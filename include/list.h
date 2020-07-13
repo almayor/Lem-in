@@ -6,12 +6,15 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 17:49:33 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 19:05:44 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 20:22:42 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIST_H
 # define LIST_H
+
+#include <errno.h>
+#include "libftprintfgnl.h"
 
 /*
 ** @struct s_list
