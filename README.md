@@ -5,7 +5,7 @@
 # Overview
 
 
-* [Official instructions](docs/Lem_in.en.pdf)
+* [Official instructions](docs/lem-in.en.pdf)
 * [Code documentation](https://almayor.github.io/Lem-in)
 
 # Acknowledgements
