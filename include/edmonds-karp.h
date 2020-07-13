@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 19:07:46 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 19:25:54 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 19:30:11 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 # define EDMONDS_KARP_H
 
 /*
-** @struct s_ekalg
+** @struct s_edkarp
 ** A data structure representing the current state of the Edmonds–Karp algorithm
-** @var s_ekalg::graph
+** @var s_edkarp::graph
 ** The graph on which the algorithm is running
-** @var s_ekalg::source
+** @var s_edkarp::source
 ** The source vertex
-** @var s_ekalg::sink
+** @var s_edkarp::sink
 ** The sink vertex
-** @var s_ekalg::marked
+** @var s_edkarp::marked
 ** A boolean array denoting which vertices have already been saturated.
 ** @details In this project, we consider only undirected graphs where all
 ** vertices have capacity of 1. Therefore, instead of considering which edges
 ** are saturated, we only keep account of saturated vertices.
 */
-typedef struct s_ekalg
+typedef struct s_edkarp
 {
 	const t_graph	*graph;
 	int				source;
 	int				sink;
 	int				*marked;
-}				s_ekalg
+}				s_edkarp
 
 /*
 ** Allocates memory and initializes a data-structure, representing
@@ -47,23 +47,23 @@ typedef struct s_ekalg
 ** @exception EINVAL	The source or sink are not graph vertices, the graph
 **						is `NULL` or invalid
 */
-s_ekalg	*make_ekalg(const t_graph *graph, int source, int sink);
+s_edkarp		*make_edkarp(const t_graph *graph, int source, int sink);
 
 /*
 ** Computes the next augmenting (shortest) path from source to sink, given
 ** the current state of the Edmonds-Karp algorithm
-** @param ekalg	A data structure representing the current state of
+** @param edkarp	A data structure representing the current state of
 ** the Edmonds-Karp algorithm
 ** @return The list of vertices on the next path from source to sink, or `NULL`
 ** no more paths exist. 
 */
-t_list	*path_ekalg(s_ekalg *ekalg);
+t_list			*path_edkarp(s_edkarp *edkarp);
 
 /*
 ** Frees all memory taken by the Edmonds-Karp algorithm or does nothing if
-** `ekalg` is `NULL`.
-** @param ekalg The current state of the Edmonds-Karp algorithm
+** `edkarp` is `NULL`.
+** @param edkarp The current state of the Edmonds-Karp algorithm
 */
-void 	free_ekalg(s_ekalg *ekalg);
+void 			free_edkarp(s_edkarp *edkarp);
 
 #endif

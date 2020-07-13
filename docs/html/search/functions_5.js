@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['path_5fekalg_54',['path_ekalg',['../edmonds-karp_8h.html#abd176bb63bb434970bfed7d5187875d3',1,'edmonds-karp.h']]]
+  ['path_5fedkarp_54',['path_edkarp',['../edmonds-karp_8h.html#a142e4bada6e84ebf020b40af52ff0830',1,'edmonds-karp.h']]]
 ];

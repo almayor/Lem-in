@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['graph_11',['graph',['../structs__ekalg.html#a7d2cc90fb369b32d8fce8da3892a1452',1,'s_ekalg']]],
+  ['graph_11',['graph',['../structs__edkarp.html#a2ad59ad934dbddb092f0a84ced29f301',1,'s_edkarp']]],
   ['graph_2eh_12',['graph.h',['../graph_8h.html',1,'']]]
 ];
