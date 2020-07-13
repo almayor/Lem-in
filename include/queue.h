@@ -6,14 +6,12 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 17:16:40 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 17:36:41 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef QUEUE_H
 # define QUEUE_H
-
-
 
 /*
 ** Allocates memory and initializes a queue data-structure.
@@ -21,8 +19,6 @@
 ** @exception ENOMEM	Memory allocation error
 */
 t_queue			*make_queue(void);
-
-
 
 /*
 ** Allocates memory for a new link to hold a value and adds this link to
@@ -35,8 +31,6 @@ t_queue			*make_queue(void);
 */
 int				enqueue_queue(t_queue *queue, int val);
 
-
-
 /*
 ** Removes the oldest value in the queue (freeing memory, if necessary) and
 ** returns it.
@@ -46,15 +40,11 @@ int				enqueue_queue(t_queue *queue, int val);
 */
 int				dequeue_queue(t_queue *queue);
 
-
-
 /*
 ** Frees all memory taken by a queue or does nothing if the queue is `NULL`.
 ** @param queue	The queue
 */
 void			free_queue(t_queue *queue);
-
-
 
 /*
 ** @struct s_queue
@@ -72,8 +62,6 @@ typedef struct	s_queue
 	t_dlink_t *head;
 	t_dlink_t *tail;
 }				t_queue;
-
-
 
 /*
 ** @struct s_dlink
