@@ -85,10 +85,10 @@ Data Structures</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a427d931134da6184cc850f01749f937b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#a427d931134da6184cc850f01749f937b">make_edkarp</a> (const <a class="el" href="structs__graph.html">t_graph</a> *graph, int source, int sink)</td></tr>
 <tr class="separator:a427d931134da6184cc850f01749f937b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a142e4bada6e84ebf020b40af52ff0830"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#a142e4bada6e84ebf020b40af52ff0830">path_edkarp</a> (<a class="el" href="structs__edkarp.html">s_edkarp</a> *edkarp)</td></tr>
-<tr class="separator:a142e4bada6e84ebf020b40af52ff0830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a399f05e9aba10bd2d16012dad6445be8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#a399f05e9aba10bd2d16012dad6445be8">free_edkarp</a> (<a class="el" href="structs__edkarp.html">s_edkarp</a> *edkarp)</td></tr>
-<tr class="separator:a399f05e9aba10bd2d16012dad6445be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f18a4608557da6a92530c624d6ee9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#ac5f18a4608557da6a92530c624d6ee9c">path_edkarp</a> (t_edkarp *edkarp)</td></tr>
+<tr class="separator:ac5f18a4608557da6a92530c624d6ee9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4feeaf6cf8b48b10e179572b2615936c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#a4feeaf6cf8b48b10e179572b2615936c">free_edkarp</a> (t_edkarp *edkarp)</td></tr>
+<tr class="separator:a4feeaf6cf8b48b10e179572b2615936c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -106,8 +106,8 @@ int *&#160;</td><td class="memItemRight" valign="bottom"><b>marked</b></td></tr>
 <tr class="separator:a34896f534fa70f528952c056fb8c72f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a399f05e9aba10bd2d16012dad6445be8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a399f05e9aba10bd2d16012dad6445be8">&#9670;&nbsp;</a></span>free_edkarp()</h2>
+<a id="a4feeaf6cf8b48b10e179572b2615936c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4feeaf6cf8b48b10e179572b2615936c">&#9670;&nbsp;</a></span>free_edkarp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -115,7 +115,7 @@ int *&#160;</td><td class="memItemRight" valign="bottom"><b>marked</b></td></tr>
         <tr>
           <td class="memname">void free_edkarp </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__edkarp.html">s_edkarp</a> *&#160;</td>
+          <td class="paramtype">t_edkarp *&#160;</td>
           <td class="paramname"><em>edkarp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -173,15 +173,15 @@ int *&#160;</td><td class="memItemRight" valign="bottom"><b>marked</b></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">ENOMEM</td><td>Memory allocation error </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The source or sink are not graph vertices, the graph is <code>NULL</code> or invalid </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>The source or sink are not graph vertices, or the graph is <code>NULL</code> / invalid </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a142e4bada6e84ebf020b40af52ff0830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a142e4bada6e84ebf020b40af52ff0830">&#9670;&nbsp;</a></span>path_edkarp()</h2>
+<a id="ac5f18a4608557da6a92530c624d6ee9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f18a4608557da6a92530c624d6ee9c">&#9670;&nbsp;</a></span>path_edkarp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +189,7 @@ int *&#160;</td><td class="memItemRight" valign="bottom"><b>marked</b></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structs__list.html">t_list</a>* path_edkarp </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__edkarp.html">s_edkarp</a> *&#160;</td>
+          <td class="paramtype">t_edkarp *&#160;</td>
           <td class="paramname"><em>edkarp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -201,7 +201,7 @@ int *&#160;</td><td class="memItemRight" valign="bottom"><b>marked</b></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The list of vertices on the next path from source to sink, or <code>NULL</code> no more paths exist. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The list of vertices on the next path from the source to the sink, or <code>NULL</code> if no more paths exist. </dd></dl>
 
 </div>
 </div>

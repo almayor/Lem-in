@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 19:07:46 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 19:30:11 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 20:20:32 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 ** @var s_edkarp::marked
 ** A boolean array denoting which vertices have already been saturated.
 ** @details In this project, we consider only undirected graphs where all
-** vertices have capacity of 1. Therefore, instead of considering which edges
+** vertices have a capacity of 1. Therefore, instead of considering which edges
 ** are saturated, we only keep account of saturated vertices.
 */
 typedef struct s_edkarp
@@ -34,7 +34,7 @@ typedef struct s_edkarp
 	int				source;
 	int				sink;
 	int				*marked;
-}				s_edkarp
+}				t_edkarp
 
 /*
 ** Allocates memory and initializes a data-structure, representing
@@ -44,26 +44,26 @@ typedef struct s_edkarp
 ** @param sink The sink vertex
 ** @return Pointer to the newly allocated memory or `NULL` on failure
 ** @exception ENOMEM	Memory allocation error
-** @exception EINVAL	The source or sink are not graph vertices, the graph
-**						is `NULL` or invalid
+** @exception EINVAL	The source or sink are not graph vertices, or the graph
+**						is `NULL` / invalid
 */
-s_edkarp		*make_edkarp(const t_graph *graph, int source, int sink);
+t_edkarp		*make_edkarp(const t_graph *graph, int source, int sink);
 
 /*
 ** Computes the next augmenting (shortest) path from source to sink, given
 ** the current state of the Edmonds-Karp algorithm
 ** @param edkarp	A data structure representing the current state of
 ** the Edmonds-Karp algorithm
-** @return The list of vertices on the next path from source to sink, or `NULL`
-** no more paths exist. 
+** @return The list of vertices on the next path from the source to the sink,
+** or `NULL` if no more paths exist. 
 */
-t_list			*path_edkarp(s_edkarp *edkarp);
+t_list			*path_edkarp(t_edkarp *edkarp);
 
 /*
 ** Frees all memory taken by the Edmonds-Karp algorithm or does nothing if
 ** `edkarp` is `NULL`.
 ** @param edkarp The current state of the Edmonds-Karp algorithm
 */
-void 			free_edkarp(s_edkarp *edkarp);
+void 			free_edkarp(t_edkarp *edkarp);
 
 #endif
