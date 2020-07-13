@@ -6,12 +6,18 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 19:07:46 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:20:32 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/14 00:16:30 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EDMONDS_KARP_H
 # define EDMONDS_KARP_H
+
+#include <errno.h>
+#include "libftprintfgnl.h"
+#include "graph.h"
+#include "list.h"
+#include "queue.h"
 
 /*
 ** @struct s_edkarp
@@ -27,14 +33,20 @@
 ** @details In this project, we consider only undirected graphs where all
 ** vertices have a capacity of 1. Therefore, instead of considering which edges
 ** are saturated, we only keep account of saturated vertices.
+** @var s_edkarp::edge_to
+** (private member) Accessory array used by the algorithm
+** @var s_edkarp::dist_to
+** (private member) Accessory array used by the algorithm
 */
-typedef struct s_edkarp
+typedef struct	s_edkarp
 {
-	const t_graph	*graph;
-	int				source;
-	int				sink;
-	int				*marked;
-}				t_edkarp
+	t_graph	*graph;
+	int		source;
+	int		sink;
+	int		*marked;
+	int		*edge_to;
+	int		*dist_to;
+}				t_edkarp;
 
 /*
 ** Allocates memory and initializes a data-structure, representing

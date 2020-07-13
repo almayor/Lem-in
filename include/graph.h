@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:52:50 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 21:15:03 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ t_graph 		*make_graph(int V);
 ** @param graph The graph
 ** @return 0 on success, 1 on failure
 ** @exception ENOMEM	Memory allocation error
-** @exception EINVAL	The graph is `NULL` or invalid
+** @exception EINVAL	The graph is `NULL` / invalid, or v is equal to w
+**						(loops are not allowed)
 */
 int 			add_edge_graph(t_graph *graph, int v, int w);
 

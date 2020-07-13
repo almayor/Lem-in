@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:52:18 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:57:55 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 21:15:33 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int add_edge_graph(t_graph *graph, int v, int w)
 {
-	if (graph == NULL || graph->adj == NULL ||
+	if (graph == NULL || graph->adj == NULL || v == w ||
 		v < 0 || v >= graph->V || w < 0 || w >= graph->V ||
 		graph->adj[v] == NULL || graph->adj[w] == NULL)
 	{
