@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['next_21',['next',['../structs__dlink.html#ad4c5a1b380b33714c126f8fa79ba3830',1,'s_dlink']]]
+  ['next_29',['next',['../structs__list.html#a06a0f2db4e8b126a362bbfa366c0ab09',1,'s_list']]]
 ];

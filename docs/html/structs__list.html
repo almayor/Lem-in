@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: s_queue Struct Reference</title>
+<title>Lem_in: s_list Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,79 +64,79 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">s_queue Struct Reference</div>  </div>
+<div class="title">s_list Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="queue_8h_source.html">queue.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="list_8h_source.html">list.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a30e2bb05af132c48cdc5e02bc5a1efac"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">size</a></td></tr>
-<tr class="separator:a30e2bb05af132c48cdc5e02bc5a1efac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ee96fcdc99807b713c9470b808a8fd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">head</a></td></tr>
-<tr class="separator:a3ee96fcdc99807b713c9470b808a8fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a681ec9436ca4eb2bc0e8865198d53f5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a></td></tr>
-<tr class="separator:a681ec9436ca4eb2bc0e8865198d53f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a0f2db4e8b126a362bbfa366c0ab09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__list.html#a06a0f2db4e8b126a362bbfa366c0ab09">next</a></td></tr>
+<tr class="separator:a06a0f2db4e8b126a362bbfa366c0ab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516e5aeecf4f80bd8cb84537483c5bd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__list.html#a516e5aeecf4f80bd8cb84537483c5bd9">prev</a></td></tr>
+<tr class="separator:a516e5aeecf4f80bd8cb84537483c5bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af277cff6f0db7317a8c3078c7b3bed8b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__list.html#af277cff6f0db7317a8c3078c7b3bed8b">val</a></td></tr>
+<tr class="separator:af277cff6f0db7317a8c3078c7b3bed8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A queue implemented as a doubly linked list </p>
+<div class="textblock"><p>Represents a doubly-linked list </p>
 
-<p class="definition">Definition at line <a class="el" href="queue_8h_source.html#l00064">64</a> of file <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list_8h_source.html#l00027">27</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a3ee96fcdc99807b713c9470b808a8fd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ee96fcdc99807b713c9470b808a8fd9">&#9670;&nbsp;</a></span>head</h2>
+<a id="a06a0f2db4e8b126a362bbfa366c0ab09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a0f2db4e8b126a362bbfa366c0ab09">&#9670;&nbsp;</a></span>next</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s_queue::head</td>
+          <td class="memname">s_list::next</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>(private member) The link with the oldest value in the queue </p>
+<p>Next link in the list </p>
 
-<p class="definition">Definition at line <a class="el" href="queue_8h_source.html#l00067">67</a> of file <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list_8h_source.html#l00029">29</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
-<a id="a30e2bb05af132c48cdc5e02bc5a1efac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30e2bb05af132c48cdc5e02bc5a1efac">&#9670;&nbsp;</a></span>size</h2>
+<a id="a516e5aeecf4f80bd8cb84537483c5bd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516e5aeecf4f80bd8cb84537483c5bd9">&#9670;&nbsp;</a></span>prev</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s_queue::size</td>
+          <td class="memname">s_list::prev</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Number of values in the queue (i.e. its size) </p>
+<p>Previous link in the list </p>
 
-<p class="definition">Definition at line <a class="el" href="queue_8h_source.html#l00066">66</a> of file <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list_8h_source.html#l00030">30</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
-<a id="a681ec9436ca4eb2bc0e8865198d53f5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a681ec9436ca4eb2bc0e8865198d53f5c">&#9670;&nbsp;</a></span>tail</h2>
+<a id="af277cff6f0db7317a8c3078c7b3bed8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af277cff6f0db7317a8c3078c7b3bed8b">&#9670;&nbsp;</a></span>val</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s_queue::tail</td>
+          <td class="memname">s_list::val</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>(private member) The link with the most recently added value in the queue </p>
+<p>Value held by this link </p>
 
-<p class="definition">Definition at line <a class="el" href="queue_8h_source.html#l00068">68</a> of file <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list_8h_source.html#l00031">31</a> of file <a class="el" href="list_8h_source.html">list.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/<a class="el" href="queue_8h_source.html">queue.h</a></li>
+<li>include/<a class="el" href="list_8h_source.html">list.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

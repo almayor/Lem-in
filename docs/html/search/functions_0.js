@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dequeue_5fqueue_16',['dequeue_queue',['../queue_8h.html#a5ff2b8e827e0a4c6702f773c666e2019',1,'queue.h']]]
+  ['add_5flist_21',['add_list',['../list_8h.html#a5b3a29660d5708b7860fb8c746609f16',1,'list.h']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['make_5fqueue_4',['make_queue',['../queue_8h.html#a16b063d6385d8975162f3f5bd8438860',1,'queue.h']]]
+  ['head_5',['head',['../structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9',1,'s_queue']]]
 ];

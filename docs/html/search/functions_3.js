@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['make_5fqueue_19',['make_queue',['../queue_8h.html#a16b063d6385d8975162f3f5bd8438860',1,'queue.h']]]
+  ['free_5flist_24',['free_list',['../list_8h.html#a5772edc7aeef39713c35596814ec2709',1,'list.h']]],
+  ['free_5fqueue_25',['free_queue',['../queue_8h.html#a32da40b23d8448229992aa7c08a3c0bb',1,'queue.h']]]
 ];

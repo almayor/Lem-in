@@ -6,12 +6,13 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 17:36:41 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 18:11:47 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef QUEUE_H
 # define QUEUE_H
+
 
 /*
 ** Allocates memory and initializes a queue data-structure.
@@ -20,8 +21,9 @@
 */
 t_queue			*make_queue(void);
 
+
 /*
-** Allocates memory for a new link to hold a value and adds this link to
+** Allocates memory for a new link to hold a value and adds this link at
 ** the end of the queue.
 ** @param queue	The queue
 ** @param val	The new value
@@ -30,6 +32,7 @@ t_queue			*make_queue(void);
 ** @exception EINVAL	The queue is `NULL` or isn't a valid queue
 */
 int				enqueue_queue(t_queue *queue, int val);
+
 
 /*
 ** Removes the oldest value in the queue (freeing memory, if necessary) and
@@ -40,11 +43,13 @@ int				enqueue_queue(t_queue *queue, int val);
 */
 int				dequeue_queue(t_queue *queue);
 
+
 /*
 ** Frees all memory taken by a queue or does nothing if the queue is `NULL`.
 ** @param queue	The queue
 */
 void			free_queue(t_queue *queue);
+
 
 /*
 ** @struct s_queue
@@ -59,25 +64,8 @@ void			free_queue(t_queue *queue);
 typedef struct	s_queue
 {
 	size_t size;
-	t_dlink_t *head;
-	t_dlink_t *tail;
+	t_list *head;
+	t_list *tail;
 }				t_queue;
-
-/*
-** @struct s_dlink
-** Represents a link in a queue that is implemented as a doubly linked list
-** @var s_dlink::next
-** Next link in a queue
-** @var s_dlink::prev
-** Previous link in a queue
-** @var s_dlink::val
-** Value held by this link
-*/		
-typedef struct	s_dlink
-{
-	dlink_t	*next;
-	dlink_t	*prev;
-	int		val;
-}				t_dlink;
 
 #endif

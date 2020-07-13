@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['val_12',['val',['../structs__dlink.html#a17288bbe2f14c123f54e334bddea272e',1,'s_dlink']]]
+  ['s_5flist_12',['s_list',['../structs__list.html',1,'']]],
+  ['s_5fqueue_13',['s_queue',['../structs__queue.html',1,'']]],
+  ['size_14',['size',['../structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac',1,'s_queue']]]
 ];
