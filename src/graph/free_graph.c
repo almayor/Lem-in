@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_list.c                                         :+:      :+:    :+:   */
+/*   free_graph.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 20:23:45 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:58:24 by unite            ###   ########.fr       */
+/*   Created: 2020/07/13 20:49:06 by unite             #+#    #+#             */
+/*   Updated: 2020/07/13 20:51:33 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "list.h"
+#include "graph.h"
 
-t_list	*add_list(t_list *list, int val)
+void			free_graph(t_graph *graph)
 {
-	t_list	*new_link;
+	int	i;
 
-	if (list == NULL)
+	if (!graph)
+		return ;
+	if (graph->adj)
 	{
-		errno = EINVAL;
-		return (NULL);
+		i = 0;
+		while (i < graph->V)
+		{
+			free_list(graph->adj[i]);
+			i++;
+		}
+		free(graph->adj)
 	}
-	if (!(new_link = ft_calloc(sizeof(t_list), 1)))
-	{
-		errno = ENOMEM;
-		return (NULL);
-	}
-	new_link->val = val;
-	new_link->next = list;
-	return (new_link);
+	free(graph);
 }
+

@@ -6,12 +6,16 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 19:07:36 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 20:52:50 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GRAPH_H
 # define GRAPH_H
+
+#include <errno.h>
+#include "libftprintfgnl.h"
+#include "list.h"
 
 /*
 ** @struct s_graph
@@ -29,7 +33,7 @@ typedef struct	s_graph
 {
 	int 	V;
 	int 	E;
-	t_list	*adj;
+	t_list	**adj;
 }				t_graph;
 
 /*
@@ -48,7 +52,7 @@ t_graph 		*make_graph(int V);
 ** @exception ENOMEM	Memory allocation error
 ** @exception EINVAL	The graph is `NULL` or invalid
 */
-int 			add_edge_graph(int v, int w, t_graph *graph);
+int 			add_edge_graph(t_graph *graph, int v, int w);
 
 /*
 ** Frees all memory taken by a graph or does nothing if the graph is `NULL`.

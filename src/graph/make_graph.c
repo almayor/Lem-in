@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_list.c                                         :+:      :+:    :+:   */
+/*   make_graph.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 20:23:45 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:58:24 by unite            ###   ########.fr       */
+/*   Created: 2020/07/13 20:35:49 by unite             #+#    #+#             */
+/*   Updated: 2020/07/13 20:58:06 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "list.h"
+#include "graph.h"
 
-t_list	*add_list(t_list *list, int val)
+t_graph 		*make_graph(int V)
 {
-	t_list	*new_link;
+	t_graph	*graph;
+	int		i;
 
-	if (list == NULL)
+	if (!(graph = ft_calloc(sizeof(graph), 1)) ||
+		!(graph->adj = ft_calloc(sizeof(t_list *), V)))
 	{
-		errno = EINVAL;
+		free_graph(graph);
 		return (NULL);
 	}
-	if (!(new_link = ft_calloc(sizeof(t_list), 1)))
+	graph.V = V;
+	graph.E = 0;
+	i = 0;
+	while (i < V)
 	{
-		errno = ENOMEM;
-		return (NULL);
+		if (!(graph->adj[i] = make_list()))
+		{
+			free_graph(graph);
+			return (NULL);
+		}
+		i++;
 	}
-	new_link->val = val;
-	new_link->next = list;
-	return (new_link);
+	return (graph);
 }

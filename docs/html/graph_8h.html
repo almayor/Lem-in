@@ -73,7 +73,23 @@ $(function() {
 <div class="title">graph.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
+<code>#include &quot;libftprintfgnl.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for graph.h:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="graph_8h__incl.png" border="0" usemap="#include_2graph_8h" alt=""/></div>
+<map name="include_2graph_8h" id="include_2graph_8h">
+<area shape="rect" title=" " alt="" coords="34,5,147,31"/>
+<area shape="rect" title=" " alt="" coords="5,152,69,177"/>
+<area shape="rect" title=" " alt="" coords="97,152,198,177"/>
+<area shape="rect" href="list_8h.html" title=" " alt="" coords="66,79,115,104"/>
+</map>
+</div>
+</div>
 <p><a href="graph_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -91,14 +107,14 @@ typedef struct <a class="el" href="structs__graph.html">s_graph</a>&#160;</td><t
 Functions</h2></td></tr>
 <tr class="memitem:a9fe40de2c1f833aa8c93a1911db2fe16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__graph.html">t_graph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8h.html#a9fe40de2c1f833aa8c93a1911db2fe16">make_graph</a> (int V)</td></tr>
 <tr class="separator:a9fe40de2c1f833aa8c93a1911db2fe16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a81556aa0ef0b652f57a6ebcd483e8f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8h.html#a6a81556aa0ef0b652f57a6ebcd483e8f">add_edge_graph</a> (int v, int w, <a class="el" href="structs__graph.html">t_graph</a> *graph)</td></tr>
-<tr class="separator:a6a81556aa0ef0b652f57a6ebcd483e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac225b3a92280b9da544831109c05e81c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8h.html#ac225b3a92280b9da544831109c05e81c">add_edge_graph</a> (<a class="el" href="structs__graph.html">t_graph</a> *graph, int v, int w)</td></tr>
+<tr class="separator:ac225b3a92280b9da544831109c05e81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ecfbaadd85bfe385334ea5a5605c5cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8h.html#a1ecfbaadd85bfe385334ea5a5605c5cc">free_graph</a> (<a class="el" href="structs__graph.html">t_graph</a> *graph)</td></tr>
 <tr class="separator:a1ecfbaadd85bfe385334ea5a5605c5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6a81556aa0ef0b652f57a6ebcd483e8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a81556aa0ef0b652f57a6ebcd483e8f">&#9670;&nbsp;</a></span>add_edge_graph()</h2>
+<a id="ac225b3a92280b9da544831109c05e81c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac225b3a92280b9da544831109c05e81c">&#9670;&nbsp;</a></span>add_edge_graph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -106,6 +122,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int add_edge_graph </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__graph.html">t_graph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
@@ -113,13 +135,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structs__graph.html">t_graph</a> *&#160;</td>
-          <td class="paramname"><em>graph</em>&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

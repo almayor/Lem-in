@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:19:04 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 20:39:21 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@
 */
 typedef struct	s_queue
 {
-	size_t size;
-	t_list *head;
-	t_list *tail;
+	int 	size;
+	t_list	*head;
+	t_list	*tail;
 }				t_queue;
 
 /*

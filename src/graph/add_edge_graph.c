@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_list.c                                         :+:      :+:    :+:   */
+/*   add_edge_graph.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 20:23:45 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:58:24 by unite            ###   ########.fr       */
+/*   Created: 2020/07/13 20:52:18 by unite             #+#    #+#             */
+/*   Updated: 2020/07/13 20:57:55 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "list.h"
+#include "graph.h"
 
-t_list	*add_list(t_list *list, int val)
+int add_edge_graph(t_graph *graph, int v, int w)
 {
-	t_list	*new_link;
-
-	if (list == NULL)
+	if (graph == NULL || graph->adj == NULL ||
+		v < 0 || v >= graph->V || w < 0 || w >= graph->V ||
+		graph->adj[v] == NULL || graph->adj[w] == NULL)
 	{
 		errno = EINVAL;
-		return (NULL);
+		return (1);
 	}
-	if (!(new_link = ft_calloc(sizeof(t_list), 1)))
+	if (!(graph->adj[v] = add_list(graph->adj[v], w)) ||
+		!(graph->adj[w] = add_list(graph->adj[w], v)))
 	{
 		errno = ENOMEM;
-		return (NULL);
+		return (1);
 	}
-	new_link->val = val;
-	new_link->next = list;
-	return (new_link);
+	graph->E++;
+	return (0);
 }
