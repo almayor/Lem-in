@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['val_16',['val',['../structs__list.html#af277cff6f0db7317a8c3078c7b3bed8b',1,'s_list']]]
+  ['tail_31',['tail',['../structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c',1,'s_queue']]]
 ];
