@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:22:03 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:23:38 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 20:31:03 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 t_list			*make_list(void)
 {
-	return (ft_calloc(sizeof(t_list)));
+	return (ft_calloc(sizeof(t_list), 1));
 }
