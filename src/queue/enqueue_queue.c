@@ -6,7 +6,7 @@
 /*   By: kbethel <kbethel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 21:11:19 by kbethel           #+#    #+#             */
-/*   Updated: 2020/07/13 21:44:15 by kbethel          ###   ########.fr       */
+/*   Updated: 2020/07/13 22:26:40 by kbethel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int				enqueue_queue(t_queue *queue, int val)
 	if (queue->head == NULL)
 	{
 		queue->head = new_link;
+		queue->head->val = val;
 		queue->tail = queue->head;
 	}
 	else
