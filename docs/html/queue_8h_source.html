@@ -77,55 +77,61 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2020/07/13 17:09:26 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2020/07/13 17:15:43 by unite            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef QUEUE_H</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"># define QUEUE_H</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<a class="code" href="structs__queue.html">t_queue</a>         *<a class="code" href="queue_8h.html#a16b063d6385d8975162f3f5bd8438860">make_queue</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="structs__queue.html">t_queue</a>         *<a class="code" href="queue_8h.html#a16b063d6385d8975162f3f5bd8438860">make_queue</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">int</span>             <a class="code" href="queue_8h.html#a1c5bd3af8875516b9ba389bb76cb1afc">enqueue_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue, <span class="keywordtype">int</span> val);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">int</span>             <a class="code" href="queue_8h.html#a1c5bd3af8875516b9ba389bb76cb1afc">enqueue_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue, <span class="keywordtype">int</span> val);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">int</span>             <a class="code" href="queue_8h.html#a5ff2b8e827e0a4c6702f773c666e2019">dequeue_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="queue_8h.html#a32da40b23d8448229992aa7c08a3c0bb">free_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structs__queue.html">   64</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__queue.html">s_queue</a></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">   66</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">size</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">   67</a></span>&#160;    t_dlink_t *<a class="code" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">head</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">   68</a></span>&#160;    t_dlink_t *<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}               <a class="code" href="structs__queue.html">t_queue</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structs__dlink.html">   82</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__dlink.html">s_dlink</a></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structs__dlink.html#ad4c5a1b380b33714c126f8fa79ba3830">   84</a></span>&#160;    dlink_t *<a class="code" href="structs__dlink.html#ad4c5a1b380b33714c126f8fa79ba3830">next</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="structs__dlink.html#af78ec6d9e054db9e6380e775c1992172">   85</a></span>&#160;    dlink_t *<a class="code" href="structs__dlink.html#af78ec6d9e054db9e6380e775c1992172">prev</a>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="structs__dlink.html#a17288bbe2f14c123f54e334bddea272e">   86</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="structs__dlink.html#a17288bbe2f14c123f54e334bddea272e">val</a>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}               <a class="code" href="structs__dlink.html">t_dlink</a>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">int</span>             <a class="code" href="queue_8h.html#a5ff2b8e827e0a4c6702f773c666e2019">dequeue_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="queue_8h.html#a32da40b23d8448229992aa7c08a3c0bb">free_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structs__queue.html">   69</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__queue.html">s_queue</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">   71</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">size</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">   72</a></span>&#160;    t_dlink_t *<a class="code" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">head</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">   73</a></span>&#160;    t_dlink_t *<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}               <a class="code" href="structs__queue.html">t_queue</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="structs__dlink.html">   88</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__dlink.html">s_dlink</a></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structs__dlink.html#ad4c5a1b380b33714c126f8fa79ba3830">   90</a></span>&#160;    dlink_t *<a class="code" href="structs__dlink.html#ad4c5a1b380b33714c126f8fa79ba3830">next</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="structs__dlink.html#af78ec6d9e054db9e6380e775c1992172">   91</a></span>&#160;    dlink_t *<a class="code" href="structs__dlink.html#af78ec6d9e054db9e6380e775c1992172">prev</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structs__dlink.html#a17288bbe2f14c123f54e334bddea272e">   92</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="structs__dlink.html#a17288bbe2f14c123f54e334bddea272e">val</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}               <a class="code" href="structs__dlink.html">t_dlink</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructs__dlink_html_af78ec6d9e054db9e6380e775c1992172"><div class="ttname"><a href="structs__dlink.html#af78ec6d9e054db9e6380e775c1992172">s_dlink::prev</a></div><div class="ttdeci">dlink_t * prev</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00085">queue.h:85</a></div></div>
-<div class="ttc" id="astructs__dlink_html_a17288bbe2f14c123f54e334bddea272e"><div class="ttname"><a href="structs__dlink.html#a17288bbe2f14c123f54e334bddea272e">s_dlink::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00086">queue.h:86</a></div></div>
-<div class="ttc" id="astructs__queue_html_a30e2bb05af132c48cdc5e02bc5a1efac"><div class="ttname"><a href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">s_queue::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00066">queue.h:66</a></div></div>
+<div class="ttc" id="astructs__dlink_html_af78ec6d9e054db9e6380e775c1992172"><div class="ttname"><a href="structs__dlink.html#af78ec6d9e054db9e6380e775c1992172">s_dlink::prev</a></div><div class="ttdeci">dlink_t * prev</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00091">queue.h:91</a></div></div>
+<div class="ttc" id="astructs__dlink_html_a17288bbe2f14c123f54e334bddea272e"><div class="ttname"><a href="structs__dlink.html#a17288bbe2f14c123f54e334bddea272e">s_dlink::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00092">queue.h:92</a></div></div>
+<div class="ttc" id="astructs__queue_html_a30e2bb05af132c48cdc5e02bc5a1efac"><div class="ttname"><a href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">s_queue::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00071">queue.h:71</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a32da40b23d8448229992aa7c08a3c0bb"><div class="ttname"><a href="queue_8h.html#a32da40b23d8448229992aa7c08a3c0bb">free_queue</a></div><div class="ttdeci">void free_queue(t_queue *queue)</div></div>
 <div class="ttc" id="aqueue_8h_html_a5ff2b8e827e0a4c6702f773c666e2019"><div class="ttname"><a href="queue_8h.html#a5ff2b8e827e0a4c6702f773c666e2019">dequeue_queue</a></div><div class="ttdeci">int dequeue_queue(t_queue *queue)</div></div>
 <div class="ttc" id="aqueue_8h_html_a16b063d6385d8975162f3f5bd8438860"><div class="ttname"><a href="queue_8h.html#a16b063d6385d8975162f3f5bd8438860">make_queue</a></div><div class="ttdeci">t_queue * make_queue(void)</div></div>
 <div class="ttc" id="aqueue_8h_html_a1c5bd3af8875516b9ba389bb76cb1afc"><div class="ttname"><a href="queue_8h.html#a1c5bd3af8875516b9ba389bb76cb1afc">enqueue_queue</a></div><div class="ttdeci">int enqueue_queue(t_queue *queue, int val)</div></div>
-<div class="ttc" id="astructs__queue_html"><div class="ttname"><a href="structs__queue.html">s_queue</a></div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00064">queue.h:64</a></div></div>
-<div class="ttc" id="astructs__dlink_html"><div class="ttname"><a href="structs__dlink.html">s_dlink</a></div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00082">queue.h:82</a></div></div>
-<div class="ttc" id="astructs__dlink_html_ad4c5a1b380b33714c126f8fa79ba3830"><div class="ttname"><a href="structs__dlink.html#ad4c5a1b380b33714c126f8fa79ba3830">s_dlink::next</a></div><div class="ttdeci">dlink_t * next</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00084">queue.h:84</a></div></div>
-<div class="ttc" id="astructs__queue_html_a3ee96fcdc99807b713c9470b808a8fd9"><div class="ttname"><a href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">s_queue::head</a></div><div class="ttdeci">t_dlink_t * head</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00067">queue.h:67</a></div></div>
-<div class="ttc" id="astructs__queue_html_a681ec9436ca4eb2bc0e8865198d53f5c"><div class="ttname"><a href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">s_queue::tail</a></div><div class="ttdeci">t_dlink_t * tail</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00068">queue.h:68</a></div></div>
+<div class="ttc" id="astructs__queue_html"><div class="ttname"><a href="structs__queue.html">s_queue</a></div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00069">queue.h:69</a></div></div>
+<div class="ttc" id="astructs__dlink_html"><div class="ttname"><a href="structs__dlink.html">s_dlink</a></div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00088">queue.h:88</a></div></div>
+<div class="ttc" id="astructs__dlink_html_ad4c5a1b380b33714c126f8fa79ba3830"><div class="ttname"><a href="structs__dlink.html#ad4c5a1b380b33714c126f8fa79ba3830">s_dlink::next</a></div><div class="ttdeci">dlink_t * next</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00090">queue.h:90</a></div></div>
+<div class="ttc" id="astructs__queue_html_a3ee96fcdc99807b713c9470b808a8fd9"><div class="ttname"><a href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">s_queue::head</a></div><div class="ttdeci">t_dlink_t * head</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00072">queue.h:72</a></div></div>
+<div class="ttc" id="astructs__queue_html_a681ec9436ca4eb2bc0e8865198d53f5c"><div class="ttname"><a href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">s_queue::tail</a></div><div class="ttdeci">t_dlink_t * tail</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00073">queue.h:73</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

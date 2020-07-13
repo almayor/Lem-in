@@ -6,12 +6,13 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 17:09:26 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 17:15:43 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef QUEUE_H
 # define QUEUE_H
+
 
 
 /*
@@ -22,6 +23,7 @@
 t_queue			*make_queue(void);
 
 
+
 /*
 ** Allocates memory for a new link to hold a value and adds this link to
 ** the end of the queue.
@@ -29,9 +31,10 @@ t_queue			*make_queue(void);
 ** @param val	The new value
 ** @return 0 on success, 1 on failure
 ** @exception ENOMEM	Memory allocation error
-** @exception EINVAL	queue is `NULL` or doesn't point to a valid queue
+** @exception EINVAL	The queue is `NULL` or isn't a valid queue
 */
 int				enqueue_queue(t_queue *queue, int val);
+
 
 
 /*
@@ -39,9 +42,10 @@ int				enqueue_queue(t_queue *queue, int val);
 ** returns it.
 ** @param queue	The queue
 ** @return The oldest value
-** @exception EINVAL	queue is `NULL` or empty
+** @exception EINVAL	The queue is `NULL` or empty
 */
 int				dequeue_queue(t_queue *queue);
+
 
 
 /*
@@ -49,6 +53,7 @@ int				dequeue_queue(t_queue *queue);
 ** @param queue	The queue
 */
 void			free_queue(t_queue *queue);
+
 
 
 /*
@@ -67,6 +72,7 @@ typedef struct	s_queue
 	t_dlink_t *head;
 	t_dlink_t *tail;
 }				t_queue;
+
 
 
 /*
