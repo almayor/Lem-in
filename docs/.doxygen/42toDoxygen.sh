@@ -9,8 +9,9 @@ if [ $? -ne 0 ]; then
 	echo "Please install Doxygen!"
 else
 	find . -name "*.c" -exec perl -i -pe 's/^\/\*$/\/\*\*/' {} \;
-	find . -name "*.h" -exec perl -i -pe 's/^\/\*$/\/\*\*/' {} \;
+	find . -name "*.h" -exec perl -i -pe 's/^\/\*$/\/\/\/\\file\n\/\*\*/' {} \;
 	doxygen docs/.doxygen/Doxyfile
 	find . -name "*.c" -exec perl -i -pe 's/^\/\*\*$/\/\*/' {} \;
-	find . -name "*.h" -exec perl -i -pe 's/^\/\*\*$/\/\*/' {} \;
+	find . -name "*.h" -exec perl -i -pe 's/^\/\*\*$/\/\*/' {} \; \
+					   -exec perl -i -pe 's/\/\/\/\\file//' {} \;
 fi

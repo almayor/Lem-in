@@ -6,4 +6,5 @@ CMakeLists.txt
 *.pickle
 cmake-build-debug
 .idea
+.doxygen
 
