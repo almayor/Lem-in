@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 19:07:46 by unite             #+#    #+#             */
-/*   Updated: 2020/07/14 00:16:30 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/14 01:55:00 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,8 @@
 ** @var s_edkarp::sink
 ** The sink vertex
 ** @var s_edkarp::marked
-** A boolean array denoting which vertices have already been saturated.
-** @details In this project, we consider only undirected graphs where all
-** vertices have a capacity of 1. Therefore, instead of considering which edges
-** are saturated, we only keep account of saturated vertices.
-** @var s_edkarp::edge_to
-** (private member) Accessory array used by the algorithm
-** @var s_edkarp::dist_to
-** (private member) Accessory array used by the algorithm
+** A boolean array denoting which vertices are on previously found
+** augmenting paths and should be ignored in future iterations.
 */
 typedef struct	s_edkarp
 {
@@ -44,8 +38,6 @@ typedef struct	s_edkarp
 	int		source;
 	int		sink;
 	int		*marked;
-	int		*edge_to;
-	int		*dist_to;
 }				t_edkarp;
 
 /*
@@ -69,7 +61,7 @@ t_edkarp		*make_edkarp(const t_graph *graph, int source, int sink);
 ** @return The list of vertices on the next path from the source to the sink,
 ** or `NULL` if no more paths exist. 
 */
-t_list			*path_edkarp(t_edkarp *edkarp);
+t_list			*next_path_edkarp(t_edkarp *edkarp);
 
 /*
 ** Frees all memory taken by the Edmonds-Karp algorithm or does nothing if
