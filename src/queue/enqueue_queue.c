@@ -3,42 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   enqueue_queue.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbethel <kbethel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 21:11:19 by kbethel           #+#    #+#             */
-/*   Updated: 2020/07/13 22:26:40 by kbethel          ###   ########.fr       */
+/*   Updated: 2020/07/14 00:31:08 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "queue.h"
 
-int				enqueue_queue(t_queue *queue, int val)
+int		enqueue_queue(t_queue *queue, int val)
 {
 	t_list	*new_link;
 
 	if (queue == NULL)
-	{
 		errno = EINVAL;
-		return (1);
-	}
-	if (!(new_link = make_list()))
-	{
+	else if (!(new_link = make_list()))
 		errno = ENOMEM;
-		return (1);
-	}
-	queue->size += 1;
-	if (queue->head == NULL)
-	{
-		queue->head = new_link;
-		queue->head->val = val;
-		queue->tail = queue->head;
-	}
 	else
 	{
-		queue->tail->next = new_link;
-		queue->tail->next->val = val;
-		queue->tail->next->prev = queue->tail;
-		queue->tail = queue->tail->next;
+		new_link->val = val;
+		new_list->prev = queue->tail;
+		if (queue->tail)
+			queue->tail->next = new_link;
+		else
+		{
+			queue->tail = new_link;
+			queue->head = new_link;
+		}
+		queue->size += 1;
 	}
-	return (0);
+	return (errno != 0);
 }

@@ -3,36 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   dequeue_queue.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbethel <kbethel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 21:22:34 by kbethel           #+#    #+#             */
-/*   Updated: 2020/07/13 22:09:42 by kbethel          ###   ########.fr       */
+/*   Updated: 2020/07/14 00:37:42 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "queue.h"
 
-int				dequeue_queue(t_queue *queue)
+int		dequeue_queue(t_queue *queue)
 {
 	int		val;
 	t_list	*temp;
 
-	if (queue == NULL)
+	if (queue == NULL || queue->size < 1)
 	{
 		errno = EINVAL;
-		return (1);
+		return (0);
 	}
 	queue->size -= 1;
 	val = queue->head->val;
-	if (queue->head->next)
-	{
-		temp = queue->head->next;
-		queue->head->val = 0;
-		queue->head->next = NULL;
-		free(temp->prev);
-		queue->head = temp;
-	}
-	else
-		free_queue(queue);
+	temp = queue->head->next;
+	free(queue->head);
+	queue->head = temp;
 	return (val);
 }

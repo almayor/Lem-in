@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   queue.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbethel <kbethel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 21:13:04 by kbethel          ###   ########.fr       */
+/*   Updated: 2020/07/14 00:23:30 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ typedef struct	s_queue
 t_queue			*make_queue(void);
 
 /*
-** Allocates memory for a new link to hold a value and adds this link to
+** Allocates memory for a new link to hold a value and adds this link at
 ** the end of the queue.
 ** @param queue	The queue
 ** @param val	The new value
