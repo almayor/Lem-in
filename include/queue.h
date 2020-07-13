@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   queue.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: kbethel <kbethel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:39:21 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/13 21:13:04 by kbethel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef QUEUE_H
 # define QUEUE_H
+
+# include <errno.h>
+# include "list.h"
 
 /*
 ** @struct s_queue
