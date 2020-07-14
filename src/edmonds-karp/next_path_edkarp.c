@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 00:39:57 by unite             #+#    #+#             */
-/*   Updated: 2020/07/14 01:55:21 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/14 13:43:15 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ static t_list	*bfs_edkarp(t_edkarp *edkarp, t_queue *queue,
 	while (queue->size > 0)
 	{
 		v = dequeue_queue(queue);
+		if (v == edkarp->sink)
+			break ;
 		link = edkarp->graph->adj[v];
 		while (link)
 		{
