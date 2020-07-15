@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:54:01 by unite             #+#    #+#             */
-/*   Updated: 2020/07/15 23:27:41 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/16 00:32:46 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,14 @@ t_farm			*make_farm(int n_ants);
 ** Print out each ant's position at
 ** every step, given a map from vertex id's to vertex names;
 ** @param farm	The ant farm
-** @param paths	An array with all existing paths.
-** @param n_paths The number of paths.
-** @param vertex_names A map from vertex id's to vertex names
+** @param paths	An `NULL`-terminated array with all existing paths between
+**				the source and the sink, where each path is a list of
+**				vertex id's
+** @param vertex_names A map between vertex id's and vertex names
+** @return	0 on success, 1 on error
+** @exception EINVAL	No single path exists, or paths are invalid.
 */
-void			run_farm(t_farm *farm, t_list **paths, int n_paths,
+int				run_farm(t_farm *farm, t_list **paths,
 						t_map *vertex_names);
 
 /*

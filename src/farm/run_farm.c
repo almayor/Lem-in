@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 11:57:06 by unite             #+#    #+#             */
-/*   Updated: 2020/07/15 23:39:51 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/16 00:32:15 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int		advance_farm(t_farm *farm, t_map *vertex_names)
 
 	i = 0;
 	n_moved_ants = 0;
-	while (i < farm->n_ants)
+	while (i < farm->n_ants && errno == 0)
 	{
 		if (farm->ants[i])
 		{
@@ -39,18 +39,36 @@ static int		advance_farm(t_farm *farm, t_map *vertex_names)
 
 static void		advance_to_finish_farm(t_farm *farm, t_map *vertex_names)
 {
-	while (advance_farm(farm, vertex_names) > 0)
+	while (advance_farm(farm, vertex_names) > 0 && errno == 0)
 		continue ;
 }
 
-int				run_farm(t_farm *farm, t_list **paths, int n_paths,
+static int		get_n_paths(t_list **paths)
+{
+	int	n_paths;
+
+	if (paths == NULL)
+		return (-1);
+	n_paths = 0;
+	while (paths[n_paths])
+		n_paths++;
+	return (n_paths);
+}
+
+int				run_farm(t_farm *farm, t_list **paths,
 						t_map *vertex_names)
 {
+	int n_paths;
 	int	n_active_ants;
 	int	i;
 
+	if ((n_paths = get_n_paths(paths)) <= 0)
+	{
+		errno = EINVAL;
+		return (1)
+	}
 	n_active_ants = 0;
-	while (n_active_ants < farm->n_ants)
+	while (n_active_ants < farm->n_ants && errno == 0)
 	{
 		i = 0;
 		while (i < n_paths)

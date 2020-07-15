@@ -110,8 +110,8 @@ typedef struct <a class="el" href="structs__farm.html">s_farm</a>&#160;</td><td 
 Functions</h2></td></tr>
 <tr class="memitem:a5b074a8b8277a5d7fe21eea5defc8128"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__farm.html">t_farm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farm_8h.html#a5b074a8b8277a5d7fe21eea5defc8128">make_farm</a> (int n_ants)</td></tr>
 <tr class="separator:a5b074a8b8277a5d7fe21eea5defc8128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeccc8cdadb31412205204ded01e1d258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farm_8h.html#aeccc8cdadb31412205204ded01e1d258">run_farm</a> (<a class="el" href="structs__farm.html">t_farm</a> *farm, <a class="el" href="structs__list.html">t_list</a> **paths, int n_paths, <a class="el" href="structs__map.html">t_map</a> *vertex_names)</td></tr>
-<tr class="separator:aeccc8cdadb31412205204ded01e1d258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b747cfcb6aeb491accd815fe13bf31c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farm_8h.html#a3b747cfcb6aeb491accd815fe13bf31c">run_farm</a> (<a class="el" href="structs__farm.html">t_farm</a> *farm, <a class="el" href="structs__list.html">t_list</a> **paths, <a class="el" href="structs__map.html">t_map</a> *vertex_names)</td></tr>
+<tr class="separator:a3b747cfcb6aeb491accd815fe13bf31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaaa41da466fe87f679a99e8b140075d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farm_8h.html#acaaa41da466fe87f679a99e8b140075d">free_farm</a> (<a class="el" href="structs__farm.html">t_farm</a> *farm)</td></tr>
 <tr class="separator:acaaa41da466fe87f679a99e8b140075d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -166,14 +166,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aeccc8cdadb31412205204ded01e1d258"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeccc8cdadb31412205204ded01e1d258">&#9670;&nbsp;</a></span>run_farm()</h2>
+<a id="a3b747cfcb6aeb491accd815fe13bf31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b747cfcb6aeb491accd815fe13bf31c">&#9670;&nbsp;</a></span>run_farm()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void run_farm </td>
+          <td class="memname">int run_farm </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structs__farm.html">t_farm</a> *&#160;</td>
           <td class="paramname"><em>farm</em>, </td>
@@ -183,12 +183,6 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="structs__list.html">t_list</a> **&#160;</td>
           <td class="paramname"><em>paths</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n_paths</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -206,9 +200,15 @@ Functions</h2></td></tr>
 <p>Run the farm with the given paths. For each ant, allocate a path and run it along it. If several ants share a path (in the cases where there are fewer paths than ants), wait until the ant in front has moved ahead before putting the next ant on this path at the start. Print out each ant's position at every step, given a map from vertex id's to vertex names; </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">farm</td><td>The ant farm </td></tr>
-    <tr><td class="paramname">paths</td><td>An array with all existing paths. </td></tr>
-    <tr><td class="paramname">n_paths</td><td>The number of paths. </td></tr>
-    <tr><td class="paramname">vertex_names</td><td>A map from vertex id's to vertex names </td></tr>
+    <tr><td class="paramname">paths</td><td>An <code>NULL</code>-terminated array with all existing paths between the source and the sink, where each path is a list of vertex id's </td></tr>
+    <tr><td class="paramname">vertex_names</td><td>A map between vertex id's and vertex names </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, 1 on error </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">EINVAL</td><td>No single path exists, or paths are invalid. </td></tr>
   </table>
   </dd>
 </dl>
