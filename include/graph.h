@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 21:15:03 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/15 23:34:33 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 
 /*
 ** @struct s_graph
-** An adjacency-list representation of an undirected graph
+** @brief An undirected graph
+** @details An adjacency-list representation of an undirected graph
 ** @var s_graph::V
 ** Number of vertices
 ** @var s_graph::E
@@ -38,6 +39,7 @@ typedef struct	s_graph
 
 /*
 ** Allocates memory and initializes a graph data-structure.
+** @param V	Number of vertices
 ** @return Pointer to the newly allocated memory or `NULL` on failure
 ** @exception ENOMEM	Memory allocation error
 */
@@ -45,8 +47,8 @@ t_graph 		*make_graph(int V);
 
 /*
 ** Adds an edge between two vertices to a graph
-** @param v One vertex sharing the edge
-** @param w The other vertex sharing the edge
+** @param v The first vertex sharing the edge
+** @param w The second vertex sharing the edge
 ** @param graph The graph
 ** @return 0 on success, 1 on failure
 ** @exception ENOMEM	Memory allocation error

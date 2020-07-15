@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['next_60',['next',['../structs__list.html#a06a0f2db4e8b126a362bbfa366c0ab09',1,'s_list']]]
+  ['marked_88',['marked',['../structs__edkarp.html#a6e84e2813e5c4f990d36f8b5b5a56fdd',1,'s_edkarp']]]
 ];

@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 19:07:46 by unite             #+#    #+#             */
-/*   Updated: 2020/07/14 01:55:00 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/15 12:08:46 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
 
 /*
 ** @struct s_edkarp
-** A data structure representing the current state of the Edmonds–Karp algorithm
+** @brief Edmonds-Karp algorithm
+** @details A data structure representing the current state of the
+** Edmonds–Karp algorithm
 ** @var s_edkarp::graph
 ** The graph on which the algorithm is running
 ** @var s_edkarp::source

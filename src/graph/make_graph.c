@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:35:49 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:58:06 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/15 16:23:10 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ t_graph 		*make_graph(int V)
 	int		i;
 
 	if (!(graph = ft_calloc(sizeof(graph), 1)) ||
-		!(graph->adj = ft_calloc(sizeof(t_list *), V)))
+		!(graph->adj = ft_calloc(sizeof(t_list *), V)) ||
+		!(graph->vertex_names) = ft_calloc(sizeof(char *), V))
 	{
 		free_graph(graph);
 		return (NULL);

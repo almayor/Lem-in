@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 17:49:33 by unite             #+#    #+#             */
-/*   Updated: 2020/07/13 20:22:42 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/15 11:46:21 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 
 /*
 ** @struct s_list
-** Represents a doubly-linked list
+** @brief A list
+** @details Represents a doubly-linked list
 ** @var s_list::next
 ** Next link in the list
 ** @var s_list::prev

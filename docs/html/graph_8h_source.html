@@ -77,7 +77,7 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2020/07/13 21:15:03 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Updated: 2020/07/15 23:34:33 by unite            ###   ########.fr       */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
@@ -89,32 +89,32 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="list_8h.html">list.h</a>&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structs__graph.html">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__graph.html">s_graph</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">   35</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">V</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structs__graph.html#a06a647c25b35a2d648338171b65a9439">   36</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="structs__graph.html#a06a647c25b35a2d648338171b65a9439">E</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">   37</a></span>&#160;    <a class="code" href="structs__list.html">t_list</a>  **<a class="code" href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">adj</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}               <a class="code" href="structs__graph.html">t_graph</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="structs__graph.html">t_graph</a>         *<a class="code" href="graph_8h.html#a9fe40de2c1f833aa8c93a1911db2fe16">make_graph</a>(<span class="keywordtype">int</span> V);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structs__graph.html">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__graph.html">s_graph</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">   36</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">V</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structs__graph.html#a06a647c25b35a2d648338171b65a9439">   37</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="structs__graph.html#a06a647c25b35a2d648338171b65a9439">E</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">   38</a></span>&#160;    <a class="code" href="structs__list.html">t_list</a>  **<a class="code" href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">adj</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}               <a class="code" href="structs__graph.html">t_graph</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<a class="code" href="structs__graph.html">t_graph</a>         *<a class="code" href="graph_8h.html#a9fe40de2c1f833aa8c93a1911db2fe16">make_graph</a>(<span class="keywordtype">int</span> V);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">int</span>             <a class="code" href="graph_8h.html#ac225b3a92280b9da544831109c05e81c">add_edge_graph</a>(<a class="code" href="structs__graph.html">t_graph</a> *graph, <span class="keywordtype">int</span> v, <span class="keywordtype">int</span> w);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">int</span>             <a class="code" href="graph_8h.html#ac225b3a92280b9da544831109c05e81c">add_edge_graph</a>(<a class="code" href="structs__graph.html">t_graph</a> *graph, <span class="keywordtype">int</span> v, <span class="keywordtype">int</span> w);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="graph_8h.html#a1ecfbaadd85bfe385334ea5a5605c5cc">free_graph</a>(<a class="code" href="structs__graph.html">t_graph</a> *graph);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="graph_8h.html#a1ecfbaadd85bfe385334ea5a5605c5cc">free_graph</a>(<a class="code" href="structs__graph.html">t_graph</a> *graph);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="agraph_8h_html_a9fe40de2c1f833aa8c93a1911db2fe16"><div class="ttname"><a href="graph_8h.html#a9fe40de2c1f833aa8c93a1911db2fe16">make_graph</a></div><div class="ttdeci">t_graph * make_graph(int V)</div></div>
-<div class="ttc" id="astructs__graph_html_ac62d642e1a23330862d4964c0e4f6746"><div class="ttname"><a href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">s_graph::adj</a></div><div class="ttdeci">t_list ** adj</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00037">graph.h:37</a></div></div>
-<div class="ttc" id="astructs__graph_html_a06a647c25b35a2d648338171b65a9439"><div class="ttname"><a href="structs__graph.html#a06a647c25b35a2d648338171b65a9439">s_graph::E</a></div><div class="ttdeci">int E</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00036">graph.h:36</a></div></div>
-<div class="ttc" id="astructs__graph_html"><div class="ttname"><a href="structs__graph.html">s_graph</a></div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00033">graph.h:33</a></div></div>
-<div class="ttc" id="astructs__list_html"><div class="ttname"><a href="structs__list.html">s_list</a></div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00030">list.h:30</a></div></div>
+<div class="ttc" id="astructs__graph_html_ac62d642e1a23330862d4964c0e4f6746"><div class="ttname"><a href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">s_graph::adj</a></div><div class="ttdeci">t_list ** adj</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00038">graph.h:38</a></div></div>
+<div class="ttc" id="astructs__graph_html_a06a647c25b35a2d648338171b65a9439"><div class="ttname"><a href="structs__graph.html#a06a647c25b35a2d648338171b65a9439">s_graph::E</a></div><div class="ttdeci">int E</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00037">graph.h:37</a></div></div>
+<div class="ttc" id="astructs__graph_html"><div class="ttname"><a href="structs__graph.html">s_graph</a></div><div class="ttdoc">An undirected graph.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00034">graph.h:34</a></div></div>
+<div class="ttc" id="astructs__list_html"><div class="ttname"><a href="structs__list.html">s_list</a></div><div class="ttdoc">A list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00031">list.h:31</a></div></div>
 <div class="ttc" id="agraph_8h_html_a1ecfbaadd85bfe385334ea5a5605c5cc"><div class="ttname"><a href="graph_8h.html#a1ecfbaadd85bfe385334ea5a5605c5cc">free_graph</a></div><div class="ttdeci">void free_graph(t_graph *graph)</div></div>
 <div class="ttc" id="agraph_8h_html_ac225b3a92280b9da544831109c05e81c"><div class="ttname"><a href="graph_8h.html#ac225b3a92280b9da544831109c05e81c">add_edge_graph</a></div><div class="ttdeci">int add_edge_graph(t_graph *graph, int v, int w)</div></div>
-<div class="ttc" id="astructs__graph_html_ac5b9d07b6f485dd0209bbf69c76c03cf"><div class="ttname"><a href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">s_graph::V</a></div><div class="ttdeci">int V</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00035">graph.h:35</a></div></div>
+<div class="ttc" id="astructs__graph_html_ac5b9d07b6f485dd0209bbf69c76c03cf"><div class="ttname"><a href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">s_graph::V</a></div><div class="ttdeci">int V</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00036">graph.h:36</a></div></div>
 <div class="ttc" id="alist_8h_html"><div class="ttname"><a href="list_8h.html">list.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
