@@ -70,48 +70,48 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="make__edkarp_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*   make_edkarp.c                                      :+:      :+:    :+:   */</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*   Created: 2020/07/13 21:01:25 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*   Updated: 2020/07/16 01:03:43 by unite            ###   ########.fr       */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="edmonds-karp_8h.html">edmonds-karp.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="edmonds-karp_8h.html#af8e90634c9c2fb782c54b7b0b45314d5">   23</a></span>&#160;<a class="code" href="structs__edkarp.html">t_edkarp</a>    *<a class="code" href="make__edkarp_8c.html#af8e90634c9c2fb782c54b7b0b45314d5">make_edkarp</a>(<span class="keyword">const</span> <a class="code" href="structs__graph.html">t_graph</a> *graph, <span class="keywordtype">int</span> source, <span class="keywordtype">int</span> sink)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="structs__edkarp.html">t_edkarp</a>    *edkarp;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (!graph || source == sink ||</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        source &lt; 0 || source &gt;= graph-&gt;<a class="code" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">V</a> ||</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        sink &lt; 0 || sink &gt;= graph-V)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        errno = EINVAL;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> (NULL);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (!(edkarp = <a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f">ft_calloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="structs__edkarp.html">t_edkarp</a>), 1)) ||</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        !(edkarp-&gt;<a class="code" href="structs__edkarp.html#a6e84e2813e5c4f990d36f8b5b5a56fdd">marked</a> = <a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f">ft_calloc</a>(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>), graph-&gt;<a class="code" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">V</a>)))</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        errno = ENOMEM;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="free__edkarp_8c.html#a4feeaf6cf8b48b10e179572b2615936c">free_edkarp</a>(edkarp);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> (NULL);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> (edkarp);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*   make_edkarp.c                                      :+:      :+:    :+:   */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*   Created: 2020/07/13 21:01:25 by unite             #+#    #+#             */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*   Updated: 2020/07/16 01:03:43 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="edmonds-karp_8h.html">edmonds-karp.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="edmonds-karp_8h.html#af8e90634c9c2fb782c54b7b0b45314d5">   28</a></span>&#160;<a class="code" href="structs__edkarp.html">t_edkarp</a>    *<a class="code" href="make__edkarp_8c.html#af8e90634c9c2fb782c54b7b0b45314d5">make_edkarp</a>(<span class="keyword">const</span> <a class="code" href="structs__graph.html">t_graph</a> *graph, <span class="keywordtype">int</span> source, <span class="keywordtype">int</span> sink)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="structs__edkarp.html">t_edkarp</a>    *edkarp;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (!graph || source == sink ||</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        source &lt; 0 || source &gt;= graph-&gt;<a class="code" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">V</a> ||</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        sink &lt; 0 || sink &gt;= graph-V)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        errno = EINVAL;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> (NULL);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (!(edkarp = <a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f">ft_calloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="structs__edkarp.html">t_edkarp</a>), 1)) ||</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        !(edkarp-&gt;<a class="code" href="structs__edkarp.html#a6e84e2813e5c4f990d36f8b5b5a56fdd">marked</a> = <a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f">ft_calloc</a>(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>), graph-&gt;<a class="code" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">V</a>)))</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        errno = ENOMEM;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="free__edkarp_8c.html#a4feeaf6cf8b48b10e179572b2615936c">free_edkarp</a>(edkarp);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> (NULL);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> (edkarp);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="afree__edkarp_8c_html_a4feeaf6cf8b48b10e179572b2615936c"><div class="ttname"><a href="free__edkarp_8c.html#a4feeaf6cf8b48b10e179572b2615936c">free_edkarp</a></div><div class="ttdeci">void free_edkarp(t_edkarp *edkarp)</div><div class="ttdoc">Frees all memory taken by the Edmonds-Karp algorithm or does nothing if edkarp is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__edkarp_8c_source.html#l00023">free_edkarp.c:23</a></div></div>
-<div class="ttc" id="astructs__edkarp_html"><div class="ttname"><a href="structs__edkarp.html">s_edkarp</a></div><div class="ttdoc">Edmonds-Karp algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="edmonds-karp_8h_source.html#l00046">edmonds-karp.h:46</a></div></div>
-<div class="ttc" id="astructs__graph_html"><div class="ttname"><a href="structs__graph.html">s_graph</a></div><div class="ttdoc">An undirected graph.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00043">graph.h:43</a></div></div>
-<div class="ttc" id="astructs__edkarp_html_a6e84e2813e5c4f990d36f8b5b5a56fdd"><div class="ttname"><a href="structs__edkarp.html#a6e84e2813e5c4f990d36f8b5b5a56fdd">s_edkarp::marked</a></div><div class="ttdeci">int * marked</div><div class="ttdoc">A boolean array denoting which vertices are on previously found augmenting paths and should be ignore...</div><div class="ttdef"><b>Definition:</b> <a href="edmonds-karp_8h_source.html#l00051">edmonds-karp.h:51</a></div></div>
+<div class="ttc" id="afree__edkarp_8c_html_a4feeaf6cf8b48b10e179572b2615936c"><div class="ttname"><a href="free__edkarp_8c.html#a4feeaf6cf8b48b10e179572b2615936c">free_edkarp</a></div><div class="ttdeci">void free_edkarp(t_edkarp *edkarp)</div><div class="ttdoc">Frees all memory taken by the Edmonds-Karp algorithm or does nothing if edkarp is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__edkarp_8c_source.html#l00028">free_edkarp.c:28</a></div></div>
+<div class="ttc" id="astructs__edkarp_html"><div class="ttname"><a href="structs__edkarp.html">s_edkarp</a></div><div class="ttdoc">Edmonds-Karp algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="edmonds-karp_8h_source.html#l00051">edmonds-karp.h:51</a></div></div>
+<div class="ttc" id="astructs__graph_html"><div class="ttname"><a href="structs__graph.html">s_graph</a></div><div class="ttdoc">An undirected graph.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00048">graph.h:48</a></div></div>
+<div class="ttc" id="astructs__edkarp_html_a6e84e2813e5c4f990d36f8b5b5a56fdd"><div class="ttname"><a href="structs__edkarp.html#a6e84e2813e5c4f990d36f8b5b5a56fdd">s_edkarp::marked</a></div><div class="ttdeci">int * marked</div><div class="ttdoc">A boolean array denoting which vertices are on previously found augmenting paths and should be ignore...</div><div class="ttdef"><b>Definition:</b> <a href="edmonds-karp_8h_source.html#l00056">edmonds-karp.h:56</a></div></div>
 <div class="ttc" id="alibft_8h_html_a6747f1fa402c0eb1dde5b99d3cdc900f"><div class="ttname"><a href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f">ft_calloc</a></div><div class="ttdeci">void * ft_calloc(size_t count, size_t size)</div></div>
 <div class="ttc" id="aedmonds-karp_8h_html"><div class="ttname"><a href="edmonds-karp_8h.html">edmonds-karp.h</a></div></div>
-<div class="ttc" id="amake__edkarp_8c_html_af8e90634c9c2fb782c54b7b0b45314d5"><div class="ttname"><a href="make__edkarp_8c.html#af8e90634c9c2fb782c54b7b0b45314d5">make_edkarp</a></div><div class="ttdeci">t_edkarp * make_edkarp(const t_graph *graph, int source, int sink)</div><div class="ttdoc">Initializes a run of the Edkmonds-Karp algorithm Allocates memory and initializes a data-structure,...</div><div class="ttdef"><b>Definition:</b> <a href="make__edkarp_8c_source.html#l00023">make_edkarp.c:23</a></div></div>
-<div class="ttc" id="astructs__graph_html_ac5b9d07b6f485dd0209bbf69c76c03cf"><div class="ttname"><a href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">s_graph::V</a></div><div class="ttdeci">int V</div><div class="ttdoc">Number of vertices.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00045">graph.h:45</a></div></div>
+<div class="ttc" id="amake__edkarp_8c_html_af8e90634c9c2fb782c54b7b0b45314d5"><div class="ttname"><a href="make__edkarp_8c.html#af8e90634c9c2fb782c54b7b0b45314d5">make_edkarp</a></div><div class="ttdeci">t_edkarp * make_edkarp(const t_graph *graph, int source, int sink)</div><div class="ttdoc">Initializes a run of the Edkmonds-Karp algorithm Allocates memory and initializes a data-structure,...</div><div class="ttdef"><b>Definition:</b> <a href="make__edkarp_8c_source.html#l00028">make_edkarp.c:28</a></div></div>
+<div class="ttc" id="astructs__graph_html_ac5b9d07b6f485dd0209bbf69c76c03cf"><div class="ttname"><a href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">s_graph::V</a></div><div class="ttdeci">int V</div><div class="ttdoc">Number of vertices.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00050">graph.h:50</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
