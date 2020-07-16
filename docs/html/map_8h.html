@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
-<code>#include &quot;libftprintfgnl.h&quot;</code><br />
+<code>#include &quot;<a class="elRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for map.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -84,7 +84,7 @@ $(function() {
 <map name="include_2map_8h" id="include_2map_8h">
 <area shape="rect" title=" " alt="" coords="38,5,143,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,69,104"/>
-<area shape="rect" title=" " alt="" coords="93,79,194,104"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="93,79,194,104"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -94,8 +94,12 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="map_8h__dep__incl.png" border="0" usemap="#include_2map_8hdep" alt=""/></div>
 <map name="include_2map_8hdep" id="include_2map_8hdep">
-<area shape="rect" title=" " alt="" coords="6,5,110,31"/>
-<area shape="rect" href="farm_8h.html" title=" " alt="" coords="5,79,110,104"/>
+<area shape="rect" title=" " alt="" coords="62,5,167,31"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="5,152,87,177"/>
+<area shape="rect" href="farm_8h.html" title=" " alt="" coords="130,79,235,104"/>
+<area shape="rect" href="free__farm_8c.html" title=" " alt="" coords="112,152,253,177"/>
+<area shape="rect" href="make__farm_8c.html" title=" " alt="" coords="277,152,427,177"/>
+<area shape="rect" href="run__farm_8c.html" title=" " alt="" coords="451,152,588,177"/>
 </map>
 </div>
 </div>
@@ -116,14 +120,19 @@ typedef struct <a class="el" href="structs__map.html">s_map</a>&#160;</td><td cl
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a052993233388a36a7daa54b68878baa4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__map.html">t_map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a052993233388a36a7daa54b68878baa4">make_map</a> (void)</td></tr>
+<tr class="memdesc:a052993233388a36a7daa54b68878baa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory and initialies a map.  <a href="map_8h.html#a052993233388a36a7daa54b68878baa4">More...</a><br /></td></tr>
 <tr class="separator:a052993233388a36a7daa54b68878baa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67b8b5d39cd69ecbbc7100a0ddb82920"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a67b8b5d39cd69ecbbc7100a0ddb82920">insert_map</a> (<a class="el" href="structs__map.html">t_map</a> *map, int key, const char *val)</td></tr>
+<tr class="memdesc:a67b8b5d39cd69ecbbc7100a0ddb82920"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a key-value pair into the map or update an existing entry if the key already exists in the map.  <a href="map_8h.html#a67b8b5d39cd69ecbbc7100a0ddb82920">More...</a><br /></td></tr>
 <tr class="separator:a67b8b5d39cd69ecbbc7100a0ddb82920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69c763e7ef5e9b695be949700e1769f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#aa69c763e7ef5e9b695be949700e1769f">val2key_map</a> (<a class="el" href="structs__map.html">t_map</a> *map, const char *val)</td></tr>
+<tr class="memdesc:aa69c763e7ef5e9b695be949700e1769f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the key associated with a given value.  <a href="map_8h.html#aa69c763e7ef5e9b695be949700e1769f">More...</a><br /></td></tr>
 <tr class="separator:aa69c763e7ef5e9b695be949700e1769f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac35ba0c380b81aff234378962b1030da"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#ac35ba0c380b81aff234378962b1030da">key2val_map</a> (<a class="el" href="structs__map.html">t_map</a> *map, int key)</td></tr>
+<tr class="memdesc:ac35ba0c380b81aff234378962b1030da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value associated with a given key.  <a href="map_8h.html#ac35ba0c380b81aff234378962b1030da">More...</a><br /></td></tr>
 <tr class="separator:ac35ba0c380b81aff234378962b1030da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3668ab7cf2e798dba13f6c167378fb6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a3668ab7cf2e798dba13f6c167378fb6f">free_map</a> (<a class="el" href="structs__map.html">t_map</a> *map)</td></tr>
+<tr class="memdesc:a3668ab7cf2e798dba13f6c167378fb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all memory taken by the map or does nothing if the map is <code>NULL</code>.  <a href="map_8h.html#a3668ab7cf2e798dba13f6c167378fb6f">More...</a><br /></td></tr>
 <tr class="separator:a3668ab7cf2e798dba13f6c167378fb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -142,7 +151,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Frees all memory taken by the map or does nothing if the map is <code>NULL</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Frees all memory taken by the map or does nothing if the map is <code>NULL</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">map</td><td>The map </td></tr>
   </table>
@@ -182,7 +193,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Insert a key-value pair into the map or update an existing entry if the key already exists in the map. A defensive copy of the value string is taken. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Insert a key-value pair into the map or update an existing entry if the key already exists in the map. </p>
+<p>A defensive copy of the value string is taken. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">map</td><td>The map </td></tr>
     <tr><td class="paramname">key</td><td>The key </td></tr>
@@ -225,7 +238,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the value associated with a given key. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Returns the value associated with a given key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">map</td><td>The map </td></tr>
     <tr><td class="paramname">key</td><td>The key </td></tr>
@@ -257,7 +272,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Allocates memory and initialies a map. </p><dl class="section return"><dt>Returns</dt><dd>Pointer to the newly allocated memory or <code>NULL</code> on failure </dd></dl>
+
+<p>Allocates memory and initialies a map. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the newly allocated memory or <code>NULL</code> on failure </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">ENOMEM</td><td>Memory allocation error </td></tr>
@@ -292,7 +309,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the key associated with a given value. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Returns the key associated with a given value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">map</td><td>The map </td></tr>
     <tr><td class="paramname">val</td><td>The value </td></tr>

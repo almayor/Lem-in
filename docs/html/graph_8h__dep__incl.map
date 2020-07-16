@@ -1,4 +1,11 @@
 <map id="include/graph.h" name="include/graph.h">
-<area shape="rect" id="node1" title=" " alt="" coords="31,5,143,31"/>
-<area shape="rect" id="node2" href="$edmonds-karp_8h.html" title=" " alt="" coords="5,79,169,104"/>
+<area shape="rect" id="node1" title=" " alt="" coords="283,5,396,31"/>
+<area shape="rect" id="node2" href="$add__edge__graph_8c.html" title=" " alt="" coords="5,79,145,117"/>
+<area shape="rect" id="node3" href="$free__graph_8c.html" title=" " alt="" coords="170,85,325,111"/>
+<area shape="rect" id="node4" href="$make__graph_8c.html" title=" " alt="" coords="349,85,514,111"/>
+<area shape="rect" id="node5" href="$edmonds-karp_8h.html" title=" " alt="" coords="537,85,701,111"/>
+<area shape="rect" id="node6" href="$free__edkarp_8c.html" title=" " alt="" coords="266,165,421,204"/>
+<area shape="rect" id="node7" href="$make__edkarp_8c.html" title=" " alt="" coords="445,165,609,204"/>
+<area shape="rect" id="node8" href="$next__path__edkarp_8c.html" title=" " alt="" coords="633,165,790,204"/>
+<area shape="rect" id="node9" href="$main_8c.html" title=" " alt="" coords="814,172,896,197"/>
 </map>

@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
-<code>#include &quot;libftprintfgnl.h&quot;</code><br />
+<code>#include &quot;<a class="elRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for graph.h:</div>
@@ -85,7 +85,7 @@ $(function() {
 <map name="include_2graph_8h" id="include_2graph_8h">
 <area shape="rect" title=" " alt="" coords="34,5,147,31"/>
 <area shape="rect" title=" " alt="" coords="5,152,69,177"/>
-<area shape="rect" title=" " alt="" coords="97,152,198,177"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="97,152,198,177"/>
 <area shape="rect" href="list_8h.html" title=" " alt="" coords="66,79,115,104"/>
 </map>
 </div>
@@ -96,8 +96,15 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="graph_8h__dep__incl.png" border="0" usemap="#include_2graph_8hdep" alt=""/></div>
 <map name="include_2graph_8hdep" id="include_2graph_8hdep">
-<area shape="rect" title=" " alt="" coords="31,5,143,31"/>
-<area shape="rect" href="edmonds-karp_8h.html" title=" " alt="" coords="5,79,169,104"/>
+<area shape="rect" title=" " alt="" coords="283,5,396,31"/>
+<area shape="rect" href="add__edge__graph_8c.html" title=" " alt="" coords="5,79,145,117"/>
+<area shape="rect" href="free__graph_8c.html" title=" " alt="" coords="170,85,325,111"/>
+<area shape="rect" href="make__graph_8c.html" title=" " alt="" coords="349,85,514,111"/>
+<area shape="rect" href="edmonds-karp_8h.html" title=" " alt="" coords="537,85,701,111"/>
+<area shape="rect" href="free__edkarp_8c.html" title=" " alt="" coords="266,165,421,204"/>
+<area shape="rect" href="make__edkarp_8c.html" title=" " alt="" coords="445,165,609,204"/>
+<area shape="rect" href="next__path__edkarp_8c.html" title=" " alt="" coords="633,165,790,204"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="814,172,896,197"/>
 </map>
 </div>
 </div>
@@ -118,10 +125,13 @@ typedef struct <a class="el" href="structs__graph.html">s_graph</a>&#160;</td><t
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9fe40de2c1f833aa8c93a1911db2fe16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__graph.html">t_graph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8h.html#a9fe40de2c1f833aa8c93a1911db2fe16">make_graph</a> (int V)</td></tr>
+<tr class="memdesc:a9fe40de2c1f833aa8c93a1911db2fe16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory and initializes a graph data-structure.  <a href="graph_8h.html#a9fe40de2c1f833aa8c93a1911db2fe16">More...</a><br /></td></tr>
 <tr class="separator:a9fe40de2c1f833aa8c93a1911db2fe16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac225b3a92280b9da544831109c05e81c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8h.html#ac225b3a92280b9da544831109c05e81c">add_edge_graph</a> (<a class="el" href="structs__graph.html">t_graph</a> *graph, int v, int w)</td></tr>
+<tr class="memdesc:ac225b3a92280b9da544831109c05e81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge between two vertices to a graph.  <a href="graph_8h.html#ac225b3a92280b9da544831109c05e81c">More...</a><br /></td></tr>
 <tr class="separator:ac225b3a92280b9da544831109c05e81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ecfbaadd85bfe385334ea5a5605c5cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8h.html#a1ecfbaadd85bfe385334ea5a5605c5cc">free_graph</a> (<a class="el" href="structs__graph.html">t_graph</a> *graph)</td></tr>
+<tr class="memdesc:a1ecfbaadd85bfe385334ea5a5605c5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all memory taken by a graph or does nothing if the graph is <code>NULL</code>.  <a href="graph_8h.html#a1ecfbaadd85bfe385334ea5a5605c5cc">More...</a><br /></td></tr>
 <tr class="separator:a1ecfbaadd85bfe385334ea5a5605c5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -156,7 +166,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds an edge between two vertices to a graph </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Adds an edge between two vertices to a graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">v</td><td>The first vertex sharing the edge </td></tr>
     <tr><td class="paramname">w</td><td>The second vertex sharing the edge </td></tr>
@@ -172,6 +184,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="add__edge__graph_8c_source.html#l00023">23</a> of file <a class="el" href="add__edge__graph_8c_source.html">add_edge_graph.c</a>.</p>
 
 </div>
 </div>
@@ -190,12 +204,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Frees all memory taken by a graph or does nothing if the graph is <code>NULL</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Frees all memory taken by a graph or does nothing if the graph is <code>NULL</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">graph</td><td>The graph </td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="free__graph_8c_source.html#l00023">23</a> of file <a class="el" href="free__graph_8c_source.html">free_graph.c</a>.</p>
 
 </div>
 </div>
@@ -214,7 +232,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Allocates memory and initializes a graph data-structure. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Allocates memory and initializes a graph data-structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">V</td><td>Number of vertices </td></tr>
   </table>
@@ -227,6 +247,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="make__graph_8c_source.html#l00023">23</a> of file <a class="el" href="make__graph_8c_source.html">make_graph.c</a>.</p>
 
 </div>
 </div>

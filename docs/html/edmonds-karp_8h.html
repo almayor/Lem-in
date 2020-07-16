@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
-<code>#include &quot;libftprintfgnl.h&quot;</code><br />
+<code>#include &quot;<a class="elRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="graph_8h_source.html">graph.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="queue_8h_source.html">queue.h</a>&quot;</code><br />
@@ -87,10 +87,24 @@ $(function() {
 <map name="include_2edmonds-karp_8h" id="include_2edmonds-karp_8h">
 <area shape="rect" title=" " alt="" coords="51,5,215,31"/>
 <area shape="rect" title=" " alt="" coords="55,225,118,251"/>
-<area shape="rect" title=" " alt="" coords="179,225,279,251"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="179,225,279,251"/>
 <area shape="rect" href="graph_8h.html" title=" " alt="" coords="170,79,237,104"/>
 <area shape="rect" href="list_8h.html" title=" " alt="" coords="93,152,141,177"/>
 <area shape="rect" href="queue_8h.html" title=" " alt="" coords="26,79,96,104"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="edmonds-karp_8h__dep__incl.png" border="0" usemap="#include_2edmonds-karp_8hdep" alt=""/></div>
+<map name="include_2edmonds-karp_8hdep" id="include_2edmonds-karp_8hdep">
+<area shape="rect" title=" " alt="" coords="277,5,441,31"/>
+<area shape="rect" href="free__edkarp_8c.html" title=" " alt="" coords="5,79,160,117"/>
+<area shape="rect" href="make__edkarp_8c.html" title=" " alt="" coords="185,79,349,117"/>
+<area shape="rect" href="next__path__edkarp_8c.html" title=" " alt="" coords="372,79,529,117"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="554,85,636,111"/>
 </map>
 </div>
 </div>
@@ -111,10 +125,13 @@ typedef struct <a class="el" href="structs__edkarp.html">s_edkarp</a>&#160;</td>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af8e90634c9c2fb782c54b7b0b45314d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__edkarp.html">t_edkarp</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#af8e90634c9c2fb782c54b7b0b45314d5">make_edkarp</a> (const <a class="el" href="structs__graph.html">t_graph</a> *graph, int source, int sink)</td></tr>
+<tr class="memdesc:af8e90634c9c2fb782c54b7b0b45314d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a run of the Edkmonds-Karp algorithm Allocates memory and initializes a data-structure, representing the current state of the Edmonds–Karp algorithm.  <a href="edmonds-karp_8h.html#af8e90634c9c2fb782c54b7b0b45314d5">More...</a><br /></td></tr>
 <tr class="separator:af8e90634c9c2fb782c54b7b0b45314d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8d8a82f9c7991fc3da488a0d41f003a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#ab8d8a82f9c7991fc3da488a0d41f003a">next_path_edkarp</a> (<a class="el" href="structs__edkarp.html">t_edkarp</a> *edkarp)</td></tr>
+<tr class="memitem:ab8d8a82f9c7991fc3da488a0d41f003a"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#ab8d8a82f9c7991fc3da488a0d41f003a">next_path_edkarp</a> (<a class="el" href="structs__edkarp.html">t_edkarp</a> *edkarp)</td></tr>
+<tr class="memdesc:ab8d8a82f9c7991fc3da488a0d41f003a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the Edmonds-Karp algorithm Computes the next augmenting (shortest) path from source to sink, given the current state of the Edmonds-Karp algorithm.  <a href="edmonds-karp_8h.html#ab8d8a82f9c7991fc3da488a0d41f003a">More...</a><br /></td></tr>
 <tr class="separator:ab8d8a82f9c7991fc3da488a0d41f003a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4feeaf6cf8b48b10e179572b2615936c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edmonds-karp_8h.html#a4feeaf6cf8b48b10e179572b2615936c">free_edkarp</a> (<a class="el" href="structs__edkarp.html">t_edkarp</a> *edkarp)</td></tr>
+<tr class="memdesc:a4feeaf6cf8b48b10e179572b2615936c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all memory taken by the Edmonds-Karp algorithm or does nothing if <code>edkarp</code> is <code>NULL</code>.  <a href="edmonds-karp_8h.html#a4feeaf6cf8b48b10e179572b2615936c">More...</a><br /></td></tr>
 <tr class="separator:a4feeaf6cf8b48b10e179572b2615936c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -133,12 +150,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Frees all memory taken by the Edmonds-Karp algorithm or does nothing if <code>edkarp</code> is <code>NULL</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Frees all memory taken by the Edmonds-Karp algorithm or does nothing if <code>edkarp</code> is <code>NULL</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edkarp</td><td>The current state of the Edmonds-Karp algorithm </td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="free__edkarp_8c_source.html#l00023">23</a> of file <a class="el" href="free__edkarp_8c_source.html">free_edkarp.c</a>.</p>
 
 </div>
 </div>
@@ -173,7 +194,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Allocates memory and initializes a data-structure, representing the current state of the Edmonds–Karp algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Initializes a run of the Edkmonds-Karp algorithm Allocates memory and initializes a data-structure, representing the current state of the Edmonds–Karp algorithm. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">graph</td><td>The graph to consider </td></tr>
     <tr><td class="paramname">source</td><td>The source vertex </td></tr>
@@ -190,6 +213,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="make__edkarp_8c_source.html#l00023">23</a> of file <a class="el" href="make__edkarp_8c_source.html">make_edkarp.c</a>.</p>
+
 </div>
 </div>
 <a id="ab8d8a82f9c7991fc3da488a0d41f003a"></a>
@@ -199,7 +224,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__list.html">t_list</a>* next_path_edkarp </td>
+          <td class="memname"><a class="elRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a>* next_path_edkarp </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structs__edkarp.html">t_edkarp</a> *&#160;</td>
           <td class="paramname"><em>edkarp</em></td><td>)</td>
@@ -207,13 +232,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Computes the next augmenting (shortest) path from source to sink, given the current state of the Edmonds-Karp algorithm </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Runs the Edmonds-Karp algorithm Computes the next augmenting (shortest) path from source to sink, given the current state of the Edmonds-Karp algorithm. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edkarp</td><td>A data structure representing the current state of the Edmonds-Karp algorithm </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The list of vertices on the next path from the source to the sink, or <code>NULL</code> if no more paths exist. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="next__path__edkarp_8c_source.html#l00079">79</a> of file <a class="el" href="next__path__edkarp_8c_source.html">next_path_edkarp.c</a>.</p>
 
 </div>
 </div>

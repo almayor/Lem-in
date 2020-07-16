@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['key_19',['key',['../structs__map.html#a6c1872ffebe1686b5b6ad956b1e8cc66',1,'s_map']]],
-  ['key2val_5fmap_20',['key2val_map',['../map_8h.html#ac35ba0c380b81aff234378962b1030da',1,'map.h']]]
+  ['insert_5fmap_134',['insert_map',['../map_8h.html#a67b8b5d39cd69ecbbc7100a0ddb82920',1,'map.h']]]
 ];

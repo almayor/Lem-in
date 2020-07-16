@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
-<code>#include &quot;libftprintfgnl.h&quot;</code><br />
+<code>#include &quot;<a class="elRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="map_8h_source.html">map.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -86,9 +86,23 @@ $(function() {
 <map name="include_2farm_8h" id="include_2farm_8h">
 <area shape="rect" title=" " alt="" coords="38,5,143,31"/>
 <area shape="rect" title=" " alt="" coords="5,152,69,177"/>
-<area shape="rect" title=" " alt="" coords="93,152,194,177"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="93,152,194,177"/>
 <area shape="rect" href="list_8h.html" title=" " alt="" coords="27,79,76,104"/>
 <area shape="rect" href="map_8h.html" title=" " alt="" coords="100,79,158,104"/>
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="farm_8h__dep__incl.png" border="0" usemap="#include_2farm_8hdep" alt=""/></div>
+<map name="include_2farm_8hdep" id="include_2farm_8hdep">
+<area shape="rect" title=" " alt="" coords="276,5,382,31"/>
+<area shape="rect" href="free__farm_8c.html" title=" " alt="" coords="5,79,146,104"/>
+<area shape="rect" href="make__farm_8c.html" title=" " alt="" coords="170,79,320,104"/>
+<area shape="rect" href="run__farm_8c.html" title=" " alt="" coords="345,79,481,104"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="505,79,587,104"/>
 </map>
 </div>
 </div>
@@ -109,10 +123,13 @@ typedef struct <a class="el" href="structs__farm.html">s_farm</a>&#160;</td><td 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5b074a8b8277a5d7fe21eea5defc8128"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__farm.html">t_farm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farm_8h.html#a5b074a8b8277a5d7fe21eea5defc8128">make_farm</a> (int n_ants)</td></tr>
+<tr class="memdesc:a5b074a8b8277a5d7fe21eea5defc8128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory and initializes a data structure representing an ant farm.  <a href="farm_8h.html#a5b074a8b8277a5d7fe21eea5defc8128">More...</a><br /></td></tr>
 <tr class="separator:a5b074a8b8277a5d7fe21eea5defc8128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b747cfcb6aeb491accd815fe13bf31c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farm_8h.html#a3b747cfcb6aeb491accd815fe13bf31c">run_farm</a> (<a class="el" href="structs__farm.html">t_farm</a> *farm, <a class="el" href="structs__list.html">t_list</a> **paths, <a class="el" href="structs__map.html">t_map</a> *vertex_names)</td></tr>
+<tr class="memitem:a3b747cfcb6aeb491accd815fe13bf31c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farm_8h.html#a3b747cfcb6aeb491accd815fe13bf31c">run_farm</a> (<a class="el" href="structs__farm.html">t_farm</a> *farm, <a class="elRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a> **paths, <a class="el" href="structs__map.html">t_map</a> *vertex_names)</td></tr>
+<tr class="memdesc:a3b747cfcb6aeb491accd815fe13bf31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run ants in the farm along the given paths.  <a href="farm_8h.html#a3b747cfcb6aeb491accd815fe13bf31c">More...</a><br /></td></tr>
 <tr class="separator:a3b747cfcb6aeb491accd815fe13bf31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaaa41da466fe87f679a99e8b140075d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="farm_8h.html#acaaa41da466fe87f679a99e8b140075d">free_farm</a> (<a class="el" href="structs__farm.html">t_farm</a> *farm)</td></tr>
+<tr class="memdesc:acaaa41da466fe87f679a99e8b140075d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all memory taken by an ant farm or does nothing if the farm is <code>NULL</code>.  <a href="farm_8h.html#acaaa41da466fe87f679a99e8b140075d">More...</a><br /></td></tr>
 <tr class="separator:acaaa41da466fe87f679a99e8b140075d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -131,7 +148,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Frees all memory taken by an ant farm or does nothing if the farm is <code>NULL</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="free__farm_8c_source.html#l00023">23</a> of file <a class="el" href="free__farm_8c_source.html">free_farm.c</a>.</p>
 
 </div>
 </div>
@@ -150,7 +170,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Allocates memory and initializes a data structure representing an ant farm. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Allocates memory and initializes a data structure representing an ant farm. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n_ants</td><td>The number of ants </td></tr>
   </table>
@@ -163,6 +185,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="make__farm_8c_source.html#l00023">23</a> of file <a class="el" href="make__farm_8c_source.html">make_farm.c</a>.</p>
 
 </div>
 </div>
@@ -181,7 +205,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structs__list.html">t_list</a> **&#160;</td>
+          <td class="paramtype"><a class="elRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a> **&#160;</td>
           <td class="paramname"><em>paths</em>, </td>
         </tr>
         <tr>
@@ -197,7 +221,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Run the farm with the given paths. For each ant, allocate a path and run it along it. If several ants share a path (in the cases where there are fewer paths than ants), wait until the ant in front has moved ahead before putting the next ant on this path at the start. Print out each ant's position at every step, given a map from vertex id's to vertex names; </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Run ants in the farm along the given paths. </p>
+<p>For each ant, allocates a path and runs it along it. If several ants share a path (in cases where there are fewer paths than ants), wait until the ant in front has moved ahead before putting the next ant on this path at the start. Print out each ant's position at every step, given a map from vertex id's to vertex names; </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">farm</td><td>The ant farm </td></tr>
     <tr><td class="paramname">paths</td><td>An <code>NULL</code>-terminated array with all existing paths between the source and the sink, where each path is a list of vertex id's </td></tr>
@@ -212,6 +238,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="run__farm_8c_source.html#l00066">66</a> of file <a class="el" href="run__farm_8c_source.html">run_farm.c</a>.</p>
 
 </div>
 </div>
