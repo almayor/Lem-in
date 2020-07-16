@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['content_6',['content',['https://almayor.github.io/libft/html/structs__list.html#a5e7bcb97789f4440937bf7d76969bab3',1,'s_list']]],
-  ['content_5fsize_7',['content_size',['https://almayor.github.io/libft/html/structs__list.html#a5118e3c8c065287667e21c0802cdec14',1,'s_list']]]
+  ['dequeue_5fqueue_6',['dequeue_queue',['../dequeue__queue_8c.html#a5ff2b8e827e0a4c6702f773c666e2019',1,'dequeue_queue(t_queue *queue):&#160;dequeue_queue.c'],['../queue_8h.html#a5ff2b8e827e0a4c6702f773c666e2019',1,'dequeue_queue(t_queue *queue):&#160;dequeue_queue.c']]],
+  ['dequeue_5fqueue_2ec_7',['dequeue_queue.c',['../dequeue__queue_8c.html',1,'']]]
 ];

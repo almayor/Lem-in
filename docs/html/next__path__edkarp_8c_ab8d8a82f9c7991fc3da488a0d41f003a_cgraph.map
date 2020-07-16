@@ -1,0 +1,6 @@
+<map id="next_path_edkarp" name="next_path_edkarp">
+<area shape="rect" id="node1" title="Runs the Edmonds&#45;Karp algorithm Computes the next augmenting (shortest) path from source to sink,..." alt="" coords="5,22,133,48"/>
+<area shape="rect" id="node2" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="328,22,398,48"/>
+<area shape="rect" id="node3" href="$make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b" title="Allocates memory and initializes a list data&#45;structure." alt="" coords="192,22,269,48"/>
+<area shape="rect" id="node4" href="$make__queue_8c.html#a16b063d6385d8975162f3f5bd8438860" title="Allocates memory and initializes a queue data&#45;structure." alt="" coords="181,72,280,97"/>
+</map>

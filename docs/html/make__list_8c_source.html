@@ -70,26 +70,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="make__list_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*   make_list.c                                        :+:      :+:    :+:   */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*   Created: 2020/07/13 20:22:03 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*   Updated: 2020/07/16 01:04:22 by unite            ###   ########.fr       */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="list_8h.html">list.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="list_8h.html#a0f283118ee903b1a430e74f5a1d0931b">   28</a></span>&#160;<a class="codeRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a>          *<a class="code" href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b">make_list</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> (<a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f">ft_calloc</a>(<span class="keyword">sizeof</span>(<a class="codeRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a>), 1));</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   make_list.c                                        :+:      :+:    :+:   */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/07/13 20:22:03 by unite             #+#    #+#             */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/07/16 01:04:22 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="list_8h.html">list.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="list_8h.html#a0f283118ee903b1a430e74f5a1d0931b">   16</a></span>&#160;<a class="code" href="structs__list.html">t_list</a>          *<a class="code" href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b">make_list</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> (<a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f">ft_calloc</a>(<span class="keyword">sizeof</span>(<a class="code" href="structs__list.html">t_list</a>), 1));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="amake__list_8c_html_a0f283118ee903b1a430e74f5a1d0931b"><div class="ttname"><a href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b">make_list</a></div><div class="ttdeci">t_list * make_list(void)</div><div class="ttdoc">Allocates memory and initializes a list data-structure.</div><div class="ttdef"><b>Definition:</b> <a href="make__list_8c_source.html#l00028">make_list.c:28</a></div></div>
-<div class="ttc" id="astructs__list_html"><div class="ttname"><a href="https://almayor.github.io/libft/html/structs__list.html">s_list</a></div><div class="ttdoc">A list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00045">list.h:45</a></div></div>
+<div class="ttc" id="amake__list_8c_html_a0f283118ee903b1a430e74f5a1d0931b"><div class="ttname"><a href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b">make_list</a></div><div class="ttdeci">t_list * make_list(void)</div><div class="ttdoc">Allocates memory and initializes a list data-structure.</div><div class="ttdef"><b>Definition:</b> <a href="make__list_8c_source.html#l00016">make_list.c:16</a></div></div>
+<div class="ttc" id="astructs__list_html"><div class="ttname"><a href="structs__list.html">s_list</a></div><div class="ttdoc">A list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00033">list.h:33</a></div></div>
 <div class="ttc" id="alibft_8h_html_a6747f1fa402c0eb1dde5b99d3cdc900f"><div class="ttname"><a href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f">ft_calloc</a></div><div class="ttdeci">void * ft_calloc(size_t count, size_t size)</div></div>
 <div class="ttc" id="alist_8h_html"><div class="ttname"><a href="list_8h.html">list.h</a></div></div>
 <!-- start footer part -->

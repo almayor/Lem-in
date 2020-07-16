@@ -70,77 +70,77 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="main_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*   main.c                                             :+:      :+:    :+:   */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*   Updated: 2020/07/16 02:02:03 by unite            ###   ########.fr       */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="map_8h.html">map.h</a>&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="list_8h.html">list.h</a>&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="farm_8h.html">farm.h</a>&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="edmonds-karp_8h.html">edmonds-karp.h</a>&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">int</span>     <a class="code" href="main_8c.html#a1490c822ad354130cb58a5852531cf1c">get_n_ants</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="structs__map.html">t_map</a>   *<a class="code" href="main_8c.html#a7bb4c708cafa864839619a2b256c0682">get_vertex_names</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">   58</a></span>&#160;<span class="keywordtype">void</span>    <a class="code" href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">free_paths</a>(<a class="codeRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a> **paths)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (!paths)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        return ;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    i = 0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">while</span> (paths[i])</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709">free_list</a>(paths[i]);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        i++;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    free(paths);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="codeRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a>  **<a class="code" href="main_8c.html#acbfba2e32f1572466cc6f99b4bb2dff7">get_paths</a>(<span class="keywordtype">int</span> n_ants, <a class="code" href="structs__map.html">t_map</a> *vertex_names);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="structs__map.html">t_map</a>   *vertex_names;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="codeRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a>  **paths;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="structs__farm.html">t_farm</a>  *farm;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span>     n_ants;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> ((n_ants = <a class="code" href="main_8c.html#a1490c822ad354130cb58a5852531cf1c">get_n_ants</a>()) &amp;&amp;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        (vertex_names = <a class="code" href="main_8c.html#a7bb4c708cafa864839619a2b256c0682">get_vertex_names</a>()) &amp;&amp;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        (paths = <a class="code" href="main_8c.html#acbfba2e32f1572466cc6f99b4bb2dff7">get_paths</a>(n_ants, vertex_names)) &amp;&amp;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        (farm = <a class="code" href="make__farm_8c.html#a5b074a8b8277a5d7fe21eea5defc8128">make_farm</a>(n_ants)))</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="run__farm_8c.html#a3b747cfcb6aeb491accd815fe13bf31c">run_farm</a>(farm, paths, n_paths, vertex_names);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="free__farm_8c.html#acaaa41da466fe87f679a99e8b140075d">free_farm</a>(farm);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">free_paths</a>(paths);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="map_8h.html#a3668ab7cf2e798dba13f6c167378fb6f">free_map</a>(vertex_names);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   main.c                                             :+:      :+:    :+:   */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/07/16 02:02:03 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="codeRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="map_8h.html">map.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="list_8h.html">list.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="farm_8h.html">farm.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="edmonds-karp_8h.html">edmonds-karp.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">int</span>     <a class="code" href="main_8c.html#a1490c822ad354130cb58a5852531cf1c">get_n_ants</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="structs__map.html">t_map</a>   *<a class="code" href="main_8c.html#a7bb4c708cafa864839619a2b256c0682">get_vertex_names</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">   46</a></span>&#160;<span class="keywordtype">void</span>    <a class="code" href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">free_paths</a>(<a class="code" href="structs__list.html">t_list</a> **paths)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (!paths)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        return ;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    i = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">while</span> (paths[i])</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709">free_list</a>(paths[i]);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        i++;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    free(paths);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<a class="code" href="structs__list.html">t_list</a>  **<a class="code" href="main_8c.html#acbfba2e32f1572466cc6f99b4bb2dff7">get_paths</a>(<span class="keywordtype">int</span> n_ants, <a class="code" href="structs__map.html">t_map</a> *vertex_names);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="structs__map.html">t_map</a>   *vertex_names;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="structs__list.html">t_list</a>  **paths;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="structs__farm.html">t_farm</a>  *farm;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span>     n_ants;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> ((n_ants = <a class="code" href="main_8c.html#a1490c822ad354130cb58a5852531cf1c">get_n_ants</a>()) &amp;&amp;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        (vertex_names = <a class="code" href="main_8c.html#a7bb4c708cafa864839619a2b256c0682">get_vertex_names</a>()) &amp;&amp;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        (paths = <a class="code" href="main_8c.html#acbfba2e32f1572466cc6f99b4bb2dff7">get_paths</a>(n_ants, vertex_names)) &amp;&amp;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        (farm = <a class="code" href="make__farm_8c.html#a5b074a8b8277a5d7fe21eea5defc8128">make_farm</a>(n_ants)))</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="run__farm_8c.html#a3b747cfcb6aeb491accd815fe13bf31c">run_farm</a>(farm, paths, n_paths, vertex_names);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="free__farm_8c.html#acaaa41da466fe87f679a99e8b140075d">free_farm</a>(farm);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">free_paths</a>(paths);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="map_8h.html#a3668ab7cf2e798dba13f6c167378fb6f">free_map</a>(vertex_names);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="amain_8c_html_a7bb4c708cafa864839619a2b256c0682"><div class="ttname"><a href="main_8c.html#a7bb4c708cafa864839619a2b256c0682">get_vertex_names</a></div><div class="ttdeci">t_map * get_vertex_names(void)</div><div class="ttdoc">Reads rooms and returns a map between vertex id's and names.</div></div>
 <div class="ttc" id="amap_8h_html_a3668ab7cf2e798dba13f6c167378fb6f"><div class="ttname"><a href="map_8h.html#a3668ab7cf2e798dba13f6c167378fb6f">free_map</a></div><div class="ttdeci">void free_map(t_map *map)</div><div class="ttdoc">Frees all memory taken by the map or does nothing if the map is NULL.</div></div>
 <div class="ttc" id="afarm_8h_html"><div class="ttname"><a href="farm_8h.html">farm.h</a></div></div>
-<div class="ttc" id="astructs__farm_html"><div class="ttname"><a href="structs__farm.html">s_farm</a></div><div class="ttdoc">An ant farm.</div><div class="ttdef"><b>Definition:</b> <a href="farm_8h_source.html#l00050">farm.h:50</a></div></div>
-<div class="ttc" id="arun__farm_8c_html_a3b747cfcb6aeb491accd815fe13bf31c"><div class="ttname"><a href="run__farm_8c.html#a3b747cfcb6aeb491accd815fe13bf31c">run_farm</a></div><div class="ttdeci">int run_farm(t_farm *farm, t_list **paths, t_map *vertex_names)</div><div class="ttdoc">Run ants in the farm along the given paths.</div><div class="ttdef"><b>Definition:</b> <a href="run__farm_8c_source.html#l00071">run_farm.c:71</a></div></div>
-<div class="ttc" id="astructs__list_html"><div class="ttname"><a href="https://almayor.github.io/libft/html/structs__list.html">s_list</a></div><div class="ttdoc">A list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00045">list.h:45</a></div></div>
+<div class="ttc" id="astructs__farm_html"><div class="ttname"><a href="structs__farm.html">s_farm</a></div><div class="ttdoc">An ant farm.</div><div class="ttdef"><b>Definition:</b> <a href="farm_8h_source.html#l00038">farm.h:38</a></div></div>
+<div class="ttc" id="arun__farm_8c_html_a3b747cfcb6aeb491accd815fe13bf31c"><div class="ttname"><a href="run__farm_8c.html#a3b747cfcb6aeb491accd815fe13bf31c">run_farm</a></div><div class="ttdeci">int run_farm(t_farm *farm, t_list **paths, t_map *vertex_names)</div><div class="ttdoc">Run ants in the farm along the given paths.</div><div class="ttdef"><b>Definition:</b> <a href="run__farm_8c_source.html#l00059">run_farm.c:59</a></div></div>
+<div class="ttc" id="astructs__list_html"><div class="ttname"><a href="structs__list.html">s_list</a></div><div class="ttdoc">A list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00033">list.h:33</a></div></div>
 <div class="ttc" id="amap_8h_html"><div class="ttname"><a href="map_8h.html">map.h</a></div></div>
-<div class="ttc" id="astructs__map_html"><div class="ttname"><a href="structs__map.html">s_map</a></div><div class="ttdoc">A bidirectional map between integers and strings.</div><div class="ttdef"><b>Definition:</b> <a href="map_8h_source.html#l00045">map.h:45</a></div></div>
+<div class="ttc" id="astructs__map_html"><div class="ttname"><a href="structs__map.html">s_map</a></div><div class="ttdoc">A bidirectional map between integers and strings.</div><div class="ttdef"><b>Definition:</b> <a href="map_8h_source.html#l00033">map.h:33</a></div></div>
 <div class="ttc" id="aedmonds-karp_8h_html"><div class="ttname"><a href="edmonds-karp_8h.html">edmonds-karp.h</a></div></div>
-<div class="ttc" id="amake__farm_8c_html_a5b074a8b8277a5d7fe21eea5defc8128"><div class="ttname"><a href="make__farm_8c.html#a5b074a8b8277a5d7fe21eea5defc8128">make_farm</a></div><div class="ttdeci">t_farm * make_farm(int n_ants)</div><div class="ttdoc">Allocates memory and initializes a data structure representing an ant farm.</div><div class="ttdef"><b>Definition:</b> <a href="make__farm_8c_source.html#l00028">make_farm.c:28</a></div></div>
-<div class="ttc" id="afree__list_8c_html_a5772edc7aeef39713c35596814ec2709"><div class="ttname"><a href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709">free_list</a></div><div class="ttdeci">void free_list(t_list *list)</div><div class="ttdoc">Frees all memory taken by a list or does nothing if the list is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__list_8c_source.html#l00028">free_list.c:28</a></div></div>
-<div class="ttc" id="amain_8c_html_a12f435cfd8b7e7356da243f491e1d708"><div class="ttname"><a href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">free_paths</a></div><div class="ttdeci">void free_paths(t_list **paths)</div><div class="ttdoc">Frees paths found by the Edmonds-Karp algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00058">main.c:58</a></div></div>
+<div class="ttc" id="amake__farm_8c_html_a5b074a8b8277a5d7fe21eea5defc8128"><div class="ttname"><a href="make__farm_8c.html#a5b074a8b8277a5d7fe21eea5defc8128">make_farm</a></div><div class="ttdeci">t_farm * make_farm(int n_ants)</div><div class="ttdoc">Allocates memory and initializes a data structure representing an ant farm.</div><div class="ttdef"><b>Definition:</b> <a href="make__farm_8c_source.html#l00016">make_farm.c:16</a></div></div>
+<div class="ttc" id="afree__list_8c_html_a5772edc7aeef39713c35596814ec2709"><div class="ttname"><a href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709">free_list</a></div><div class="ttdeci">void free_list(t_list *list)</div><div class="ttdoc">Frees all memory taken by a list or does nothing if the list is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__list_8c_source.html#l00016">free_list.c:16</a></div></div>
+<div class="ttc" id="amain_8c_html_a12f435cfd8b7e7356da243f491e1d708"><div class="ttname"><a href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">free_paths</a></div><div class="ttdeci">void free_paths(t_list **paths)</div><div class="ttdoc">Frees paths found by the Edmonds-Karp algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00046">main.c:46</a></div></div>
 <div class="ttc" id="alibftprintfgnl_8h_html"><div class="ttname"><a href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a></div></div>
-<div class="ttc" id="amain_8c_html_a1490c822ad354130cb58a5852531cf1c"><div class="ttname"><a href="main_8c.html#a1490c822ad354130cb58a5852531cf1c">get_n_ants</a></div><div class="ttdeci">int get_n_ants(void)</div><div class="ttdoc">Reads and returns the number of ants.</div></div>
-<div class="ttc" id="afree__farm_8c_html_acaaa41da466fe87f679a99e8b140075d"><div class="ttname"><a href="free__farm_8c.html#acaaa41da466fe87f679a99e8b140075d">free_farm</a></div><div class="ttdeci">void free_farm(t_farm *farm)</div><div class="ttdoc">Frees all memory taken by an ant farm or does nothing if the farm is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__farm_8c_source.html#l00028">free_farm.c:28</a></div></div>
+<div class="ttc" id="amain_8c_html_a1490c822ad354130cb58a5852531cf1c"><div class="ttname"><a href="main_8c.html#a1490c822ad354130cb58a5852531cf1c">get_n_ants</a></div><div class="ttdeci">int get_n_ants(void)</div><div class="ttdoc">Reads and returns the number of ants.</div><div class="ttdef"><b>Definition:</b> <a href="get__n__ants_8c_source.html#l00036">get_n_ants.c:36</a></div></div>
+<div class="ttc" id="afree__farm_8c_html_acaaa41da466fe87f679a99e8b140075d"><div class="ttname"><a href="free__farm_8c.html#acaaa41da466fe87f679a99e8b140075d">free_farm</a></div><div class="ttdeci">void free_farm(t_farm *farm)</div><div class="ttdoc">Frees all memory taken by an ant farm or does nothing if the farm is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__farm_8c_source.html#l00016">free_farm.c:16</a></div></div>
 <div class="ttc" id="alist_8h_html"><div class="ttname"><a href="list_8h.html">list.h</a></div></div>
 <div class="ttc" id="amain_8c_html_acbfba2e32f1572466cc6f99b4bb2dff7"><div class="ttname"><a href="main_8c.html#acbfba2e32f1572466cc6f99b4bb2dff7">get_paths</a></div><div class="ttdeci">t_list ** get_paths(int n_ants, t_map *vertex_names)</div><div class="ttdoc">Reads links and returns paths found by the Edmonds-Karp algorithm.</div></div>
 <!-- start footer part -->

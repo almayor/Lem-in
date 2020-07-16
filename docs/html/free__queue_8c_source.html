@@ -70,32 +70,32 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="free__queue_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*   free_queue.c                                       :+:      :+:    :+:   */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*   Created: 2020/07/13 21:05:14 by kbethel           #+#    #+#             */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*   Updated: 2020/07/16 01:04:37 by unite            ###   ########.fr       */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="queue_8h.html">queue.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="queue_8h.html#a32da40b23d8448229992aa7c08a3c0bb">   28</a></span>&#160;<span class="keywordtype">void</span>            <a class="code" href="free__queue_8c.html#a32da40b23d8448229992aa7c08a3c0bb">free_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (!queue)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        return ;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709">free_list</a>(queue-&gt;<a class="code" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">head</a>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    free(queue);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   free_queue.c                                       :+:      :+:    :+:   */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/07/13 21:05:14 by kbethel           #+#    #+#             */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/07/16 01:04:37 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="queue_8h.html">queue.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="queue_8h.html#a32da40b23d8448229992aa7c08a3c0bb">   16</a></span>&#160;<span class="keywordtype">void</span>            <a class="code" href="free__queue_8c.html#a32da40b23d8448229992aa7c08a3c0bb">free_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (!queue)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        return ;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709">free_list</a>(queue-&gt;<a class="code" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">head</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    free(queue);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aqueue_8h_html"><div class="ttname"><a href="queue_8h.html">queue.h</a></div></div>
-<div class="ttc" id="astructs__queue_html"><div class="ttname"><a href="structs__queue.html">s_queue</a></div><div class="ttdoc">A queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00044">queue.h:44</a></div></div>
-<div class="ttc" id="afree__list_8c_html_a5772edc7aeef39713c35596814ec2709"><div class="ttname"><a href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709">free_list</a></div><div class="ttdeci">void free_list(t_list *list)</div><div class="ttdoc">Frees all memory taken by a list or does nothing if the list is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__list_8c_source.html#l00028">free_list.c:28</a></div></div>
-<div class="ttc" id="afree__queue_8c_html_a32da40b23d8448229992aa7c08a3c0bb"><div class="ttname"><a href="free__queue_8c.html#a32da40b23d8448229992aa7c08a3c0bb">free_queue</a></div><div class="ttdeci">void free_queue(t_queue *queue)</div><div class="ttdoc">Frees all memory taken by a queue or does nothing if the queue is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__queue_8c_source.html#l00028">free_queue.c:28</a></div></div>
-<div class="ttc" id="astructs__queue_html_a3ee96fcdc99807b713c9470b808a8fd9"><div class="ttname"><a href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">s_queue::head</a></div><div class="ttdeci">t_list * head</div><div class="ttdoc">The link with the oldest value in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00047">queue.h:47</a></div></div>
+<div class="ttc" id="astructs__queue_html"><div class="ttname"><a href="structs__queue.html">s_queue</a></div><div class="ttdoc">A queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00032">queue.h:32</a></div></div>
+<div class="ttc" id="afree__list_8c_html_a5772edc7aeef39713c35596814ec2709"><div class="ttname"><a href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709">free_list</a></div><div class="ttdeci">void free_list(t_list *list)</div><div class="ttdoc">Frees all memory taken by a list or does nothing if the list is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__list_8c_source.html#l00016">free_list.c:16</a></div></div>
+<div class="ttc" id="afree__queue_8c_html_a32da40b23d8448229992aa7c08a3c0bb"><div class="ttname"><a href="free__queue_8c.html#a32da40b23d8448229992aa7c08a3c0bb">free_queue</a></div><div class="ttdeci">void free_queue(t_queue *queue)</div><div class="ttdoc">Frees all memory taken by a queue or does nothing if the queue is NULL.</div><div class="ttdef"><b>Definition:</b> <a href="free__queue_8c_source.html#l00016">free_queue.c:16</a></div></div>
+<div class="ttc" id="astructs__queue_html_a3ee96fcdc99807b713c9470b808a8fd9"><div class="ttname"><a href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">s_queue::head</a></div><div class="ttdeci">t_list * head</div><div class="ttdoc">The link with the oldest value in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00035">queue.h:35</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

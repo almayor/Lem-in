@@ -1,0 +1,4 @@
+<map id="free_queue" name="free_queue">
+<area shape="rect" id="node1" title="Frees all memory taken by a queue or does nothing if the queue is NULL." alt="" coords="5,5,94,31"/>
+<area shape="rect" id="node2" href="$free__list_8c.html#a5772edc7aeef39713c35596814ec2709" title="Frees all memory taken by a list or does nothing if the list is NULL." alt="" coords="142,5,210,31"/>
+</map>

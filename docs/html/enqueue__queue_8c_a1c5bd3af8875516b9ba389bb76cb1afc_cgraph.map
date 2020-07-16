@@ -1,0 +1,5 @@
+<map id="enqueue_queue" name="enqueue_queue">
+<area shape="rect" id="node1" title="Allocates memory for a new link to hold a value and adds this link at the end of the queue." alt="" coords="5,5,123,31"/>
+<area shape="rect" id="node2" href="$make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b" title="Allocates memory and initializes a list data&#45;structure." alt="" coords="171,5,249,31"/>
+<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="297,5,367,31"/>
+</map>

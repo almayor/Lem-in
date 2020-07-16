@@ -70,52 +70,53 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="enqueue__queue_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*   enqueue_queue.c                                    :+:      :+:    :+:   */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/*   Created: 2020/07/13 21:11:19 by kbethel           #+#    #+#             */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">/*   Updated: 2020/07/16 01:04:38 by unite            ###   ########.fr       */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*                                                                            */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="queue_8h.html">queue.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="queue_8h.html#a1c5bd3af8875516b9ba389bb76cb1afc">   28</a></span>&#160;<span class="keywordtype">int</span>     <a class="code" href="enqueue__queue_8c.html#a1c5bd3af8875516b9ba389bb76cb1afc">enqueue_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue, <span class="keywordtype">int</span> val)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="codeRef" href="https://almayor.github.io/libft/html/structs__list.html">t_list</a>  *new_link;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> (queue == NULL)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        errno = EINVAL;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(new_link = <a class="code" href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b">make_list</a>()))</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        errno = ENOMEM;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        new_link-&gt;val = val;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        new_list-&gt;prev = queue-&gt;<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (queue-&gt;<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a>)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            queue-&gt;<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a>-&gt;<a class="codeRef" href="https://almayor.github.io/libft/html/structs__list.html#a06a0f2db4e8b126a362bbfa366c0ab09">next</a> = new_link;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            queue-&gt;<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a> = new_link;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            queue-&gt;<a class="code" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">head</a> = new_link;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        queue-&gt;<a class="code" href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">size</a> += 1;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> (errno != 0);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   enqueue_queue.c                                    :+:      :+:    :+:   */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/07/13 21:11:19 by kbethel           #+#    #+#             */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/07/16 01:04:38 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="queue_8h.html">queue.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="queue_8h.html#a1c5bd3af8875516b9ba389bb76cb1afc">   16</a></span>&#160;<span class="keywordtype">int</span>     <a class="code" href="enqueue__queue_8c.html#a1c5bd3af8875516b9ba389bb76cb1afc">enqueue_queue</a>(<a class="code" href="structs__queue.html">t_queue</a> *queue, <span class="keywordtype">int</span> val)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="structs__list.html">t_list</a>  *new_link;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (queue == NULL)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        errno = EINVAL;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(new_link = <a class="code" href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b">make_list</a>()))</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        errno = ENOMEM;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        new_link-&gt;<a class="code" href="structs__list.html#af277cff6f0db7317a8c3078c7b3bed8b">val</a> = val;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        new_list-&gt;prev = queue-&gt;<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> (queue-&gt;<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            queue-&gt;<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a>-&gt;<a class="code" href="structs__list.html#a06a0f2db4e8b126a362bbfa366c0ab09">next</a> = new_link;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            queue-&gt;<a class="code" href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">tail</a> = new_link;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            queue-&gt;<a class="code" href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">head</a> = new_link;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        queue-&gt;<a class="code" href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">size</a> += 1;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> (errno != 0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructs__queue_html_a30e2bb05af132c48cdc5e02bc5a1efac"><div class="ttname"><a href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">s_queue::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">Number of values in the queue (i.e. its size)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00046">queue.h:46</a></div></div>
-<div class="ttc" id="amake__list_8c_html_a0f283118ee903b1a430e74f5a1d0931b"><div class="ttname"><a href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b">make_list</a></div><div class="ttdeci">t_list * make_list(void)</div><div class="ttdoc">Allocates memory and initializes a list data-structure.</div><div class="ttdef"><b>Definition:</b> <a href="make__list_8c_source.html#l00028">make_list.c:28</a></div></div>
-<div class="ttc" id="astructs__list_html"><div class="ttname"><a href="https://almayor.github.io/libft/html/structs__list.html">s_list</a></div><div class="ttdoc">A list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00045">list.h:45</a></div></div>
+<div class="ttc" id="astructs__queue_html_a30e2bb05af132c48cdc5e02bc5a1efac"><div class="ttname"><a href="structs__queue.html#a30e2bb05af132c48cdc5e02bc5a1efac">s_queue::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">Number of values in the queue (i.e. its size)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00034">queue.h:34</a></div></div>
+<div class="ttc" id="amake__list_8c_html_a0f283118ee903b1a430e74f5a1d0931b"><div class="ttname"><a href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b">make_list</a></div><div class="ttdeci">t_list * make_list(void)</div><div class="ttdoc">Allocates memory and initializes a list data-structure.</div><div class="ttdef"><b>Definition:</b> <a href="make__list_8c_source.html#l00016">make_list.c:16</a></div></div>
+<div class="ttc" id="astructs__list_html"><div class="ttname"><a href="structs__list.html">s_list</a></div><div class="ttdoc">A list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00033">list.h:33</a></div></div>
 <div class="ttc" id="aqueue_8h_html"><div class="ttname"><a href="queue_8h.html">queue.h</a></div></div>
-<div class="ttc" id="astructs__queue_html"><div class="ttname"><a href="structs__queue.html">s_queue</a></div><div class="ttdoc">A queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00044">queue.h:44</a></div></div>
-<div class="ttc" id="astructs__list_html_a06a0f2db4e8b126a362bbfa366c0ab09"><div class="ttname"><a href="https://almayor.github.io/libft/html/structs__list.html#a06a0f2db4e8b126a362bbfa366c0ab09">s_list::next</a></div><div class="ttdeci">struct s_list * next</div><div class="ttdoc">Next link in the list.</div></div>
-<div class="ttc" id="aenqueue__queue_8c_html_a1c5bd3af8875516b9ba389bb76cb1afc"><div class="ttname"><a href="enqueue__queue_8c.html#a1c5bd3af8875516b9ba389bb76cb1afc">enqueue_queue</a></div><div class="ttdeci">int enqueue_queue(t_queue *queue, int val)</div><div class="ttdoc">Allocates memory for a new link to hold a value and adds this link at the end of the queue.</div><div class="ttdef"><b>Definition:</b> <a href="enqueue__queue_8c_source.html#l00028">enqueue_queue.c:28</a></div></div>
-<div class="ttc" id="astructs__queue_html_a3ee96fcdc99807b713c9470b808a8fd9"><div class="ttname"><a href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">s_queue::head</a></div><div class="ttdeci">t_list * head</div><div class="ttdoc">The link with the oldest value in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00047">queue.h:47</a></div></div>
-<div class="ttc" id="astructs__queue_html_a681ec9436ca4eb2bc0e8865198d53f5c"><div class="ttname"><a href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">s_queue::tail</a></div><div class="ttdeci">t_list * tail</div><div class="ttdoc">The link with the most recently added value in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00048">queue.h:48</a></div></div>
+<div class="ttc" id="astructs__queue_html"><div class="ttname"><a href="structs__queue.html">s_queue</a></div><div class="ttdoc">A queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00032">queue.h:32</a></div></div>
+<div class="ttc" id="astructs__list_html_a06a0f2db4e8b126a362bbfa366c0ab09"><div class="ttname"><a href="structs__list.html#a06a0f2db4e8b126a362bbfa366c0ab09">s_list::next</a></div><div class="ttdeci">t_list * next</div><div class="ttdoc">Next link in the list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00035">list.h:35</a></div></div>
+<div class="ttc" id="aenqueue__queue_8c_html_a1c5bd3af8875516b9ba389bb76cb1afc"><div class="ttname"><a href="enqueue__queue_8c.html#a1c5bd3af8875516b9ba389bb76cb1afc">enqueue_queue</a></div><div class="ttdeci">int enqueue_queue(t_queue *queue, int val)</div><div class="ttdoc">Allocates memory for a new link to hold a value and adds this link at the end of the queue.</div><div class="ttdef"><b>Definition:</b> <a href="enqueue__queue_8c_source.html#l00016">enqueue_queue.c:16</a></div></div>
+<div class="ttc" id="astructs__list_html_af277cff6f0db7317a8c3078c7b3bed8b"><div class="ttname"><a href="structs__list.html#af277cff6f0db7317a8c3078c7b3bed8b">s_list::val</a></div><div class="ttdeci">int val</div><div class="ttdoc">Value held by this link.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00037">list.h:37</a></div></div>
+<div class="ttc" id="astructs__queue_html_a3ee96fcdc99807b713c9470b808a8fd9"><div class="ttname"><a href="structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9">s_queue::head</a></div><div class="ttdeci">t_list * head</div><div class="ttdoc">The link with the oldest value in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00035">queue.h:35</a></div></div>
+<div class="ttc" id="astructs__queue_html_a681ec9436ca4eb2bc0e8865198d53f5c"><div class="ttname"><a href="structs__queue.html#a681ec9436ca4eb2bc0e8865198d53f5c">s_queue::tail</a></div><div class="ttdeci">t_list * tail</div><div class="ttdoc">The link with the most recently added value in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00036">queue.h:36</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
