@@ -6,27 +6,28 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:54:01 by unite             #+#    #+#             */
-/*   Updated: 2020/07/16 00:32:46 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/16 02:11:53 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FARM_H
+
 # define FARM_H
 
-#include <errno.h>
-#include "libftprintfgnl.h"
-#include "list.h"
-#include "map.h"
+# include <errno.h>
+# include "libftprintfgnl.h"
+# include "list.h"
+# include "map.h"
 
 /*
 ** @struct s_farm
 ** @brief An ant farm
 ** @details A data structure representing the paths and the position on them
-** that each ant takes
+** that each ant takes during its run
 ** @var s_farm::n_ants
-** Number of ants
+** @brief Number of ants
 ** @var s_farm::ants
-** A list of position on each ant's remaining path.
+** @brief A list of position on each ant's remaining path.
 ** @details Example: If the first ant's path is 1->2->3->4 and the ant is
 ** currently at vertex 2, then ants[0] points at the path's link holding the
 ** vertex 2. Please note that several ants' positions can point to different
@@ -48,8 +49,9 @@ typedef struct	s_farm
 t_farm			*make_farm(int n_ants);
 
 /*
-** Run the farm with the given paths. For each ant, allocate a path and run
-** it along it. If several ants share a path (in the cases where there are
+** @brief Run ants in the farm along the given paths.
+** @details For each ant, allocates a path and runs it along it.
+** If several ants share a path (in cases where there are
 ** fewer paths than ants), wait until the ant in front has moved ahead before
 ** putting the next ant on this path at the start.
 ** Print out each ant's position at

@@ -6,27 +6,29 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/07/15 23:34:33 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/16 02:11:48 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GRAPH_H
+
 # define GRAPH_H
 
-#include <errno.h>
-#include "libftprintfgnl.h"
-#include "list.h"
+# include <errno.h>
+# include "libftprintfgnl.h"
+# include "list.h"
 
 /*
 ** @struct s_graph
 ** @brief An undirected graph
-** @details An adjacency-list representation of an undirected graph
+** @par Implementation
+** Adjacency-lists representation 
 ** @var s_graph::V
-** Number of vertices
+** @brief Number of vertices
 ** @var s_graph::E
-** Number of edges
+** @brief Number of edges
 ** @var s_graph::adj
-** The array of adjacency lists
+** @brief The array of adjacency lists
 ** @details For every vertex, the array holds a list of vertices that
 ** this vertex shares an edge with.
 */

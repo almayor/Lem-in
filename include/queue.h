@@ -6,11 +6,12 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/07/15 11:46:25 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/16 02:12:00 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef QUEUE_H
+
 # define QUEUE_H
 
 # include <errno.h>
@@ -21,11 +22,11 @@
 ** @brief A queue
 ** @details A queue implemented as a doubly linked list
 ** @var s_queue::size
-** Number of values in the queue (i.e. its size)
+** @brief Number of values in the queue (i.e. its size)
 ** @var s_queue::head
-** (private member) The link with the oldest value in the queue
+** @brief The link with the oldest value in the queue
 ** @var s_queue::tail
-** (private member) The link with the most recently added value in the queue
+** @brief The link with the most recently added value in the queue
 */
 typedef struct	s_queue
 {

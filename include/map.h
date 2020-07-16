@@ -6,27 +6,28 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 16:51:55 by unite             #+#    #+#             */
-/*   Updated: 2020/07/15 23:45:03 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/16 02:12:05 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MAP_H
+
 # define MAP_H
 
-#include <errno.h>
-#include "libftprintfgnl.h"
+# include <errno.h>
+# include "libftprintfgnl.h"
 
 /*
 ** @struct s_map
 ** @brief A bidirectional map between integers and strings
-** @details A bidirectional map between integers and strings represented by
-** a linked list.
+** @par Implementation
+** Implemented as a linked list
 ** @var s_map::key
-** The integer key
+** @brief The integer key
 ** @var s_map::val
-** The string value
+** @brief The string value
 ** @var s_map::next
-** The next link in the linked list.
+** @brief The next link in the linked list.
 */
 typedef struct	s_map
 {

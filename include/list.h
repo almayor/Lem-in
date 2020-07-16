@@ -6,26 +6,28 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 17:49:33 by unite             #+#    #+#             */
-/*   Updated: 2020/07/15 11:46:21 by unite            ###   ########.fr       */
+/*   Updated: 2020/07/16 02:12:08 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIST_H
+
 # define LIST_H
 
-#include <errno.h>
-#include "libftprintfgnl.h"
+# include <errno.h>
+# include "libftprintfgnl.h"
 
 /*
 ** @struct s_list
 ** @brief A list
-** @details Represents a doubly-linked list
+** @par Implementation
+** Implemented as a doubly-linked list
 ** @var s_list::next
-** Next link in the list
+** @brief Next link in the list
 ** @var s_list::prev
-** Previous link in the list
+** @brief Previous link in the list
 ** @var s_list::val
-** Value held by this link
+** @brief Value held by this link
 */
 typedef struct	s_list
 {
