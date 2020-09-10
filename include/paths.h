@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   queue.h                                            :+:      :+:    :+:   */
+/*   paths.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:26:24 by unite            ###   ########.fr       */
+/*   Created: 2020/09/10 15:27:17 by unite             #+#    #+#             */
+/*   Updated: 2020/09/10 17:36:52 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef QUEUE_H
+#ifndef PATHS_H
 
-# define QUEUE_H
+# define PATHS_H
 
-# include <stdlib.h>
-# include "libftprintfgnl.h"
+# include "graph.h"
+# include "iterator.h"
 # include "list.h"
 # include "utils.h"
 
-typedef struct s_list	t_queue;
+typedef struct	s_paths
+{
+	size_t	npaths;
+	t_list	**arr;
+	size_t	*assignments;
+}				t_paths;
 
-void	queue_delete(t_queue *queue);
-int		queue_dequeue(t_queue *queue);
-void	queue_enqueue(t_queue *queue, int val);
-t_queue	*queue_new(void);
-size_t	queue_size(const t_queue *queue);
-int		queue_peek(const t_queue *queue);
+void			paths_delete(t_paths *paths);
+t_paths			*paths_get(t_graph *graph, size_t nants);
+int				paths_is_available(const t_paths *paths, size_t i);
+t_iterator		*paths_navigate(t_paths *paths, size_t i);
+size_t			paths_length(const t_paths *paths, size_t i);
 
 #endif

@@ -6,88 +6,86 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/07/16 02:02:03 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/10 17:53:41 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <errno.h>
 #include "libftprintfgnl.h"
-#include "map.h"
+#include "graph.h"
 #include "list.h"
-#include "farm.h"
-#include "edmonds-karp.h"
+#include "paths.h"
+#include "parse.h"
+#include "stdin.h"
 
-/*
-** Reads and returns the number of ants.
-** @note This function reprints what it read from `STDIN` to `STDOUT`.
-** @return The number of ants and -1 if an error occured
-** @exception EINVAL	The number of ants isn't given or largest than `MAX_INT`
-*/
-int		get_n_ants(void);
-
-/*
-** @brief Reads rooms and returns a map between vertex id's and names
-** @details Reads the vertices (rooms) from `STDIN`, assigns each vertex an
-** integer id and creates a map between vertex id's and names.
-** @note This function reprints what it read from `STDIN` to `STDOUT`.
-** @return A bidirectional map between vertex id's and names.
-** @exception ENOMEM	Memory allocation error
-** @exception EINVAL	The format is wrong
-*/
-t_map	*get_vertex_names(void);
-
-/*
-** @brief Frees paths found by the Edmonds-Karp algorithm
-** @details Frees all memory taken by a `NULL`-terminated arrays of paths,
-** where each path is represented by a linked list array of vertex id's.
-** @param paths	A `NULL`-terminated array of paths
-*/
-void	free_paths(t_list **paths)
+static size_t	step_once(t_iterator **ants, size_t nants,
+								const t_graph *graph)
 {
-	int	i;
+	size_t	nants_moved;
+	size_t	i;
 
-	if (!paths)
-		return ;
+	nants_moved = 0;
 	i = 0;
-	while (paths[i])
+	while (i < nants)
 	{
-		free_list(paths[i]);
+		if (iterator_has_next(ants[i]))
+		{
+			ft_printf("%cL%i-%s",
+				nants_moved > 0 ? ' ' : '\n',
+				i + 1,
+				graph_id2name(graph, iterator_next(ants[i])));
+			nants_moved++;
+		}
 		i++;
 	}
-	free(paths);
+	return (nants_moved);
 }
 
-/*
-** @brief Reads links and returns paths found by the Edmonds-Karp algorithm
-** @details Reads the edges (links) from `STDIN`, writes them to a graph,
-** then uses the Edmonds-Karp algorithm to get paths from the source to the
-** sink. The returned paths are sorted in the order from shortest to longest.
-** @note This function reprints what it read from `STDIN` to `STDOUT`.
-** @return	An ordered `NULL`-terminated array of paths from the source
-** 			to the sink, or `NULL` if an error occurs
-** @param n_ants	Number of ants and, therefore, the maximum number of
-**					paths that must be considered
-** @param vertex_names	A map between vertex id's and vertex names
-** @exception ENOMEM	Memory allocation error
-** @exception EINVAL	The format is wrong, the edges connect vertices that
-**						do not exist, or the source and the sink aren't
-**						connected
-*/
-t_list	**get_paths(int n_ants, t_map *vertex_names);
-	
-int main(void)
+static void		cycle_to_finish(t_iterator **ants, size_t nants,
+								const t_graph *graph)
 {
-	t_map	*vertex_names;
-	t_list	**paths;
-	t_farm	*farm;
-	int		n_ants;
+	while (step_once(ants, nants, graph) > 0)
+		continue ;
+	ft_putchar('\n');
+}
 
-	if ((n_ants = get_n_ants()) &&
-		(vertex_names = get_vertex_names()) &&
-		(paths = get_paths(n_ants, vertex_names)) &&
-		(farm = make_farm(n_ants)))
-		run_farm(farm, paths, n_paths, vertex_names);
-	free_farm(farm);
-	free_paths(paths);
-	free_map(vertex_names);
+static void		lemin(t_paths *paths, size_t nants, const t_graph *graph)
+{
+	t_iterator	**ants;
+	size_t		nants_active;
+	size_t		i;
+
+	ants = ft_xcalloc(sizeof(t_iterator *), nants);
+	nants_active = 0;
+	while (nants_active < nants)
+	{
+		i = 0;
+		while (i < paths->npaths && nants_active < nants)
+		{
+			if (paths_is_available(paths, i))
+				ants[nants_active++] = paths_navigate(paths, i);
+			i++;
+		}
+		step_once(ants, nants, graph);
+	}
+	cycle_to_finish(ants, nants, graph);
+	while (nants_active > 0)
+		iterator_delete(ants[--nants_active]);
+}
+
+int 			main(void)
+{
+	t_stdin	*in;
+	size_t	nants;
+	t_graph	*graph;
+	t_paths	*paths;
+	
+	in = stdin_new();
+	nants = parse_nants(in);
+	graph = parse_rooms(in);
+	parse_links(in, graph);
+	paths = paths_get(graph, nants);
+	lemin(paths, nants, graph);
+	stdin_delete(in);
+	graph_delete(graph);
+	paths_delete(paths);
 }

@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/07/16 02:11:48 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/10 17:26:30 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,55 +14,32 @@
 
 # define GRAPH_H
 
-# include <errno.h>
+# include <stdlib.h>
+# include "array.h"
+# include "iterator.h"
 # include "libftprintfgnl.h"
 # include "list.h"
+# include "queue.h"
+# include "utils.h"
 
-/*
-** @struct s_graph
-** @brief An undirected graph
-** @par Implementation
-** Adjacency-lists representation 
-** @var s_graph::V
-** @brief Number of vertices
-** @var s_graph::E
-** @brief Number of edges
-** @var s_graph::adj
-** @brief The array of adjacency lists
-** @details For every vertex, the array holds a list of vertices that
-** this vertex shares an edge with.
-*/
+
 typedef struct	s_graph
 {
-	int 	V;
-	int 	E;
+	int 	nverti;
+	int 	nedges;
 	t_list	**adj;
+	t_array	*names;
+	int		start;
+	int		end;
 }				t_graph;
 
-/*
-** Allocates memory and initializes a graph data-structure.
-** @param V	Number of vertices
-** @return Pointer to the newly allocated memory or `NULL` on failure
-** @exception ENOMEM	Memory allocation error
-*/
-t_graph 		*make_graph(int V);
-
-/*
-** Adds an edge between two vertices to a graph
-** @param v The first vertex sharing the edge
-** @param w The second vertex sharing the edge
-** @param graph The graph
-** @return 0 on success, 1 on failure
-** @exception ENOMEM	Memory allocation error
-** @exception EINVAL	The graph is `NULL` / invalid, or v is equal to w
-**						(loops are not allowed)
-*/
-int 			add_edge_graph(t_graph *graph, int v, int w);
-
-/*
-** Frees all memory taken by a graph or does nothing if the graph is `NULL`.
-** @param graph The graph
-*/
-void			free_graph(t_graph *graph);
+t_graph 		*graph_from_names(t_array *names, const char *start,
+								const char *end);
+void 			graph_add_edge(t_graph *graph, int v, int w);
+t_iterator		*graph_adjacency(const t_graph *graph, int v);
+void			graph_delete(t_graph *graph);
+size_t 			graph_edkarp(const t_graph *graph, t_list ***paths, size_t n);
+int				graph_name2id(const t_graph *graph, const char *name);
+const char		*graph_id2name(const t_graph *graph, int id);
 
 #endif

@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   queue.h                                            :+:      :+:    :+:   */
+/*   stdin_next.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:26:24 by unite            ###   ########.fr       */
+/*   Created: 2020/09/09 19:42:02 by unite             #+#    #+#             */
+/*   Updated: 2020/09/10 02:12:50 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef QUEUE_H
+#include "stdin.h"
 
-# define QUEUE_H
+char	*stdin_next(t_stdin *in)
+{
+	int	rc;
 
-# include <stdlib.h>
-# include "libftprintfgnl.h"
-# include "list.h"
-# include "utils.h"
-
-typedef struct s_list	t_queue;
-
-void	queue_delete(t_queue *queue);
-int		queue_dequeue(t_queue *queue);
-void	queue_enqueue(t_queue *queue, int val);
-t_queue	*queue_new(void);
-size_t	queue_size(const t_queue *queue);
-int		queue_peek(const t_queue *queue);
-
-#endif
+	if (in->line)
+		free(in->line);
+	rc = get_next_line(0, &(in->line));
+	if (rc < 0)
+		terminate(ERR_STDIN);
+	else if (rc == 0)
+		in->line = NULL;
+	else
+		ft_putendl(in->line);
+	return (in->line);
+}

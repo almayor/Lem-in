@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   queue.h                                            :+:      :+:    :+:   */
+/*   paths_delete.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:26:24 by unite            ###   ########.fr       */
+/*   Created: 2020/09/10 15:52:45 by unite             #+#    #+#             */
+/*   Updated: 2020/09/10 15:53:39 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef QUEUE_H
+#include "paths.h"
 
-# define QUEUE_H
+void	paths_delete(t_paths *paths)
+{
+	size_t	i;
 
-# include <stdlib.h>
-# include "libftprintfgnl.h"
-# include "list.h"
-# include "utils.h"
-
-typedef struct s_list	t_queue;
-
-void	queue_delete(t_queue *queue);
-int		queue_dequeue(t_queue *queue);
-void	queue_enqueue(t_queue *queue, int val);
-t_queue	*queue_new(void);
-size_t	queue_size(const t_queue *queue);
-int		queue_peek(const t_queue *queue);
-
-#endif
+	i = 0;
+	while (i < paths->npaths)
+		list_delete(paths->arr[i++]);
+	free(paths->assignments);
+	free(paths);
+}

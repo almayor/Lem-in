@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   queue.h                                            :+:      :+:    :+:   */
+/*   parse.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:26:24 by unite            ###   ########.fr       */
+/*   Created: 2020/09/10 15:16:16 by unite             #+#    #+#             */
+/*   Updated: 2020/09/10 17:25:23 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef QUEUE_H
+#ifndef PARSE_H
 
-# define QUEUE_H
+# define PARSE_H
 
-# include <stdlib.h>
-# include "libftprintfgnl.h"
-# include "list.h"
-# include "utils.h"
+# include "graph.h"
+# include "stdin.h"
 
-typedef struct s_list	t_queue;
-
-void	queue_delete(t_queue *queue);
-int		queue_dequeue(t_queue *queue);
-void	queue_enqueue(t_queue *queue, int val);
-t_queue	*queue_new(void);
-size_t	queue_size(const t_queue *queue);
-int		queue_peek(const t_queue *queue);
+void	parse_links(t_stdin *in, t_graph *graph);
+int		parse_nants(t_stdin *in);
+t_graph	*parse_rooms(t_stdin *in);
 
 #endif

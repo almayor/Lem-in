@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   queue.h                                            :+:      :+:    :+:   */
+/*   array_delete.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:26:24 by unite            ###   ########.fr       */
+/*   Created: 2020/07/16 23:56:40 by unite             #+#    #+#             */
+/*   Updated: 2020/09/08 22:43:00 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef QUEUE_H
+#include "array.h"
 
-# define QUEUE_H
+void	array_delete(t_array *array)
+{
+	int	i;
 
-# include <stdlib.h>
-# include "libftprintfgnl.h"
-# include "list.h"
-# include "utils.h"
-
-typedef struct s_list	t_queue;
-
-void	queue_delete(t_queue *queue);
-int		queue_dequeue(t_queue *queue);
-void	queue_enqueue(t_queue *queue, int val);
-t_queue	*queue_new(void);
-size_t	queue_size(const t_queue *queue);
-int		queue_peek(const t_queue *queue);
-
-#endif
+	i = 0;
+	while (i < array->size)
+		free(array->arr[i++]);
+	free(array->arr);
+	free(array);
+}

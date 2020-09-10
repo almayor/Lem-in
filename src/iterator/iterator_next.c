@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   queue.h                                            :+:      :+:    :+:   */
+/*   iterator_next.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 16:28:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:26:24 by unite            ###   ########.fr       */
+/*   Created: 2020/09/10 12:00:59 by unite             #+#    #+#             */
+/*   Updated: 2020/09/10 17:52:30 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef QUEUE_H
+#include "iterator.h"
 
-# define QUEUE_H
+int	iterator_next(t_iterator *iter)
+{
+	int	val;
 
-# include <stdlib.h>
-# include "libftprintfgnl.h"
-# include "list.h"
-# include "utils.h"
-
-typedef struct s_list	t_queue;
-
-void	queue_delete(t_queue *queue);
-int		queue_dequeue(t_queue *queue);
-void	queue_enqueue(t_queue *queue, int val);
-t_queue	*queue_new(void);
-size_t	queue_size(const t_queue *queue);
-int		queue_peek(const t_queue *queue);
-
-#endif
+	val = iter->pointer->content;
+	iter->pointer = iter->pointer->next;
+	return (val);
+}

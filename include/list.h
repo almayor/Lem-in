@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 17:49:33 by unite             #+#    #+#             */
-/*   Updated: 2020/07/16 02:12:08 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/10 17:26:27 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,50 +14,30 @@
 
 # define LIST_H
 
-# include <errno.h>
+# include <stdlib.h>
 # include "libftprintfgnl.h"
+# include "utils.h"
 
-/*
-** @struct s_list
-** @brief A list
-** @par Implementation
-** Implemented as a doubly-linked list
-** @var s_list::next
-** @brief Next link in the list
-** @var s_list::prev
-** @brief Previous link in the list
-** @var s_list::val
-** @brief Value held by this link
-*/
-typedef struct	s_list
+typedef struct		s_link
 {
-	t_list	*next;
-	t_list	*prev;
-	int		val;
-}				t_list;
+	int				content;
+	struct s_link	*next;
+	struct s_link	*prev;
+}					t_link;
 
-/*
-** Allocates memory and initializes a list data-structure.
-** @return Pointer to the newly allocated memory of `NULL` on failure
-** @exception ENOMEM	Memory allocation error
-*/
-t_list			*make_list(void);
+typedef struct		s_list
+{
+	t_link			*head;
+	t_link			*tail;
+	size_t			size;
+}					t_list;
 
-/*
-** Allocates memory for a new link to hold a value and adds this link at the
-** beginning of the list.
-** @param list	The list
-** @param val	The new value
-** @return 0 on success, 1 on failure
-** @exception ENOMEM	Memory allocation error
-** @exception EINVAL	The list is `NULL` of invalid
-*/
-t_list			*add_list(t_list *list, int val);
-
-/*
-** Frees all memory taken by a list or does nothing if the list is `NULL`.
-** @param list	The list
-*/
-void			free_list(t_list *list);
+t_list			*list_new(void);
+void			list_add_first(t_list *alst, int val);
+void			list_add_last(t_list *alst, int val);
+int				list_pop_first(t_list *alst);
+int				list_pop_last(t_list *alst);
+size_t			list_size(const t_list *alst);
+void			list_delete(t_list *list);
 
 #endif
