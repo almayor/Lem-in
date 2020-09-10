@@ -1,7 +1,7 @@
 <map id="parse_nants" name="parse_nants">
 <area shape="rect" id="node1" title="Exctacts the number of ants from the STDIN" alt="" coords="5,56,99,83"/>
 <area shape="rect" id="node2" href="$is__nants_8c.html#ad32b9600f884e10c0fe436546b62be82" title="Checks if the given string specifies the number of ants." alt="" coords="153,5,223,32"/>
-<area shape="rect" id="node4" href="$stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b" title="Returns the next line in the STDIN and updates its pointer." alt="" coords="147,56,229,83"/>
+<area shape="rect" id="node4" href="$stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b" title="Reads the next line STDIN and returns it." alt="" coords="147,56,229,83"/>
 <area shape="rect" id="node6" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="289,107,365,133"/>
 <area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a2cf15b8a1a277d1e2ce3654101a2003d" title=" " alt="" coords="291,5,362,32"/>
 <area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/get_next_line/docs/.doxygen/get_next_line.tag$get__next__line_8c.html#ab20831df58070fa98472f95285c72311" title=" " alt="" coords="277,56,376,83"/>

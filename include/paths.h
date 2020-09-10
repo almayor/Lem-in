@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:27:17 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:18:07 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 00:48:42 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int				paths_is_available(const t_paths *paths, size_t i);
 
 /*
 ** Returns an iterator that an ant can use to navigate along the `i`th path,
-** and updates the paths' assignments
+** and decrements the path's availability
 ** @param i The index of a path
 ** @return The iterator
 */

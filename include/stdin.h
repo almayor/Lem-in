@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:32:01 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:21:37 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 01:19:05 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void			stdin_delete(t_stdin *in);
 t_stdin			*stdin_new(void);
 
 /*
-** Returns the next line in the `STDIN` and updates its pointer
+** Reads the next line `STDIN` and returns it
 ** @return The next line in the `STDIN`
 ** @note As per the assignment, this function re-prints everything that it reads
 ** to `STDOUT`
