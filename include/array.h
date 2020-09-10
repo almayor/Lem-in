@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 00:28:04 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 23:29:43 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 00:43:53 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void			array_grow(t_array *array);
 ** Returns the index of a specified value in the array
 ** @note This function ONLY works if the array has been pre-sorted. If this
 ** isn't the case, the function may fail.
-** @remark This function uses binary search and has complexity O(logE)
+** @remark This function uses binary search and has complexity `O(logE)`
 ** @param val The value to search for
 ** @return The index
 */
