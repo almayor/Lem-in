@@ -6,7 +6,7 @@
 #    By: unite <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/09/10 04:58:04 by unite            ###   ########.fr        #
+#    Updated: 2020/09/10 19:41:00 by unite            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,20 +24,32 @@ array/array_quick_sort.c \
 array/array_shrink.c \
 array/array_size.c \
 array/array_swap.c \
-farm/farm_delete.c \
-farm/farm_parse.c \
-farm/farm_parse_links.c \
-farm/farm_parse_nants.c \
-farm/farm_parse_rooms.c \
-farm/farm_run.c \
-farm/farm_search.c \
 graph/graph_add_edge.c \
 graph/graph_adjacency.c \
 graph/graph_delete.c \
-graph/graph_new.c \
-list/list_add.c \
+graph/graph_edkarp.c \
+graph/graph_from_names.c \
+graph/graph_id2name.c \
+graph/graph_name2id.c \
+iterator/iterator_delete.c \
+iterator/iterator_from_list.c \
+iterator/iterator_has_next.c \
+iterator/iterator_next.c \
+list/list_add_first.c \
+list/list_add_last.c \
 list/list_delete.c \
 list/list_new.c \
+list/list_pop_first.c \
+list/list_pop_last.c \
+list/list_size.c \
+parse/parse_links.c \
+parse/parse_nants.c \
+parse/parse_rooms.c \
+paths/paths_delete.c \
+paths/paths_get.c \
+paths/paths_is_available.c \
+paths/paths_length.c \
+paths/paths_navigate.c \
 queue/queue_delete.c \
 queue/queue_dequeue.c \
 queue/queue_enqueue.c \

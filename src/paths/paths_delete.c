@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:52:45 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 15:53:39 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/10 19:46:11 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	paths_delete(t_paths *paths)
 	i = 0;
 	while (i < paths->npaths)
 		list_delete(paths->arr[i++]);
+	free(paths->arr);
 	free(paths->assignments);
 	free(paths);
 }

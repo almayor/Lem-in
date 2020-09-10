@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:27:17 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:36:52 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/10 19:41:53 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # define PATHS_H
 
+# include <stdint.h>
 # include "graph.h"
 # include "iterator.h"
 # include "list.h"

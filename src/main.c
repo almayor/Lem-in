@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:53:41 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/10 19:44:54 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ static void		lemin(t_paths *paths, size_t nants, const t_graph *graph)
 	cycle_to_finish(ants, nants, graph);
 	while (nants_active > 0)
 		iterator_delete(ants[--nants_active]);
+	free(ants);
 }
 
 int 			main(void)

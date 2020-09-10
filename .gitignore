@@ -9,4 +9,5 @@ cmake-build-debug
 .doxygen
 generator-docker
 *.txt
+Lem_in
 
