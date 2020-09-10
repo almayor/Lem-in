@@ -6,11 +6,20 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:49:54 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 15:50:30 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 00:33:45 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
+
+/*
+** Converts `edge_to` to a list of vertices along the path
+** @param[in] edge_to An array that keeps track of
+** the order of vertices on the path
+** @param[out] marked An array where all vertices along the new path will be
+** marked as unavailable
+** @return The list of vertices along the path
+*/
 
 static t_list	*unroll_path(const t_graph *graph, const int *edge_to,
 						   int *marked)
@@ -31,6 +40,18 @@ static t_list	*unroll_path(const t_graph *graph, const int *edge_to,
 	}
 	return (path);
 }
+
+/*
+** Runs breadth-first search on the graph in order to
+** get the shortest from `start` to `end`, whilst
+** ignoring all the `marked` vertices that have already been used in other paths
+** @param[out] edge_to An array to keep track of
+** the order of vertices on the path
+** @param[out] marked An array marking which vertices have already been used
+** in other paths
+** @return A list of vertices along the new path, or `NULL` if no more paths
+** exist
+*/
 
 static t_list	*graph_bst(const t_graph *graph, int *edge_to, int *marked)
 {

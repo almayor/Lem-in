@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 19:44:54 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 00:22:31 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 #include "paths.h"
 #include "parse.h"
 #include "stdin.h"
+
+/*
+** Moves all ants that are currently en-route by one link forward
+** @param ants An array of iterators corresponding to each ant
+** @param nants The total number of ants
+** @param graph The graph in which the ants are travelling
+** @return The number of ants that have moved forward
+*/
 
 static size_t	step_once(t_iterator **ants, size_t nants,
 								const t_graph *graph)
@@ -40,6 +48,14 @@ static size_t	step_once(t_iterator **ants, size_t nants,
 	return (nants_moved);
 }
 
+/*
+** Moves all ants by one link at a time,
+** until all of them have reached their destination
+** @param ants An array of iterators corresponding to each ant
+** @param nants The total number of ants
+** @param graph The graph in which the ants are travelling
+*/
+
 static void		cycle_to_finish(t_iterator **ants, size_t nants,
 								const t_graph *graph)
 {
@@ -47,6 +63,13 @@ static void		cycle_to_finish(t_iterator **ants, size_t nants,
 		continue ;
 	ft_putchar('\n');
 }
+
+/*
+** Runs Lem_in given some paths, ants and a graph
+** @param paths The paths available to ants
+** @param nants The total number of ants
+** @param graph The graph
+*/
 
 static void		lemin(t_paths *paths, size_t nants, const t_graph *graph)
 {

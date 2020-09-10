@@ -1,0 +1,4 @@
+<map id="queue_dequeue" name="queue_dequeue">
+<area shape="rect" id="node1" title="Removes the oldest value in the queue and returns it." alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node2" href="$list__pop__first_8c.html#ace18b16f74b2d1d593a0d023addb2694" title="Returns the first value in the list and removes it from the list." alt="" coords="167,5,263,32"/>
+</map>

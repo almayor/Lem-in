@@ -1,0 +1,12 @@
+<map id="include/stdin.h" name="include/stdin.h">
+<area shape="rect" id="node1" title=" " alt="" coords="609,5,715,32"/>
+<area shape="rect" id="node2" href="$main_8c.html" title=" " alt="" coords="618,155,701,181"/>
+<area shape="rect" id="node3" href="$parse__links_8c.html" title=" " alt="" coords="23,80,181,107"/>
+<area shape="rect" id="node4" href="$parse__nants_8c.html" title=" " alt="" coords="205,80,367,107"/>
+<area shape="rect" id="node5" href="$parse__rooms_8c.html" title=" " alt="" coords="392,80,559,107"/>
+<area shape="rect" id="node6" href="$stdin__delete_8c.html" title=" " alt="" coords="583,80,741,107"/>
+<area shape="rect" id="node7" href="$stdin__new_8c.html" title=" " alt="" coords="765,80,909,107"/>
+<area shape="rect" id="node8" href="$stdin__next_8c.html" title=" " alt="" coords="933,80,1079,107"/>
+<area shape="rect" id="node9" href="$stdin__peek_8c.html" title=" " alt="" coords="1104,80,1255,107"/>
+<area shape="rect" id="node10" href="$parse_8h.html" title=" " alt="" coords="1279,80,1389,107"/>
+</map>

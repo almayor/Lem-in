@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['prev_326',['prev',['../structs__list.html#a516e5aeecf4f80bd8cb84537483c5bd9',1,'s_list']]]
+  ['tail_507',['tail',['../structs__list.html#a34c85ecf7803f11cb86886c9e9967c19',1,'s_list']]]
 ];

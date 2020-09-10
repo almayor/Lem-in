@@ -1,0 +1,4 @@
+<map id="list_delete" name="list_delete">
+<area shape="rect" id="node1" title="Frees all memory taken up by the list." alt="" coords="5,5,87,32"/>
+<area shape="rect" id="node2" href="$list__pop__first_8c.html#ace18b16f74b2d1d593a0d023addb2694" title="Returns the first value in the list and removes it from the list." alt="" coords="135,5,231,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="paths_delete" name="paths_delete">
+<area shape="rect" id="node1" title="Free all memory taken up by t_paths" alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node2" href="$list__delete_8c.html#a647690cf37d8d4a19925eafa8d8077a5" title="Frees all memory taken up by the list." alt="" coords="149,5,231,32"/>
+<area shape="rect" id="node3" href="$list__pop__first_8c.html#ace18b16f74b2d1d593a0d023addb2694" title="Returns the first value in the list and removes it from the list." alt="" coords="279,5,375,32"/>
+</map>

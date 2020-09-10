@@ -1,0 +1,14 @@
+<map id="parse_rooms" name="parse_rooms">
+<area shape="rect" id="node1" title="Extracts rooms from STDIN and uses them to initialize a graph." alt="" coords="5,132,103,159"/>
+<area shape="rect" id="node2" href="$array__new_8c.html#a48f49b8ec738de757a155330bc7ba2eb" title="Allocates memory and returns an empty array of capacity ARRAY_INIT_CAPACITY" alt="" coords="152,17,235,44"/>
+<area shape="rect" id="node6" href="$is__link_8c.html#a2d81976a81911585174a34c57322830d" title="Checks if the given string represents a link between two rooms." alt="" coords="164,81,223,108"/>
+<area shape="rect" id="node8" href="$is__start_8c.html#a0dad7aa8e80d01d6e9636d34759ccae4" title="Checks if the given string is the ##start command." alt="" coords="161,132,226,159"/>
+<area shape="rect" id="node10" href="$stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b" title="Returns the next line in the STDIN and updates its pointer." alt="" coords="284,208,367,235"/>
+<area shape="rect" id="node12" href="$stdin__peek_8c.html#a4a4ff6200cee3f9de039ee60a2aa1179" title="Returns the line that was most recently read from the STDIN" alt="" coords="151,233,236,260"/>
+<area shape="rect" id="node3" href="$ft__xmalloc_8c.html#a668e8ce8ac8b47388c8f3bb135e25f4e" title="Replicates behaviour of malloc from libc, but fails on memory allocation errors." alt="" coords="284,5,367,32"/>
+<area shape="rect" id="node4" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="426,56,502,83"/>
+<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="561,56,659,83"/>
+<area shape="rect" id="node7" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a62475b3b1de62355bf4664dd337e8324" title=" " alt="" coords="287,107,363,133"/>
+<area shape="rect" id="node9" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#acd9021150ef93f3e8018dd571cef44bc" title=" " alt="" coords="289,157,362,184"/>
+<area shape="rect" id="node11" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/get_next_line/docs/.doxygen/get_next_line.tag$get__next__line_8c.html#ab20831df58070fa98472f95285c72311" title=" " alt="" coords="415,208,513,235"/>
+</map>

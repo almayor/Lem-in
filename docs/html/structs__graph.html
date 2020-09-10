@@ -68,28 +68,36 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>An undirected graph.  
+<p>A graph represented as an array of adjacency lists.  
  <a href="structs__graph.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="graph_8h_source.html">graph.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ac5b9d07b6f485dd0209bbf69c76c03cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">V</a></td></tr>
-<tr class="memdesc:ac5b9d07b6f485dd0209bbf69c76c03cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of vertices.  <a href="structs__graph.html#ac5b9d07b6f485dd0209bbf69c76c03cf">More...</a><br /></td></tr>
-<tr class="separator:ac5b9d07b6f485dd0209bbf69c76c03cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06a647c25b35a2d648338171b65a9439"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__graph.html#a06a647c25b35a2d648338171b65a9439">E</a></td></tr>
-<tr class="memdesc:a06a647c25b35a2d648338171b65a9439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of edges.  <a href="structs__graph.html#a06a647c25b35a2d648338171b65a9439">More...</a><br /></td></tr>
-<tr class="separator:a06a647c25b35a2d648338171b65a9439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1451bb04f98ae757b1b61e696ab19bc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__graph.html#a1451bb04f98ae757b1b61e696ab19bc2">nverti</a></td></tr>
+<tr class="memdesc:a1451bb04f98ae757b1b61e696ab19bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of vertices.  <a href="structs__graph.html#a1451bb04f98ae757b1b61e696ab19bc2">More...</a><br /></td></tr>
+<tr class="separator:a1451bb04f98ae757b1b61e696ab19bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0f936b972f133aef8f02abf742553c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__graph.html#a6f0f936b972f133aef8f02abf742553c">nedges</a></td></tr>
+<tr class="memdesc:a6f0f936b972f133aef8f02abf742553c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of edges.  <a href="structs__graph.html#a6f0f936b972f133aef8f02abf742553c">More...</a><br /></td></tr>
+<tr class="separator:a6f0f936b972f133aef8f02abf742553c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac62d642e1a23330862d4964c0e4f6746"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">adj</a></td></tr>
-<tr class="memdesc:ac62d642e1a23330862d4964c0e4f6746"><td class="mdescLeft">&#160;</td><td class="mdescRight">The array of adjacency lists.  <a href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">More...</a><br /></td></tr>
+<tr class="memdesc:ac62d642e1a23330862d4964c0e4f6746"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of lists, where the list at position <code>i</code> contains all vertices to which the vertex <code>i</code> is adjacent of a given vertex.  <a href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">More...</a><br /></td></tr>
 <tr class="separator:ac62d642e1a23330862d4964c0e4f6746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705402ef5131ed9a9f7f36e95117ad35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__array.html">t_array</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__graph.html#a705402ef5131ed9a9f7f36e95117ad35">names</a></td></tr>
+<tr class="memdesc:a705402ef5131ed9a9f7f36e95117ad35"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sorted arrays of vertex names, where the string at position <code>i</code> is the name of the <code>i</code>th vertex.  <a href="structs__graph.html#a705402ef5131ed9a9f7f36e95117ad35">More...</a><br /></td></tr>
+<tr class="separator:a705402ef5131ed9a9f7f36e95117ad35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add727e13210e2fa7d9a30a7863fa0f44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__graph.html#add727e13210e2fa7d9a30a7863fa0f44">start</a></td></tr>
+<tr class="memdesc:add727e13210e2fa7d9a30a7863fa0f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of the start vertex.  <a href="structs__graph.html#add727e13210e2fa7d9a30a7863fa0f44">More...</a><br /></td></tr>
+<tr class="separator:add727e13210e2fa7d9a30a7863fa0f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a12517b688d91e8e827ef674b1cf542"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__graph.html#a6a12517b688d91e8e827ef674b1cf542">end</a></td></tr>
+<tr class="memdesc:a6a12517b688d91e8e827ef674b1cf542"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of the end vertex.  <a href="structs__graph.html#a6a12517b688d91e8e827ef674b1cf542">More...</a><br /></td></tr>
+<tr class="separator:a6a12517b688d91e8e827ef674b1cf542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An undirected graph. </p>
-<dl class="section user"><dt>Implementation</dt><dd>Adjacency-lists representation </dd></dl>
+<div class="textblock"><p>A graph represented as an array of adjacency lists. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00036">36</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00046">46</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="ac62d642e1a23330862d4964c0e4f6746"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac62d642e1a23330862d4964c0e4f6746">&#9670;&nbsp;</a></span>adj</h2>
@@ -103,46 +111,99 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The array of adjacency lists. </p>
-<p>For every vertex, the array holds a list of vertices that this vertex shares an edge with. </p>
+<p>An array of lists, where the list at position <code>i</code> contains all vertices to which the vertex <code>i</code> is adjacent of a given vertex. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00040">40</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00050">50</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
-<a id="a06a647c25b35a2d648338171b65a9439"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06a647c25b35a2d648338171b65a9439">&#9670;&nbsp;</a></span>E</h2>
+<a id="a6a12517b688d91e8e827ef674b1cf542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a12517b688d91e8e827ef674b1cf542">&#9670;&nbsp;</a></span>end</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s_graph::E</td>
+          <td class="memname">s_graph::end</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Number of edges. </p>
+<p>The index of the end vertex. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00039">39</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00053">53</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
-<a id="ac5b9d07b6f485dd0209bbf69c76c03cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5b9d07b6f485dd0209bbf69c76c03cf">&#9670;&nbsp;</a></span>V</h2>
+<a id="a705402ef5131ed9a9f7f36e95117ad35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705402ef5131ed9a9f7f36e95117ad35">&#9670;&nbsp;</a></span>names</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s_graph::V</td>
+          <td class="memname">s_graph::names</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Number of vertices. </p>
+<p>A sorted arrays of vertex names, where the string at position <code>i</code> is the name of the <code>i</code>th vertex. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00038">38</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00051">51</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+
+</div>
+</div>
+<a id="a6f0f936b972f133aef8f02abf742553c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0f936b972f133aef8f02abf742553c">&#9670;&nbsp;</a></span>nedges</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s_graph::nedges</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of edges. </p>
+
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00049">49</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+
+</div>
+</div>
+<a id="a1451bb04f98ae757b1b61e696ab19bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1451bb04f98ae757b1b61e696ab19bc2">&#9670;&nbsp;</a></span>nverti</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s_graph::nverti</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of vertices. </p>
+
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00048">48</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+
+</div>
+</div>
+<a id="add727e13210e2fa7d9a30a7863fa0f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add727e13210e2fa7d9a30a7863fa0f44">&#9670;&nbsp;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s_graph::start</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The index of the start vertex. </p>
+
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00052">52</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>

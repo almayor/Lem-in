@@ -1,0 +1,7 @@
+<map id="array_append" name="array_append">
+<area shape="rect" id="node1" title="Appends a value at the end of this array." alt="" coords="5,5,105,32"/>
+<area shape="rect" id="node2" href="$array__grow_8c.html#a5783db2b5d0863222c05d6cdd003cd31" title="Doubles the capacity of the array by reallocating and copying its contents." alt="" coords="153,5,240,32"/>
+<area shape="rect" id="node3" href="$ft__xmalloc_8c.html#a668e8ce8ac8b47388c8f3bb135e25f4e" title="Replicates behaviour of malloc from libc, but fails on memory allocation errors." alt="" coords="288,5,371,32"/>
+<area shape="rect" id="node4" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="419,5,495,32"/>
+<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="543,5,640,32"/>
+</map>

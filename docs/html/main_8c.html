@@ -71,12 +71,12 @@ $(function() {
 <div class="title">main.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
-<code>#include &quot;<a class="elRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="map_8h_source.html">map.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="elRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="graph_8h_source.html">graph.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="farm_8h_source.html">farm.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="edmonds-karp_8h_source.html">edmonds-karp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="paths_8h_source.html">paths.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parse_8h_source.html">parse.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="stdin_8h_source.html">stdin.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for main.c:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -84,15 +84,19 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#src_2main_8c" alt=""/></div>
 <map name="src_2main_8c" id="src_2main_8c">
-<area shape="rect" title=" " alt="" coords="89,5,171,31"/>
-<area shape="rect" title=" " alt="" coords="297,299,361,324"/>
-<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="5,299,106,324"/>
-<area shape="rect" href="map_8h.html" title=" " alt="" coords="60,225,118,251"/>
-<area shape="rect" href="list_8h.html" title=" " alt="" coords="193,225,241,251"/>
-<area shape="rect" href="farm_8h.html" title=" " alt="" coords="59,152,119,177"/>
-<area shape="rect" href="edmonds-karp_8h.html" title=" " alt="" coords="206,79,324,104"/>
-<area shape="rect" href="graph_8h.html" title=" " alt="" coords="244,152,310,177"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="334,152,404,177"/>
+<area shape="rect" title=" " alt="" coords="276,5,359,32"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="258,453,358,480"/>
+<area shape="rect" href="graph_8h.html" title=" " alt="" coords="393,155,458,181"/>
+<area shape="rect" href="list_8h.html" title=" " alt="" coords="193,304,244,331"/>
+<area shape="rect" href="paths_8h.html" title=" " alt="" coords="249,80,314,107"/>
+<area shape="rect" href="parse_8h.html" title=" " alt="" coords="393,80,458,107"/>
+<area shape="rect" href="stdin_8h.html" title=" " alt="" coords="657,304,719,331"/>
+<area shape="rect" title=" " alt="" coords="561,453,625,480"/>
+<area shape="rect" href="array_8h.html" title=" " alt="" coords="522,304,582,331"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="397,379,454,405"/>
+<area shape="rect" href="iterator_8h.html" title=" " alt="" coords="245,229,317,256"/>
+<area shape="rect" href="queue_8h.html" title=" " alt="" coords="393,229,461,256"/>
+<area shape="rect" title=" " alt="" coords="94,155,159,181"/>
 </map>
 </div>
 </div>
@@ -100,128 +104,46 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1490c822ad354130cb58a5852531cf1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1490c822ad354130cb58a5852531cf1c">get_n_ants</a> (void)</td></tr>
-<tr class="memdesc:a1490c822ad354130cb58a5852531cf1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads and returns the number of ants.  <a href="main_8c.html#a1490c822ad354130cb58a5852531cf1c">More...</a><br /></td></tr>
-<tr class="separator:a1490c822ad354130cb58a5852531cf1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb4c708cafa864839619a2b256c0682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__map.html">t_map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7bb4c708cafa864839619a2b256c0682">get_vertex_names</a> (void)</td></tr>
-<tr class="memdesc:a7bb4c708cafa864839619a2b256c0682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads rooms and returns a map between vertex id's and names.  <a href="main_8c.html#a7bb4c708cafa864839619a2b256c0682">More...</a><br /></td></tr>
-<tr class="separator:a7bb4c708cafa864839619a2b256c0682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12f435cfd8b7e7356da243f491e1d708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">free_paths</a> (<a class="el" href="structs__list.html">t_list</a> **paths)</td></tr>
-<tr class="memdesc:a12f435cfd8b7e7356da243f491e1d708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees paths found by the Edmonds-Karp algorithm.  <a href="main_8c.html#a12f435cfd8b7e7356da243f491e1d708">More...</a><br /></td></tr>
-<tr class="separator:a12f435cfd8b7e7356da243f491e1d708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbfba2e32f1572466cc6f99b4bb2dff7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#acbfba2e32f1572466cc6f99b4bb2dff7">get_paths</a> (int n_ants, <a class="el" href="structs__map.html">t_map</a> *vertex_names)</td></tr>
-<tr class="memdesc:acbfba2e32f1572466cc6f99b4bb2dff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads links and returns paths found by the Edmonds-Karp algorithm.  <a href="main_8c.html#acbfba2e32f1572466cc6f99b4bb2dff7">More...</a><br /></td></tr>
-<tr class="separator:acbfba2e32f1572466cc6f99b4bb2dff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a30726f674b395701008f00980c6cb"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a62a30726f674b395701008f00980c6cb">step_once</a> (<a class="el" href="iterator_8h.html#aaa614fc1fd6dab3955eca975a6490268">t_iterator</a> **ants, size_t nants, const <a class="el" href="structs__graph.html">t_graph</a> *graph)</td></tr>
+<tr class="memdesc:a62a30726f674b395701008f00980c6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves all ants that are currently en-route by one link forward.  <a href="main_8c.html#a62a30726f674b395701008f00980c6cb">More...</a><br /></td></tr>
+<tr class="separator:a62a30726f674b395701008f00980c6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5500b4ca17722344ba1bdf9b7499ce69"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5500b4ca17722344ba1bdf9b7499ce69">cycle_to_finish</a> (<a class="el" href="iterator_8h.html#aaa614fc1fd6dab3955eca975a6490268">t_iterator</a> **ants, size_t nants, const <a class="el" href="structs__graph.html">t_graph</a> *graph)</td></tr>
+<tr class="memdesc:a5500b4ca17722344ba1bdf9b7499ce69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves all ants by one link at a time, until all of them have reached their destination.  <a href="main_8c.html#a5500b4ca17722344ba1bdf9b7499ce69">More...</a><br /></td></tr>
+<tr class="separator:a5500b4ca17722344ba1bdf9b7499ce69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a18e0f386bae1cd65eaeb02c332ff89"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8a18e0f386bae1cd65eaeb02c332ff89">lemin</a> (<a class="el" href="structs__paths.html">t_paths</a> *paths, size_t nants, const <a class="el" href="structs__graph.html">t_graph</a> *graph)</td></tr>
+<tr class="memdesc:a8a18e0f386bae1cd65eaeb02c332ff89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs Lem_in given some paths, ants and a graph.  <a href="main_8c.html#a8a18e0f386bae1cd65eaeb02c332ff89">More...</a><br /></td></tr>
+<tr class="separator:a8a18e0f386bae1cd65eaeb02c332ff89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top"><a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (void)</td></tr>
 <tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a12f435cfd8b7e7356da243f491e1d708"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12f435cfd8b7e7356da243f491e1d708">&#9670;&nbsp;</a></span>free_paths()</h2>
+<a id="a5500b4ca17722344ba1bdf9b7499ce69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5500b4ca17722344ba1bdf9b7499ce69">&#9670;&nbsp;</a></span>cycle_to_finish()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void free_paths </td>
+          <td class="memname">static void cycle_to_finish </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__list.html">t_list</a> **&#160;</td>
-          <td class="paramname"><em>paths</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Frees paths found by the Edmonds-Karp algorithm. </p>
-<p>Frees all memory taken by a <code>NULL</code>-terminated arrays of paths, where each path is represented by a linked list array of vertex id's. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">paths</td><td>A <code>NULL</code>-terminated array of paths </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00046">46</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="main_8c_a12f435cfd8b7e7356da243f491e1d708_cgraph.png" border="0" usemap="#main_8c_a12f435cfd8b7e7356da243f491e1d708_cgraph" alt=""/></div>
-<map name="main_8c_a12f435cfd8b7e7356da243f491e1d708_cgraph" id="main_8c_a12f435cfd8b7e7356da243f491e1d708_cgraph">
-<area shape="rect" title="Frees paths found by the Edmonds&#45;Karp algorithm." alt="" coords="5,5,90,31"/>
-<area shape="rect" href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709" title="Frees all memory taken by a list or does nothing if the list is NULL." alt="" coords="138,5,206,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1490c822ad354130cb58a5852531cf1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1490c822ad354130cb58a5852531cf1c">&#9670;&nbsp;</a></span>get_n_ants()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int get_n_ants </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads and returns the number of ants. </p>
-<dl class="section note"><dt>Note</dt><dd>This function reprints what it read from <code>STDIN</code> to <code>STDOUT</code>. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of ants and -1 if an error occured </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">EINVAL</td><td>The number of ants isn't given or largest than <code>MAX_INT</code></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of ants and -1 if an error occured </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">EINVAL</td><td>The number of ants isn't given, or it is largest than <code>MAX_INT</code> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This function reprints what it read from <code>STDIN</code> to <code>STDOUT</code>. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="get__n__ants_8c_source.html#l00036">36</a> of file <a class="el" href="get__n__ants_8c_source.html">get_n_ants.c</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="main_8c_a1490c822ad354130cb58a5852531cf1c_cgraph.png" border="0" usemap="#main_8c_a1490c822ad354130cb58a5852531cf1c_cgraph" alt=""/></div>
-<map name="main_8c_a1490c822ad354130cb58a5852531cf1c_cgraph" id="main_8c_a1490c822ad354130cb58a5852531cf1c_cgraph">
-<area shape="rect" title="Reads and returns the number of ants." alt="" coords="5,5,93,31"/>
-<area shape="rect" href="https://almayor.github.io/get_next_line/html/get__next__line_8c.html#ab20831df58070fa98472f95285c72311" title=" " alt="" coords="141,5,241,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="acbfba2e32f1572466cc6f99b4bb2dff7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbfba2e32f1572466cc6f99b4bb2dff7">&#9670;&nbsp;</a></span>get_paths()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structs__list.html">t_list</a>** get_paths </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n_ants</em>, </td>
+          <td class="paramtype"><a class="el" href="iterator_8h.html#aaa614fc1fd6dab3955eca975a6490268">t_iterator</a> **&#160;</td>
+          <td class="paramname"><em>ants</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structs__map.html">t_map</a> *&#160;</td>
-          <td class="paramname"><em>vertex_names</em>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structs__graph.html">t_graph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -229,54 +151,192 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (void)</td></
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Reads links and returns paths found by the Edmonds-Karp algorithm. </p>
-<p>Reads the edges (links) from <code>STDIN</code>, writes them to a graph, then uses the Edmonds-Karp algorithm to get paths from the source to the sink. The returned paths are sorted in the order from shortest to longest. </p><dl class="section note"><dt>Note</dt><dd>This function reprints what it read from <code>STDIN</code> to <code>STDOUT</code>. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>An ordered <code>NULL</code>-terminated array of paths from the source to the sink, or <code>NULL</code> if an error occurs </dd></dl>
+<p>Moves all ants by one link at a time, until all of them have reached their destination. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n_ants</td><td>Number of ants and, therefore, the maximum number of paths that must be considered </td></tr>
-    <tr><td class="paramname">vertex_names</td><td>A map between vertex id's and vertex names </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ENOMEM</td><td>Memory allocation error </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The format is wrong, the edges connect vertices that do not exist, or the source and the sink aren't connected </td></tr>
+    <tr><td class="paramname">ants</td><td>An array of iterators corresponding to each ant </td></tr>
+    <tr><td class="paramname">nants</td><td>The total number of ants </td></tr>
+    <tr><td class="paramname">graph</td><td>The graph in which the ants are travelling </td></tr>
   </table>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00060">60</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="main_8c_a5500b4ca17722344ba1bdf9b7499ce69_cgraph.png" border="0" usemap="#main_8c_a5500b4ca17722344ba1bdf9b7499ce69_cgraph" alt=""/></div>
+<map name="main_8c_a5500b4ca17722344ba1bdf9b7499ce69_cgraph" id="main_8c_a5500b4ca17722344ba1bdf9b7499ce69_cgraph">
+<area shape="rect" title="Moves all ants by one link at a time, until all of them have reached their destination." alt="" coords="5,56,115,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="164,31,244,57"/>
+<area shape="rect" href="main_8c.html#a62a30726f674b395701008f00980c6cb" title="Moves all ants that are currently en&#45;route by one link forward." alt="" coords="163,81,245,108"/>
+<area shape="rect" href="https://almayor.github.io/ft_printf/html/group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title=" " alt="" coords="321,5,388,32"/>
+<area shape="rect" href="graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73" title="Convertex a numeric id to the corresponding vertex name." alt="" coords="299,56,410,83"/>
+<area shape="rect" href="iterator__has__next_8c.html#a46c57c3c86aff5f9ae46fa019dad6728" title="Checks if an iterator has any values left." alt="" coords="293,107,416,133"/>
+<area shape="rect" href="iterator__next_8c.html#aefa7db19dcbb448ea7c7edd43c26fab7" title="Returns the next value in the iterator and advances its pointer." alt="" coords="307,157,402,184"/>
+<area shape="rect" href="array__get_8c.html#a1eb71c28fd8048d3bd3ab59dc2e55896" title="Returns the value at the specified position in this list." alt="" coords="464,56,540,83"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a7bb4c708cafa864839619a2b256c0682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bb4c708cafa864839619a2b256c0682">&#9670;&nbsp;</a></span>get_vertex_names()</h2>
+<a id="a8a18e0f386bae1cd65eaeb02c332ff89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a18e0f386bae1cd65eaeb02c332ff89">&#9670;&nbsp;</a></span>lemin()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__map.html">t_map</a>* get_vertex_names </td>
+          <td class="memname">static void lemin </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structs__paths.html">t_paths</a> *&#160;</td>
+          <td class="paramname"><em>paths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structs__graph.html">t_graph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Reads rooms and returns a map between vertex id's and names. </p>
-<p>Reads the vertices (rooms) from <code>STDIN</code>, assigns each vertex an integer id and creates a map between vertex id's and names. </p><dl class="section note"><dt>Note</dt><dd>This function reprints what it read from <code>STDIN</code> to <code>STDOUT</code>. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>A bidirectional map between vertex id's and names. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ENOMEM</td><td>Memory allocation error </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The format is wrong </td></tr>
+<p>Runs Lem_in given some paths, ants and a graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paths</td><td>The paths available to ants </td></tr>
+    <tr><td class="paramname">nants</td><td>The total number of ants </td></tr>
+    <tr><td class="paramname">graph</td><td>The graph </td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00075">75</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="main_8c_a8a18e0f386bae1cd65eaeb02c332ff89_cgraph.png" border="0" usemap="#main_8c_a8a18e0f386bae1cd65eaeb02c332ff89_cgraph" alt=""/></div>
+<map name="main_8c_a8a18e0f386bae1cd65eaeb02c332ff89_cgraph" id="main_8c_a8a18e0f386bae1cd65eaeb02c332ff89_cgraph">
+<area shape="rect" title="Runs Lem_in given some paths, ants and a graph." alt="" coords="5,180,59,207"/>
+<area shape="rect" href="main_8c.html#a5500b4ca17722344ba1bdf9b7499ce69" title="Moves all ants by one link at a time, until all of them have reached their destination." alt="" coords="117,53,226,80"/>
+<area shape="rect" href="main_8c.html#a62a30726f674b395701008f00980c6cb" title="Moves all ants that are currently en&#45;route by one link forward." alt="" coords="302,104,385,131"/>
+<area shape="rect" href="ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="132,155,211,181"/>
+<area shape="rect" href="iterator__delete_8c.html#ad788af1073c33c13900ad026e9f83617" title="Frees all memory taken up by the iterator." alt="" coords="119,205,223,232"/>
+<area shape="rect" href="paths__is__available_8c.html#ae32565910ae5e79ca857de93f0c6db1f" title="Checks if the ith path can accommodate one more ant, given the optimal assignments of paths to ants." alt="" coords="107,256,236,283"/>
+<area shape="rect" href="paths__navigate_8c.html#a1ad59a019bb8dd6fc0e7a15ea0c212f0" title="Returns an iterator that an ant can use to navigate along the ith path, and updates the paths&#39; assign..." alt="" coords="116,307,227,333"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="303,53,383,80"/>
+<area shape="rect" href="https://almayor.github.io/ft_printf/html/group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title=" " alt="" coords="479,5,545,32"/>
+<area shape="rect" href="graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73" title="Convertex a numeric id to the corresponding vertex name." alt="" coords="457,56,567,83"/>
+<area shape="rect" href="iterator__has__next_8c.html#a46c57c3c86aff5f9ae46fa019dad6728" title="Checks if an iterator has any values left." alt="" coords="451,107,573,133"/>
+<area shape="rect" href="iterator__next_8c.html#aefa7db19dcbb448ea7c7edd43c26fab7" title="Returns the next value in the iterator and advances its pointer." alt="" coords="465,157,559,184"/>
+<area shape="rect" href="array__get_8c.html#a1eb71c28fd8048d3bd3ab59dc2e55896" title="Returns the value at the specified position in this list." alt="" coords="621,56,697,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="308,155,379,181"/>
+<area shape="rect" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="621,237,697,264"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="745,237,843,264"/>
+<area shape="rect" href="iterator__from__list_8c.html#a3cdcef27fa10627427e5d2ddc0df8e62" title="Creates an iterator from a list." alt="" coords="284,300,403,327"/>
+<area shape="rect" href="ft__xmalloc_8c.html#a668e8ce8ac8b47388c8f3bb135e25f4e" title="Replicates behaviour of malloc from libc, but fails on memory allocation errors." alt="" coords="471,275,553,301"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a62a30726f674b395701008f00980c6cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a30726f674b395701008f00980c6cb">&#9670;&nbsp;</a></span>step_once()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static size_t step_once </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="iterator_8h.html#aaa614fc1fd6dab3955eca975a6490268">t_iterator</a> **&#160;</td>
+          <td class="paramname"><em>ants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structs__graph.html">t_graph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves all ants that are currently en-route by one link forward. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ants</td><td>An array of iterators corresponding to each ant </td></tr>
+    <tr><td class="paramname">nants</td><td>The total number of ants </td></tr>
+    <tr><td class="paramname">graph</td><td>The graph in which the ants are travelling </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of ants that have moved forward </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00029">29</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="main_8c_a62a30726f674b395701008f00980c6cb_cgraph.png" border="0" usemap="#main_8c_a62a30726f674b395701008f00980c6cb_cgraph" alt=""/></div>
+<map name="main_8c_a62a30726f674b395701008f00980c6cb_cgraph" id="main_8c_a62a30726f674b395701008f00980c6cb_cgraph">
+<area shape="rect" title="Moves all ants that are currently en&#45;route by one link forward." alt="" coords="5,81,88,108"/>
+<area shape="rect" href="https://almayor.github.io/ft_printf/html/group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title=" " alt="" coords="164,5,231,32"/>
+<area shape="rect" href="graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73" title="Convertex a numeric id to the corresponding vertex name." alt="" coords="142,56,253,83"/>
+<area shape="rect" href="iterator__has__next_8c.html#a46c57c3c86aff5f9ae46fa019dad6728" title="Checks if an iterator has any values left." alt="" coords="136,107,259,133"/>
+<area shape="rect" href="iterator__next_8c.html#aefa7db19dcbb448ea7c7edd43c26fab7" title="Returns the next value in the iterator and advances its pointer." alt="" coords="150,157,245,184"/>
+<area shape="rect" href="array__get_8c.html#a1eb71c28fd8048d3bd3ab59dc2e55896" title="Returns the value at the specified position in this list." alt="" coords="307,56,383,83"/>
+</map>
+</div>
 
 </div>
 </div>

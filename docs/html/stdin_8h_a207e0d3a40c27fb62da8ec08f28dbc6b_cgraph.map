@@ -1,0 +1,6 @@
+<map id="stdin_next" name="stdin_next">
+<area shape="rect" id="node1" title="Returns the next line in the STDIN and updates its pointer." alt="" coords="5,31,88,57"/>
+<area shape="rect" id="node2" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/get_next_line/docs/.doxygen/get_next_line.tag$get__next__line_8c.html#ab20831df58070fa98472f95285c72311" title=" " alt="" coords="136,5,235,32"/>
+<area shape="rect" id="node3" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="147,56,223,83"/>
+<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="283,56,380,83"/>
+</map>

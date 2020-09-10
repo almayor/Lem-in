@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 12:00:30 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 17:52:11 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/10 23:16:54 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	iterator_has_next(const t_iterator *iter)
 {
-	return (iter && iter->pointer != NULL);
+	return (iter && *iter != NULL);
 }

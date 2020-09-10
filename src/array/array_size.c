@@ -6,13 +6,13 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 23:24:52 by unite             #+#    #+#             */
-/*   Updated: 2020/09/08 22:43:40 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/10 23:23:28 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "array.h"
 
-int			array_size(const t_array *array)
+size_t		array_size(const t_array *array)
 {
 	return (array->size);
 }

@@ -1,6 +1,10 @@
 <map id="include/graph.h" name="include/graph.h">
-<area shape="rect" id="node1" title=" " alt="" coords="34,5,147,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,152,69,177"/>
-<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/docs/.doxygen/libftprintfgnl.tag$libftprintfgnl_8h.html" title=" " alt="" coords="97,152,198,177"/>
-<area shape="rect" id="node4" href="$list_8h.html" title=" " alt="" coords="66,79,115,104"/>
+<area shape="rect" id="node1" title=" " alt="" coords="139,5,249,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="143,304,207,331"/>
+<area shape="rect" id="node3" href="$array_8h.html" title=" " alt="" coords="23,155,83,181"/>
+<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/docs/.doxygen/libftprintfgnl.tag$libftprintfgnl_8h.html" title=" " alt="" coords="297,304,397,331"/>
+<area shape="rect" id="node5" href="$utils_8h.html" title=" " alt="" coords="147,229,204,256"/>
+<area shape="rect" id="node6" href="$iterator_8h.html" title=" " alt="" coords="158,80,230,107"/>
+<area shape="rect" id="node7" href="$list_8h.html" title=" " alt="" coords="310,155,361,181"/>
+<area shape="rect" id="node8" href="$queue_8h.html" title=" " alt="" coords="255,80,323,107"/>
 </map>

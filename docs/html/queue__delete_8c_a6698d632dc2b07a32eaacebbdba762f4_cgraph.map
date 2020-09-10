@@ -1,0 +1,5 @@
+<map id="queue_delete" name="queue_delete">
+<area shape="rect" id="node1" title="Frees all memory taken up by the queue." alt="" coords="5,5,104,32"/>
+<area shape="rect" id="node2" href="$list__delete_8c.html#a647690cf37d8d4a19925eafa8d8077a5" title="Frees all memory taken up by the list." alt="" coords="152,5,233,32"/>
+<area shape="rect" id="node3" href="$list__pop__first_8c.html#ace18b16f74b2d1d593a0d023addb2694" title="Returns the first value in the list and removes it from the list." alt="" coords="281,5,377,32"/>
+</map>

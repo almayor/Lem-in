@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:32:01 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 00:39:22 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 00:21:37 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,43 @@
 # include "libftprintfgnl.h"
 # include "utils.h"
 
+/*
+** @struct s_stdin
+** @brief A convenience data type for reading from `STDIN`
+*/
+
 typedef struct		s_stdin
 {
 	char	*line;
 }					t_stdin;
 
-void				stdin_delete(t_stdin *in);
-t_stdin				*stdin_new(void);
-char				*stdin_next(t_stdin *in);
-char				*stdin_peek(t_stdin *in);
+/*
+** Frees all memory taken up by `t_stdin`
+*/
+
+void			stdin_delete(t_stdin *in);
+
+/*
+** Initializes a new `t_stdin`
+** @returns A new `t_stdin`
+*/
+
+t_stdin			*stdin_new(void);
+
+/*
+** Returns the next line in the `STDIN` and updates its pointer
+** @return The next line in the `STDIN`
+** @note As per the assignment, this function re-prints everything that it reads
+** to `STDOUT`
+*/
+
+char			*stdin_next(t_stdin *in);
+
+/*
+** Returns the line that was most recently read from the `STDIN`
+** @return The line that was most recently read from the `STDIN`
+*/
+
+char			*stdin_peek(t_stdin *in);
 
 #endif

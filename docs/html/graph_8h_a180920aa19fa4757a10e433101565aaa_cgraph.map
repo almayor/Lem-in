@@ -1,0 +1,6 @@
+<map id="graph_delete" name="graph_delete">
+<area shape="rect" id="node1" title="Frees all memory taken by a graph." alt="" coords="5,31,101,57"/>
+<area shape="rect" id="node2" href="$array__delete_8c.html#a715232a8b24029cbc48ae3a699aa16e1" title="Deletes the array and all its associated data." alt="" coords="149,5,243,32"/>
+<area shape="rect" id="node3" href="$list__delete_8c.html#a647690cf37d8d4a19925eafa8d8077a5" title="Frees all memory taken up by the list." alt="" coords="155,56,237,83"/>
+<area shape="rect" id="node4" href="$list__pop__first_8c.html#ace18b16f74b2d1d593a0d023addb2694" title="Returns the first value in the list and removes it from the list." alt="" coords="291,56,387,83"/>
+</map>

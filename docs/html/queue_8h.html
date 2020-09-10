@@ -66,15 +66,16 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">queue.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="elRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for queue.h:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -82,10 +83,11 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="queue_8h__incl.png" border="0" usemap="#include_2queue_8h" alt=""/></div>
 <map name="include_2queue_8h" id="include_2queue_8h">
-<area shape="rect" title=" " alt="" coords="10,5,126,31"/>
-<area shape="rect" title=" " alt="" coords="5,152,69,177"/>
-<area shape="rect" href="list_8h.html" title=" " alt="" coords="74,79,123,104"/>
-<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="93,152,194,177"/>
+<area shape="rect" title=" " alt="" coords="27,5,141,32"/>
+<area shape="rect" title=" " alt="" coords="17,229,81,256"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="117,229,217,256"/>
+<area shape="rect" href="list_8h.html" title=" " alt="" coords="89,80,140,107"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="21,155,78,181"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -95,94 +97,160 @@ $(function() {
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="queue_8h__dep__incl.png" border="0" usemap="#include_2queue_8hdep" alt=""/></div>
 <map name="include_2queue_8hdep" id="include_2queue_8hdep">
-<area shape="rect" title=" " alt="" coords="457,5,573,31"/>
-<area shape="rect" href="dequeue__queue_8c.html" title=" " alt="" coords="5,79,196,104"/>
-<area shape="rect" href="enqueue__queue_8c.html" title=" " alt="" coords="220,79,410,104"/>
-<area shape="rect" href="free__queue_8c.html" title=" " alt="" coords="434,79,596,104"/>
-<area shape="rect" href="make__queue_8c.html" title=" " alt="" coords="620,79,791,104"/>
-<area shape="rect" href="edmonds-karp_8h.html" title=" " alt="" coords="816,79,980,104"/>
-<area shape="rect" href="free__edkarp_8c.html" title=" " alt="" coords="544,152,699,191"/>
-<area shape="rect" href="make__edkarp_8c.html" title=" " alt="" coords="724,152,888,191"/>
-<area shape="rect" href="next__path__edkarp_8c.html" title=" " alt="" coords="911,152,1068,191"/>
-<area shape="rect" href="main_8c.html" title=" " alt="" coords="1093,159,1175,184"/>
+<area shape="rect" title=" " alt="" coords="625,5,739,32"/>
+<area shape="rect" href="queue__delete_8c.html" title=" " alt="" coords="87,80,258,107"/>
+<area shape="rect" href="queue__dequeue_8c.html" title=" " alt="" coords="283,80,468,107"/>
+<area shape="rect" href="queue__enqueue_8c.html" title=" " alt="" coords="492,80,677,107"/>
+<area shape="rect" href="queue__new_8c.html" title=" " alt="" coords="701,80,860,107"/>
+<area shape="rect" href="queue__size_8c.html" title=" " alt="" coords="885,80,1045,107"/>
+<area shape="rect" href="graph_8h.html" title=" " alt="" coords="1069,80,1180,107"/>
+<area shape="rect" href="graph__add__edge_8c.html" title=" " alt="" coords="5,155,145,196"/>
+<area shape="rect" href="graph__adjacency_8c.html" title=" " alt="" coords="170,162,357,189"/>
+<area shape="rect" href="graph__delete_8c.html" title=" " alt="" coords="381,162,546,189"/>
+<area shape="rect" href="graph__edkarp_8c.html" title=" " alt="" coords="571,162,740,189"/>
+<area shape="rect" href="graph__from__names_8c.html" title=" " alt="" coords="764,155,909,196"/>
+<area shape="rect" href="graph__id2name_8c.html" title=" " alt="" coords="934,162,1113,189"/>
+<area shape="rect" href="graph__name2id_8c.html" title=" " alt="" coords="1137,162,1315,189"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="1501,251,1583,278"/>
+<area shape="rect" href="parse__links_8c.html" title=" " alt="" coords="1390,162,1547,189"/>
+<area shape="rect" href="parse__rooms_8c.html" title=" " alt="" coords="1572,162,1739,189"/>
+<area shape="rect" href="parse_8h.html" title=" " alt="" coords="1763,162,1873,189"/>
+<area shape="rect" href="paths_8h.html" title=" " alt="" coords="1897,162,2008,189"/>
+<area shape="rect" href="paths__delete_8c.html" title=" " alt="" coords="1607,251,1773,278"/>
+<area shape="rect" href="paths__get_8c.html" title=" " alt="" coords="1797,251,1945,278"/>
+<area shape="rect" href="paths__is__available_8c.html" title=" " alt="" coords="1969,244,2099,285"/>
+<area shape="rect" href="paths__length_8c.html" title=" " alt="" coords="2123,251,2289,278"/>
+<area shape="rect" href="paths__navigate_8c.html" title=" " alt="" coords="2313,251,2491,278"/>
 </map>
 </div>
 </div>
 <p><a href="queue_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__queue.html">s_queue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A queue.  <a href="structs__queue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ac7f047c8fe06f2a51038f03929f83c1d"><td class="memItemLeft" align="right" valign="top"><a id="ac7f047c8fe06f2a51038f03929f83c1d"></a>
-typedef struct <a class="el" href="structs__queue.html">s_queue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>t_queue</b></td></tr>
-<tr class="separator:ac7f047c8fe06f2a51038f03929f83c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4d3efef4db98e495895a0cb288e6a4"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structs__list.html">s_list</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a></td></tr>
+<tr class="memdesc:a3c4d3efef4db98e495895a0cb288e6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A queue of integer values.  <a href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">More...</a><br /></td></tr>
+<tr class="separator:a3c4d3efef4db98e495895a0cb288e6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a16b063d6385d8975162f3f5bd8438860"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__queue.html">t_queue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a16b063d6385d8975162f3f5bd8438860">make_queue</a> (void)</td></tr>
-<tr class="memdesc:a16b063d6385d8975162f3f5bd8438860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory and initializes a queue data-structure.  <a href="queue_8h.html#a16b063d6385d8975162f3f5bd8438860">More...</a><br /></td></tr>
-<tr class="separator:a16b063d6385d8975162f3f5bd8438860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c5bd3af8875516b9ba389bb76cb1afc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a1c5bd3af8875516b9ba389bb76cb1afc">enqueue_queue</a> (<a class="el" href="structs__queue.html">t_queue</a> *queue, int val)</td></tr>
-<tr class="memdesc:a1c5bd3af8875516b9ba389bb76cb1afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory for a new link to hold a value and adds this link at the end of the queue.  <a href="queue_8h.html#a1c5bd3af8875516b9ba389bb76cb1afc">More...</a><br /></td></tr>
-<tr class="separator:a1c5bd3af8875516b9ba389bb76cb1afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ff2b8e827e0a4c6702f773c666e2019"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a5ff2b8e827e0a4c6702f773c666e2019">dequeue_queue</a> (<a class="el" href="structs__queue.html">t_queue</a> *queue)</td></tr>
-<tr class="memdesc:a5ff2b8e827e0a4c6702f773c666e2019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the oldest value in the queue (freeing memory, if necessary) and returns it.  <a href="queue_8h.html#a5ff2b8e827e0a4c6702f773c666e2019">More...</a><br /></td></tr>
-<tr class="separator:a5ff2b8e827e0a4c6702f773c666e2019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32da40b23d8448229992aa7c08a3c0bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a32da40b23d8448229992aa7c08a3c0bb">free_queue</a> (<a class="el" href="structs__queue.html">t_queue</a> *queue)</td></tr>
-<tr class="memdesc:a32da40b23d8448229992aa7c08a3c0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all memory taken by a queue or does nothing if the queue is <code>NULL</code>.  <a href="queue_8h.html#a32da40b23d8448229992aa7c08a3c0bb">More...</a><br /></td></tr>
-<tr class="separator:a32da40b23d8448229992aa7c08a3c0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6698d632dc2b07a32eaacebbdba762f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a6698d632dc2b07a32eaacebbdba762f4">queue_delete</a> (<a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *queue)</td></tr>
+<tr class="memdesc:a6698d632dc2b07a32eaacebbdba762f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all memory taken up by the queue.  <a href="queue_8h.html#a6698d632dc2b07a32eaacebbdba762f4">More...</a><br /></td></tr>
+<tr class="separator:a6698d632dc2b07a32eaacebbdba762f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa7b2c3189d1f1614f1c9b04f25534e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a9fa7b2c3189d1f1614f1c9b04f25534e">queue_dequeue</a> (<a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *queue)</td></tr>
+<tr class="memdesc:a9fa7b2c3189d1f1614f1c9b04f25534e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the oldest value in the queue and returns it.  <a href="queue_8h.html#a9fa7b2c3189d1f1614f1c9b04f25534e">More...</a><br /></td></tr>
+<tr class="separator:a9fa7b2c3189d1f1614f1c9b04f25534e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9913898a1749e3327de48ff6f6d56a7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a9913898a1749e3327de48ff6f6d56a7a">queue_enqueue</a> (<a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *queue, int val)</td></tr>
+<tr class="memdesc:a9913898a1749e3327de48ff6f6d56a7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a value to the queue.  <a href="queue_8h.html#a9913898a1749e3327de48ff6f6d56a7a">More...</a><br /></td></tr>
+<tr class="separator:a9913898a1749e3327de48ff6f6d56a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619ef29bc9c09076ab4f073657b8afcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a619ef29bc9c09076ab4f073657b8afcd">queue_new</a> (void)</td></tr>
+<tr class="memdesc:a619ef29bc9c09076ab4f073657b8afcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new empty queue.  <a href="queue_8h.html#a619ef29bc9c09076ab4f073657b8afcd">More...</a><br /></td></tr>
+<tr class="separator:a619ef29bc9c09076ab4f073657b8afcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee45b845fb757af5e2653f9955d4fc27"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#aee45b845fb757af5e2653f9955d4fc27">queue_size</a> (const <a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *queue)</td></tr>
+<tr class="memdesc:aee45b845fb757af5e2653f9955d4fc27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of items in the queue.  <a href="queue_8h.html#aee45b845fb757af5e2653f9955d4fc27">More...</a><br /></td></tr>
+<tr class="separator:aee45b845fb757af5e2653f9955d4fc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae9c3c43aa3ea19084241c10365530c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a1ae9c3c43aa3ea19084241c10365530c">queue_peek</a> (const <a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *queue)</td></tr>
+<tr class="memdesc:a1ae9c3c43aa3ea19084241c10365530c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the oldest value in the queue and keeps it from the queue.  <a href="queue_8h.html#a1ae9c3c43aa3ea19084241c10365530c">More...</a><br /></td></tr>
+<tr class="separator:a1ae9c3c43aa3ea19084241c10365530c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a5ff2b8e827e0a4c6702f773c666e2019"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ff2b8e827e0a4c6702f773c666e2019">&#9670;&nbsp;</a></span>dequeue_queue()</h2>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a3c4d3efef4db98e495895a0cb288e6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4d3efef4db98e495895a0cb288e6a4">&#9670;&nbsp;</a></span>t_queue</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int dequeue_queue </td>
+          <td class="memname">typedef struct <a class="el" href="structs__list.html">s_list</a> <a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A queue of integer values. </p>
+
+<p class="definition">Definition at line <a class="el" href="queue_8h_source.html#l00027">27</a> of file <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a6698d632dc2b07a32eaacebbdba762f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6698d632dc2b07a32eaacebbdba762f4">&#9670;&nbsp;</a></span>queue_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void queue_delete </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__queue.html">t_queue</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *&#160;</td>
           <td class="paramname"><em>queue</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Removes the oldest value in the queue (freeing memory, if necessary) and returns it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">queue</td><td>The queue </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The oldest value </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">EINVAL</td><td>The queue is <code>NULL</code> or empty </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Frees all memory taken up by the queue. </p>
 
-<p class="definition">Definition at line <a class="el" href="dequeue__queue_8c_source.html#l00016">16</a> of file <a class="el" href="dequeue__queue_8c_source.html">dequeue_queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue__delete_8c_source.html#l00016">16</a> of file <a class="el" href="queue__delete_8c_source.html">queue_delete.c</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="queue_8h_a6698d632dc2b07a32eaacebbdba762f4_cgraph.png" border="0" usemap="#queue_8h_a6698d632dc2b07a32eaacebbdba762f4_cgraph" alt=""/></div>
+<map name="queue_8h_a6698d632dc2b07a32eaacebbdba762f4_cgraph" id="queue_8h_a6698d632dc2b07a32eaacebbdba762f4_cgraph">
+<area shape="rect" title="Frees all memory taken up by the queue." alt="" coords="5,5,104,32"/>
+<area shape="rect" href="list__delete_8c.html#a647690cf37d8d4a19925eafa8d8077a5" title="Frees all memory taken up by the list." alt="" coords="152,5,233,32"/>
+<area shape="rect" href="list__pop__first_8c.html#ace18b16f74b2d1d593a0d023addb2694" title="Returns the first value in the list and removes it from the list." alt="" coords="281,5,377,32"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a1c5bd3af8875516b9ba389bb76cb1afc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c5bd3af8875516b9ba389bb76cb1afc">&#9670;&nbsp;</a></span>enqueue_queue()</h2>
+<a id="a9fa7b2c3189d1f1614f1c9b04f25534e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa7b2c3189d1f1614f1c9b04f25534e">&#9670;&nbsp;</a></span>queue_dequeue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int enqueue_queue </td>
+          <td class="memname">int queue_dequeue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__queue.html">t_queue</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *&#160;</td>
+          <td class="paramname"><em>queue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the oldest value in the queue and returns it. </p>
+<dl class="section return"><dt>Returns</dt><dd>The oldest value in the queue </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="queue__dequeue_8c_source.html#l00016">16</a> of file <a class="el" href="queue__dequeue_8c_source.html">queue_dequeue.c</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="queue_8h_a9fa7b2c3189d1f1614f1c9b04f25534e_cgraph.png" border="0" usemap="#queue_8h_a9fa7b2c3189d1f1614f1c9b04f25534e_cgraph" alt=""/></div>
+<map name="queue_8h_a9fa7b2c3189d1f1614f1c9b04f25534e_cgraph" id="queue_8h_a9fa7b2c3189d1f1614f1c9b04f25534e_cgraph">
+<area shape="rect" title="Removes the oldest value in the queue and returns it." alt="" coords="5,5,119,32"/>
+<area shape="rect" href="list__pop__first_8c.html#ace18b16f74b2d1d593a0d023addb2694" title="Returns the first value in the list and removes it from the list." alt="" coords="167,5,263,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9913898a1749e3327de48ff6f6d56a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9913898a1749e3327de48ff6f6d56a7a">&#9670;&nbsp;</a></span>queue_enqueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void queue_enqueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
         </tr>
         <tr>
@@ -199,86 +267,41 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allocates memory for a new link to hold a value and adds this link at the end of the queue. </p>
+<p>Add a value to the queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">queue</td><td>The queue </td></tr>
-    <tr><td class="paramname">val</td><td>The new value </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, 1 on failure </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ENOMEM</td><td>Memory allocation error </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>The queue is <code>NULL</code> or invalid </td></tr>
+    <tr><td class="paramname">val</td><td>The value to add to the queue </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="enqueue__queue_8c_source.html#l00016">16</a> of file <a class="el" href="enqueue__queue_8c_source.html">enqueue_queue.c</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="queue__enqueue_8c_source.html#l00016">16</a> of file <a class="el" href="queue__enqueue_8c_source.html">queue_enqueue.c</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="queue_8h_a1c5bd3af8875516b9ba389bb76cb1afc_cgraph.png" border="0" usemap="#queue_8h_a1c5bd3af8875516b9ba389bb76cb1afc_cgraph" alt=""/></div>
-<map name="queue_8h_a1c5bd3af8875516b9ba389bb76cb1afc_cgraph" id="queue_8h_a1c5bd3af8875516b9ba389bb76cb1afc_cgraph">
-<area shape="rect" title="Allocates memory for a new link to hold a value and adds this link at the end of the queue." alt="" coords="5,5,123,31"/>
-<area shape="rect" href="make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b" title="Allocates memory and initializes a list data&#45;structure." alt="" coords="171,5,249,31"/>
-<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="297,5,367,31"/>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="queue_8h_a9913898a1749e3327de48ff6f6d56a7a_cgraph.png" border="0" usemap="#queue_8h_a9913898a1749e3327de48ff6f6d56a7a_cgraph" alt=""/></div>
+<map name="queue_8h_a9913898a1749e3327de48ff6f6d56a7a_cgraph" id="queue_8h_a9913898a1749e3327de48ff6f6d56a7a_cgraph">
+<area shape="rect" title="Add a value to the queue." alt="" coords="5,31,119,57"/>
+<area shape="rect" href="list__add__last_8c.html#aee9d8a0ec430036bc7c09ed825ea97af" title="Adds an entry at the back of the list." alt="" coords="167,31,261,57"/>
+<area shape="rect" href="ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="309,31,388,57"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="439,5,509,32"/>
+<area shape="rect" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="436,56,512,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="560,56,657,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a32da40b23d8448229992aa7c08a3c0bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32da40b23d8448229992aa7c08a3c0bb">&#9670;&nbsp;</a></span>free_queue()</h2>
+<a id="a619ef29bc9c09076ab4f073657b8afcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a619ef29bc9c09076ab4f073657b8afcd">&#9670;&nbsp;</a></span>queue_new()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void free_queue </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__queue.html">t_queue</a> *&#160;</td>
-          <td class="paramname"><em>queue</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Frees all memory taken by a queue or does nothing if the queue is <code>NULL</code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">queue</td><td>The queue </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="free__queue_8c_source.html#l00016">16</a> of file <a class="el" href="free__queue_8c_source.html">free_queue.c</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="queue_8h_a32da40b23d8448229992aa7c08a3c0bb_cgraph.png" border="0" usemap="#queue_8h_a32da40b23d8448229992aa7c08a3c0bb_cgraph" alt=""/></div>
-<map name="queue_8h_a32da40b23d8448229992aa7c08a3c0bb_cgraph" id="queue_8h_a32da40b23d8448229992aa7c08a3c0bb_cgraph">
-<area shape="rect" title="Frees all memory taken by a queue or does nothing if the queue is NULL." alt="" coords="5,5,94,31"/>
-<area shape="rect" href="free__list_8c.html#a5772edc7aeef39713c35596814ec2709" title="Frees all memory taken by a list or does nothing if the list is NULL." alt="" coords="142,5,210,31"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a16b063d6385d8975162f3f5bd8438860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16b063d6385d8975162f3f5bd8438860">&#9670;&nbsp;</a></span>make_queue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structs__queue.html">t_queue</a>* make_queue </td>
+          <td class="memname"><a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a>* queue_new </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -287,25 +310,78 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allocates memory and initializes a queue data-structure. </p>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the newly allocated memory or <code>NULL</code> on failure </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ENOMEM</td><td>Memory allocation error </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Creates a new empty queue. </p>
+<dl class="section return"><dt>Returns</dt><dd>The new empty queue </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="make__queue_8c_source.html#l00016">16</a> of file <a class="el" href="make__queue_8c_source.html">make_queue.c</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definition at line <a class="el" href="queue__new_8c_source.html#l00016">16</a> of file <a class="el" href="queue__new_8c_source.html">queue_new.c</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="queue_8h_a16b063d6385d8975162f3f5bd8438860_cgraph.png" border="0" usemap="#queue_8h_a16b063d6385d8975162f3f5bd8438860_cgraph" alt=""/></div>
-<map name="queue_8h_a16b063d6385d8975162f3f5bd8438860_cgraph" id="queue_8h_a16b063d6385d8975162f3f5bd8438860_cgraph">
-<area shape="rect" title="Allocates memory and initializes a queue data&#45;structure." alt="" coords="5,5,104,31"/>
-<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="152,5,222,31"/>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="queue_8h_a619ef29bc9c09076ab4f073657b8afcd_cgraph.png" border="0" usemap="#queue_8h_a619ef29bc9c09076ab4f073657b8afcd_cgraph" alt=""/></div>
+<map name="queue_8h_a619ef29bc9c09076ab4f073657b8afcd_cgraph" id="queue_8h_a619ef29bc9c09076ab4f073657b8afcd_cgraph">
+<area shape="rect" title="Creates a new empty queue." alt="" coords="5,31,93,57"/>
+<area shape="rect" href="list__new_8c.html#a5ed6c55f949d2bf6949bdaf117e2e7c7" title="Creates a new empty list." alt="" coords="141,31,212,57"/>
+<area shape="rect" href="ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="260,31,339,57"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="389,5,460,32"/>
+<area shape="rect" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="387,56,463,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="511,56,608,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1ae9c3c43aa3ea19084241c10365530c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae9c3c43aa3ea19084241c10365530c">&#9670;&nbsp;</a></span>queue_peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int queue_peek </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *&#160;</td>
+          <td class="paramname"><em>queue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the oldest value in the queue and keeps it from the queue. </p>
+<dl class="section return"><dt>Returns</dt><dd>The oldes value in the queue </dd></dl>
+
+</div>
+</div>
+<a id="aee45b845fb757af5e2653f9955d4fc27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee45b845fb757af5e2653f9955d4fc27">&#9670;&nbsp;</a></span>queue_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t queue_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="queue_8h.html#a3c4d3efef4db98e495895a0cb288e6a4">t_queue</a> *&#160;</td>
+          <td class="paramname"><em>queue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of items in the queue. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of items in the queue </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="queue__size_8c_source.html#l00016">16</a> of file <a class="el" href="queue__size_8c_source.html">queue_size.c</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="queue_8h_aee45b845fb757af5e2653f9955d4fc27_cgraph.png" border="0" usemap="#queue_8h_aee45b845fb757af5e2653f9955d4fc27_cgraph" alt=""/></div>
+<map name="queue_8h_aee45b845fb757af5e2653f9955d4fc27_cgraph" id="queue_8h_aee45b845fb757af5e2653f9955d4fc27_cgraph">
+<area shape="rect" title="Returns the number of items in the queue." alt="" coords="5,5,93,32"/>
+<area shape="rect" href="list__size_8c.html#a8d0a3be51f473573303891440156eea5" title="Returns the current number of entries in the list." alt="" coords="141,5,212,32"/>
 </map>
 </div>
 

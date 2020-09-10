@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['head_321',['head',['../structs__queue.html#a3ee96fcdc99807b713c9470b808a8fd9',1,'s_queue']]]
+  ['head_498',['head',['../structs__list.html#af222b43290e12d08dd57530ebc7f672b',1,'s_list']]]
 ];

@@ -6,11 +6,20 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:36:39 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 16:56:01 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 00:28:55 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "paths.h"
+
+/*
+** Computes the best assignment (one that would result in the fewest steps)
+** of `nants` by using only the first `nused` paths and ignoring the rest
+** @param[in] nants The total number of ants
+** @param[in] nused The number of best paths to use
+** @param[out] assignment_new The best assignment satisfying these conditions
+** @return The number of steps in this assignment
+*/
 
 static size_t	paths_assign(const t_paths *paths, size_t nants, size_t nused,
 							size_t *assigments_new)
@@ -38,6 +47,11 @@ static size_t	paths_assign(const t_paths *paths, size_t nants, size_t nused,
 	return (nsteps_new);
 }
 
+/*
+** Replace current assignments with new ones
+** @param assignments_new New assignments
+*/
+
 static void 	paths_reassign(t_paths *paths, size_t *assigments_new)
 {
 	size_t i;
@@ -50,7 +64,12 @@ static void 	paths_reassign(t_paths *paths, size_t *assigments_new)
 	}
 }
 
-static void		paths_filter(t_paths *paths, size_t nants)
+/*
+** Calculates the best assignment of `nants` ants over the paths
+** @param nants The total number of ants
+*/
+ 
+static void		paths_assign_optimally(t_paths *paths, size_t nants)
 {
 	size_t	i;
 	size_t	nsteps_old;
@@ -81,6 +100,6 @@ t_paths			*paths_get(t_graph *graph, size_t nants)
 	if (paths->npaths < 1)
 		terminate(ERR_INVALID_INPUT);
 	paths->assignments = ft_xcalloc(sizeof(size_t), nants);
-	paths_filter(paths, nants);
+	paths_assign_optimally(paths, nants);
 	return (paths);
 }
