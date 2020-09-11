@@ -6,13 +6,13 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:35:49 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 12:19:03 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:31:30 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
 
-t_graph *graph_from_names(t_array *names, const char *start, const char *end)
+t_graph	*graph_from_names(t_array *names, const char *start, const char *end)
 {
 	t_graph	*graph;
 	int		i;

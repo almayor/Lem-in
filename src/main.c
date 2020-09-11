@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:22:31 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:34:28 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,13 +96,13 @@ static void		lemin(t_paths *paths, size_t nants, const t_graph *graph)
 	free(ants);
 }
 
-int 			main(void)
+int				main(void)
 {
 	t_stdin	*in;
 	size_t	nants;
 	t_graph	*graph;
 	t_paths	*paths;
-	
+
 	in = stdin_new();
 	nants = parse_nants(in);
 	graph = parse_rooms(in);

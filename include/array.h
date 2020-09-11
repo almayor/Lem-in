@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 00:28:04 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:43:53 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:27:43 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "utils.h"
 
 /*
-** The initial capacity of an array. 
+** The initial capacity of an array.
 ** @remark Change this if you know that the array will contain many more items
 ** on average.
 */

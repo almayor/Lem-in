@@ -6,13 +6,13 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 14:38:31 by unite             #+#    #+#             */
-/*   Updated: 2020/09/09 19:24:19 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:28:57 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "array.h"
 
-static int	array_partition(t_array *array, int lo, int hi)
+static int		array_partition(t_array *array, int lo, int hi)
 {
 	int	i;
 	int	j;

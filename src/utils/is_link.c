@@ -6,13 +6,13 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 00:56:20 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 02:21:22 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:33:49 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 
-int is_link(const char *s)
+int	is_link(const char *s)
 {
 	char	**tab;
 	int		ret;

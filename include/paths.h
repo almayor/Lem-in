@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:27:17 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:48:42 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:27:54 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ typedef struct	s_paths
 void			paths_delete(t_paths *paths);
 
 /*
-** Gets paths from `start` to `end`, given a graph, as well as the number of 
+** Gets paths from `start` to `end`, given a graph, as well as the number of
 ** ants that should take each path in the best-case scenario
 ** @param graph The graph
 ** @param nants The number of ants

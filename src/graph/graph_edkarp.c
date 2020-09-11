@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:49:54 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:33:45 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:31:11 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 */
 
 static t_list	*unroll_path(const t_graph *graph, const int *edge_to,
-						   int *marked)
+							int *marked)
 {
 	t_list	*path;
 	int		v;
@@ -80,7 +80,7 @@ static t_list	*graph_bst(const t_graph *graph, int *edge_to, int *marked)
 	return (unroll_path(graph, edge_to, marked));
 }
 
-size_t 		graph_edkarp(const t_graph *graph, t_list ***dest, size_t n)
+size_t			graph_edkarp(const t_graph *graph, t_list ***dest, size_t n)
 {
 	t_list	*path;
 	int		*edge_to;

@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 11:57:25 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 23:43:54 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:28:09 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 # define ITERATOR_H
 
-#include "list.h"
-#include "utils.h"
+# include "list.h"
+# include "utils.h"
 
 /*
 ** An iterator over the contents of a list

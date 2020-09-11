@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 17:49:33 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:37:14 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:27:35 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@
 ** @brief A pointer to the previous link
 */
 
-typedef struct		s_link
+typedef struct	s_link
 {
 	int				content;
 	struct s_link	*next;
 	struct s_link	*prev;
-}					t_link;
+}				t_link;
 
 /*
 ** @struct s_list
@@ -47,12 +47,12 @@ typedef struct		s_link
 ** @brief The number of entries in the list
 */
 
-typedef struct		s_list
+typedef struct	s_list
 {
 	t_link			*head;
 	t_link			*tail;
 	size_t			size;
-}					t_list;
+}				t_list;
 
 /*
 ** Creates a new empty list

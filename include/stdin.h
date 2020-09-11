@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:32:01 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 01:19:05 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:25:39 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 ** @brief A convenience data type for reading from `STDIN`
 */
 
-typedef struct		s_stdin
+typedef struct	s_stdin
 {
 	char	*line;
-}					t_stdin;
+}				t_stdin;
 
 /*
 ** Frees all memory taken up by `t_stdin`

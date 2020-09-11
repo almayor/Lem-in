@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 23:41:05 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:27:10 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 ** @brief The number of edges
 ** @var s_graph::adj
 ** @brief An array of lists, where the list at position `i` contains
-** all vertices to which the vertex `i` is adjacent 
+** all vertices to which the vertex `i` is adjacent
 ** of a given vertex.
 ** @var s_graph::names
 ** @brief A sorted arrays of vertex names, where the string at position `i` is
@@ -44,8 +44,8 @@
 
 typedef struct	s_graph
 {
-	int 	nverti;
-	int 	nedges;
+	int		nverti;
+	int		nedges;
 	t_list	**adj;
 	t_array	*names;
 	int		start;
@@ -61,7 +61,7 @@ typedef struct	s_graph
 ** @return A new graph
 */
 
-t_graph 		*graph_from_names(t_array *names, const char *start,
+t_graph			*graph_from_names(t_array *names, const char *start,
 								const char *end);
 
 /*
@@ -70,7 +70,7 @@ t_graph 		*graph_from_names(t_array *names, const char *start,
 ** @param w	The other vertex
 */
 
-void 			graph_add_edge(t_graph *graph, int v, int w);
+void			graph_add_edge(t_graph *graph, int v, int w);
 
 /*
 ** Returns an iterator over the vertices adjacent to a given vertex
@@ -95,7 +95,7 @@ void			graph_delete(t_graph *graph);
 ** @return The number of paths actually found
 */
 
-size_t 			graph_edkarp(const t_graph *graph, t_list ***paths, size_t n);
+size_t			graph_edkarp(const t_graph *graph, t_list ***paths, size_t n);
 
 /*
 ** Converts a vertex name to the corresponding numeric id

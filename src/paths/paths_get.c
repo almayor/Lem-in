@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:36:39 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:28:55 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:33:23 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static size_t	paths_assign(const t_paths *paths, size_t nants, size_t nused,
 	{
 		nants -= (paths_length(paths, nused - 1) - paths_length(paths, i));
 		assigments_new[i] = (paths_length(paths, nused - 1) -
-							 paths_length(paths, i));
+							paths_length(paths, i));
 		i++;
 	}
 	i = 0;
@@ -52,7 +52,7 @@ static size_t	paths_assign(const t_paths *paths, size_t nants, size_t nused,
 ** @param assignments_new New assignments
 */
 
-static void 	paths_reassign(t_paths *paths, size_t *assigments_new)
+static void		paths_reassign(t_paths *paths, size_t *assigments_new)
 {
 	size_t i;
 
@@ -68,7 +68,7 @@ static void 	paths_reassign(t_paths *paths, size_t *assigments_new)
 ** Calculates the best assignment of `nants` ants over the paths
 ** @param nants The total number of ants
 */
- 
+
 static void		paths_assign_optimally(t_paths *paths, size_t nants)
 {
 	size_t	i;

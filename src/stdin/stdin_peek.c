@@ -6,14 +6,14 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:34:56 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:01:15 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:34:04 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdin.h"
 
 char	*stdin_peek(t_stdin *in)
-{ 
+{
 	if (!in->line)
 		stdin_next(in);
 	return (in->line);

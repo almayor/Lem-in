@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 23:55:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 12:53:09 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:30:24 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static char	*parse_name(const char *line)
 	return (name);
 }
 
-static void parse_start(t_stdin *in, t_array *names, char **start)
+static void	parse_start(t_stdin *in, t_array *names, char **start)
 {
 	if (*start)
 		terminate(ERR_INVALID_INPUT);
@@ -41,7 +41,7 @@ static void parse_start(t_stdin *in, t_array *names, char **start)
 	array_append(names, *start);
 }
 
-static void parse_end(t_stdin *in, t_array *names, char **end)
+static void	parse_end(t_stdin *in, t_array *names, char **end)
 {
 	if (*end)
 		terminate(ERR_INVALID_INPUT);
@@ -57,8 +57,8 @@ static void	parse_default(t_stdin *in, t_array *names)
 t_graph		*parse_rooms(t_stdin *in)
 {
 	t_array	*names;
-	char 	*start;
-	char 	*end;
+	char	*start;
+	char	*end;
 
 	names = array_new();
 	start = NULL;

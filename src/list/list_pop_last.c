@@ -6,13 +6,13 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 16:00:19 by unite             #+#    #+#             */
-/*   Updated: 2020/09/10 11:53:03 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 03:34:39 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "list.h"
 
-int list_pop_last(t_list *list)
+int	list_pop_last(t_list *list)
 {
 	t_link	*tmp;
 	int		val;
