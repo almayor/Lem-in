@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 23:55:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:30:24 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/11 16:16:21 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ static void	parse_start(t_stdin *in, t_array *names, char **start)
 {
 	if (*start)
 		terminate(ERR_INVALID_INPUT);
-	*start = parse_name(stdin_next(in));
+	while (is_comment(stdin_next(in)))
+		continue ;
+	*start = parse_name(stdin_peek(in));
 	array_append(names, *start);
 }
 
@@ -45,7 +47,9 @@ static void	parse_end(t_stdin *in, t_array *names, char **end)
 {
 	if (*end)
 		terminate(ERR_INVALID_INPUT);
-	*end = parse_name(stdin_next(in));
+	while (is_comment(stdin_next(in)))
+		continue ;
+	*end = parse_name(stdin_peek(in));
 	array_append(names, *end);
 }
 

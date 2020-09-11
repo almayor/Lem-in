@@ -8,6 +8,5 @@ cmake-build-debug
 .idea
 .doxygen
 generator-docker
-*.txt
 Lem_in
 
