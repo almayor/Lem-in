@@ -34,7 +34,7 @@ or generate your own
 ./generator --flow-thousand | ./Lem_in
 ```
 
-(_NOTE_ that the `generator` has been made available to use in a Linux compilation. If you're running OSX, you could use a Docker `gcc` container or a VM. Alternatively, you could use the many pre-generated example maps in the `example-maps` directory)
+(_NOTE_ that the `generator` has been made available to us in a Linux compilation. If you're running OSX, you could use a Docker `gcc` container or a VM. Alternatively, you could use the many pre-generated example maps in the `example-maps` directory)
 
 # Acknowledgements
 
