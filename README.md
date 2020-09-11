@@ -4,7 +4,7 @@
 
 # Overview
 
-* [Official instructions](docs/lem-in.en.pdf)
+* [Official instructions](docs/subjects/lem-in.en.pdf)
 * [Code documentation](https://almayor.github.io/Lem-in)
 * This project practices the following algorithmic topics
 	* path search in undirected graphs
