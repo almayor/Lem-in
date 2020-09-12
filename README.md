@@ -2,7 +2,12 @@
 
 *This project is part of the official curriculum at [School 42](https://en.wikipedia.org/wiki/42_(school)).*
 
-# Overview
+## Disclaimer
+
+> In [School 42](https://en.wikipedia.org/wiki/42_(school)), almost every project must be written to comply with. coding standard (also known as the "[Norm](./docs/subjects/norme.en.pdf)"). As a result, the implementation of certain parts may appear strange.
+
+
+## Overview
 
 * [Official instructions](docs/subjects/lem-in.en.pdf)
 * [Code documentation](https://almayor.github.io/Lem-in)
@@ -11,9 +16,8 @@
 	* maxflow / mincut
 	* sorts
 	* efficient data representation (graphs, arrays, queues)
-* This project is written in compliance with the [Norm](docs/subjects/norme.en.pdf)
 
-# Run
+## Run
 
 To compile, run
 
@@ -36,7 +40,7 @@ or generate your own
 
 (_NOTE_ that the `generator` has been made available to us in a Linux compilation. If you're running OSX, you could use a Docker `gcc` container or a VM. Alternatively, you could use the many pre-generated example maps in the `example-maps` directory)
 
-# Acknowledgements
+## Acknowledgements
 
 We are grateful to the entire team behind School 42 and its [Moscow branch](https://21-school.ru
 ), as well as to my fellow students for help and support. Some ideas for tests found in `example-maps` are borrowed from a [similar project](https://github.com/davhojt/lem_in) by [davhojt](https://github.com/davhojt).
