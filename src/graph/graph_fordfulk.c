@@ -6,11 +6,44 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 17:49:54 by unite             #+#    #+#             */
-/*   Updated: 2020/09/16 19:14:23 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/16 20:28:48 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
+
+static void		reset_flow(const t_graph *graph)
+{
+	t_edge	*edge;
+	size_t	i;
+
+	i = 0;
+	while (i < graph->nverti)
+	{
+		edge = graph->adj[i];
+		while (edge)
+		{
+			edge->flow = 0;
+			edge = edge->next;
+		}
+		i++;
+	}
+}
+
+static void		augment_flow(const t_graph *graph, int from, int to)
+{
+	t_edge	*edge_fwd;
+	t_edge	*edge_rev;
+
+	edge_fwd = graph->adj[from];
+	while (edge_fwd->to != to)
+		edge_fwd = edge_fwd->next;
+	edge_fwd->flow += 1;
+	edge_rev = graph->adj[to];
+	while (edge_rev->to != from)
+		edge_rev = edge_rev->next;
+	edge_rev->flow -= 1;
+}
 
 static int		has_augmenting_path(const t_graph *graph, int *edge_to)
 {
@@ -39,22 +72,7 @@ static int		has_augmenting_path(const t_graph *graph, int *edge_to)
 	return (edge_to[graph->end] != -1);
 }
 
-static void		augment_flow(const t_graph *graph, int from, int to)
-{
-	t_edge	*edge_fwd;
-	t_edge	*edge_rev;
-
-	edge_fwd = graph->adj[from];
-	while (edge_fwd->to != to)
-		edge_fwd = edge_fwd->next;
-	edge_fwd->flow += 1;
-	edge_rev = graph->adj[to];
-	while (edge_rev->to != from)
-		edge_rev = edge_rev->next;
-	edge_rev->flow -= 1;
-}
-
-size_t			graph_fordfulk(const t_graph *graph, size_t n)
+size_t			graph_fordfulk(const t_graph *graph, size_t flow)
 {
 	size_t	maxflow;
 	int		*edge_to;
@@ -62,9 +80,10 @@ size_t			graph_fordfulk(const t_graph *graph, size_t n)
 	int		v;
 
 	maxflow = 0;
+	reset_flow(graph);
 	edge_to = ft_xmalloc(sizeof(int) * graph->nverti);
 	ft_memset(edge_to, -1, sizeof(int) * graph->nverti);
-	while (maxflow < n && has_augmenting_path(graph, edge_to))
+	while (maxflow < flow && has_augmenting_path(graph, edge_to))
 	{
 		w = graph->end;
 		while (w != graph->start)
@@ -77,6 +96,5 @@ size_t			graph_fordfulk(const t_graph *graph, size_t n)
 		maxflow++;
 	}
 	free(edge_to);
-	ft_printf("MAXFLOW = %i\n", (int)maxflow);
 	return (maxflow);
 }

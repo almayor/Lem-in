@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/09/16 17:53:58 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/16 20:43:11 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,34 @@ static void		lemin(t_paths *paths, size_t nants, const t_graph *graph)
 	free(ants);
 }
 
+static t_paths	*optimize_flow(const t_graph *graph, size_t nants)
+{
+	size_t	flow;
+	t_paths	*paths_best;
+	t_paths	*paths_new;
+
+	if (graph_fordfulk(graph, 1) < 1)
+		terminate(ERR_INVALID_INPUT);
+	paths_best = paths_get(graph, nants);
+	flow = 2;
+	while (flow <= nants)
+	{
+		if (flow > graph_fordfulk(graph, flow))
+			return (paths_best);
+		paths_new = paths_get(graph, nants);
+		ft_printf("%i : NSTEPS_NEW = %i, NSTEPS_BEST = %i\n", flow, paths_new->nsteps, paths_best->nsteps);
+		if (paths_new->nsteps < paths_best->nsteps)
+		{
+			paths_delete(paths_best);
+			paths_best = paths_new;
+		}
+		else
+			paths_delete(paths_new);
+		flow++;
+	}
+	return (paths_best);
+}
+
 int				main(void)
 {
 	t_stdin	*in;
@@ -107,7 +135,8 @@ int				main(void)
 	nants = parse_nants(in);
 	graph = parse_rooms(in);
 	parse_links(in, graph);
-	paths = paths_get(graph, nants);
+	paths = optimize_flow(graph, nants);
+	return (1);
 	lemin(paths, nants, graph);
 	stdin_delete(in);
 	graph_delete(graph);

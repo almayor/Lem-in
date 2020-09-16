@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:27:17 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:27:54 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/16 20:17:19 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@
 typedef struct	s_paths
 {
 	size_t	npaths;
+	size_t	nsteps;
 	t_list	**arr;
 	size_t	*assignments;
 }				t_paths;
@@ -53,7 +54,7 @@ void			paths_delete(t_paths *paths);
 ** @return The paths
 */
 
-t_paths			*paths_get(t_graph *graph, size_t nants);
+t_paths			*paths_get(const t_graph *graph, size_t nants);
 
 /*
 ** Checks if the `i`th path can accommodate one more ant, given the optimal

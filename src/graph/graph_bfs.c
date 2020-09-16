@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 17:30:58 by unite             #+#    #+#             */
-/*   Updated: 2020/09/16 17:47:18 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/16 20:34:19 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static t_list	*next_path(const t_graph *graph, int *edge_to, int *marked)
 		while (edge)
 		{
 			w = edge->to;
-			if (w != graph->start && edge->flow == 1 && marked[w] == 0)
+			if (w != graph->start && edge->flow >= 0 && edge_to[w] == -1 && marked[w] == 0)
 			{
 				edge_to[w] = v;
 				queue_enqueue(queue, w);
