@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:27:10 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/16 17:48:17 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@
 # include "list.h"
 # include "queue.h"
 # include "utils.h"
+
+typedef struct	s_edge
+{
+	int				to;
+	int				flow;
+	struct s_edge	*next;
+}				t_edge;
 
 /*
 ** @struct s_graph
@@ -46,7 +53,7 @@ typedef struct	s_graph
 {
 	int		nverti;
 	int		nedges;
-	t_list	**adj;
+	t_edge	**adj;
 	t_array	*names;
 	int		start;
 	int		end;
@@ -95,7 +102,9 @@ void			graph_delete(t_graph *graph);
 ** @return The number of paths actually found
 */
 
-size_t			graph_edkarp(const t_graph *graph, t_list ***paths, size_t n);
+size_t			graph_bfs(const t_graph *graph, t_list ***paths, size_t n);
+
+size_t			graph_fordfulk(const t_graph *graph, size_t n);
 
 /*
 ** Converts a vertex name to the corresponding numeric id

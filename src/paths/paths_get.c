@@ -6,7 +6,7 @@
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:36:39 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:33:23 by unite            ###   ########.fr       */
+/*   Updated: 2020/09/16 19:13:54 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,10 @@ t_paths			*paths_get(t_graph *graph, size_t nants)
 {
 	t_paths	*paths;
 
-	paths = ft_xcalloc(sizeof(t_paths), 1);
-	paths->npaths = graph_edkarp(graph, &(paths->arr), nants);
-	if (paths->npaths < 1)
+	if (graph_fordfulk(graph, nants) < 1)
 		terminate(ERR_INVALID_INPUT);
+	paths = ft_xcalloc(sizeof(t_paths), 1);
+	paths->npaths = graph_bfs(graph, &(paths->arr), nants);
 	paths->assignments = ft_xcalloc(sizeof(size_t), nants);
 	paths_assign_optimally(paths, nants);
 	return (paths);

@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_edkarp.c                                     :+:      :+:    :+:   */
+/*   graph_bfs.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 17:49:54 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:31:11 by unite            ###   ########.fr       */
+/*   Created: 2020/09/16 17:30:58 by unite             #+#    #+#             */
+/*   Updated: 2020/09/16 17:47:18 by unite            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
-
-/*
-** Converts `edge_to` to a list of vertices along the path
-** @param[in] edge_to An array that keeps track of
-** the order of vertices on the path
-** @param[out] marked An array where all vertices along the new path will be
-** marked as unavailable
-** @return The list of vertices along the path
-*/
 
 static t_list	*unroll_path(const t_graph *graph, const int *edge_to,
 							int *marked)
@@ -41,22 +32,10 @@ static t_list	*unroll_path(const t_graph *graph, const int *edge_to,
 	return (path);
 }
 
-/*
-** Runs breadth-first search on the graph in order to
-** get the shortest from `start` to `end`, whilst
-** ignoring all the `marked` vertices that have already been used in other paths
-** @param[out] edge_to An array to keep track of
-** the order of vertices on the path
-** @param[out] marked An array marking which vertices have already been used
-** in other paths
-** @return A list of vertices along the new path, or `NULL` if no more paths
-** exist
-*/
-
-static t_list	*graph_bst(const t_graph *graph, int *edge_to, int *marked)
+static t_list	*next_path(const t_graph *graph, int *edge_to, int *marked)
 {
 	t_queue			*queue;
-	t_iterator		*adj;
+	t_edge			*edge;
 	int				v;
 	int				w;
 
@@ -64,23 +43,23 @@ static t_list	*graph_bst(const t_graph *graph, int *edge_to, int *marked)
 	queue_enqueue(queue, graph->start);
 	while (queue_size(queue) > 0 && (v = queue_dequeue(queue)) != graph->end)
 	{
-		adj = graph_adjacency(graph, v);
-		while (iterator_has_next(adj))
+		edge = graph->adj[v];
+		while (edge)
 		{
-			w = iterator_next(adj);
-			if (w != graph->start && edge_to[w] < 0 && marked[w] == 0)
+			w = edge->to;
+			if (w != graph->start && edge->flow == 1 && marked[w] == 0)
 			{
 				edge_to[w] = v;
 				queue_enqueue(queue, w);
 			}
+			edge = edge->next;
 		}
-		iterator_delete(adj);
 	}
 	queue_delete(queue);
 	return (unroll_path(graph, edge_to, marked));
 }
 
-size_t			graph_edkarp(const t_graph *graph, t_list ***dest, size_t n)
+size_t			graph_bfs(const t_graph *graph, t_list ***dest, size_t n)
 {
 	t_list	*path;
 	int		*edge_to;
@@ -92,7 +71,7 @@ size_t			graph_edkarp(const t_graph *graph, t_list ***dest, size_t n)
 	edge_to = ft_xcalloc(sizeof(int), graph->nverti);
 	ft_memset(edge_to, -1, sizeof(int) * graph->nverti);
 	i = 0;
-	while (i < n && (path = graph_bst(graph, edge_to, marked)))
+	while (i < n && (path = next_path(graph, edge_to, marked)))
 	{
 		(*dest)[i++] = path;
 		ft_memset(edge_to, -1, sizeof(int) * graph->nverti);

@@ -6,11 +6,11 @@
 #    By: unite <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/09/10 19:41:00 by unite            ###   ########.fr        #
+#    Updated: 2020/09/16 19:07:56 by unite            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Lem_in
+NAME = lem-in
 
 SRC_NAME = \
 array/array_append.c \
@@ -25,9 +25,9 @@ array/array_shrink.c \
 array/array_size.c \
 array/array_swap.c \
 graph/graph_add_edge.c \
-graph/graph_adjacency.c \
+graph/graph_bfs.c \
 graph/graph_delete.c \
-graph/graph_edkarp.c \
+graph/graph_fordfulk.c \
 graph/graph_from_names.c \
 graph/graph_id2name.c \
 graph/graph_name2id.c \
