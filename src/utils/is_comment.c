@@ -14,5 +14,5 @@
 
 int	is_comment(const char *s)
 {
-	return (s && s[0] == '#');
+	return (s && s[0] == '#' && !is_end(s) && !is_start(s));
 }
