@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_add_edge.c                                   :+:      :+:    :+:   */
+/*   graph_remove_edge.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 20:52:18 by unite             #+#    #+#             */
-/*   Updated: 2020/10/06 19:03:35 by user             ###   ########.fr       */
+/*   Created: 2020/10/06 18:58:10 by user              #+#    #+#             */
+/*   Updated: 2020/10/06 19:02:14 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
 
-void	graph_add_edge(t_graph *graph, int from, int to, int cost)
+void	graph_remove_edge(t_graph *graph, int from, int to)
 {
 	t_edge	*edge;
+	t_edge	*tmp;
 
-	edge = ft_xcalloc(sizeof(t_edge), 1);
-	edge->to = to;
-	edge->cost = cost;
-	edge->next = graph->nodes[from]->edges;
-	graph->nodes[from]->edges = edge;
-	graph->nedges++;
+	graph->nedges--;
+	edge = graph->nodes[from]->edges;
+	if (edge->to == to)
+	{
+		graph->nodes[from]->edges = edge->next;
+		free(edge);
+		return ;
+	}
+	while (edge && edge->next)
+	{
+		if (edge->next && edge->next->to == to)
+		{
+			tmp = edge->next;
+			edge->next = edge->next->next;
+			free(tmp);
+			return ;
+		}
+		edge = edge->next;
+	}
 }

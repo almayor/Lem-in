@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_links.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:04:28 by unite             #+#    #+#             */
-/*   Updated: 2020/09/16 17:42:26 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/06 19:03:46 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ void	parse_links(t_stdin *in, t_graph *graph)
 				(room1 = graph_name2id(graph, tab[0])) < 0 ||
 				(room2 = graph_name2id(graph, tab[1])) < 0)
 				terminate(ERR_INVALID_INPUT);
-			graph_add_edge(graph, room1, room2);
+			graph_add_edge(graph, room1, room2, 1);
+			graph_add_edge(graph, room2, room1, 1);
 			tab_delete(tab);
 		}
 		stdin_next(in);

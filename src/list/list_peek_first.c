@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_add_edge.c                                   :+:      :+:    :+:   */
+/*   list_peek_first.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 20:52:18 by unite             #+#    #+#             */
-/*   Updated: 2020/10/06 19:03:35 by user             ###   ########.fr       */
+/*   Created: 2020/10/06 17:52:24 by user              #+#    #+#             */
+/*   Updated: 2020/10/06 18:15:09 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "graph.h"
+#include "list.h"
 
-void	graph_add_edge(t_graph *graph, int from, int to, int cost)
+int	list_peek_first(const t_list *list)
 {
-	t_edge	*edge;
-
-	edge = ft_xcalloc(sizeof(t_edge), 1);
-	edge->to = to;
-	edge->cost = cost;
-	edge->next = graph->nodes[from]->edges;
-	graph->nodes[from]->edges = edge;
-	graph->nedges++;
+	return (list->size > 0 ? list->head->content : -1);	
 }

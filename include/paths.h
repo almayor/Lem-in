@@ -46,15 +46,9 @@ typedef struct	s_paths
 
 void			paths_delete(t_paths *paths);
 
-/*
-** Gets paths from `start` to `end`, given a graph, as well as the number of
-** ants that should take each path in the best-case scenario
-** @param graph The graph
-** @param nants The number of ants
-** @return The paths
-*/
+t_paths			*paths_compute(t_graph *graph, size_t nants);
 
-t_paths			*paths_get(const t_graph *graph, size_t nants);
+void			paths_assign(t_paths *paths, size_t nants);
 
 /*
 ** Checks if the `i`th path can accommodate one more ant, given the optimal

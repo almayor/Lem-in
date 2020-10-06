@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   paths_get.c                                        :+:      :+:    :+:   */
+/*   paths_optimize_assignment.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/10 15:36:39 by unite             #+#    #+#             */
-/*   Updated: 2020/09/16 20:17:00 by unite            ###   ########.fr       */
+/*   Created: 2020/10/06 19:15:58 by user              #+#    #+#             */
+/*   Updated: 2020/10/06 19:19:36 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 ** @return The number of steps in this assignment
 */
 
-static size_t	paths_assign(const t_paths *paths, size_t nants, size_t nused,
-							size_t *assigments_new)
+static size_t	paths_assign_once(const t_paths *paths, size_t nants,
+								size_t nused, size_t *assigments_new)
 {
 	size_t	nsteps_new;
 	size_t	i;
@@ -69,7 +69,7 @@ static void		paths_reassign(t_paths *paths, size_t *assigments_new)
 ** @param nants The total number of ants
 */
 
-static size_t	paths_assign_optimally(t_paths *paths, size_t nants)
+void	paths_assign(t_paths *paths, size_t nants)
 {
 	size_t	i;
 	size_t	nsteps_old;
@@ -81,7 +81,7 @@ static size_t	paths_assign_optimally(t_paths *paths, size_t nants)
 	i = 1;
 	while (i <= paths->npaths)
 	{
-		nsteps_new = paths_assign(paths, nants, i, assigments_new);
+		nsteps_new = paths_assign_once(paths, nants, i, assigments_new);
 		if (nsteps_new >= nsteps_old)
 			break ;
 		paths_reassign(paths, assigments_new);
@@ -89,16 +89,5 @@ static size_t	paths_assign_optimally(t_paths *paths, size_t nants)
 		i++;
 	}
 	free(assigments_new);
-	return (nsteps_old);
-}
-
-t_paths			*paths_get(const t_graph *graph, size_t nants)
-{
-	t_paths	*paths;
-
-	paths = ft_xcalloc(sizeof(t_paths), 1);
-	paths->npaths = graph_bfs(graph, &(paths->arr), nants);
-	paths->assignments = ft_xcalloc(sizeof(size_t), nants);
-	paths->nsteps = paths_assign_optimally(paths, nants);
-	return (paths);
+	paths->nsteps = nsteps_old;
 }
