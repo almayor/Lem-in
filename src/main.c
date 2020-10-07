@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/10/06 19:27:13 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 20:44:08 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include "paths.h"
 #include "parse.h"
 #include "stdin.h"
+
+#include <time.h>
 
 /*
 ** Moves all ants that are currently en-route by one link forward
@@ -103,24 +105,21 @@ int				main(void)
 	t_graph	*graph;
 	t_paths	*paths;
 
-	// in = stdin_new();
-	// nants = parse_nants(in);
-	// graph = parse_rooms(in);
-	// parse_links(in, graph);
-	// paths = optimize_flow(graph, nants);
-	// return (1);
-	// lemin(paths, nants, graph);
-	// stdin_delete(in);
-	// graph_delete(graph);
-	// paths_delete(paths);
+	time_t	time1, time2, time3; 
 
+	time1 = time(0);
 	in = stdin_new();
 	nants = parse_nants(in);
 	graph = parse_rooms(in);
 	parse_links(in, graph);
+	time2 = time(0);
 	paths = paths_compute(graph, nants);
 	lemin(paths, nants, graph);
 	stdin_delete(in);
 	graph_delete(graph);
 	paths_delete(paths);
+	time3 = time(0);
+
+	ft_printf("Time during parsing = %ld\n", time2 - time1);
+	ft_printf("Time after parsing = %ld\n", time3 - time2);
 }

@@ -37,7 +37,7 @@ t_paths		*paths_compute(t_graph *graph, size_t nants)
 	if (!(paths_old = paths_get(graph, nants)))
 		terminate("ERROR");
 	while ((paths_new = paths_get(graph, nants)) &&
-		paths_new->nsteps < paths_old->nsteps)
+			paths_new->nsteps <= paths_old->nsteps)
 	//int i = 0;
 	//while (i++ < 10 && (paths_new = paths_get(graph, nants)))
 	{
