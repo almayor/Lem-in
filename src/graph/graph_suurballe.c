@@ -12,11 +12,30 @@
 
 #include "graph.h"
 
+static void 	resplit(t_graph *graph)
+{
+	int child;
+	int parent;
+
+	child = 0;
+	while (child < graph->nnodes)
+	{
+		parent = graph->nodes[child]->parent;
+		if (child == graph->start || parent < 0 ||
+			graph->nodes[parent]->child != child)
+			graph->nodes[child]->split = 0;
+		else
+			graph->nodes[child]->split = 1;
+		child++;
+	}
+}
 static void		set_path(t_graph *graph, int *edge_to)
 {
+	int del;
 	int	v;
 	int	w;
 
+	del = 0;
 	w = graph->end;
 	while (w != graph->start)
 	{
@@ -25,15 +44,22 @@ static void		set_path(t_graph *graph, int *edge_to)
 		{
 			graph_set_edge(graph, v, w, POSITIVE);
 			graph_set_edge(graph, w, v, POSITIVE);
+			if (del)
+			{
+				graph->nodes[v]->parent = -1;
+				graph->nodes[v]->split = 0;
+			}
+			del = 1;
 		}
 		else
 		{
 			graph_set_edge(graph, v, w, FORBIDDEN);
 			graph_set_edge(graph, w, v, NEGATIVE);
 			graph->nodes[w]->parent = v;
+			del = 0;
+			if (v != graph->start)	graph->nodes[v]->split = 1;
+			if (w != graph->end) 	graph->nodes[w]->split = 1;
 		}
-		if (w != graph->end)
-			graph->nodes[w]->split = 1;
 		w = v;
 	}
 }

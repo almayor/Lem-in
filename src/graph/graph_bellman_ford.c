@@ -56,7 +56,6 @@ static void	relax_edges(t_graph *graph, int *edge_to, int *cost_to)
 				edge_to[w] = v;
 				cost_to[w] = cost_to[v] + c;
 				update_mode(graph, v, w);
-				//assert(cost_to[w] >= 0);
 			}
 			edge = edge->next;
 		}
