@@ -6,29 +6,12 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 17:30:42 by user              #+#    #+#             */
-/*   Updated: 2020/10/07 12:34:47 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 20:25:36 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
 
-static void 	resplit(t_graph *graph)
-{
-	int child;
-	int parent;
-
-	child = 0;
-	while (child < graph->nnodes)
-	{
-		parent = graph->nodes[child]->parent;
-		if (child == graph->start || parent < 0 ||
-			graph->nodes[parent]->child != child)
-			graph->nodes[child]->split = 0;
-		else
-			graph->nodes[child]->split = 1;
-		child++;
-	}
-}
 static void		set_path(t_graph *graph, int *edge_to)
 {
 	int del;

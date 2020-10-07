@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: unite <marvin@42.fr>                       +#+  +:+       +#+         #
+#    By: user <user@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/09/16 19:07:56 by unite            ###   ########.fr        #
+#    Updated: 2020/10/07 20:24:35 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,12 +25,13 @@ array/array_shrink.c \
 array/array_size.c \
 array/array_swap.c \
 graph/graph_add_edge.c \
-graph/graph_bfs.c \
+graph/graph_bellman_ford.c \
 graph/graph_delete.c \
-graph/graph_fordfulk.c \
 graph/graph_from_names.c \
 graph/graph_id2name.c \
 graph/graph_name2id.c \
+graph/graph_set_edge.c \
+graph/graph_suurballe.c \
 iterator/iterator_delete.c \
 iterator/iterator_from_list.c \
 iterator/iterator_has_next.c \
@@ -39,17 +40,24 @@ list/list_add_first.c \
 list/list_add_last.c \
 list/list_delete.c \
 list/list_new.c \
+list/list_peek_first.c \
+list/list_peek_last.c \
 list/list_pop_first.c \
 list/list_pop_last.c \
+list/list_print.c \
+list/list_remove.c \
 list/list_size.c \
+main.c \
 parse/parse_links.c \
 parse/parse_nants.c \
 parse/parse_rooms.c \
+paths/paths_assign.c \
+paths/paths_compute.c \
 paths/paths_delete.c \
-paths/paths_get.c \
 paths/paths_is_available.c \
 paths/paths_length.c \
 paths/paths_navigate.c \
+paths/paths_print.c \
 queue/queue_delete.c \
 queue/queue_dequeue.c \
 queue/queue_enqueue.c \
@@ -71,7 +79,7 @@ utils/is_start.c \
 utils/tab_delete.c \
 utils/tab_len.c \
 utils/terminate.c \
-main.c \
+
 
 ################################################################################
 

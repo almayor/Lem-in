@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 17:44:00 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 20:23:52 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ typedef struct	s_node
 {
 	t_edge			*edges;
 	int				parent;
-	int				child;
 	int				price;
 	char			split;
 	char			mode;
