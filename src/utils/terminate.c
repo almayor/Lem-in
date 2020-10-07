@@ -14,6 +14,7 @@
 
 void	terminate(const char *mes)
 {
+	ft_putchar('\n');
 	ft_putendl_fd(mes, 2);
 	exit(1);
 }

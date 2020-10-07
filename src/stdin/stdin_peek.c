@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   stdin_peek.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:34:56 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:34:04 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/07 21:30:35 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdin.h"
 
-char	*stdin_peek(t_stdin *in)
+const char	*stdin_peek(t_stdin *in)
 {
+	if (in->end)
+		return (NULL);
 	if (!in->line)
 		stdin_next(in);
 	return (in->line);

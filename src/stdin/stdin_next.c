@@ -3,27 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   stdin_next.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:42:02 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:01:06 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/07 22:01:32 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdin.h"
 
-char	*stdin_next(t_stdin *in)
+static void	get_line(t_stdin *in)
 {
-	int	rc;
-
-	if (in->line)
-		free(in->line);
-	rc = get_next_line(0, &(in->line));
-	if (rc < 0)
+	in->line = in->ptr;
+	if (!(in->ptr = ft_strchr(in->ptr, '\n')))
 		terminate(ERR_STDIN);
-	else if (rc == 0)
-		in->line = NULL;
-	else
-		ft_putendl(in->line);
+	*(in->ptr) = '\0';
+}
+
+const char	*stdin_next(t_stdin *in)
+{
+	ssize_t		ret;
+	size_t 		carryover;
+
+	if (in->end)
+		return (NULL);
+	in->ptr++;
+	if (ft_strchr(in->ptr, '\n') == NULL)
+	{
+		carryover = ft_strlen(in->ptr);
+		ft_memmove(in->buffer, in->ptr, carryover + 1);
+		in->ptr = in->buffer;
+		ret = read(0, in->buffer + carryover, BUFFER_SIZE - carryover);
+		if (ret < 0)
+			terminate(ERR_STDIN);
+		if (ret == 0)
+		{
+			in->end = 1;
+			return (in->line);
+		}
+		in->buffer[carryover + ret] = '\0';
+		write(1, in->buffer + carryover, ret);
+	}
+	get_line(in);
 	return (in->line);
 }

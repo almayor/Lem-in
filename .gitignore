@@ -4,7 +4,7 @@ obj
 *.d
 CMakeLists.txt
 *.pickle
-cmake-build-debug
+cmake-build-*
 .idea
 .doxygen
 generator-docker

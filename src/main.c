@@ -120,6 +120,6 @@ int				main(void)
 	paths_delete(paths);
 	time3 = time(0);
 
-	ft_printf("Time during parsing = %ld\n", time2 - time1);
-	ft_printf("Time after parsing = %ld\n", time3 - time2);
+	//ft_printf("Time during parsing = %ld\n", time2 - time1);
+	//ft_printf("Time after parsing = %ld\n", time3 - time2);
 }
