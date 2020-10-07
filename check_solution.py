@@ -4,6 +4,7 @@ import collections
 import re
 import sys
 
+
 class Room:
 
 	def __init__(self, name):
@@ -19,6 +20,8 @@ class Farm:
 	cmd_regex = re.compile(r"L([0-9]{1,3})-(.*)")
 
 	def __init__(self, nants):
+		if nants == 0:
+			raise ValueError("Numbers of ants should be greater than zero")
 		self.nants = nants
 		self.nrooms = 0
 		self.rooms = dict()
@@ -101,9 +104,9 @@ class Farm:
 
 class Parser:
 
-	nants_regex = re.compile(r"([0-9]+)")
-	room_regex  = re.compile(r"([^L][^\s]*)\s+(-?[0-9]+)\s+(-?[0-9]+)")
-	link_regex	= re.compile(r"([^L][^\s]*)-([^L][^\s]*)")
+	nants_regex = re.compile(r"^([0-9]+)$")
+	room_regex  = re.compile(r"^([^L][^\s]*)\s+(-?[0-9]+)\s+(-?[0-9]+)$")
+	link_regex	= re.compile(r"^([^L][^\s]*)-([^L][^\s]*)$")
 
 	def make_farm(self):
 		self.farm = None
@@ -175,6 +178,7 @@ class Parser:
 		if ("required" in self.line):
 			self.required = self.line
 			self.readline()
+
 
 if __name__ == "__main__":
 	try:

@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:32:01 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 22:06:08 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 22:19:40 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ typedef struct	s_stdin
 	char	buffer[BUFFER_SIZE + 1];
 	char	*ptr;
 	char	*line;
-	size_t	carryover;
 	char	end;
 }				t_stdin;
 
