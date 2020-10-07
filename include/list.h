@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 17:49:33 by unite             #+#    #+#             */
-/*   Updated: 2020/10/06 18:47:04 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 13:38:26 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ void			list_delete(t_list *list);
 int 			list_peek_first(const t_list *list);
 int 			list_peek_last(const t_list *list);
 void			list_remove(t_list *list, int val);
+void			list_print(const t_list *list);
 
 #endif

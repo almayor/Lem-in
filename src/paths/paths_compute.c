@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:36:39 by unite             #+#    #+#             */
-/*   Updated: 2020/10/06 19:26:29 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 14:39:17 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static t_paths	*paths_get(t_graph *graph, size_t nants)
 
 	paths = ft_xcalloc(sizeof(t_paths), 1);
 	paths->npaths = ++npaths;
-	if (!(paths->arr = graph_bhandari(graph)))
+	if (!(paths->arr = graph_suurballe(graph)))
 	{
 		free(paths);
 		return (NULL);
@@ -39,8 +39,8 @@ t_paths		*paths_compute(t_graph *graph, size_t nants)
 	while ((paths_new = paths_get(graph, nants)) &&
 			paths_new->nsteps < paths_old->nsteps)
 	{
-		paths_delete(paths_old);
-		paths_old = paths_new;
+			paths_delete(paths_old);
+			paths_old = paths_new;
 	}
 	if (paths_new)
 		paths_delete(paths_new);

@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/10/06 19:04:21 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 12:40:50 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,36 @@
 # include "queue.h"
 # include "utils.h"
 
+# define NEGATIVE	-1
+# define POSITIVE	+1
+# define FORBIDDEN	0
+
 typedef struct	s_edge
 {
 	int				to;
-	int				cost;
+	char			state;
 	struct s_edge	*next;
 }				t_edge;
+
+# define FROM_PARENT	1
+# define FROM_OTHER		0
 
 typedef struct	s_node
 {
 	t_edge			*edges;
-	t_list			*ancest;
-	t_list			*descend;
+	int				parent;
+	int				price;
+	char			split;
+	char			mode;
 }				t_node;
 
 typedef struct	s_graph
 {
-	int				nverti;
+	int				nnodes;
 	int				nedges;
 	t_array			*names;
 	t_node			**nodes;
+	t_list			*exits;
 	int				start;
 	int				end;
 }				t_graph;
@@ -49,16 +59,14 @@ typedef struct	s_graph
 t_graph			*graph_from_names(t_array *names, const char *start_name,
 								const char *end_name);
 
-void			graph_add_edge(t_graph *graph, int from, int to, int cost);
-void			graph_remove_edge(t_graph *graph, int from, int to);
-
-t_iterator		*graph_adjacency(const t_graph *graph, int v);
+void			graph_add_edge(t_graph *graph, int from, int to);
+void			graph_set_edge(t_graph *graph, int from, int to, char state);
 
 void			graph_delete(t_graph *graph);
 
-int				*graph_bellman_ford(const t_graph *graph);
+int				*graph_bellman_ford(t_graph *graph);
 
-t_list			**graph_bhandari(t_graph *graph);
+t_list			**graph_suurballe(t_graph *graph);
 
 int				graph_name2id(const t_graph *graph, const char *name);
 

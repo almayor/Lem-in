@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:49:06 by unite             #+#    #+#             */
-/*   Updated: 2020/10/06 18:53:17 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 12:37:19 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ static void		node_delete(t_node *node)
 		free(e1);
 		e1 = e2;
 	}
-	list_delete(node->ancest);
-	list_delete(node->descend);
 	free(node);
 }
 
@@ -34,9 +32,10 @@ void			graph_delete(t_graph *graph)
 	int	i;
 
 	i = 0;
-	while (i < graph->nverti)
+	while (i < graph->nnodes)
 		node_delete(graph->nodes[i++]);
 	array_delete(graph->names);
+	list_delete(graph->exits);
 	free(graph->nodes);
 	free(graph);
 }

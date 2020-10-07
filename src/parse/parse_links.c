@@ -31,8 +31,8 @@ void	parse_links(t_stdin *in, t_graph *graph)
 				(room1 = graph_name2id(graph, tab[0])) < 0 ||
 				(room2 = graph_name2id(graph, tab[1])) < 0)
 				terminate(ERR_INVALID_INPUT);
-			graph_add_edge(graph, room1, room2, 1);
-			graph_add_edge(graph, room2, room1, 1);
+			graph_add_edge(graph, room1, room2);
+			graph_add_edge(graph, room2, room1);
 			tab_delete(tab);
 		}
 		stdin_next(in);

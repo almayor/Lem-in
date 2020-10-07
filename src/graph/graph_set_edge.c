@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_remove_edge.c                                :+:      :+:    :+:   */
+/*   graph_set_edge.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/06 18:58:10 by user              #+#    #+#             */
-/*   Updated: 2020/10/06 19:02:14 by user             ###   ########.fr       */
+/*   Created: 2020/10/07 12:38:20 by user              #+#    #+#             */
+/*   Updated: 2020/10/07 12:41:01 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
 
-void	graph_remove_edge(t_graph *graph, int from, int to)
+void	graph_set_edge(t_graph *graph, int from, int to, char state)
 {
 	t_edge	*edge;
-	t_edge	*tmp;
 
-	graph->nedges--;
 	edge = graph->nodes[from]->edges;
-	if (edge->to == to)
+	while (edge)
 	{
-		graph->nodes[from]->edges = edge->next;
-		free(edge);
-		return ;
-	}
-	while (edge && edge->next)
-	{
-		if (edge->next && edge->next->to == to)
+		if (edge->to == to)
 		{
-			tmp = edge->next;
-			edge->next = edge->next->next;
-			free(tmp);
+			edge->state = state;
 			return ;
 		}
 		edge = edge->next;

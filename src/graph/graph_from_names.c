@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:35:49 by unite             #+#    #+#             */
-/*   Updated: 2020/10/06 18:50:42 by user             ###   ########.fr       */
+/*   Updated: 2020/10/07 14:12:44 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ static t_node	*node_new(void)
 	t_node	*node;
 
 	node = ft_xcalloc(sizeof(t_node), 1);
-	node->ancest = list_new();
-	node->descend = list_new();
+	node->parent = -1;
 	return (node);
 }
 
@@ -29,15 +28,16 @@ t_graph			*graph_from_names(t_array *names, const char *start_name,
 	int		i;
 
 	graph = ft_xcalloc(sizeof(t_graph), 1);
-	graph->nverti = array_size(names);
+	graph->nnodes = array_size(names);
 	graph->nedges = 0;
 	graph->names = names;
-	graph->nodes = ft_xcalloc(sizeof(t_node *), graph->nverti);
+	graph->nodes = ft_xcalloc(sizeof(t_node *), graph->nnodes);
+	graph->exits = list_new();
 	i = 0;
-	while (i < graph->nverti)
+	while (i < graph->nnodes)
 		graph->nodes[i++] = node_new();
 	array_quick_sort(names);
-	graph->start = array_indexof(names, start_name);
-	graph->end = array_indexof(names, end_name);
+	graph->start = graph_name2id(graph, start_name);
+	graph->end = graph_name2id(graph, end_name);
 	return (graph);
 }

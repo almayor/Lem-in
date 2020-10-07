@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_add_edge.c                                   :+:      :+:    :+:   */
+/*   list_print.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 20:52:18 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 12:30:18 by user             ###   ########.fr       */
+/*   Created: 2020/07/13 20:23:45 by unite             #+#    #+#             */
+/*   Updated: 2020/10/07 13:38:35 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "graph.h"
+#include "list.h"
 
-void	graph_add_edge(t_graph *graph, int from, int to)
+void	list_print(const t_list *list)
 {
-	t_edge	*edge;
+	t_link	*link;
 
-	edge = ft_xcalloc(sizeof(t_edge), 1);
-	edge->to = to;
-	edge->state = POSITIVE;
-	edge->next = graph->nodes[from]->edges;
-	graph->nodes[from]->edges = edge;
-	graph->nedges++;
+	link = list->head;
+	while (link)
+	{
+		ft_printf("%i", link->content);
+		if (link->next)
+			ft_printf(" -> ");
+		link = link->next;
+	}
+	ft_printf("\n");
 }
