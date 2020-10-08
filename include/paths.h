@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:27:17 by unite             #+#    #+#             */
-/*   Updated: 2020/10/08 11:42:39 by user             ###   ########.fr       */
+/*   Updated: 2020/10/08 21:46:38 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 # include <stdint.h>
 # include "graph.h"
-# include "iterator.h"
 # include "list.h"
 # include "utils.h"
 
@@ -66,7 +65,7 @@ int				paths_is_available(const t_paths *paths, size_t i);
 ** @return The iterator
 */
 
-t_iterator		*paths_navigate(t_paths *paths, size_t i);
+t_link		*paths_navigate(t_paths *paths, size_t i);
 
 /*
 ** Returns the length (i.e. the number of links to traverse) of the `i`th path

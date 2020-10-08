@@ -28,7 +28,7 @@ void		graph_cache_path(t_graph *graph)
 
 	unsplit = 0;
 	w = graph->end;
-	list_add_last(graph->exits, w);
+	list_add_last(graph->exits, graph->nodes[w]->edge_in);
 	while (w != graph->start)
 	{
 		v = get_new_parent(graph, w);

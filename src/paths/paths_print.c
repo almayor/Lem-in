@@ -14,19 +14,19 @@
 
 void paths_print(const t_paths *paths, const t_graph *graph)
 {
-	int 		i;
-	t_iterator 	*iter;
+	int 	i;
+	t_link 	*link;
 
 	i = 0;
 	while (i < paths->npaths)
 	{
-		iter = iterator_from_list(paths->arr[i]);
-		while (iterator_has_next(iter))
+		link = paths->arr[i]->head;
+		while (link)
 		{
-			ft_putstr(graph_id2name(graph, iterator_next(iter)));
-			ft_putstr(iterator_has_next(iter) ? " -> " : "\n");
+			ft_putstr(graph_id2name(graph, link->content));
+			link = link->next;
+			ft_putstr(link ? " -> " : "\n");
 		}
-		iterator_delete(iter);
 		i++;
 	}
 }

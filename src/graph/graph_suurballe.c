@@ -30,15 +30,17 @@ static t_list	**unroll_paths(const t_graph *graph)
 {
 	static int	npaths;
 	t_list		**paths;
-	t_iterator	*iter;
+	t_link		*link;
 	int			i;
 
 	paths = ft_xcalloc(sizeof(t_list *), ++npaths);
-	iter = iterator_from_list(graph->exits);
+	link = graph->exits->head;
 	i = 0;
-	while (iterator_has_next(iter))
-		paths[i++] = unroll_path(graph, iterator_next(iter));
-	iterator_delete(iter);
+	while (link)
+	{
+		paths[i++] = unroll_path(graph, link->content);
+		link = link->next;
+	}
 	return (paths);
 }
 

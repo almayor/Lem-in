@@ -23,8 +23,8 @@ void	graph_reset(t_graph *graph)
 		node = graph->nodes[v];
 		node->edge_in = -1;
 		node->edge_out = -1;
-		node->cost_in = INT_MAX;
-		node->cost_out = INT_MAX;
+		node->cost_in = INT_MAX - 1;
+		node->cost_out = INT_MAX - 1;
 		v++;
 	}
 	node = graph->nodes[graph->start];

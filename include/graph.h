@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/10/08 17:54:16 by user             ###   ########.fr       */
+/*   Updated: 2020/10/08 21:46:42 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 # include <stdlib.h>
 # include "array.h"
-# include "iterator.h"
 # include "libftprintfgnl.h"
 # include "list.h"
 # include "queue.h"

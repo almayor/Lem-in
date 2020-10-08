@@ -16,20 +16,20 @@
 
 static void	relax_edges(t_graph *graph)
 {
-	int			v;
-	int			w;
-	t_iterator	*iter;
+	int		v;
+	int		w;
+	t_link	*link;
 
 	v = 0;
 	while (v < graph->nnodes)
 	{
-		iter = iterator_from_list(graph->nodes[v]->edges);
-		while (iterator_has_next(iter))
+		link = graph->nodes[v]->edges->head;
+		while (link)
 		{
-			w = iterator_next(iter);
+			w = link->content;
 			graph_relax_edge(graph, v, w);
+			link = link->next;
 		}
-		iterator_delete(iter);
 		v++;
 	}
 }
