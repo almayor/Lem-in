@@ -4,6 +4,7 @@ import collections
 import re
 import sys
 
+import pickle #
 
 class Room:
 
@@ -108,9 +109,12 @@ class Parser:
 	room_regex  = re.compile(r"^([^L][^\s]*)\s+(-?[0-9]+)\s+(-?[0-9]+)$")
 	link_regex	= re.compile(r"^([^L][^\s]*)-([^L][^\s]*)$")
 
-	def make_farm(self):
+	def __init__(self, file):
+		self.file = file
 		self.farm = None
+		self.line = None
 
+	def make_farm(self):
 		self.readline()
 		if not self.parse_nants():
 			raise ValueError("Invalid number of ants: " + self.line)
@@ -174,16 +178,40 @@ class Parser:
 		return True
 
 	def readline(self):
-		self.line = sys.stdin.readline().strip()
+		self.line = self.file.readline().strip()
 		if ("required" in self.line):
 			self.required = self.line
 			self.readline()
 
 
+def id2names(farm, ids):
+	names = sorted(farm.rooms.keys())
+	names_li = list()
+	for id_ in ids:
+		names_li.append(names[id_])
+	return names_li
+
+def path_exists(farm, rooms):
+	from_ = rooms[0]
+	for to in rooms[1:]:
+		if to not in farm.rooms[from_].links:
+			return False
+		from_ = to
+	return True
+
 if __name__ == "__main__":
 	try:
-		parser = Parser()
+		parser = Parser(sys.stdin)
 		parser.make_farm()
+
+		# with open("names.p", 'wb') as f:
+		# 	pickle.dump(sorted(parser.farm.rooms.keys()), f)
+
+		# print(f"Start = {parser.farm.start}")
+		# print(f"End = {parser.farm.end}")
+
+		# exit(0)
+
 		count = parser.run_farm()
 		print(f"Correct ({count} steps)")
 		if hasattr(parser, "required"):

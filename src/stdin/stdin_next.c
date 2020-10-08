@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:42:02 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 22:01:32 by user             ###   ########.fr       */
+/*   Updated: 2020/10/08 18:24:16 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static void	get_line(t_stdin *in)
 		terminate(ERR_STDIN);
 	*(in->ptr) = '\0';
 }
+
+// TODO Skip last newline
 
 const char	*stdin_next(t_stdin *in)
 {

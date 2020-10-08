@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:27:17 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 13:39:42 by user             ###   ########.fr       */
+/*   Updated: 2020/10/08 11:42:39 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ t_iterator		*paths_navigate(t_paths *paths, size_t i);
 
 size_t			paths_length(const t_paths *paths, size_t i);
 
-void			paths_print(const t_paths *paths);
+void			paths_print(const t_paths *paths, const t_graph *graph);
 
 #endif

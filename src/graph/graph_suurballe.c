@@ -6,46 +6,11 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 17:30:42 by user              #+#    #+#             */
-/*   Updated: 2020/10/07 20:25:36 by user             ###   ########.fr       */
+/*   Updated: 2020/10/08 17:49:29 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
-
-static void		set_path(t_graph *graph, int *edge_to)
-{
-	int del;
-	int	v;
-	int	w;
-
-	del = 0;
-	w = graph->end;
-	while (w != graph->start)
-	{
-		v = edge_to[w];
-		if (graph->nodes[v]->parent == w)
-		{
-			graph_set_edge(graph, v, w, POSITIVE);
-			graph_set_edge(graph, w, v, POSITIVE);
-			if (del)
-			{
-				graph->nodes[v]->parent = -1;
-				graph->nodes[v]->split = 0;
-			}
-			del = 1;
-		}
-		else
-		{
-			graph_set_edge(graph, v, w, FORBIDDEN);
-			graph_set_edge(graph, w, v, NEGATIVE);
-			graph->nodes[w]->parent = v;
-			del = 0;
-			if (v != graph->start)	graph->nodes[v]->split = 1;
-			if (w != graph->end) 	graph->nodes[w]->split = 1;
-		}
-		w = v;
-	}
-}
 
 static t_list	*unroll_path(const t_graph *graph, int v)
 {
@@ -77,29 +42,11 @@ static t_list	**unroll_paths(const t_graph *graph)
 	return (paths);
 }
 
-void 			print_path_edge_to(const t_graph *graph, const int *edge_to)
-{
-	int v = graph->end;
-	t_list	*list = list_new();
-	while (v != graph->start)
-	{
-		list_add_last(list, v);
-		ft_printf("%i\n", v);
-		v = edge_to[v];
-	}
-	list_print(list);
-	list_delete(list);
-}
-
 t_list			**graph_suurballe(t_graph *graph)
 {
-	t_list	**paths;
-	int		*edge_to;
-
-	if (!(edge_to = graph_bellman_ford(graph)))
-		return (NULL);
-	list_add_last(graph->exits, edge_to[graph->end]);
-	set_path(graph, edge_to);
-	free(edge_to);
+	graph_bellman_ford(graph);
+	if (graph->nodes[graph->end]->edge_in < 0)
+		return (0);
+	graph_cache_path(graph);
 	return (unroll_paths(graph));
 }

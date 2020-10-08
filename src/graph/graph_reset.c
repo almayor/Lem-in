@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_set_edge.c                                   :+:      :+:    :+:   */
+/*   graph_reset.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/07 12:38:20 by user              #+#    #+#             */
-/*   Updated: 2020/10/07 12:41:01 by user             ###   ########.fr       */
+/*   Created: 2020/10/08 17:34:05 by user              #+#    #+#             */
+/*   Updated: 2020/10/08 17:37:26 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
 
-void	graph_set_edge(t_graph *graph, int from, int to, char state)
+void	graph_reset(t_graph *graph)
 {
-	t_edge	*edge;
+	int		v;
+	t_node	*node;
 
-	edge = graph->nodes[from]->edges;
-	while (edge)
+	v = 0;
+	while (v < graph->nnodes)
 	{
-		if (edge->to == to)
-		{
-			edge->state = state;
-			return ;
-		}
-		edge = edge->next;
+		node = graph->nodes[v];
+		node->edge_in = -1;
+		node->edge_out = -1;
+		node->cost_in = INT_MAX;
+		node->cost_out = INT_MAX;
+		v++;
 	}
+	node = graph->nodes[graph->start];
+	node->cost_in = 0;
+	node->cost_out = 0;
 }

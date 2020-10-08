@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 00:29:35 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 00:09:26 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/08 17:36:19 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # define UTILS_H
 
+# include <limits.h>
 # include <stdlib.h>
 # include "libftprintfgnl.h"
 

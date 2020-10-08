@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:35:49 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 20:24:58 by user             ###   ########.fr       */
+/*   Updated: 2020/10/08 17:43:45 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static t_node	*node_new(void)
 	t_node	*node;
 
 	node = ft_xcalloc(sizeof(t_node), 1);
+	node->edges = list_new();
 	node->parent = -1;
 	return (node);
 }

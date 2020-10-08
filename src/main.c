@@ -105,21 +105,13 @@ int				main(void)
 	t_graph	*graph;
 	t_paths	*paths;
 
-	time_t	time1, time2, time3; 
-
-	time1 = time(0);
 	in = stdin_new();
 	nants = parse_nants(in);
 	graph = parse_rooms(in);
 	parse_links(in, graph);
-	time2 = time(0);
 	paths = paths_compute(graph, nants);
 	lemin(paths, nants, graph);
 	stdin_delete(in);
 	graph_delete(graph);
 	paths_delete(paths);
-	time3 = time(0);
-
-	//ft_printf("Time during parsing = %ld\n", time2 - time1);
-	//ft_printf("Time after parsing = %ld\n", time3 - time2);
 }

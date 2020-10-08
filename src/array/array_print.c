@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_delete.c                                     :+:      :+:    :+:   */
+/*   array_print.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 20:49:06 by unite             #+#    #+#             */
-/*   Updated: 2020/10/08 17:43:33 by user             ###   ########.fr       */
+/*   Created: 2020/07/17 14:18:30 by unite             #+#    #+#             */
+/*   Updated: 2020/10/08 11:40:52 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "graph.h"
+#include "array.h"
 
-void			graph_delete(t_graph *graph)
+void	array_print(const t_array *array)
 {
 	int		i;
-	t_node	*node;
 
 	i = 0;
-	while (i < graph->nnodes)
-	{
-		node = graph->nodes[i];
-		list_delete(node->edges);
-		free(node);
-		i++;
-	}
-	array_delete(graph->names);
-	list_delete(graph->exits);
-	free(graph->nodes);
-	free(graph);
+	while (i < array->size)
+		ft_puts(array->arr[i++]);
 }
