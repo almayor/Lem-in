@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   min_pq.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 18:46:03 by unite             #+#    #+#             */
-/*   Updated: 2020/09/18 05:01:30 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/09 23:43:37 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 typedef struct	s_min_pq
 {
-	int		*keys;
+	int		*vals;
 	int		*pq;
 	int		*qp;
 	size_t	size;
@@ -50,18 +50,18 @@ t_min_pq	*min_pq_new(size_t max_size);
 int			min_pq_peek(const t_min_pq *pq);
 
 /*
-** Removes and returns the smallest key in this queue.
+** Removes and returns the smallest cost in this queue.
 ** @return The smallest item in the queue, or `NULL` if the array is empty.
 */
 
-int			*min_pq_pop(t_min_pq *pq);
+int			min_pq_pop(t_min_pq *pq);
 
 /*
 ** Adds a copy of the specified element to the queue.
 ** @param data	The element to be copied
 */
 
-void		min_pq_add(t_min_pq *pq, int i, int key);
+void		min_pq_add(t_min_pq *pq, int i, int val);
 
 /*
 ** Returns the number of keys in this queue.
@@ -76,5 +76,15 @@ size_t		min_pq_size(const t_min_pq *pq);
 
 void		min_pq_delete(t_min_pq *pq);
 
+void		min_pq_empty(t_min_pq *pq);
+
+void		min_pq_edit(t_min_pq *pq, int i, int val);
+
+void		min_pq_swap(t_min_pq *pq, size_t i, size_t j);
+void		min_pq_sink(t_min_pq *pq, size_t k);
+void 		min_pq_swim(t_min_pq *pq, size_t k);
+
+int 		min_pq_contains(const t_min_pq *pq, int i);
+void 		min_pq_insert(t_min_pq *pq, int i, int val);
 
 #endif

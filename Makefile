@@ -6,7 +6,7 @@
 #    By: user <user@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/10/09 20:43:26 by user             ###   ########.fr        #
+#    Updated: 2020/10/10 00:12:23 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,11 @@ array/array_shrink.c \
 array/array_size.c \
 array/array_swap.c \
 graph/graph_add_edge.c \
-graph/graph_bellman_ford.c \
-graph/graph_cache_path.c \
 graph/graph_delete.c \
+graph/graph_djikstra.c \
 graph/graph_from_names.c \
 graph/graph_id2name.c \
 graph/graph_name2id.c \
-graph/graph_relax_edge.c \
 graph/graph_reset.c \
 graph/graph_suurballe.c \
 list/list_add_first.c \
@@ -47,6 +45,19 @@ list/list_print.c \
 list/list_remove.c \
 list/list_size.c \
 main.c \
+min_pq/min_pq_add.c \
+min_pq/min_pq_contains.c \
+min_pq/min_pq_delete.c \
+min_pq/min_pq_edit.c \
+min_pq/min_pq_empty.c \
+min_pq/min_pq_insert.c \
+min_pq/min_pq_new.c \
+min_pq/min_pq_peek.c \
+min_pq/min_pq_pop.c \
+min_pq/min_pq_sink.c \
+min_pq/min_pq_size.c \
+min_pq/min_pq_swap.c \
+min_pq/min_pq_swim.c \
 parse/parse_links.c \
 parse/parse_nants.c \
 parse/parse_rooms.c \
@@ -58,11 +69,6 @@ paths/paths_is_available.c \
 paths/paths_length.c \
 paths/paths_navigate.c \
 paths/paths_print.c \
-queue/queue_delete.c \
-queue/queue_dequeue.c \
-queue/queue_enqueue.c \
-queue/queue_new.c \
-queue/queue_size.c \
 stdin/stdin_delete.c \
 stdin/stdin_new.c \
 stdin/stdin_next.c \

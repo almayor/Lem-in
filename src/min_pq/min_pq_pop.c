@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   min_pq_pop.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 14:23:02 by unite             #+#    #+#             */
-/*   Updated: 2020/09/18 05:23:24 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/09 23:22:14 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ int 	min_pq_pop(t_min_pq *pq)
 {
 	int	min;
 
-	min = pq->keys[pq->pq[1]];
+	min = pq->pq[1];
 	min_pq_swap(pq, 1, pq->size);
-	min_pq_sink(pq, 1);
-	pq->qp[pq->size] = 0;
 	pq->size--;
+	min_pq_sink(pq, 1);
+	pq->qp[min] = 0;
 	return (min);
 }

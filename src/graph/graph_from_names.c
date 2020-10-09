@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:35:49 by unite             #+#    #+#             */
-/*   Updated: 2020/10/08 17:43:45 by user             ###   ########.fr       */
+/*   Updated: 2020/10/09 21:00:37 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ t_graph			*graph_from_names(t_array *names, const char *start_name,
 	array_quick_sort(names);
 	graph->start = graph_name2id(graph, start_name);
 	graph->end = graph_name2id(graph, end_name);
+	graph->pq = min_pq_new(array_size(names) * 2);
 	return (graph);
 }

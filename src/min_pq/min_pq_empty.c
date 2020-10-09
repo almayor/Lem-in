@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   min_pq_change.c                                    :+:      :+:    :+:   */
+/*   min_pq_empty.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/18 05:11:31 by unite             #+#    #+#             */
-/*   Updated: 2020/09/18 05:24:28 by unite            ###   ########.fr       */
+/*   Created: 2020/10/09 20:55:54 by user              #+#    #+#             */
+/*   Updated: 2020/10/09 23:42:42 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "min_pq.h"
 
-void	min_pq_change(t_min_pq *pq, int i, int key)
+void	min_pq_empty(t_min_pq *pq)
 {
-	pq->keys[i] = key;
-	min_pq_swim(pq, pq->qp[i]);
-	min_pq_sink(pq, pq->qp[i]);
+	ft_bzero(pq->vals, sizeof(int) * (pq->size + 1));
+	ft_bzero(pq->pq, sizeof(int) * (pq->size + 1));
+	ft_bzero(pq->qp, sizeof(int) * (pq->size + 1));
 }

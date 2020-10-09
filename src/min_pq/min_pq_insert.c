@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_delete.c                                     :+:      :+:    :+:   */
+/*   min_pq_insert.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 20:49:06 by unite             #+#    #+#             */
-/*   Updated: 2020/10/09 20:58:39 by user             ###   ########.fr       */
+/*   Created: 2020/10/10 00:10:15 by user              #+#    #+#             */
+/*   Updated: 2020/10/10 00:10:58 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "graph.h"
+#include "min_pq.h"
 
-void			graph_delete(t_graph *graph)
+void		min_pq_insert(t_min_pq *pq, int i, int val)
 {
-	int		i;
-	t_node	*node;
-
-	i = 0;
-	while (i < graph->nnodes)
-	{
-		node = graph->nodes[i];
-		list_delete(node->edges);
-		free(node);
-		i++;
-	}
-	array_delete(graph->names);
-	list_delete(graph->exits);
-	min_pq_delete(graph->pq);
-	free(graph->nodes);
-	free(graph);
+	if (min_pq_contains(pq, i))
+		min_pq_edit(pq, i, val);
+	else
+		min_pq_add(pq, i, val);
 }
