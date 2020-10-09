@@ -63,7 +63,7 @@ class Farm:
 	def finish(self):
 		if not all(room == self.end for room in self.ants):
 			raise ValueError(
-				f"Some ants haven't reaches the end"
+				f"Some ants haven't reached the end"
 			)
 
 	def _check_occupancy(self):
