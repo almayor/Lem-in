@@ -26,6 +26,7 @@ typedef struct	s_node
 	t_list			*edges;
 	int				parent;
 	int				price;
+	char			split;
 	int				edge_in;
 	int				edge_out;
 	int				cost_in;

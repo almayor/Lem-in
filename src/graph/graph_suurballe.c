@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "graph.h"
+#include "paths.h"
 
 static t_list	*unroll_path(const t_graph *graph, int v)
 {
@@ -26,6 +27,21 @@ static t_list	*unroll_path(const t_graph *graph, int v)
 	return (path);
 }
 
+//
+
+static void		print(const t_list *path, const t_graph *graph)
+{
+	t_link	*link;
+
+	link = path->head;
+	while (link)
+	{
+		//ft_printf("%s %s",
+		//	graph_id2name(graph, link->content),
+		//	link->next ? " -> " : "\n");
+		link = link->next;
+	}
+}
 static t_list	**unroll_paths(const t_graph *graph)
 {
 	static int	npaths;
@@ -36,10 +52,13 @@ static t_list	**unroll_paths(const t_graph *graph)
 	paths = ft_xcalloc(sizeof(t_list *), ++npaths);
 	link = graph->exits->head;
 	i = 0;
+	//ft_puts("\nPATHS:\n");
 	while (link)
 	{
-		paths[i++] = unroll_path(graph, link->content);
+		paths[i] = unroll_path(graph, link->content);
+		print(paths[i], graph);
 		link = link->next;
+		i++;
 	}
 	return (paths);
 }

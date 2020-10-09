@@ -6,7 +6,7 @@
 #    By: user <user@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/10/07 20:24:35 by user             ###   ########.fr        #
+#    Updated: 2020/10/08 21:56:22 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,22 +20,21 @@ array/array_grow.c \
 array/array_indexof.c \
 array/array_insertion_sort.c \
 array/array_new.c \
+array/array_print.c \
 array/array_quick_sort.c \
 array/array_shrink.c \
 array/array_size.c \
 array/array_swap.c \
 graph/graph_add_edge.c \
 graph/graph_bellman_ford.c \
+graph/graph_cache_path.c \
 graph/graph_delete.c \
 graph/graph_from_names.c \
 graph/graph_id2name.c \
 graph/graph_name2id.c \
-graph/graph_set_edge.c \
+graph/graph_relax_edge.c \
+graph/graph_reset.c \
 graph/graph_suurballe.c \
-iterator/iterator_delete.c \
-iterator/iterator_from_list.c \
-iterator/iterator_has_next.c \
-iterator/iterator_next.c \
 list/list_add_first.c \
 list/list_add_last.c \
 list/list_delete.c \
@@ -80,17 +79,11 @@ utils/tab_delete.c \
 utils/tab_len.c \
 utils/terminate.c \
 
-
 ################################################################################
 
 PATHS = src
 PATHO = obj
 PATHI = include libftprintfgnl
-
-TEST_PATH = test
-TEST_PATHS = $(TEST_PATH)/src
-TEST_PATHO = $(TEST_PATH)/obj
-TEST_PATHI = $(TEST_PATH)/src/Unity
 
 ################################################################################
 
@@ -104,7 +97,7 @@ COMPILE = $(CC) -c
 CFLAGS += -Werror
 CFLAGS += -O3 -std=gnu11 -ffast-math -march=native
 CFLAGS += -MMD
-CFLAGS += $(foreach path, $(PATHI) $(TEST_PATHI), -I$(path))
+CFLAGS += $(foreach path, $(PATHI), -I$(path))
 
 LINK = $(CC)
 LFLAGS += -lftprintfgnl -L libftprintfgnl
@@ -120,17 +113,9 @@ endif
 SRC = $(patsubst %.c, $(PATHS)/%.c, $(SRC_NAME))
 OBJ = $(patsubst %.c, $(PATHO)/%.o, $(SRC_NAME))
 
-TEST_SRC = $(patsubst %.c, $(TEST_PATHS)/%.c, $(TEST_SRC_NAME))
-TEST_OBJ = $(patsubst %.c, $(TEST_PATHO)/%.o, $(TEST_SRC_NAME))
-
-TEST_BIN = $(TEST_PATH)/$(TEST_NAME)
-
 ################################################################################
 
 $(NAME) : $(OBJ)
-	$(LINK) $^ -o $@ $(LFLAGS)
-
-$(TEST_BIN) : $(TEST_OBJ) $(OBJ)
 	$(LINK) $^ -o $@ $(LFLAGS)
 
 ################################################################################
@@ -139,14 +124,9 @@ $(PATHO)/%.o : $(PATHS)/%.c
 	$(MKDIR) -p $(@D)
 	$(COMPILE) $(CFLAGS) $< -o $@
 
-$(TEST_PATHO)/%.o : $(TEST_PATHS)/%.c
-	$(MKDIR) -p $(@D)
-	$(COMPILE) $(CFLAGS) $< -o $@
-
 ################################################################################
 
 DEP += $(patsubst %.c, $(PATHO)/%.d, $(SRC_NAME))
-DEP += $(patsubst %.c, $(TEST_PATHO)/%.d, $(TEST_SRC_NAME))
 
 -include $(DEP)
 
@@ -154,7 +134,7 @@ DEP += $(patsubst %.c, $(TEST_PATHO)/%.d, $(TEST_SRC_NAME))
 
 .DEFAULT_GOAL = all
 
-.PHONY : all clean fclean re test docs libftprintfgnl
+.PHONY : all clean fclean re docs libftprintfgnl
 
 all : libftprintfgnl $(NAME)
 
@@ -163,14 +143,9 @@ fclean : clean
 
 clean :
 	$(RM) -rf $(PATHO)
-# 	$(RM) -rf $(TEST_PATHO)
-# 	$(RM) -f $(TEST_BIN)
 	$(MAKE) -C libftprintfgnl fclean
 
 re : fclean all
-
-test: all $(TEST_BIN)
-	./$(TEST_BIN)
 
 docs :
 	sh docs/.doxygen/42toDoxygen.sh

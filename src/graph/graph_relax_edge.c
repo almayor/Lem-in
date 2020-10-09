@@ -17,7 +17,12 @@ static void	relax_hidden_edge(t_graph *graph, int w)
 	t_node	*node;
 
 	node = graph->nodes[w];
-	if (node->cost_out > node->cost_in)
+	if (node->split && node->cost_in > node->cost_out)
+	{
+		node->cost_in = node->cost_out;
+		node->edge_in = node->edge_out;
+	}
+	if (!node->split && node->cost_out > node->cost_in)
 	{
 		node->cost_out = node->cost_in;
 		node->edge_out = node->edge_in;
@@ -39,6 +44,7 @@ void	graph_relax_edge(t_graph *graph, int v, int w)
 	{
 		node_w->edge_out = v;
 		node_w->cost_out = node_v->cost_in - 1;
+		relax_hidden_edge(graph, w);
 	}
 	else if (node_v->parent != w && node_w->cost_in > node_v->cost_out + 1)
 	{
