@@ -50,7 +50,7 @@ void		graph_cache_path(t_graph *graph)
 		if (graph->nodes[v]->parent == w)
 		{
 			if (unsplit)
-				graph_unsplit(graph, v);
+				graph_unsplit(graph, w);
 			unsplit = 1;
 			w = v;
 			v = graph->nodes[v]->edge_in;

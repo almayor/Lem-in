@@ -82,7 +82,7 @@ void	paths_assign(t_paths *paths, size_t nants)
 	while (i <= paths->npaths)
 	{
 		nsteps_new = paths_assign_once(paths, nants, i, assigments_new);
-		if (nsteps_new >= nsteps_old)
+		if (nsteps_new > nsteps_old)
 			break ;
 		paths_reassign(paths, assigments_new);
 		nsteps_old = nsteps_new;

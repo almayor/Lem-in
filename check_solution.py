@@ -4,7 +4,6 @@ import collections
 import re
 import sys
 
-import pickle #
 
 class Room:
 
@@ -26,6 +25,8 @@ class Farm:
 		self.nants = nants
 		self.nrooms = 0
 		self.rooms = dict()
+		self.start = None
+		self.end = None
 
 	def add_room(self, name):
 		if name in self.rooms:
@@ -34,14 +35,14 @@ class Farm:
 		self.rooms[name] = Room(name)
 	
 	def set_start(self, name):
-		if hasattr(self, 'start'):
+		if self.start is not None:
 			raise ValueError(f"START has already been set to {name}")
 		self._check_room(name)
 		self.start = name
 		self.ants = [name] * self.nants
 
 	def set_end(self, name):
-		if hasattr(self, 'end'):
+		if self.end is not None:
 			raise ValueError(f"END has already been set to {name}")
 		self._check_room(name)
 		self.end = name
@@ -76,9 +77,9 @@ class Farm:
 				)
 
 	def _check_cmd(self, cmd):
-		if not hasattr(self, 'start'):
+		if self.start is None:
 			raise ValueError(f"Start isn't set")
-		if not hasattr(self, 'end'):
+		if self.end is None:
 			raise ValueError(f"End isn't set")
 
 		matches = self.cmd_regex.search(cmd).groups()
@@ -149,7 +150,7 @@ class Parser:
 	def parse_room(self):
 		if self.line == "##start" or self.line == "##end":
 			command = self.line
-			self.readline()
+			while self.line[0] == '#': self.readline()
 		elif self.line[0] == "#":
 			return True
 		else:
@@ -179,39 +180,30 @@ class Parser:
 
 	def readline(self):
 		self.line = self.file.readline().strip()
-		if ("required" in self.line):
+		if "required" in self.line:
 			self.required = self.line
 			self.readline()
 
 
-def id2names(farm, ids):
-	names = sorted(farm.rooms.keys())
-	names_li = list()
-	for id_ in ids:
-		names_li.append(names[id_])
-	return names_li
+# def id2names(farm, ids):
+# 	names = sorted(farm.rooms.keys())
+# 	names_li = list()
+# 	for id_ in ids:
+# 		names_li.append(names[id_])
+# 	return names_li
 
-def path_exists(farm, rooms):
-	from_ = rooms[0]
-	for to in rooms[1:]:
-		if to not in farm.rooms[from_].links:
-			return False
-		from_ = to
-	return True
+# def path_exists(farm, rooms):
+# 	from_ = rooms[0]
+# 	for to in rooms[1:]:
+# 		if to not in farm.rooms[from_].links:
+# 			return False
+# 		from_ = to
+# 	return True
 
 if __name__ == "__main__":
+	parser = Parser(sys.stdin)
 	try:
-		parser = Parser(sys.stdin)
 		parser.make_farm()
-
-		# with open("names.p", 'wb') as f:
-		# 	pickle.dump(sorted(parser.farm.rooms.keys()), f)
-
-		# print(f"Start = {parser.farm.start}")
-		# print(f"End = {parser.farm.end}")
-
-		# exit(0)
-
 		count = parser.run_farm()
 		print(f"Correct ({count} steps)")
 		if hasattr(parser, "required"):
