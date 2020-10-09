@@ -6,7 +6,7 @@
 #    By: user <user@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/10/08 21:56:22 by user             ###   ########.fr        #
+#    Updated: 2020/10/09 20:43:26 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ parse/parse_rooms.c \
 paths/paths_assign.c \
 paths/paths_compute.c \
 paths/paths_delete.c \
+paths/paths_from_graph.c \
 paths/paths_is_available.c \
 paths/paths_length.c \
 paths/paths_navigate.c \

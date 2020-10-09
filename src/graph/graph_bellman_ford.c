@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 16:49:47 by user              #+#    #+#             */
-/*   Updated: 2020/10/08 17:43:00 by user             ###   ########.fr       */
+/*   Updated: 2020/10/09 20:40:28 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	relax_edges(t_graph *graph)
 	}
 }
 
-void graph_bellman_ford(t_graph *graph)
+int 		graph_bellman_ford(t_graph *graph)
 {
 	int	i;
 
@@ -45,4 +45,5 @@ void graph_bellman_ford(t_graph *graph)
 		relax_edges(graph);
 		i++;
 	}
+	return (graph->nodes[graph->end]->edge_in >= 0);
 }

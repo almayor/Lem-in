@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/10/08 21:46:42 by user             ###   ########.fr       */
+/*   Updated: 2020/10/09 20:41:50 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ typedef struct	s_graph
 }				t_graph;
 
 void	graph_add_edge(t_graph *graph, int v, int w);
-void	graph_bellman_ford(t_graph *graph);
+int		graph_bellman_ford(t_graph *graph);
 void	graph_cache_path(t_graph *graph);
 void	graph_delete(t_graph *graph);
 t_graph	*graph_from_names(t_array *names, const char *start_name,const char *end_name);
@@ -53,6 +53,6 @@ const char	*graph_id2name(const t_graph *graph, int id);
 int	graph_name2id(const t_graph *graph, const char *name);
 void	graph_relax_edge(t_graph *graph, int v, int w);
 void	graph_reset(t_graph *graph);
-t_list	**graph_suurballe(t_graph *graph);
+int		graph_suurballe(t_graph *graph);
 
 #endif

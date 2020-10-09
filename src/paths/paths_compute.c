@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:36:39 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 16:20:53 by user             ###   ########.fr       */
+/*   Updated: 2020/10/09 20:42:54 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,12 @@
 
 static t_paths	*paths_get(t_graph *graph, size_t nants)
 {
-	t_paths		*paths;
-	static int	npaths;
-
-	paths = ft_xcalloc(sizeof(t_paths), 1);
-	paths->npaths = ++npaths;
-	if (!(paths->arr = graph_suurballe(graph)))
-	{
-		free(paths);
+	if (graph_suurballe(graph) == 0)
 		return (NULL);
-	}
-	paths->assignments = ft_xcalloc(sizeof(size_t), nants);
-	paths_assign(paths, nants);
-	return (paths);
+	return (paths_from_graph(graph, nants));
 }
 
-t_paths		*paths_compute(t_graph *graph, size_t nants)
+t_paths			*paths_compute(t_graph *graph, size_t nants)
 {
 	t_paths	*paths_old;
 	t_paths	*paths_new;
