@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:42:02 by unite             #+#    #+#             */
-/*   Updated: 2020/10/08 21:26:25 by user             ###   ########.fr       */
+/*   Updated: 2020/10/10 22:45:06 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	get_line(t_stdin *in)
 {
 	in->line = in->ptr;
 	if (!(in->ptr = ft_strchr(in->ptr, '\n')))
-		terminate(ERR_STDIN);
+		terminate(ERR_INVALID_INPUT);
 	*(in->ptr) = '\0';
 }
 

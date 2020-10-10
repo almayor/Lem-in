@@ -2,11 +2,11 @@
 
 echo "\n################# EXAMPLE MAPS ##################\n"
 
-maps=$(find example-maps -type f ! -path "*error-management*" -name "*\.txt")
-for map in $maps; do
-	printf "%s:\n > " $map
-	./lem-in < $map | ./check-solution
-done
+# maps=$(find example-maps -type f ! -path "*error-management*" -name "*\.txt")
+# for map in $maps; do
+# 	printf "%s:\n > " $map
+# 	./lem-in < $map | ./check-solution
+# done
 
 echo "\n############### ERROR MANAGEMENT ################\n"
 
