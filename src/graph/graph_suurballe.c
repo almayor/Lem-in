@@ -36,6 +36,9 @@ static void	cache_path(t_graph *graph)
 	list_add_last(graph->exits, graph->nodes[w]->edge_in);
 	while (w != graph->start)
 	{
+		//ft_printf("%s %s",
+		//	graph_id2name(graph, w),
+		//	v == graph->start ? "\n" : " <- ");
 		if (graph->nodes[v]->parent == w)
 		{
 			if (unsplit)
