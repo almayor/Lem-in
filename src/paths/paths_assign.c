@@ -1,16 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   paths_optimize_assignment.c                        :+:      :+:    :+:   */
+/*   paths_assign.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 19:15:58 by user              #+#    #+#             */
-/*   Updated: 2020/10/06 19:19:36 by user             ###   ########.fr       */
+/*   Updated: 2020/10/10 17:58:39 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "paths.h"
+
+static void		paths_insert_next(t_paths *paths, int j)
+{
+	t_list	*tmp;
+
+	while (j > 0)
+	{
+		if (paths->arr[j]->size < paths->arr[j - 1]->size)
+		{
+			tmp = paths->arr[j];
+			paths->arr[j] = paths->arr[j - 1];
+			paths->arr[j - 1] = tmp;
+		}
+		else 
+			break ;
+		j--;
+	}
+}
+ 
+static void		paths_insertion_sort(t_paths *paths)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < paths->npaths - 1)
+	{
+		if (paths->arr[i]->size > paths->arr[i + 1]->size)
+			paths_insert_next(paths, i + 1);
+		i++;
+	}
+}
 
 /*
 ** Computes the best assignment (one that would result in the fewest steps)
@@ -79,6 +111,7 @@ void	paths_assign(t_paths *paths, size_t nants)
 	size_t	nsteps_new;
 	size_t	*assigments_new;
 
+	paths_insertion_sort(paths);
 	assigments_new = ft_xcalloc(sizeof(size_t), nants);
 	nsteps_old = SIZE_MAX;
 	i = 1;
