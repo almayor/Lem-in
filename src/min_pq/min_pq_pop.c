@@ -6,13 +6,13 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 14:23:02 by unite             #+#    #+#             */
-/*   Updated: 2020/10/09 23:22:14 by user             ###   ########.fr       */
+/*   Updated: 2020/10/10 23:35:23 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "min_pq.h"
 
-int 	min_pq_pop(t_min_pq *pq)
+int	min_pq_pop(t_min_pq *pq)
 {
 	int	min;
 

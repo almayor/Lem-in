@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:42:02 by unite             #+#    #+#             */
-/*   Updated: 2020/10/08 21:26:25 by user             ###   ########.fr       */
+/*   Updated: 2020/10/10 23:37:28 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	get_line(t_stdin *in)
 const char	*stdin_next(t_stdin *in)
 {
 	ssize_t		ret;
-	size_t 		carryover;
+	size_t		carryover;
 
 	if (in->end)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 19:15:58 by user              #+#    #+#             */
-/*   Updated: 2020/10/10 17:58:39 by user             ###   ########.fr       */
+/*   Updated: 2020/10/10 23:48:33 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ static void		paths_insert_next(t_paths *paths, int j)
 			paths->arr[j] = paths->arr[j - 1];
 			paths->arr[j - 1] = tmp;
 		}
-		else 
+		else
 			break ;
 		j--;
 	}
 }
- 
+
 static void		paths_insertion_sort(t_paths *paths)
 {
 	int	i;
@@ -104,7 +104,7 @@ static void		paths_reassign(t_paths *paths, size_t *assigments_new)
 ** @param nants The total number of ants
 */
 
-void	paths_assign(t_paths *paths, size_t nants)
+void			paths_assign(t_paths *paths, size_t nants)
 {
 	size_t	i;
 	size_t	nsteps_old;

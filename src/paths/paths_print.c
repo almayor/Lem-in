@@ -6,16 +6,16 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 19:15:58 by user              #+#    #+#             */
-/*   Updated: 2020/10/08 11:42:26 by user             ###   ########.fr       */
+/*   Updated: 2020/10/10 23:36:02 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "paths.h"
 
-void paths_print(const t_paths *paths, const t_graph *graph)
+void	paths_print(const t_paths *paths, const t_graph *graph)
 {
-	int 	i;
-	t_link 	*link;
+	int		i;
+	t_link	*link;
 
 	i = 0;
 	while (i < paths->npaths)
