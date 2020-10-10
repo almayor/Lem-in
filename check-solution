@@ -63,7 +63,7 @@ class Farm:
 	def finish(self):
 		if not all(room == self.end for room in self.ants):
 			raise ValueError(
-				f"Some ants haven't reaches the end"
+				f"Some ants haven't reached the end"
 			)
 
 	def _check_occupancy(self):
@@ -114,6 +114,7 @@ class Parser:
 		self.file = file
 		self.farm = None
 		self.line = None
+		self.required = None
 
 	def make_farm(self):
 		self.readline()
@@ -181,33 +182,46 @@ class Parser:
 	def readline(self):
 		self.line = self.file.readline().strip()
 		if "required" in self.line:
-			self.required = self.line
+			self._extract_required()
 			self.readline()
 
+	def _extract_required(self):
+		for s in self.line.split():
+			if s.isdigit():
+				self.required = int(s)
+				break
 
-# def id2names(farm, ids):
-# 	names = sorted(farm.rooms.keys())
-# 	names_li = list()
-# 	for id_ in ids:
-# 		names_li.append(names[id_])
-# 	return names_li
 
-# def path_exists(farm, rooms):
-# 	from_ = rooms[0]
-# 	for to in rooms[1:]:
-# 		if to not in farm.rooms[from_].links:
-# 			return False
-# 		from_ = to
-# 	return True
+ansi_red = "\033[91m"
+ansi_green = "\033[92m"
+ansi_yellow = "\033[93m"
+ansi_reset = "\033[0m"
+
 
 if __name__ == "__main__":
+
 	parser = Parser(sys.stdin)
 	try:
 		parser.make_farm()
 		count = parser.run_farm()
-		print(f"Correct ({count} steps)")
-		if hasattr(parser, "required"):
-			print(parser.required)
+
+		if parser.required and count > parser.required:
+			print(
+				f"{ansi_yellow}Too many lines{ansi_reset}"
+				f" ({count} lines, {parser.required} expected)"
+			)
+		elif parser.required:
+			print(
+				f"{ansi_green}Correct{ansi_reset}"
+				f" ({count} lines, {parser.required} expected)"
+			)
+		else:
+			print(
+				f"{ansi_green}Correct{ansi_reset}"
+				f" ({count} lines)"
+			)
+
 	except:
+		print(f"{ansi_red}Error{ansi_reset}")
 		print("Last line read: " + parser.line)
 		raise
