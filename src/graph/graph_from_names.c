@@ -3,30 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   graph_from_names.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 20:35:49 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:31:30 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/09 21:00:37 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
 
-t_graph	*graph_from_names(t_array *names, const char *start, const char *end)
+static t_node	*node_new(void)
+{
+	t_node	*node;
+
+	node = ft_xcalloc(sizeof(t_node), 1);
+	node->edges = list_new();
+	node->parent = -1;
+	return (node);
+}
+
+t_graph			*graph_from_names(t_array *names, const char *start_name,
+								const char *end_name)
 {
 	t_graph	*graph;
 	int		i;
 
 	graph = ft_xcalloc(sizeof(t_graph), 1);
-	graph->nverti = array_size(names);
+	graph->nnodes = array_size(names);
 	graph->nedges = 0;
-	graph->adj = ft_xcalloc(sizeof(t_list *), graph->nverti);
-	i = 0;
-	while (i < graph->nverti)
-		graph->adj[i++] = list_new();
 	graph->names = names;
+	graph->nodes = ft_xcalloc(sizeof(t_node *), graph->nnodes);
+	graph->exits = list_new();
+	i = 0;
+	while (i < graph->nnodes)
+		graph->nodes[i++] = node_new();
 	array_quick_sort(names);
-	graph->start = array_indexof(names, start);
-	graph->end = array_indexof(names, end);
+	graph->start = graph_name2id(graph, start_name);
+	graph->end = graph_name2id(graph, end_name);
+	graph->pq = min_pq_new(array_size(names) * 2);
 	return (graph);
 }

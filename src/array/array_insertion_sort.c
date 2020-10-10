@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   array_insertion_sort.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 16:16:40 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:29:17 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/10 17:54:07 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ static void	array_insert_next(t_array *array, int j)
 void		array_insertion_sort(t_array *array)
 {
 	int	i;
-	int	j;
 
 	i = 0;
 	while (i < array->size - 1)

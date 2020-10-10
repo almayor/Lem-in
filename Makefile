@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: unite <marvin@42.fr>                       +#+  +:+       +#+         #
+#    By: user <user@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/09/10 19:41:00 by unite            ###   ########.fr        #
+#    Updated: 2020/10/10 23:15:04 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = lemin
+NAME = lem-in
 
 SRC_NAME = \
 array/array_append.c \
@@ -20,41 +20,55 @@ array/array_grow.c \
 array/array_indexof.c \
 array/array_insertion_sort.c \
 array/array_new.c \
+array/array_print.c \
 array/array_quick_sort.c \
 array/array_shrink.c \
 array/array_size.c \
 array/array_swap.c \
 graph/graph_add_edge.c \
-graph/graph_adjacency.c \
 graph/graph_delete.c \
-graph/graph_edkarp.c \
+graph/graph_djikstra.c \
 graph/graph_from_names.c \
 graph/graph_id2name.c \
 graph/graph_name2id.c \
-iterator/iterator_delete.c \
-iterator/iterator_from_list.c \
-iterator/iterator_has_next.c \
-iterator/iterator_next.c \
+graph/graph_reset.c \
+graph/graph_suurballe.c \
 list/list_add_first.c \
 list/list_add_last.c \
 list/list_delete.c \
 list/list_new.c \
+list/list_peek_first.c \
+list/list_peek_last.c \
 list/list_pop_first.c \
 list/list_pop_last.c \
+list/list_print.c \
+list/list_remove.c \
 list/list_size.c \
+main.c \
+min_pq/min_pq_add.c \
+min_pq/min_pq_contains.c \
+min_pq/min_pq_delete.c \
+min_pq/min_pq_edit.c \
+min_pq/min_pq_empty.c \
+min_pq/min_pq_insert.c \
+min_pq/min_pq_new.c \
+min_pq/min_pq_peek.c \
+min_pq/min_pq_pop.c \
+min_pq/min_pq_sink.c \
+min_pq/min_pq_size.c \
+min_pq/min_pq_swap.c \
+min_pq/min_pq_swim.c \
 parse/parse_links.c \
 parse/parse_nants.c \
 parse/parse_rooms.c \
+paths/paths_assign.c \
+paths/paths_compute.c \
 paths/paths_delete.c \
-paths/paths_get.c \
+paths/paths_from_graph.c \
 paths/paths_is_available.c \
 paths/paths_length.c \
 paths/paths_navigate.c \
-queue/queue_delete.c \
-queue/queue_dequeue.c \
-queue/queue_enqueue.c \
-queue/queue_new.c \
-queue/queue_size.c \
+paths/paths_print.c \
 stdin/stdin_delete.c \
 stdin/stdin_new.c \
 stdin/stdin_next.c \
@@ -71,18 +85,12 @@ utils/is_start.c \
 utils/tab_delete.c \
 utils/tab_len.c \
 utils/terminate.c \
-main.c \
 
 ################################################################################
 
 PATHS = src
 PATHO = obj
 PATHI = include libftprintfgnl
-
-TEST_PATH = test
-TEST_PATHS = $(TEST_PATH)/src
-TEST_PATHO = $(TEST_PATH)/obj
-TEST_PATHI = $(TEST_PATH)/src/Unity
 
 ################################################################################
 
@@ -96,7 +104,7 @@ COMPILE = $(CC) -c
 CFLAGS += -Werror
 CFLAGS += -O3 -std=gnu11 -ffast-math -march=native
 CFLAGS += -MMD
-CFLAGS += $(foreach path, $(PATHI) $(TEST_PATHI), -I$(path))
+CFLAGS += $(foreach path, $(PATHI), -I$(path))
 
 LINK = $(CC)
 LFLAGS += -lftprintfgnl -L libftprintfgnl
@@ -112,17 +120,9 @@ endif
 SRC = $(patsubst %.c, $(PATHS)/%.c, $(SRC_NAME))
 OBJ = $(patsubst %.c, $(PATHO)/%.o, $(SRC_NAME))
 
-TEST_SRC = $(patsubst %.c, $(TEST_PATHS)/%.c, $(TEST_SRC_NAME))
-TEST_OBJ = $(patsubst %.c, $(TEST_PATHO)/%.o, $(TEST_SRC_NAME))
-
-TEST_BIN = $(TEST_PATH)/$(TEST_NAME)
-
 ################################################################################
 
 $(NAME) : $(OBJ)
-	$(LINK) $^ -o $@ $(LFLAGS)
-
-$(TEST_BIN) : $(TEST_OBJ) $(OBJ)
 	$(LINK) $^ -o $@ $(LFLAGS)
 
 ################################################################################
@@ -131,14 +131,9 @@ $(PATHO)/%.o : $(PATHS)/%.c
 	$(MKDIR) -p $(@D)
 	$(COMPILE) $(CFLAGS) $< -o $@
 
-$(TEST_PATHO)/%.o : $(TEST_PATHS)/%.c
-	$(MKDIR) -p $(@D)
-	$(COMPILE) $(CFLAGS) $< -o $@
-
 ################################################################################
 
 DEP += $(patsubst %.c, $(PATHO)/%.d, $(SRC_NAME))
-DEP += $(patsubst %.c, $(TEST_PATHO)/%.d, $(TEST_SRC_NAME))
 
 -include $(DEP)
 
@@ -146,7 +141,7 @@ DEP += $(patsubst %.c, $(TEST_PATHO)/%.d, $(TEST_SRC_NAME))
 
 .DEFAULT_GOAL = all
 
-.PHONY : all clean fclean re test docs libftprintfgnl
+.PHONY : all clean fclean re docs test libftprintfgnl
 
 all : libftprintfgnl $(NAME)
 
@@ -155,20 +150,18 @@ fclean : clean
 
 clean :
 	$(RM) -rf $(PATHO)
-# 	$(RM) -rf $(TEST_PATHO)
-# 	$(RM) -f $(TEST_BIN)
 	$(MAKE) -C libftprintfgnl fclean
 
 re : fclean all
-
-test: all $(TEST_BIN)
-	./$(TEST_BIN)
 
 docs :
 	sh docs/.doxygen/42toDoxygen.sh
 
 libftprintfgnl :
 	$(MAKE) -C libftprintfgnl
+
+test : all
+	test/test.sh
 
 ################################################################################
 

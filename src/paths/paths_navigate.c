@@ -12,11 +12,8 @@
 
 #include "paths.h"
 
-t_iterator	*paths_navigate(t_paths *paths, size_t i)
+t_link	*paths_navigate(t_paths *paths, size_t i)
 {
-	t_iterator	*iter;
-
-	iter = iterator_from_list(paths->arr[i]);
 	paths->assignments[i] -= 1;
-	return (iter);
+	return (paths->arr[i]->head);
 }

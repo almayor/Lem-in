@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   graph.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 18:26:49 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:27:10 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/09 23:05:30 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,101 +16,45 @@
 
 # include <stdlib.h>
 # include "array.h"
-# include "iterator.h"
 # include "libftprintfgnl.h"
 # include "list.h"
-# include "queue.h"
+# include "min_pq.h"
 # include "utils.h"
 
-/*
-** @struct s_graph
-** @brief A graph represented as an array of adjacency lists
-** @var s_graph::nverti
-** @brief The number of vertices
-** @var s_graph::nedges
-** @brief The number of edges
-** @var s_graph::adj
-** @brief An array of lists, where the list at position `i` contains
-** all vertices to which the vertex `i` is adjacent
-** of a given vertex.
-** @var s_graph::names
-** @brief A sorted arrays of vertex names, where the string at position `i` is
-** the name of the `i`th vertex
-** @var s_graph::start
-** @brief The index of the start vertex
-** @var s_graph::end
-** @brief The index of the end vertex
-*/
+# define MAX_NNODES	100000
+
+typedef struct	s_node
+{
+	t_list			*edges;
+	int				parent;
+	char			split;
+	int				price_in;
+	int				price_out;
+	int				edge_in;
+	int				edge_out;
+	int				cost_in;
+	int				cost_out;
+}				t_node;
 
 typedef struct	s_graph
 {
-	int		nverti;
-	int		nedges;
-	t_list	**adj;
-	t_array	*names;
-	int		start;
-	int		end;
+	int				nnodes;
+	int				nedges;
+	t_array			*names;
+	t_node			**nodes;
+	t_list			*exits;
+	int				start;
+	int				end;
+	t_min_pq		*pq;
 }				t_graph;
 
-/*
-** Creates a graph with vertices having specified names and no edges between
-** them
-** @param names	A (possibly unsorted) array of vertex names
-** @param start	The name of the start vertex
-** @param end	The name of the end vertex
-** @return A new graph
-*/
-
-t_graph			*graph_from_names(t_array *names, const char *start,
-								const char *end);
-
-/*
-** Adds an edge between vertices `v` and `w`
-** @param v	One vertex
-** @param w	The other vertex
-*/
-
-void			graph_add_edge(t_graph *graph, int v, int w);
-
-/*
-** Returns an iterator over the vertices adjacent to a given vertex
-** @param v The vertex
-** @return The iterator ove the adjacent vertices
-*/
-
-t_iterator		*graph_adjacency(const t_graph *graph, int v);
-
-/*
-** Frees all memory taken by a graph
-*/
-
-void			graph_delete(t_graph *graph);
-
-/*
-** Run Edwards-Karp algorithm on the graph, seeking at most `n` independent
-** paths from `start` to `end`
-** @param[out] paths The pointer where an array of paths, each represented
-** by a list of vertices on each path, will be written
-** @param[in] n The maximum number of paths to compute
-** @return The number of paths actually found
-*/
-
-size_t			graph_edkarp(const t_graph *graph, t_list ***paths, size_t n);
-
-/*
-** Converts a vertex name to the corresponding numeric id
-** @param name A vertex name
-** @return The corresponding numeric id
-*/
-
-int				graph_name2id(const t_graph *graph, const char *name);
-
-/*
-** Convertex a numeric id to the corresponding vertex name
-** @param id A numeric id
-** @return The corresponding vertex name
-*/
-
-const char		*graph_id2name(const t_graph *graph, int id);
+void	graph_add_edge(t_graph *graph, int v, int w);
+void	graph_delete(t_graph *graph);
+int		graph_dijkstra(t_graph *graph);
+t_graph	*graph_from_names(t_array *names, const char *start_name,const char *end_name);
+const char	*graph_id2name(const t_graph *graph, int id);
+int		graph_name2id(const t_graph *graph, const char *name);
+void	graph_reset(t_graph *graph);
+int		graph_suurballe(t_graph *graph);
 
 #endif

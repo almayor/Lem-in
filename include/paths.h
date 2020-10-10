@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   paths.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:27:17 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:27:54 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/09 20:41:47 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 # include <stdint.h>
 # include "graph.h"
-# include "iterator.h"
 # include "list.h"
 # include "utils.h"
 
@@ -35,6 +34,7 @@
 typedef struct	s_paths
 {
 	size_t	npaths;
+	size_t	nsteps;
 	t_list	**arr;
 	size_t	*assignments;
 }				t_paths;
@@ -45,15 +45,9 @@ typedef struct	s_paths
 
 void			paths_delete(t_paths *paths);
 
-/*
-** Gets paths from `start` to `end`, given a graph, as well as the number of
-** ants that should take each path in the best-case scenario
-** @param graph The graph
-** @param nants The number of ants
-** @return The paths
-*/
+t_paths			*paths_compute(t_graph *graph, size_t nants);
 
-t_paths			*paths_get(t_graph *graph, size_t nants);
+void			paths_assign(t_paths *paths, size_t nants);
 
 /*
 ** Checks if the `i`th path can accommodate one more ant, given the optimal
@@ -71,7 +65,7 @@ int				paths_is_available(const t_paths *paths, size_t i);
 ** @return The iterator
 */
 
-t_iterator		*paths_navigate(t_paths *paths, size_t i);
+t_link		*paths_navigate(t_paths *paths, size_t i);
 
 /*
 ** Returns the length (i.e. the number of links to traverse) of the `i`th path
@@ -80,5 +74,9 @@ t_iterator		*paths_navigate(t_paths *paths, size_t i);
 */
 
 size_t			paths_length(const t_paths *paths, size_t i);
+
+void			paths_print(const t_paths *paths, const t_graph *graph);
+
+t_paths			*paths_from_graph(const t_graph *graph, size_t nants);
 
 #endif

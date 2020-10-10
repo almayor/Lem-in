@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 03:34:28 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/10 21:09:29 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include "parse.h"
 #include "stdin.h"
 
+#include <time.h>
+
 /*
 ** Moves all ants that are currently en-route by one link forward
 ** @param ants An array of iterators corresponding to each ant
@@ -25,8 +27,8 @@
 ** @return The number of ants that have moved forward
 */
 
-static size_t	step_once(t_iterator **ants, size_t nants,
-								const t_graph *graph)
+static size_t	step_once(t_link **ants, size_t nants,
+							const t_graph *graph)
 {
 	size_t	nants_moved;
 	size_t	i;
@@ -35,12 +37,13 @@ static size_t	step_once(t_iterator **ants, size_t nants,
 	i = 0;
 	while (i < nants)
 	{
-		if (iterator_has_next(ants[i]))
+		if (ants[i])
 		{
 			ft_printf("%cL%i-%s",
 				nants_moved > 0 ? ' ' : '\n',
 				i + 1,
-				graph_id2name(graph, iterator_next(ants[i])));
+				graph_id2name(graph, ants[i]->content));
+			ants[i] = ants[i]->next;
 			nants_moved++;
 		}
 		i++;
@@ -56,7 +59,7 @@ static size_t	step_once(t_iterator **ants, size_t nants,
 ** @param graph The graph in which the ants are travelling
 */
 
-static void		cycle_to_finish(t_iterator **ants, size_t nants,
+static void		cycle_to_finish(t_link **ants, size_t nants,
 								const t_graph *graph)
 {
 	while (step_once(ants, nants, graph) > 0)
@@ -73,11 +76,11 @@ static void		cycle_to_finish(t_iterator **ants, size_t nants,
 
 static void		lemin(t_paths *paths, size_t nants, const t_graph *graph)
 {
-	t_iterator	**ants;
-	size_t		nants_active;
-	size_t		i;
+	t_link	**ants;
+	size_t	nants_active;
+	size_t	i;
 
-	ants = ft_xcalloc(sizeof(t_iterator *), nants);
+	ants = ft_xcalloc(sizeof(t_link *), nants);
 	nants_active = 0;
 	while (nants_active < nants)
 	{
@@ -91,23 +94,26 @@ static void		lemin(t_paths *paths, size_t nants, const t_graph *graph)
 		step_once(ants, nants, graph);
 	}
 	cycle_to_finish(ants, nants, graph);
-	while (nants_active > 0)
-		iterator_delete(ants[--nants_active]);
 	free(ants);
 }
 
-int				main(void)
+int				main(int argc, char **argv)
 {
 	t_stdin	*in;
 	size_t	nants;
 	t_graph	*graph;
 	t_paths	*paths;
 
+	if (argc > 1)
+	{
+		write(1, "Usage: lem-in < {your-map}\n", 27);
+		exit(0);
+	}
 	in = stdin_new();
 	nants = parse_nants(in);
 	graph = parse_rooms(in);
 	parse_links(in, graph);
-	paths = paths_get(graph, nants);
+	paths = paths_compute(graph, nants);
 	lemin(paths, nants, graph);
 	stdin_delete(in);
 	graph_delete(graph);

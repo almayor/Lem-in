@@ -14,7 +14,7 @@
 
 int	is_nants(const char *s)
 {
-	if (!s)
+	if (!s || !*s)
 		return (0);
 	while (*s)
 	{
