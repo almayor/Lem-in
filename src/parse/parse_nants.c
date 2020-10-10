@@ -21,7 +21,7 @@ int	parse_nants(t_stdin *in)
 	if (!is_nants(stdin_next(in)))
 		terminate(ERR_INVALID_INPUT);
 	nants = ft_atoi(stdin_peek(in));
-	if (nants <= 0)
+	if (nants < 0)
 		terminate(ERR_INVALID_INPUT);
 	return (nants);
 }
