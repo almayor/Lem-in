@@ -16,7 +16,7 @@ static void	get_line(t_stdin *in)
 {
 	in->line = in->ptr;
 	if (!(in->ptr = ft_strchr(in->ptr, '\n')))
-		terminate(ERR_STDIN);
+		terminate(ERR_INVALID_INPUT);
 	*(in->ptr) = '\0';
 }
 

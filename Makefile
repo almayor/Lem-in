@@ -6,7 +6,7 @@
 #    By: user <user@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/10/10 00:12:23 by user             ###   ########.fr        #
+#    Updated: 2020/10/10 21:45:09 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -141,7 +141,7 @@ DEP += $(patsubst %.c, $(PATHO)/%.d, $(SRC_NAME))
 
 .DEFAULT_GOAL = all
 
-.PHONY : all clean fclean re docs libftprintfgnl
+.PHONY : all clean fclean re docs test libftprintfgnl
 
 all : libftprintfgnl $(NAME)
 
@@ -159,6 +159,9 @@ docs :
 
 libftprintfgnl :
 	$(MAKE) -C libftprintfgnl
+
+test : all
+	test/test.sh
 
 ################################################################################
 

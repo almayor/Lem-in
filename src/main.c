@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 20:44:08 by user             ###   ########.fr       */
+/*   Updated: 2020/10/10 21:09:29 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,13 +97,18 @@ static void		lemin(t_paths *paths, size_t nants, const t_graph *graph)
 	free(ants);
 }
 
-int				main(void)
+int				main(int argc, char **argv)
 {
 	t_stdin	*in;
 	size_t	nants;
 	t_graph	*graph;
 	t_paths	*paths;
 
+	if (argc > 1)
+	{
+		write(1, "Usage: lem-in < {your-map}\n", 27);
+		exit(0);
+	}
 	in = stdin_new();
 	nants = parse_nants(in);
 	graph = parse_rooms(in);

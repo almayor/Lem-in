@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_rooms.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: unite <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 23:55:22 by unite             #+#    #+#             */
-/*   Updated: 2020/09/11 16:16:21 by unite            ###   ########.fr       */
+/*   Updated: 2020/10/10 21:10:59 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ t_graph		*parse_rooms(t_stdin *in)
 			parse_default(in, names);
 	}
 	if (!start || !end)
+		terminate(ERR_INVALID_INPUT);
+	if (array_size(names) < 1)
 		terminate(ERR_INVALID_INPUT);
 	return (graph_from_names(names, start, end));
 }
