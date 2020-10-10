@@ -9,5 +9,5 @@ cmake-build-*
 .idea
 .doxygen
 generator-docker
-Lem_in
+lem-in
 
