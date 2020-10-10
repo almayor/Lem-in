@@ -31,8 +31,11 @@ static size_t	paths_assign_once(const t_paths *paths, size_t nants,
 	while (i + 1 < nused)
 	{
 		nants -= (paths_length(paths, nused - 1) - paths_length(paths, i));
-		assigments_new[i] = (paths_length(paths, nused - 1) -
-							paths_length(paths, i));
+		if (paths_length(paths, nused - 1) > paths_length(paths, i))
+			assigments_new[i] = paths_length(paths, nused - 1) -
+								paths_length(paths, i);
+		else
+			assigments_new[i] = 0;
 		i++;
 	}
 	i = 0;
