@@ -6,9 +6,6 @@
 
 > At [School 42](https://en.wikipedia.org/wiki/42_(school)), almost every project must be written to comply with a coding standard (also known as the "[Norm](./docs/subjects/norme.en.pdf)"). As a result, the implementation of certain parts may appear strange.
 
-## Algorithm
-
-
 ## Overview
 
 * [Official instructions](docs/subjects/lem-in.en.pdf)
@@ -55,6 +52,32 @@ Alternatively, you can run the whole batch of included tests with
 ```sh
 make test
 ```
+## Algorithm
+
+_(All observation are true to our particular case, where all edges and nodes, other than `start` and `end`, have a unit positive capacity)_
+
+### Minimum cost for a given flow 
+
+**Defition:** Flow constraints are constraints stipulating that at every node other than `start` an `end`, the amount of incoming flow equals the amount of outgoing flow.
+
+Note that in our particular case, any path from `start` to `end` or a closed path, such as a cycle, automatically satisfies the flow constrains.
+
+**Defition:** A residual network _Gr_ is formed from a network _G_ by replacing all edges along paths involved in a flow _f_ with edges directed in the opposite direction to the flow, and negating their cost.
+
+**Observation:** A cycle in the residual graph _Gr_ doesn't change the value of the flow in the graph _G_. Moreover, the cost of the flow changes in relation to the cost of the cycle. 
+
+**Observation:** A given flow _f_ in the network has minimum cost in the network _G_ if there are no negative cost cycles in the residual network _Gr_.
+
+**Observation:** The shortest path from `start` to `end` in the graph _G_ doesn't introduce any negative cycles in the corresponding residual graph _Gr_.
+
+This is true, because in the residual graph, the negative cost of going from `end` to `start` along the shortest path is less than the positive cost of going from `start` to `end` along any of the remaining paths.
+
+**Observation:** A minimum cost flow of any given amount (less than the overall max-flow of the network) can be obtained iteratively as follows:
+
+	1. hjasdf
+	2. 
+
+
 
 ## Acknowledgements
 
