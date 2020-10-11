@@ -10,11 +10,12 @@
 
 * [Official instructions](docs/subjects/lem-in.en.pdf)
 * [Code documentation](https://almayor.github.io/lem-in)
+* [Algorithm explanation](docs/algorithm-explanation.pdf)
 * This project practices the following algorithmic topics
 	* minimum cost maximum flow (Ford-Fulkerson, Suurballe)
 	* path search in directed graphs (BFS, Dijkstra, Bellman-Ford)
 	* sorts (quick sort, insertion sort)
-	* efficient data representation (priority quues, graphs, arrays, queues, linked lists)
+	* efficient data representation (priority queues, graphs, arrays, queues, linked lists)
 
 ## Run
 
@@ -54,30 +55,7 @@ make test
 ```
 ## Algorithm
 
-_(All observation are true to our particular case, where all edges and nodes, other than `start` and `end`, have a unit positive capacity)_
-
-### Minimum cost for a given flow 
-
-**Defition:** Flow constraints are constraints stipulating that at every node other than `start` an `end`, the amount of incoming flow equals the amount of outgoing flow.
-
-Note that in our particular case, any path from `start` to `end` or a closed path, such as a cycle, automatically satisfies the flow constrains.
-
-**Defition:** A residual network _Gr_ is formed from a network _G_ by replacing all edges along paths involved in a flow _f_ with edges directed in the opposite direction to the flow, and negating their cost.
-
-**Observation:** A cycle in the residual graph _Gr_ doesn't change the value of the flow in the graph _G_. Moreover, the cost of the flow changes in relation to the cost of the cycle. 
-
-**Observation:** A given flow _f_ in the network has minimum cost in the network _G_ if there are no negative cost cycles in the residual network _Gr_.
-
-**Observation:** The shortest path from `start` to `end` in the graph _G_ doesn't introduce any negative cycles in the corresponding residual graph _Gr_.
-
-This is true, because in the residual graph, the negative cost of going from `end` to `start` along the shortest path is less than the positive cost of going from `start` to `end` along any of the remaining paths.
-
-**Observation:** A minimum cost flow of any given amount (less than the overall max-flow of the network) can be obtained iteratively as follows:
-
-	1. hjasdf
-	2. 
-
-
+I have written a detailed [PDF](docs/algorithm-explanation.pdf) to outline my thought process when designing the algorithm. Please have a look if you're interested.
 
 ## Acknowledgements
 
