@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 19:15:58 by user              #+#    #+#             */
-/*   Updated: 2020/10/11 12:44:20 by user             ###   ########.fr       */
+/*   Updated: 2020/10/11 19:35:56 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,11 +116,9 @@ void			paths_assign(t_paths *paths, size_t nants)
 	assigments_new = ft_xcalloc(sizeof(size_t), nants);
 	nsteps_old = SIZE_MAX;
 	i = 1;
-	while (i <= paths->npaths)
+	while (i <= paths->npaths && nsteps_old > list_size(paths->arr[i - 1]))
 	{
 		nsteps_new = paths_assign_once(paths, nants, i, assigments_new);
-		if (nsteps_new > nsteps_old)
-			break ;
 		paths_reassign(paths, assigments_new);
 		nsteps_old = nsteps_new;
 		i++;
