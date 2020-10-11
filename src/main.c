@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 01:27:50 by unite             #+#    #+#             */
-/*   Updated: 2020/10/10 21:09:29 by user             ###   ########.fr       */
+/*   Updated: 2020/10/11 13:10:41 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static void		cycle_to_finish(t_link **ants, size_t nants,
 }
 
 /*
-** Runs Lem_in given some paths, ants and a graph
+** Runs lem-in given some paths, ants and a graph
 ** @param paths The paths available to ants
 ** @param nants The total number of ants
 ** @param graph The graph

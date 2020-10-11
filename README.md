@@ -1,44 +1,60 @@
-# Lem_in
+# lem-in
 
 *This project is part of the official curriculum at [School 42](https://en.wikipedia.org/wiki/42_(school)).*
 
 ## Disclaimer
 
-> In [School 42](https://en.wikipedia.org/wiki/42_(school)), almost every project must be written to comply with. coding standard (also known as the "[Norm](./docs/subjects/norme.en.pdf)"). As a result, the implementation of certain parts may appear strange.
+> At [School 42](https://en.wikipedia.org/wiki/42_(school)), almost every project must be written to comply with a coding standard (also known as the "[Norm](./docs/subjects/norme.en.pdf)"). As a result, the implementation of certain parts may appear strange.
+
+## Algorithm
 
 
 ## Overview
 
 * [Official instructions](docs/subjects/lem-in.en.pdf)
-* [Code documentation](https://almayor.github.io/Lem-in)
+* [Code documentation](https://almayor.github.io/lem-in)
 * This project practices the following algorithmic topics
-	* path search in undirected graphs
-	* maxflow / mincut
-	* sorts
-	* efficient data representation (graphs, arrays, queues)
+	* minimum cost maximum flow (Ford-Fulkerson, Suurballe)
+	* path search in directed graphs (BFS, Dijkstra, Bellman-Ford)
+	* sorts (quick sort, insertion sort)
+	* efficient data representation (priority quues, graphs, arrays, queues, linked lists)
 
 ## Run
 
 To compile, run
 
 ```sh
-git clone https://github.com/almayor/Lem-in
-cd Lem-in
+git clone https://github.com/almayor/lem-in
+cd lem-in
 git submodule --init --recursive
 make
 ```
 Then try some example maps
 
 ```sh
-./Lem_in < example-maps/flow-thousand.txt
+./lem-in < example-maps/flow-thousand.txt
 ```
 or generate your own
 
 ```sh
-./generator --flow-thousand | ./Lem_in
+./generator --flow-thousand | ./lem-in
 ```
 
-(_NOTE_ that the `generator` has been made available to us in a Linux compilation. If you're running OSX, you could use a Docker `gcc` container or a VM. Alternatively, you could use the many pre-generated example maps in the `example-maps` directory)
+(_NOTE_ that the `generator` has only been made available to us in a Linux compilation.)
+
+## Test
+
+Your can check that a generated solution is correct using the provided Python script `check-solution`
+
+```sh
+./lem-in < {your-map} | ./check-solution
+```
+
+Alternatively, you can run the whole batch of included tests with
+
+```sh
+make test
+```
 
 ## Acknowledgements
 
