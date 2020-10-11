@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: s_paths Struct Reference</title>
+<title>lem-in: s_paths Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -68,16 +68,31 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A data structing containing the paths from <code>start</code> to <code>end</code> and the number of ants that each path can optimally accommodate.  
+<p>A data structing containing the paths in the graph.  
  <a href="structs__paths.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="paths_8h_source.html">paths.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for s_paths:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="structs__paths__coll__graph.png" border="0" usemap="#s__paths_coll__map" alt="Collaboration graph"/></div>
+<map name="s__paths_coll__map" id="s__paths_coll__map">
+<area shape="rect" title="A data structing containing the paths in the graph." alt="" coords="5,201,73,228"/>
+<area shape="rect" href="structs__list.html" title="A doubly linked list of integers." alt="" coords="13,112,66,139"/>
+<area shape="rect" href="structs__link.html" title="A link in in a doubly linked list of integers." alt="" coords="11,7,67,33"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a772050479a43bf61819a5c1e95e06036"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__paths.html#a772050479a43bf61819a5c1e95e06036">npaths</a></td></tr>
 <tr class="memdesc:a772050479a43bf61819a5c1e95e06036"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total number of paths from <code>start</code> to <code>end</code>  <a href="structs__paths.html#a772050479a43bf61819a5c1e95e06036">More...</a><br /></td></tr>
 <tr class="separator:a772050479a43bf61819a5c1e95e06036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248f8939dc61b8e4737c78060cf98d6d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__paths.html#a248f8939dc61b8e4737c78060cf98d6d">nsteps</a></td></tr>
+<tr class="memdesc:a248f8939dc61b8e4737c78060cf98d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of steps its would take to walk <code>nants</code> ants from <code>start</code> to <code>end</code> given these paths and assignments.  <a href="structs__paths.html#a248f8939dc61b8e4737c78060cf98d6d">More...</a><br /></td></tr>
+<tr class="separator:a248f8939dc61b8e4737c78060cf98d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95a71448644314061e548701ef78e02a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__list.html">t_list</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__paths.html#a95a71448644314061e548701ef78e02a">arr</a></td></tr>
 <tr class="memdesc:a95a71448644314061e548701ef78e02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of paths.  <a href="structs__paths.html#a95a71448644314061e548701ef78e02a">More...</a><br /></td></tr>
 <tr class="separator:a95a71448644314061e548701ef78e02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -86,9 +101,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:ac752372ade947014832fe9104cecabe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A data structing containing the paths from <code>start</code> to <code>end</code> and the number of ants that each path can optimally accommodate. </p>
+<div class="textblock"><p>A data structing containing the paths in the graph. </p>
+<p>A data structing containing the paths in the graph from <code>start</code> to <code>end</code> and assignments of <code>nants</code> ants among them </p>
 
-<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00036">36</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00039">39</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a95a71448644314061e548701ef78e02a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95a71448644314061e548701ef78e02a">&#9670;&nbsp;</a></span>arr</h2>
@@ -104,7 +120,7 @@ Data Fields</h2></td></tr>
 
 <p>An array of paths. </p>
 
-<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00039">39</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00043">43</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
 
 </div>
 </div>
@@ -122,7 +138,7 @@ Data Fields</h2></td></tr>
 
 <p>The number of ants that should take each path. </p>
 
-<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00040">40</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00044">44</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
 
 </div>
 </div>
@@ -140,7 +156,25 @@ Data Fields</h2></td></tr>
 
 <p>The total number of paths from <code>start</code> to <code>end</code> </p>
 
-<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00038">38</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00041">41</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
+
+</div>
+</div>
+<a id="a248f8939dc61b8e4737c78060cf98d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a248f8939dc61b8e4737c78060cf98d6d">&#9670;&nbsp;</a></span>nsteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">s_paths::nsteps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of steps its would take to walk <code>nants</code> ants from <code>start</code> to <code>end</code> given these paths and assignments. </p>
+
+<p class="definition">Definition at line <a class="el" href="paths_8h_source.html#l00042">42</a> of file <a class="el" href="paths_8h_source.html">paths.h</a>.</p>
 
 </div>
 </div>

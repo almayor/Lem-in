@@ -1,0 +1,6 @@
+<map id="min_pq_insert" name="min_pq_insert">
+<area shape="rect" id="node1" title="A convenience function that adds an integer&#45;value pair to the queue, if it&#39;s not already contained in..." alt="" coords="5,56,108,83"/>
+<area shape="rect" id="node2" href="$min__pq__add_8c.html#aa6f41f8a822163971f2f6e3500f80c31" title="Adds an integer an its associated value to the queue." alt="" coords="170,5,262,32"/>
+<area shape="rect" id="node3" href="$min__pq__contains_8c.html#af9361c7f081bfc0a46550a66928562e0" title="Checks that a given integer is contained in the priority queue." alt="" coords="156,56,276,83"/>
+<area shape="rect" id="node4" href="$min__pq__edit_8c.html#a5debd98896a3463ba624e0d688506b00" title="Changes the value associated with a given integer." alt="" coords="170,107,262,133"/>
+</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: include/list.h Source File</title>
+<title>lem-in: include/list.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -74,10 +74,10 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   list.h                                             :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: user &lt;user@student.42.fr&gt;                  +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/07/13 17:49:33 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/09/11 00:37:14 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/10/11 11:14:30 by user             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
@@ -89,19 +89,19 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &quot;<a class="codeRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structs__link.html">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct      </span><a class="code" href="structs__link.html">s_link</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structs__link.html">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__link.html">s_link</a></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structs__link.html#a83f53c8a8f95dd4d17f664c8b6d6f2e1">   35</a></span>&#160;    <span class="keywordtype">int</span>             <a class="code" href="structs__link.html#a83f53c8a8f95dd4d17f664c8b6d6f2e1">content</a>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structs__link.html#a7dfdffee2e3c14c4f52ab78da2204cc9">   36</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__link.html">s_link</a>   *<a class="code" href="structs__link.html#a7dfdffee2e3c14c4f52ab78da2204cc9">next</a>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structs__link.html#a3c7530e04b763d544ce62e510b666b1a">   37</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__link.html">s_link</a>   *<a class="code" href="structs__link.html#a3c7530e04b763d544ce62e510b666b1a">prev</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}                   <a class="code" href="structs__link.html">t_link</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}               <a class="code" href="structs__link.html">t_link</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structs__list.html">   51</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct      </span><a class="code" href="structs__list.html">s_list</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structs__list.html">   51</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__list.html">s_list</a></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structs__list.html#af222b43290e12d08dd57530ebc7f672b">   53</a></span>&#160;    <a class="code" href="structs__link.html">t_link</a>          *<a class="code" href="structs__list.html#af222b43290e12d08dd57530ebc7f672b">head</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="structs__list.html#a34c85ecf7803f11cb86886c9e9967c19">   54</a></span>&#160;    <a class="code" href="structs__link.html">t_link</a>          *<a class="code" href="structs__list.html#a34c85ecf7803f11cb86886c9e9967c19">tail</a>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structs__list.html#ac322563dbbb8c1dafd814734cfa689f1">   55</a></span>&#160;    <span class="keywordtype">size_t</span>          <a class="code" href="structs__list.html#ac322563dbbb8c1dafd814734cfa689f1">size</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}                   <a class="code" href="structs__list.html">t_list</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}               <a class="code" href="structs__list.html">t_list</a>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="structs__list.html">t_list</a>          *<a class="code" href="list_8h.html#a5ed6c55f949d2bf6949bdaf117e2e7c7">list_new</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
@@ -117,18 +117,30 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="list_8h.html#a647690cf37d8d4a19925eafa8d8077a5">list_delete</a>(<a class="code" href="structs__list.html">t_list</a> *list);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">int</span>             <a class="code" href="list_8h.html#a0a20effca59394923ebfc3719646d6d2">list_peek_first</a>(<span class="keyword">const</span> <a class="code" href="structs__list.html">t_list</a> *list);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">int</span>             <a class="code" href="list_8h.html#a81bd26a9124b81e156ad5abfe1af2704">list_peek_last</a>(<span class="keyword">const</span> <a class="code" href="structs__list.html">t_list</a> *list);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="list_8h.html#acd3b069d1d2af845ff2c829b44761c51">list_remove</a>(<a class="code" href="structs__list.html">t_list</a> *list, <span class="keywordtype">int</span> val);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="list_8h.html#ac9f6145bc30f71b10ae01dc6419ecc13">list_print</a>(<span class="keyword">const</span> <a class="code" href="structs__list.html">t_list</a> *list);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructs__link_html_a83f53c8a8f95dd4d17f664c8b6d6f2e1"><div class="ttname"><a href="structs__link.html#a83f53c8a8f95dd4d17f664c8b6d6f2e1">s_link::content</a></div><div class="ttdeci">int content</div><div class="ttdoc">The integer value at this link.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00035">list.h:35</a></div></div>
 <div class="ttc" id="alist_8h_html_ae041f360da67f35654aed00a95f1a2f6"><div class="ttname"><a href="list_8h.html#ae041f360da67f35654aed00a95f1a2f6">list_pop_last</a></div><div class="ttdeci">int list_pop_last(t_list *alst)</div><div class="ttdoc">Returns the last value in the list and removes it from the list.</div><div class="ttdef"><b>Definition:</b> <a href="list__pop__last_8c_source.html#l00016">list_pop_last.c:16</a></div></div>
+<div class="ttc" id="alist_8h_html_a81bd26a9124b81e156ad5abfe1af2704"><div class="ttname"><a href="list_8h.html#a81bd26a9124b81e156ad5abfe1af2704">list_peek_last</a></div><div class="ttdeci">int list_peek_last(const t_list *list)</div><div class="ttdoc">Returns the last value in the list without removing it.</div><div class="ttdef"><b>Definition:</b> <a href="list__peek__last_8c_source.html#l00016">list_peek_last.c:16</a></div></div>
 <div class="ttc" id="alist_8h_html_a647690cf37d8d4a19925eafa8d8077a5"><div class="ttname"><a href="list_8h.html#a647690cf37d8d4a19925eafa8d8077a5">list_delete</a></div><div class="ttdeci">void list_delete(t_list *list)</div><div class="ttdoc">Frees all memory taken up by the list.</div><div class="ttdef"><b>Definition:</b> <a href="list__delete_8c_source.html#l00016">list_delete.c:16</a></div></div>
+<div class="ttc" id="alist_8h_html_acd3b069d1d2af845ff2c829b44761c51"><div class="ttname"><a href="list_8h.html#acd3b069d1d2af845ff2c829b44761c51">list_remove</a></div><div class="ttdeci">void list_remove(t_list *list, int val)</div><div class="ttdoc">Removes the first occurence of value from the list.</div><div class="ttdef"><b>Definition:</b> <a href="list__remove_8c_source.html#l00029">list_remove.c:29</a></div></div>
 <div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
 <div class="ttc" id="astructs__list_html_af222b43290e12d08dd57530ebc7f672b"><div class="ttname"><a href="structs__list.html#af222b43290e12d08dd57530ebc7f672b">s_list::head</a></div><div class="ttdeci">t_link * head</div><div class="ttdoc">The first link in the list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00053">list.h:53</a></div></div>
 <div class="ttc" id="alist_8h_html_a5ed6c55f949d2bf6949bdaf117e2e7c7"><div class="ttname"><a href="list_8h.html#a5ed6c55f949d2bf6949bdaf117e2e7c7">list_new</a></div><div class="ttdeci">t_list * list_new(void)</div><div class="ttdoc">Creates a new empty list.</div><div class="ttdef"><b>Definition:</b> <a href="list__new_8c_source.html#l00016">list_new.c:16</a></div></div>
 <div class="ttc" id="astructs__list_html"><div class="ttname"><a href="structs__list.html">s_list</a></div><div class="ttdoc">A doubly linked list of integers.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00051">list.h:51</a></div></div>
 <div class="ttc" id="astructs__list_html_a34c85ecf7803f11cb86886c9e9967c19"><div class="ttname"><a href="structs__list.html#a34c85ecf7803f11cb86886c9e9967c19">s_list::tail</a></div><div class="ttdeci">t_link * tail</div><div class="ttdoc">The last link in the list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00054">list.h:54</a></div></div>
+<div class="ttc" id="alist_8h_html_a0a20effca59394923ebfc3719646d6d2"><div class="ttname"><a href="list_8h.html#a0a20effca59394923ebfc3719646d6d2">list_peek_first</a></div><div class="ttdeci">int list_peek_first(const t_list *list)</div><div class="ttdoc">Returns the first value in the list without removing it.</div><div class="ttdef"><b>Definition:</b> <a href="list__peek__first_8c_source.html#l00016">list_peek_first.c:16</a></div></div>
 <div class="ttc" id="astructs__list_html_ac322563dbbb8c1dafd814734cfa689f1"><div class="ttname"><a href="structs__list.html#ac322563dbbb8c1dafd814734cfa689f1">s_list::size</a></div><div class="ttdeci">size_t size</div><div class="ttdoc">The number of entries in the list.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00055">list.h:55</a></div></div>
 <div class="ttc" id="alibftprintfgnl_8h_html"><div class="ttname"><a href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a></div></div>
+<div class="ttc" id="alist_8h_html_ac9f6145bc30f71b10ae01dc6419ecc13"><div class="ttname"><a href="list_8h.html#ac9f6145bc30f71b10ae01dc6419ecc13">list_print</a></div><div class="ttdeci">void list_print(const t_list *list)</div><div class="ttdoc">Prints values contained in the list.</div><div class="ttdef"><b>Definition:</b> <a href="list__print_8c_source.html#l00016">list_print.c:16</a></div></div>
 <div class="ttc" id="astructs__link_html_a3c7530e04b763d544ce62e510b666b1a"><div class="ttname"><a href="structs__link.html#a3c7530e04b763d544ce62e510b666b1a">s_link::prev</a></div><div class="ttdeci">struct s_link * prev</div><div class="ttdoc">A pointer to the previous link.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00037">list.h:37</a></div></div>
 <div class="ttc" id="alist_8h_html_ad9e1810d5738eb07a29c9e55302eec40"><div class="ttname"><a href="list_8h.html#ad9e1810d5738eb07a29c9e55302eec40">list_add_first</a></div><div class="ttdeci">void list_add_first(t_list *alst, int val)</div><div class="ttdoc">Adds an entry at the front of the list.</div><div class="ttdef"><b>Definition:</b> <a href="list__add__first_8c_source.html#l00016">list_add_first.c:16</a></div></div>
 <div class="ttc" id="alist_8h_html_af08d1f5ca24cada9b3fde235762a3016"><div class="ttname"><a href="list_8h.html#af08d1f5ca24cada9b3fde235762a3016">list_add_last</a></div><div class="ttdeci">void list_add_last(t_list *alst, int val)</div><div class="ttdoc">Adds an entry at the back of the list.</div><div class="ttdef"><b>Definition:</b> <a href="list__add__last_8c_source.html#l00016">list_add_last.c:16</a></div></div>

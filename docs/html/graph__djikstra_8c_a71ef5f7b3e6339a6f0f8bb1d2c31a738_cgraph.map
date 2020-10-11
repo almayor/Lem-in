@@ -1,0 +1,7 @@
+<map id="relax_hidden_edge" name="relax_hidden_edge">
+<area shape="rect" id="node1" title="Relaxes edges between the IN and OUT halves of split nodes." alt="" coords="5,56,136,83"/>
+<area shape="rect" id="node2" href="$min__pq__insert_8c.html#a42368b32d2445b5eaae7a7db9227c913" title="A convenience function that adds an integer&#45;value pair to the queue, if it&#39;s not already contained in..." alt="" coords="184,56,287,83"/>
+<area shape="rect" id="node3" href="$min__pq__add_8c.html#aa6f41f8a822163971f2f6e3500f80c31" title="Adds an integer an its associated value to the queue." alt="" coords="349,5,441,32"/>
+<area shape="rect" id="node4" href="$min__pq__contains_8c.html#af9361c7f081bfc0a46550a66928562e0" title="Checks that a given integer is contained in the priority queue." alt="" coords="335,56,455,83"/>
+<area shape="rect" id="node5" href="$min__pq__edit_8c.html#a5debd98896a3463ba624e0d688506b00" title="Changes the value associated with a given integer." alt="" coords="349,107,441,133"/>
+</map>

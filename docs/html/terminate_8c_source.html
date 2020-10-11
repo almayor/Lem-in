@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: src/utils/terminate.c Source File</title>
+<title>lem-in: src/utils/terminate.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -85,10 +85,12 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="utils_8h.html#af5447adc2e4c3ae45c65d2d1ce1c759f">   16</a></span>&#160;<span class="keywordtype">void</span>    <a class="code" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f">terminate</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *mes)</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8">ft_putendl_fd</a>(mes, 2);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    exit(1);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#ad5be1665b379489304b89bdc6381d1eb">ft_putchar</a>(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8">ft_putendl_fd</a>(mes, 2);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    exit(1);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="alibft_8h_html_ad5be1665b379489304b89bdc6381d1eb"><div class="ttname"><a href="https://almayor.github.io/libft/html/libft_8h.html#ad5be1665b379489304b89bdc6381d1eb">ft_putchar</a></div><div class="ttdeci">void ft_putchar(char c)</div></div>
 <div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
 <div class="ttc" id="alibft_8h_html_a1c8aac84262f05aa9d1afbd2d29982a8"><div class="ttname"><a href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8">ft_putendl_fd</a></div><div class="ttdeci">void ft_putendl_fd(char const *s, int fd)</div></div>
 <div class="ttc" id="aterminate_8c_html_af5447adc2e4c3ae45c65d2d1ce1c759f"><div class="ttname"><a href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f">terminate</a></div><div class="ttdeci">void terminate(const char *mes)</div><div class="ttdoc">Prints a message to STDERR end exits.</div><div class="ttdef"><b>Definition:</b> <a href="terminate_8c_source.html#l00016">terminate.c:16</a></div></div>

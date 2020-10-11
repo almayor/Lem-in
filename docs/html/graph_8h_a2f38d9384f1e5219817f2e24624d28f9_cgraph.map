@@ -1,7 +1,0 @@
-<map id="graph_adjacency" name="graph_adjacency">
-<area shape="rect" id="node1" title="Returns an iterator over the vertices adjacent to a given vertex." alt="" coords="5,5,125,32"/>
-<area shape="rect" id="node2" href="$iterator__from__list_8c.html#a3cdcef27fa10627427e5d2ddc0df8e62" title="Creates an iterator from a list." alt="" coords="173,5,292,32"/>
-<area shape="rect" id="node3" href="$ft__xmalloc_8c.html#a668e8ce8ac8b47388c8f3bb135e25f4e" title="Replicates behaviour of malloc from libc, but fails on memory allocation errors." alt="" coords="340,5,423,32"/>
-<area shape="rect" id="node4" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="471,5,547,32"/>
-<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="595,5,692,32"/>
-</map>

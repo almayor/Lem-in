@@ -1,8 +1,9 @@
 <map id="graph_add_edge" name="graph_add_edge">
-<area shape="rect" id="node1" title="Adds an edge between vertices v and w" alt="" coords="5,31,123,57"/>
-<area shape="rect" id="node2" href="$list__add__last_8c.html#aee9d8a0ec430036bc7c09ed825ea97af" title="Adds an entry at the back of the list." alt="" coords="171,31,265,57"/>
-<area shape="rect" id="node3" href="$ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="313,31,392,57"/>
-<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="443,5,513,32"/>
-<area shape="rect" id="node5" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="440,56,516,83"/>
-<area shape="rect" id="node6" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="564,56,661,83"/>
+<area shape="rect" id="node1" title="Adds two directed between edges going in the opposite directions connecting two nodes in the graph." alt="" coords="5,31,123,57"/>
+<area shape="rect" id="node2" href="$list__add__first_8c.html#a298d67ddc062dc3ac87189267637b6af" title="Adds an entry at the front of the list." alt="" coords="171,31,267,57"/>
+<area shape="rect" id="node3" href="$ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="315,31,393,57"/>
+<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="444,5,515,32"/>
+<area shape="rect" id="node5" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="441,56,517,83"/>
+<area shape="rect" id="node6" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="574,31,654,57"/>
+<area shape="rect" id="node7" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="565,81,663,108"/>
 </map>

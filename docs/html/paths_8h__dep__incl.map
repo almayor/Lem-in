@@ -1,9 +1,12 @@
 <map id="include/paths.h" name="include/paths.h">
-<area shape="rect" id="node1" title=" " alt="" coords="402,5,513,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="717,5,827,32"/>
 <area shape="rect" id="node2" href="$main_8c.html" title=" " alt="" coords="5,87,88,114"/>
-<area shape="rect" id="node3" href="$paths__delete_8c.html" title=" " alt="" coords="112,87,277,114"/>
-<area shape="rect" id="node4" href="$paths__get_8c.html" title=" " alt="" coords="302,87,450,114"/>
-<area shape="rect" id="node5" href="$paths__is__available_8c.html" title=" " alt="" coords="474,80,603,121"/>
-<area shape="rect" id="node6" href="$paths__length_8c.html" title=" " alt="" coords="628,87,793,114"/>
-<area shape="rect" id="node7" href="$paths__navigate_8c.html" title=" " alt="" coords="817,87,996,114"/>
+<area shape="rect" id="node3" href="$paths__assign_8c.html" title=" " alt="" coords="112,87,280,114"/>
+<area shape="rect" id="node4" href="$paths__compute_8c.html" title=" " alt="" coords="305,87,485,114"/>
+<area shape="rect" id="node5" href="$paths__delete_8c.html" title=" " alt="" coords="509,87,675,114"/>
+<area shape="rect" id="node6" href="$paths__from__graph_8c.html" title=" " alt="" coords="699,80,845,121"/>
+<area shape="rect" id="node7" href="$paths__is__available_8c.html" title=" " alt="" coords="869,80,998,121"/>
+<area shape="rect" id="node8" href="$paths__length_8c.html" title=" " alt="" coords="1023,87,1188,114"/>
+<area shape="rect" id="node9" href="$paths__navigate_8c.html" title=" " alt="" coords="1212,87,1391,114"/>
+<area shape="rect" id="node10" href="$paths__print_8c.html" title=" " alt="" coords="1415,87,1569,114"/>
 </map>

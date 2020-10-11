@@ -1,20 +1,15 @@
 <map id="lemin" name="lemin">
-<area shape="rect" id="node1" title="Runs Lem_in given some paths, ants and a graph." alt="" coords="5,180,59,207"/>
-<area shape="rect" id="node2" href="$main_8c.html#a5500b4ca17722344ba1bdf9b7499ce69" title="Moves all ants by one link at a time, until all of them have reached their destination." alt="" coords="117,53,226,80"/>
-<area shape="rect" id="node4" href="$main_8c.html#a62a30726f674b395701008f00980c6cb" title="Moves all ants that are currently en&#45;route by one link forward." alt="" coords="302,104,385,131"/>
-<area shape="rect" id="node10" href="$ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="132,155,211,181"/>
-<area shape="rect" id="node14" href="$iterator__delete_8c.html#ad788af1073c33c13900ad026e9f83617" title="Frees all memory taken up by the iterator." alt="" coords="119,205,223,232"/>
-<area shape="rect" id="node15" href="$paths__is__available_8c.html#ae32565910ae5e79ca857de93f0c6db1f" title="Checks if the ith path can accommodate one more ant, given the optimal assignments of paths to ants." alt="" coords="107,256,236,283"/>
-<area shape="rect" id="node16" href="$paths__navigate_8c.html#a1ad59a019bb8dd6fc0e7a15ea0c212f0" title="Returns an iterator that an ant can use to navigate along the ith path, and decrements the path&#39;s ava..." alt="" coords="116,307,227,333"/>
-<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="303,53,383,80"/>
-<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/ft_printf/docs/.doxygen/ft_printf.tag$group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title=" " alt="" coords="479,5,545,32"/>
-<area shape="rect" id="node6" href="$graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73" title="Convertex a numeric id to the corresponding vertex name." alt="" coords="457,56,567,83"/>
-<area shape="rect" id="node8" href="$iterator__has__next_8c.html#a46c57c3c86aff5f9ae46fa019dad6728" title="Checks if an iterator has any values left." alt="" coords="451,107,573,133"/>
-<area shape="rect" id="node9" href="$iterator__next_8c.html#aefa7db19dcbb448ea7c7edd43c26fab7" title="Returns the next value in the iterator and advances its pointer." alt="" coords="465,157,559,184"/>
-<area shape="rect" id="node7" href="$array__get_8c.html#a1eb71c28fd8048d3bd3ab59dc2e55896" title="Returns the value at the specified position in this list." alt="" coords="621,56,697,83"/>
-<area shape="rect" id="node11" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="308,155,379,181"/>
-<area shape="rect" id="node12" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="621,237,697,264"/>
-<area shape="rect" id="node13" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="745,237,843,264"/>
-<area shape="rect" id="node17" href="$iterator__from__list_8c.html#a3cdcef27fa10627427e5d2ddc0df8e62" title="Creates an iterator from a list." alt="" coords="284,300,403,327"/>
-<area shape="rect" id="node18" href="$ft__xmalloc_8c.html#a668e8ce8ac8b47388c8f3bb135e25f4e" title="Replicates behaviour of malloc from libc, but fails on memory allocation errors." alt="" coords="471,275,553,301"/>
+<area shape="rect" id="node1" title="Runs Lem_in given some paths, ants and a graph." alt="" coords="5,132,59,159"/>
+<area shape="rect" id="node2" href="$main_8c.html#ad76d1c71f9e6039df8ef0c293cd2b08f" title="Moves all ants by one link at a time, until all of them have reached their destination." alt="" coords="117,81,226,108"/>
+<area shape="rect" id="node4" href="$main_8c.html#a7175d62a5c6bd53fbd1305da52e9c5e9" title="Moves all ants that are currently en&#45;route by one link forward." alt="" coords="284,31,367,57"/>
+<area shape="rect" id="node8" href="$ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="132,132,211,159"/>
+<area shape="rect" id="node12" href="$paths__is__available_8c.html#ae32565910ae5e79ca857de93f0c6db1f" title="Checks if the ith path can accommodate one more ant, given the optimal assignments of paths to ants." alt="" coords="107,183,236,209"/>
+<area shape="rect" id="node13" href="$paths__navigate_8c.html#adce27c4246e8185ee164fd4359a44351" title="Returns an iterator that an ant can use to navigate along the ith path, and decrements the path&#39;s ava..." alt="" coords="116,233,227,260"/>
+<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="430,107,510,133"/>
+<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/ft_printf/docs/.doxygen/ft_printf.tag$group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title=" " alt="" coords="437,5,503,32"/>
+<area shape="rect" id="node6" href="$graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73" title="Returns the name of the node with a given id." alt="" coords="415,56,525,83"/>
+<area shape="rect" id="node7" href="$array__get_8c.html#a1eb71c28fd8048d3bd3ab59dc2e55896" title="Returns the value at the specified position in this list." alt="" coords="573,56,649,83"/>
+<area shape="rect" id="node9" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="290,132,361,159"/>
+<area shape="rect" id="node10" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="287,183,363,209"/>
+<area shape="rect" id="node11" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="421,183,519,209"/>
 </map>

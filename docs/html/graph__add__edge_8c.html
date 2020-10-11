@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: src/graph/graph_add_edge.c File Reference</title>
+<title>lem-in: src/graph/graph_add_edge.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -79,15 +79,17 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="graph__add__edge_8c__incl.png" border="0" usemap="#src_2graph_2graph__add__edge_8c" alt=""/></div>
 <map name="src_2graph_2graph__add__edge_8c" id="src_2graph_2graph__add__edge_8c">
-<area shape="rect" title=" " alt="" coords="124,5,264,47"/>
-<area shape="rect" href="graph_8h.html" title=" " alt="" coords="161,95,227,121"/>
-<area shape="rect" title=" " alt="" coords="143,393,207,420"/>
-<area shape="rect" href="array_8h.html" title=" " alt="" coords="23,244,83,271"/>
-<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="297,393,397,420"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="147,319,204,345"/>
-<area shape="rect" href="iterator_8h.html" title=" " alt="" coords="158,169,230,196"/>
-<area shape="rect" href="list_8h.html" title=" " alt="" coords="310,244,361,271"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="255,169,323,196"/>
+<area shape="rect" title=" " alt="" coords="72,5,212,47"/>
+<area shape="rect" href="graph_8h.html" title=" " alt="" coords="110,95,175,121"/>
+<area shape="rect" title=" " alt="" coords="13,393,77,420"/>
+<area shape="rect" href="array_8h.html" title=" " alt="" coords="150,244,210,271"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="210,393,310,420"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="164,319,222,345"/>
+<area shape="rect" href="list_8h.html" title=" " alt="" coords="24,244,74,271"/>
+<area shape="rect" href="min__pq_8h.html" title=" " alt="" coords="210,169,285,196"/>
+<area shape="rect" title=" " alt="" coords="121,393,185,420"/>
+<area shape="rect" title=" " alt="" coords="286,244,348,271"/>
+<area shape="rect" title=" " alt="" coords="373,244,464,271"/>
 </map>
 </div>
 </div>
@@ -96,7 +98,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a73e2d178b7b649f310d893b384d3297b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph__add__edge_8c.html#a73e2d178b7b649f310d893b384d3297b">graph_add_edge</a> (<a class="el" href="structs__graph.html">t_graph</a> *graph, int v, int w)</td></tr>
-<tr class="memdesc:a73e2d178b7b649f310d893b384d3297b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge between vertices <code>v</code> and <code>w</code>  <a href="graph__add__edge_8c.html#a73e2d178b7b649f310d893b384d3297b">More...</a><br /></td></tr>
+<tr class="memdesc:a73e2d178b7b649f310d893b384d3297b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two directed between edges going in the opposite directions connecting two nodes in the graph.  <a href="graph__add__edge_8c.html#a73e2d178b7b649f310d893b384d3297b">More...</a><br /></td></tr>
 <tr class="separator:a73e2d178b7b649f310d893b384d3297b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -132,11 +134,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds an edge between vertices <code>v</code> and <code>w</code> </p>
+<p>Adds two directed between edges going in the opposite directions connecting two nodes in the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td>One vertex </td></tr>
-    <tr><td class="paramname">w</td><td>The other vertex </td></tr>
+    <tr><td class="paramname">v</td><td>The id of one node </td></tr>
+    <tr><td class="paramname">w</td><td>The id of the other node </td></tr>
   </table>
   </dd>
 </dl>
@@ -149,12 +151,13 @@ Functions</h2></td></tr>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="graph__add__edge_8c_a73e2d178b7b649f310d893b384d3297b_cgraph.png" border="0" usemap="#graph__add__edge_8c_a73e2d178b7b649f310d893b384d3297b_cgraph" alt=""/></div>
 <map name="graph__add__edge_8c_a73e2d178b7b649f310d893b384d3297b_cgraph" id="graph__add__edge_8c_a73e2d178b7b649f310d893b384d3297b_cgraph">
-<area shape="rect" title="Adds an edge between vertices v and w" alt="" coords="5,31,123,57"/>
-<area shape="rect" href="list__add__last_8c.html#aee9d8a0ec430036bc7c09ed825ea97af" title="Adds an entry at the back of the list." alt="" coords="171,31,265,57"/>
-<area shape="rect" href="ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="313,31,392,57"/>
-<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="443,5,513,32"/>
-<area shape="rect" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="440,56,516,83"/>
-<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="564,56,661,83"/>
+<area shape="rect" title="Adds two directed between edges going in the opposite directions connecting two nodes in the graph." alt="" coords="5,31,123,57"/>
+<area shape="rect" href="list__add__first_8c.html#a298d67ddc062dc3ac87189267637b6af" title="Adds an entry at the front of the list." alt="" coords="171,31,267,57"/>
+<area shape="rect" href="ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="315,31,393,57"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="444,5,515,32"/>
+<area shape="rect" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="441,56,517,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="574,31,654,57"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="565,81,663,108"/>
 </map>
 </div>
 

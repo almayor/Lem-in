@@ -1,5 +1,0 @@
-<map id="paths_assign" name="paths_assign">
-<area shape="rect" id="node1" title="Computes the best assignment (one that would result in the fewest steps) of nants by using only the f..." alt="" coords="5,5,104,32"/>
-<area shape="rect" id="node2" href="$paths__length_8c.html#aaba08583919195c52be902233fc41852" title="Returns the length (i.e." alt="" coords="152,5,248,32"/>
-<area shape="rect" id="node3" href="$list__size_8c.html#a8d0a3be51f473573303891440156eea5" title="Returns the current number of entries in the list." alt="" coords="296,5,367,32"/>
-</map>

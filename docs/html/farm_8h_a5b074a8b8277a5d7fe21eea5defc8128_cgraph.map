@@ -1,5 +1,0 @@
-<map id="make_farm" name="make_farm">
-<area shape="rect" id="node1" title="Allocates memory and initializes a data structure representing an ant farm." alt="" coords="5,31,93,56"/>
-<area shape="rect" id="node2" href="$free__farm_8c.html#acaaa41da466fe87f679a99e8b140075d" title="Frees all memory taken by an ant farm or does nothing if the farm is NULL." alt="" coords="141,5,220,31"/>
-<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="145,55,216,80"/>
-</map>

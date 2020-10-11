@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: src/stdin/stdin_peek.c Source File</title>
+<title>lem-in: src/stdin/stdin_peek.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -74,26 +74,28 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   stdin_peek.c                                       :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: user &lt;user@student.42.fr&gt;                  +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/09/09 19:34:56 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/09/11 00:01:15 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/10/07 21:30:35 by user             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdin_8h.html">stdin.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="stdin_8h.html#a4a4ff6200cee3f9de039ee60a2aa1179">   16</a></span>&#160;<span class="keywordtype">char</span>    *<a class="code" href="stdin__peek_8c.html#a4a4ff6200cee3f9de039ee60a2aa1179">stdin_peek</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{ </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (!in-&gt;line)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b">stdin_next</a>(in);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> (in-&gt;line);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="stdin_8h.html#ad12775a14e44f855be4118a08321fe5f">   16</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>  *<a class="code" href="stdin__peek_8c.html#ad12775a14e44f855be4118a08321fe5f">stdin_peek</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (in-&gt;end)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> (NULL);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (!in-&gt;line)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="stdin__next_8c.html#af393b6e672c321fce0340fd69613b508">stdin_next</a>(in);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> (in-&gt;line);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astdin__peek_8c_html_a4a4ff6200cee3f9de039ee60a2aa1179"><div class="ttname"><a href="stdin__peek_8c.html#a4a4ff6200cee3f9de039ee60a2aa1179">stdin_peek</a></div><div class="ttdeci">char * stdin_peek(t_stdin *in)</div><div class="ttdoc">Returns the line that was most recently read from the STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin__peek_8c_source.html#l00016">stdin_peek.c:16</a></div></div>
-<div class="ttc" id="astructs__stdin_html"><div class="ttname"><a href="structs__stdin.html">s_stdin</a></div><div class="ttdoc">A convenience data type for reading from STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin_8h_source.html#l00027">stdin.h:27</a></div></div>
+<div class="ttc" id="astdin__peek_8c_html_ad12775a14e44f855be4118a08321fe5f"><div class="ttname"><a href="stdin__peek_8c.html#ad12775a14e44f855be4118a08321fe5f">stdin_peek</a></div><div class="ttdeci">const char * stdin_peek(t_stdin *in)</div><div class="ttdoc">Returns the line that was most recently read from the STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin__peek_8c_source.html#l00016">stdin_peek.c:16</a></div></div>
+<div class="ttc" id="astdin__next_8c_html_af393b6e672c321fce0340fd69613b508"><div class="ttname"><a href="stdin__next_8c.html#af393b6e672c321fce0340fd69613b508">stdin_next</a></div><div class="ttdeci">const char * stdin_next(t_stdin *in)</div><div class="ttdoc">Reads the next line STDIN and returns it.</div><div class="ttdef"><b>Definition:</b> <a href="stdin__next_8c_source.html#l00024">stdin_next.c:24</a></div></div>
+<div class="ttc" id="astructs__stdin_html"><div class="ttname"><a href="structs__stdin.html">s_stdin</a></div><div class="ttdoc">A data type for efficient reading from STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin_8h_source.html#l00030">stdin.h:30</a></div></div>
 <div class="ttc" id="astdin_8h_html"><div class="ttname"><a href="stdin_8h.html">stdin.h</a></div></div>
-<div class="ttc" id="astdin__next_8c_html_a207e0d3a40c27fb62da8ec08f28dbc6b"><div class="ttname"><a href="stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b">stdin_next</a></div><div class="ttdeci">char * stdin_next(t_stdin *in)</div><div class="ttdoc">Reads the next line STDIN and returns it.</div><div class="ttdef"><b>Definition:</b> <a href="stdin__next_8c_source.html#l00016">stdin_next.c:16</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

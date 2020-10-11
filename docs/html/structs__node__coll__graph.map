@@ -1,0 +1,5 @@
+<map id="s_node" name="s_node">
+<area shape="rect" id="node1" title="A node in the graph." alt="" coords="5,201,69,228"/>
+<area shape="rect" id="node2" href="$structs__list.html" title="A doubly linked list of integers." alt="" coords="11,112,64,139"/>
+<area shape="rect" id="node3" href="$structs__link.html" title="A link in in a doubly linked list of integers." alt="" coords="9,7,65,33"/>
+</map>

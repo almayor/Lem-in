@@ -1,4 +1,0 @@
-<map id="free_paths" name="free_paths">
-<area shape="rect" id="node1" title="Frees paths found by the Edmonds&#45;Karp algorithm." alt="" coords="5,5,90,31"/>
-<area shape="rect" id="node2" href="$free__list_8c.html#a5772edc7aeef39713c35596814ec2709" title="Frees all memory taken by a list or does nothing if the list is NULL." alt="" coords="138,5,206,31"/>
-</map>

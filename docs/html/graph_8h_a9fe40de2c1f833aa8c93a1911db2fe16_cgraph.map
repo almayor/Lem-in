@@ -1,7 +1,0 @@
-<map id="make_graph" name="make_graph">
-<area shape="rect" id="node1" title="Allocates memory and initializes a graph data&#45;structure." alt="" coords="5,56,101,81"/>
-<area shape="rect" id="node2" href="$free__graph_8c.html#a1ecfbaadd85bfe385334ea5a5605c5cc" title="Frees all memory taken by a graph or does nothing if the graph is NULL." alt="" coords="149,5,235,31"/>
-<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="283,81,353,107"/>
-<area shape="rect" id="node5" href="$make__list_8c.html#a0f283118ee903b1a430e74f5a1d0931b" title="Allocates memory and initializes a list data&#45;structure." alt="" coords="153,107,231,132"/>
-<area shape="rect" id="node3" href="$free__list_8c.html#a5772edc7aeef39713c35596814ec2709" title="Frees all memory taken by a list or does nothing if the list is NULL." alt="" coords="284,5,352,31"/>
-</map>

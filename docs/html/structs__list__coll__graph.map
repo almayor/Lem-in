@@ -1,0 +1,4 @@
+<map id="s_list" name="s_list">
+<area shape="rect" id="node1" title="A doubly linked list of integers." alt="" coords="7,112,60,139"/>
+<area shape="rect" id="node2" href="$structs__link.html" title="A link in in a doubly linked list of integers." alt="" coords="5,7,61,33"/>
+</map>

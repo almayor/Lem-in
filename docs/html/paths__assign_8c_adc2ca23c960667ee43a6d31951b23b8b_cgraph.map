@@ -1,0 +1,13 @@
+<map id="paths_assign" name="paths_assign">
+<area shape="rect" id="node1" title="Calculates the best assignment of nants ants over the paths." alt="" coords="5,132,104,159"/>
+<area shape="rect" id="node2" href="$ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="182,56,261,83"/>
+<area shape="rect" id="node7" href="$paths__assign_8c.html#a1075b7db952a06ee41603ce42e09d532" title="Computes the best assignment (one that would result in the fewest steps) of nants by using only the f..." alt="" coords="154,107,289,133"/>
+<area shape="rect" id="node10" href="$paths__assign_8c.html#a440df5456bfe682cc0fa13f0b09906c2" title="Sorts the paths by their length in the ascending order." alt="" coords="152,157,291,184"/>
+<area shape="rect" id="node11" href="$paths__assign_8c.html#a88db8b8f590dd36ab0922147f7270877" title="Replace current assignments with new ones." alt="" coords="166,208,277,235"/>
+<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="351,5,422,32"/>
+<area shape="rect" id="node4" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="349,56,425,83"/>
+<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="491,5,571,32"/>
+<area shape="rect" id="node6" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="483,56,580,83"/>
+<area shape="rect" id="node8" href="$paths__length_8c.html#aaba08583919195c52be902233fc41852" title="Returns the length (i.e." alt="" coords="339,107,435,133"/>
+<area shape="rect" id="node9" href="$list__size_8c.html#a8d0a3be51f473573303891440156eea5" title="Returns the current number of entries in the list." alt="" coords="496,107,567,133"/>
+</map>

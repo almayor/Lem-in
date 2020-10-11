@@ -1,0 +1,6 @@
+<map id="is_comment" name="is_comment">
+<area shape="rect" id="node1" title="Checks if the given string is a comment." alt="" coords="5,31,99,57"/>
+<area shape="rect" id="node2" href="$is__end_8c.html#a76879869cfd0fdc53f2cad88d13696c8" title="Checks if the given string is the ##end command." alt="" coords="149,5,209,32"/>
+<area shape="rect" id="node4" href="$is__start_8c.html#a0dad7aa8e80d01d6e9636d34759ccae4" title="Checks if the given string is the ##start command." alt="" coords="147,56,212,83"/>
+<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#acd9021150ef93f3e8018dd571cef44bc" title=" " alt="" coords="260,31,333,57"/>
+</map>

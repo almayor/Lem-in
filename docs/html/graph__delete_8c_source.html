@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: src/graph/graph_delete.c Source File</title>
+<title>lem-in: src/graph/graph_delete.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -74,10 +74,10 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   graph_delete.c                                     :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: user &lt;user@student.42.fr&gt;                  +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/07/13 20:49:06 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/09/10 12:13:37 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/10/09 20:58:39 by user             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
@@ -85,23 +85,36 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="graph_8h.html#a180920aa19fa4757a10e433101565aaa">   16</a></span>&#160;<span class="keywordtype">void</span>            <a class="code" href="graph__delete_8c.html#a180920aa19fa4757a10e433101565aaa">graph_delete</a>(<a class="code" href="structs__graph.html">t_graph</a> *graph)</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    i = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">while</span> (i &lt; graph-&gt;nverti)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="list__delete_8c.html#a647690cf37d8d4a19925eafa8d8077a5">list_delete</a>(graph-&gt;<a class="code" href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">adj</a>[i++]);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    free(graph-&gt;<a class="code" href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">adj</a>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="array__delete_8c.html#a715232a8b24029cbc48ae3a699aa16e1">array_delete</a>(graph-&gt;<a class="code" href="structs__graph.html#a705402ef5131ed9a9f7f36e95117ad35">names</a>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    free(graph);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span>     i;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="structs__node.html">t_node</a>  *node;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    i = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">while</span> (i &lt; graph-&gt;nnodes)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        node = graph-&gt;<a class="code" href="structs__graph.html#aee7c6a2788ac8f9dc247a71e991ec43c">nodes</a>[i];</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="list__delete_8c.html#a647690cf37d8d4a19925eafa8d8077a5">list_delete</a>(node-&gt;<a class="code" href="structs__node.html#aee57666ec3f5b9ad8de3bbc8a68c67bc">edges</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        free(node);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        i++;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="array__delete_8c.html#a715232a8b24029cbc48ae3a699aa16e1">array_delete</a>(graph-&gt;<a class="code" href="structs__graph.html#a705402ef5131ed9a9f7f36e95117ad35">names</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="list__delete_8c.html#a647690cf37d8d4a19925eafa8d8077a5">list_delete</a>(graph-&gt;<a class="code" href="structs__graph.html#ae16767fac19b4825c30a653a9a59edb1">exits</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="min__pq__delete_8c.html#ad54851e44b5227b2db6e55cc65278664">min_pq_delete</a>(graph-&gt;<a class="code" href="structs__graph.html#a137030804290a5a0006c203340fad1c1">pq</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    free(graph-&gt;<a class="code" href="structs__graph.html#aee7c6a2788ac8f9dc247a71e991ec43c">nodes</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    free(graph);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="alist__delete_8c_html_a647690cf37d8d4a19925eafa8d8077a5"><div class="ttname"><a href="list__delete_8c.html#a647690cf37d8d4a19925eafa8d8077a5">list_delete</a></div><div class="ttdeci">void list_delete(t_list *list)</div><div class="ttdoc">Frees all memory taken up by the list.</div><div class="ttdef"><b>Definition:</b> <a href="list__delete_8c_source.html#l00016">list_delete.c:16</a></div></div>
-<div class="ttc" id="astructs__graph_html_a705402ef5131ed9a9f7f36e95117ad35"><div class="ttname"><a href="structs__graph.html#a705402ef5131ed9a9f7f36e95117ad35">s_graph::names</a></div><div class="ttdeci">t_array * names</div><div class="ttdoc">A sorted arrays of vertex names, where the string at position i is the name of the ith vertex.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00051">graph.h:51</a></div></div>
-<div class="ttc" id="astructs__graph_html_ac62d642e1a23330862d4964c0e4f6746"><div class="ttname"><a href="structs__graph.html#ac62d642e1a23330862d4964c0e4f6746">s_graph::adj</a></div><div class="ttdeci">t_list ** adj</div><div class="ttdoc">An array of lists, where the list at position i contains all vertices to which the vertex i is adjace...</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00050">graph.h:50</a></div></div>
-<div class="ttc" id="astructs__graph_html"><div class="ttname"><a href="structs__graph.html">s_graph</a></div><div class="ttdoc">A graph represented as an array of adjacency lists.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00046">graph.h:46</a></div></div>
+<div class="ttc" id="astructs__node_html"><div class="ttname"><a href="structs__node.html">s_node</a></div><div class="ttdoc">A node in the graph.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00060">graph.h:60</a></div></div>
+<div class="ttc" id="astructs__graph_html_a705402ef5131ed9a9f7f36e95117ad35"><div class="ttname"><a href="structs__graph.html#a705402ef5131ed9a9f7f36e95117ad35">s_graph::names</a></div><div class="ttdeci">t_array * names</div><div class="ttdoc">An array of names of graph nodes.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00100">graph.h:100</a></div></div>
+<div class="ttc" id="astructs__node_html_aee57666ec3f5b9ad8de3bbc8a68c67bc"><div class="ttname"><a href="structs__node.html#aee57666ec3f5b9ad8de3bbc8a68c67bc">s_node::edges</a></div><div class="ttdeci">t_list * edges</div><div class="ttdoc">A list of ids of nodes that this node has an edge to.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00062">graph.h:62</a></div></div>
+<div class="ttc" id="astructs__graph_html"><div class="ttname"><a href="structs__graph.html">s_graph</a></div><div class="ttdoc">A graph.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00096">graph.h:96</a></div></div>
 <div class="ttc" id="aarray__delete_8c_html_a715232a8b24029cbc48ae3a699aa16e1"><div class="ttname"><a href="array__delete_8c.html#a715232a8b24029cbc48ae3a699aa16e1">array_delete</a></div><div class="ttdeci">void array_delete(t_array *array)</div><div class="ttdoc">Deletes the array and all its associated data.</div><div class="ttdef"><b>Definition:</b> <a href="array__delete_8c_source.html#l00016">array_delete.c:16</a></div></div>
-<div class="ttc" id="agraph__delete_8c_html_a180920aa19fa4757a10e433101565aaa"><div class="ttname"><a href="graph__delete_8c.html#a180920aa19fa4757a10e433101565aaa">graph_delete</a></div><div class="ttdeci">void graph_delete(t_graph *graph)</div><div class="ttdoc">Frees all memory taken by a graph.</div><div class="ttdef"><b>Definition:</b> <a href="graph__delete_8c_source.html#l00016">graph_delete.c:16</a></div></div>
+<div class="ttc" id="agraph__delete_8c_html_a180920aa19fa4757a10e433101565aaa"><div class="ttname"><a href="graph__delete_8c.html#a180920aa19fa4757a10e433101565aaa">graph_delete</a></div><div class="ttdeci">void graph_delete(t_graph *graph)</div><div class="ttdoc">Deletes the graph and frees all of its data.</div><div class="ttdef"><b>Definition:</b> <a href="graph__delete_8c_source.html#l00016">graph_delete.c:16</a></div></div>
 <div class="ttc" id="agraph_8h_html"><div class="ttname"><a href="graph_8h.html">graph.h</a></div></div>
+<div class="ttc" id="astructs__graph_html_ae16767fac19b4825c30a653a9a59edb1"><div class="ttname"><a href="structs__graph.html#ae16767fac19b4825c30a653a9a59edb1">s_graph::exits</a></div><div class="ttdeci">t_list * exits</div><div class="ttdoc">A list of ids of exit nodes (i.e. nodes just preceding the end node) from paths that have thus far be...</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00102">graph.h:102</a></div></div>
+<div class="ttc" id="astructs__graph_html_a137030804290a5a0006c203340fad1c1"><div class="ttname"><a href="structs__graph.html#a137030804290a5a0006c203340fad1c1">s_graph::pq</a></div><div class="ttdeci">t_min_pq * pq</div><div class="ttdoc">A priority queue (used during Dijkstra's algorithm run)</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00105">graph.h:105</a></div></div>
+<div class="ttc" id="amin__pq__delete_8c_html_ad54851e44b5227b2db6e55cc65278664"><div class="ttname"><a href="min__pq__delete_8c.html#ad54851e44b5227b2db6e55cc65278664">min_pq_delete</a></div><div class="ttdeci">void min_pq_delete(t_min_pq *pq)</div><div class="ttdoc">Deletes this queue and free all its associated data.</div><div class="ttdef"><b>Definition:</b> <a href="min__pq__delete_8c_source.html#l00016">min_pq_delete.c:16</a></div></div>
+<div class="ttc" id="astructs__graph_html_aee7c6a2788ac8f9dc247a71e991ec43c"><div class="ttname"><a href="structs__graph.html#aee7c6a2788ac8f9dc247a71e991ec43c">s_graph::nodes</a></div><div class="ttdeci">t_node ** nodes</div><div class="ttdoc">An array of graph nodes.</div><div class="ttdef"><b>Definition:</b> <a href="graph_8h_source.html#l00101">graph.h:101</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 19:32:01 by unite             #+#    #+#             */
-/*   Updated: 2020/10/07 22:19:40 by user             ###   ########.fr       */
+/*   Updated: 2020/10/11 11:15:44 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 /*
 ** @struct s_stdin
-** @brief A convenience data type for reading from `STDIN`
+** @brief A data type for efficient reading from `STDIN`
 */
 
 typedef struct	s_stdin

@@ -1,7 +1,0 @@
-<map id="stdin_peek" name="stdin_peek">
-<area shape="rect" id="node1" title="Returns the line that was most recently read from the STDIN" alt="" coords="5,31,91,57"/>
-<area shape="rect" id="node2" href="$stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b" title="Reads the next line STDIN and returns it." alt="" coords="139,31,221,57"/>
-<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/get_next_line/docs/.doxygen/get_next_line.tag$get__next__line_8c.html#ab20831df58070fa98472f95285c72311" title=" " alt="" coords="269,5,368,32"/>
-<area shape="rect" id="node4" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="281,56,357,83"/>
-<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="416,56,513,83"/>
-</map>

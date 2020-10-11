@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: src/graph/graph_id2name.c File Reference</title>
+<title>lem-in: src/graph/graph_id2name.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -79,15 +79,17 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="graph__id2name_8c__incl.png" border="0" usemap="#src_2graph_2graph__id2name_8c" alt=""/></div>
 <map name="src_2graph_2graph__id2name_8c" id="src_2graph_2graph__id2name_8c">
-<area shape="rect" title=" " alt="" coords="105,5,283,32"/>
-<area shape="rect" href="graph_8h.html" title=" " alt="" coords="161,80,227,107"/>
-<area shape="rect" title=" " alt="" coords="143,379,207,405"/>
-<area shape="rect" href="array_8h.html" title=" " alt="" coords="23,229,83,256"/>
-<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="297,379,397,405"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="147,304,204,331"/>
-<area shape="rect" href="iterator_8h.html" title=" " alt="" coords="158,155,230,181"/>
-<area shape="rect" href="list_8h.html" title=" " alt="" coords="310,229,361,256"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="255,155,323,181"/>
+<area shape="rect" title=" " alt="" coords="53,5,232,32"/>
+<area shape="rect" href="graph_8h.html" title=" " alt="" coords="110,80,175,107"/>
+<area shape="rect" title=" " alt="" coords="13,379,77,405"/>
+<area shape="rect" href="array_8h.html" title=" " alt="" coords="150,229,210,256"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="210,379,310,405"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="164,304,222,331"/>
+<area shape="rect" href="list_8h.html" title=" " alt="" coords="24,229,74,256"/>
+<area shape="rect" href="min__pq_8h.html" title=" " alt="" coords="210,155,285,181"/>
+<area shape="rect" title=" " alt="" coords="121,379,185,405"/>
+<area shape="rect" title=" " alt="" coords="286,229,348,256"/>
+<area shape="rect" title=" " alt="" coords="373,229,464,256"/>
 </map>
 </div>
 </div>
@@ -96,7 +98,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a350297e2f8d0d09cf18aa3b16e9e6f73"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73">graph_id2name</a> (const <a class="el" href="structs__graph.html">t_graph</a> *graph, int id)</td></tr>
-<tr class="memdesc:a350297e2f8d0d09cf18aa3b16e9e6f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convertex a numeric id to the corresponding vertex name.  <a href="graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73">More...</a><br /></td></tr>
+<tr class="memdesc:a350297e2f8d0d09cf18aa3b16e9e6f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the node with a given id.  <a href="graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73">More...</a><br /></td></tr>
 <tr class="separator:a350297e2f8d0d09cf18aa3b16e9e6f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -126,14 +128,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convertex a numeric id to the corresponding vertex name. </p>
+<p>Returns the name of the node with a given id. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>A numeric id </td></tr>
+    <tr><td class="paramname">id</td><td>The id of the node </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The corresponding vertex name </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The name of the node </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="graph__id2name_8c_source.html#l00016">16</a> of file <a class="el" href="graph__id2name_8c_source.html">graph_id2name.c</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -143,7 +145,7 @@ Functions</h2></td></tr>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="graph__id2name_8c_a350297e2f8d0d09cf18aa3b16e9e6f73_cgraph.png" border="0" usemap="#graph__id2name_8c_a350297e2f8d0d09cf18aa3b16e9e6f73_cgraph" alt=""/></div>
 <map name="graph__id2name_8c_a350297e2f8d0d09cf18aa3b16e9e6f73_cgraph" id="graph__id2name_8c_a350297e2f8d0d09cf18aa3b16e9e6f73_cgraph">
-<area shape="rect" title="Convertex a numeric id to the corresponding vertex name." alt="" coords="5,5,116,32"/>
+<area shape="rect" title="Returns the name of the node with a given id." alt="" coords="5,5,116,32"/>
 <area shape="rect" href="array__get_8c.html#a1eb71c28fd8048d3bd3ab59dc2e55896" title="Returns the value at the specified position in this list." alt="" coords="164,5,240,32"/>
 </map>
 </div>

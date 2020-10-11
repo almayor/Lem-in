@@ -1,13 +1,15 @@
 <map id="src/paths/paths_navigate.c" name="src/paths/paths_navigate.c">
-<area shape="rect" id="node1" title=" " alt="" coords="243,5,422,32"/>
-<area shape="rect" id="node2" href="$paths_8h.html" title=" " alt="" coords="300,80,365,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="155,5,334,32"/>
+<area shape="rect" id="node2" href="$paths_8h.html" title=" " alt="" coords="212,80,277,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" id="node4" href="$graph_8h.html" title=" " alt="" coords="300,155,365,181"/>
-<area shape="rect" id="node8" href="$utils_8h.html" title=" " alt="" coords="217,379,275,405"/>
-<area shape="rect" id="node9" href="$iterator_8h.html" title=" " alt="" coords="442,229,514,256"/>
-<area shape="rect" id="node10" href="$list_8h.html" title=" " alt="" coords="451,304,502,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="97,453,161,480"/>
-<area shape="rect" id="node6" href="$array_8h.html" title=" " alt="" coords="113,304,173,331"/>
-<area shape="rect" id="node7" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/docs/.doxygen/libftprintfgnl.tag$libftprintfgnl_8h.html" title=" " alt="" coords="313,453,413,480"/>
-<area shape="rect" id="node11" href="$queue_8h.html" title=" " alt="" coords="299,229,367,256"/>
+<area shape="rect" id="node4" href="$graph_8h.html" title=" " alt="" coords="367,155,432,181"/>
+<area shape="rect" id="node8" href="$utils_8h.html" title=" " alt="" coords="376,379,433,405"/>
+<area shape="rect" id="node10" href="$list_8h.html" title=" " alt="" coords="586,304,637,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="439,453,503,480"/>
+<area shape="rect" id="node6" href="$array_8h.html" title=" " alt="" coords="501,304,561,331"/>
+<area shape="rect" id="node7" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/docs/.doxygen/libftprintfgnl.tag$libftprintfgnl_8h.html" title=" " alt="" coords="551,453,651,480"/>
+<area shape="rect" id="node11" href="$min__pq_8h.html" title=" " alt="" coords="362,229,437,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="351,453,415,480"/>
+<area shape="rect" id="node12" title=" " alt="" coords="248,304,311,331"/>
+<area shape="rect" id="node13" title=" " alt="" coords="335,304,426,331"/>
 </map>

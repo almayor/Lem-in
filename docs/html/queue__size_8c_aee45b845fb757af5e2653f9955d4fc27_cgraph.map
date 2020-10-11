@@ -1,4 +1,0 @@
-<map id="queue_size" name="queue_size">
-<area shape="rect" id="node1" title="Returns the number of items in the queue." alt="" coords="5,5,93,32"/>
-<area shape="rect" id="node2" href="$list__size_8c.html#a8d0a3be51f473573303891440156eea5" title="Returns the current number of entries in the list." alt="" coords="141,5,212,32"/>
-</map>

@@ -1,7 +1,9 @@
 <map id="src/stdin/stdin_new.c" name="src/stdin/stdin_new.c">
-<area shape="rect" id="node1" title=" " alt="" coords="19,5,163,32"/>
-<area shape="rect" id="node2" href="$stdin_8h.html" title=" " alt="" coords="60,80,121,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="64,5,208,32"/>
+<area shape="rect" id="node2" href="$stdin_8h.html" title=" " alt="" coords="105,80,167,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,229,69,256"/>
-<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/docs/.doxygen/libftprintfgnl.tag$libftprintfgnl_8h.html" title=" " alt="" coords="101,229,201,256"/>
-<area shape="rect" id="node5" href="$utils_8h.html" title=" " alt="" coords="62,155,119,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="59,155,127,181"/>
+<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/docs/.doxygen/libftprintfgnl.tag$libftprintfgnl_8h.html" title=" " alt="" coords="197,229,297,256"/>
+<area shape="rect" id="node6" href="$utils_8h.html" title=" " alt="" coords="151,155,209,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="108,229,172,256"/>
 </map>

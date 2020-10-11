@@ -1,4 +1,0 @@
-<map id="free_graph" name="free_graph">
-<area shape="rect" id="node1" title="Frees all memory taken by a graph or does nothing if the graph is NULL." alt="" coords="5,5,91,31"/>
-<area shape="rect" id="node2" href="$free__list_8c.html#a5772edc7aeef39713c35596814ec2709" title="Frees all memory taken by a list or does nothing if the list is NULL." alt="" coords="139,5,207,31"/>
-</map>

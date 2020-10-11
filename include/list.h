@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 17:49:33 by unite             #+#    #+#             */
-/*   Updated: 2020/10/10 23:52:30 by user             ###   ########.fr       */
+/*   Updated: 2020/10/11 11:14:30 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,14 +77,14 @@ void			list_add_last(t_list *alst, int val);
 
 /*
 ** Returns the first value in the list and removes it from the list
-** @return val The first value in the list
+** @return The first value in the list
 */
 
 int				list_pop_first(t_list *alst);
 
 /*
 ** Returns the last value in the list and removes it from the list
-** @return val The last value in the list
+** @return The last value in the list
 */
 
 int				list_pop_last(t_list *alst);
@@ -102,9 +102,32 @@ size_t			list_size(const t_list *alst);
 
 void			list_delete(t_list *list);
 
+/*
+** Returns the first value in the list without removing it
+** @return The first value in the list
+*/
+
 int				list_peek_first(const t_list *list);
+
+/*
+** Returns the last value in the list without removing it
+** @return The last value in the list
+*/
+
 int				list_peek_last(const t_list *list);
+
+/*
+** Removes the first occurence of value from the list
+** @param val The value to remove
+*/
+
 void			list_remove(t_list *list, int val);
+
+/*
+** Prints values contained in the list
+** @note Function used for debugging purposes
+*/
+
 void			list_print(const t_list *list);
 
 #endif

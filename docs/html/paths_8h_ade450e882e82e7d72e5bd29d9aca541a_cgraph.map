@@ -1,0 +1,6 @@
+<map id="paths_print" name="paths_print">
+<area shape="rect" id="node1" title="Prints the paths." alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#af059881fce329f6d9b5ff7a28ef2fd25" title=" " alt="" coords="160,5,231,32"/>
+<area shape="rect" id="node3" href="$graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73" title="Returns the name of the node with a given id." alt="" coords="140,56,251,83"/>
+<area shape="rect" id="node4" href="$array__get_8c.html#a1eb71c28fd8048d3bd3ab59dc2e55896" title="Returns the value at the specified position in this list." alt="" coords="299,56,375,83"/>
+</map>

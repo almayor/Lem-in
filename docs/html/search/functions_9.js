@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['tab_5fdelete_488',['tab_delete',['../tab__delete_8c.html#abaab81fb464597b596b0a8cc5cf2705c',1,'tab_delete(char **tab):&#160;tab_delete.c'],['../utils_8h.html#abaab81fb464597b596b0a8cc5cf2705c',1,'tab_delete(char **tab):&#160;tab_delete.c']]],
-  ['tab_5flen_489',['tab_len',['../tab__len_8c.html#a0da067888caded7402846fdc7cf1688b',1,'tab_len(char **tab):&#160;tab_len.c'],['../utils_8h.html#a0da067888caded7402846fdc7cf1688b',1,'tab_len(char **tab):&#160;tab_len.c']]],
-  ['terminate_490',['terminate',['../terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f',1,'terminate(const char *mes):&#160;terminate.c'],['../utils_8h.html#af5447adc2e4c3ae45c65d2d1ce1c759f',1,'terminate(const char *mes):&#160;terminate.c']]]
+  ['set_5fprices_544',['set_prices',['../graph__djikstra_8c.html#ae3cb4c035142cbc9e458a3efc732614f',1,'graph_djikstra.c']]],
+  ['simult_5fassign_545',['simult_assign',['../graph__suurballe_8c.html#a4d6ecd2eec6c6b556171ea4a3279d17b',1,'graph_suurballe.c']]],
+  ['stdin_5fdelete_546',['stdin_delete',['../stdin__delete_8c.html#abf58512ebefa5754d12a2e0527dfbcf3',1,'stdin_delete(t_stdin *in):&#160;stdin_delete.c'],['../stdin_8h.html#abf58512ebefa5754d12a2e0527dfbcf3',1,'stdin_delete(t_stdin *in):&#160;stdin_delete.c']]],
+  ['stdin_5fnew_547',['stdin_new',['../stdin__new_8c.html#a6de66b061301f781eca61f3b471f6041',1,'stdin_new(void):&#160;stdin_new.c'],['../stdin_8h.html#a6de66b061301f781eca61f3b471f6041',1,'stdin_new(void):&#160;stdin_new.c']]],
+  ['stdin_5fnext_548',['stdin_next',['../stdin__next_8c.html#af393b6e672c321fce0340fd69613b508',1,'stdin_next(t_stdin *in):&#160;stdin_next.c'],['../stdin_8h.html#af393b6e672c321fce0340fd69613b508',1,'stdin_next(t_stdin *in):&#160;stdin_next.c']]],
+  ['stdin_5fpeek_549',['stdin_peek',['../stdin__peek_8c.html#ad12775a14e44f855be4118a08321fe5f',1,'stdin_peek(t_stdin *in):&#160;stdin_peek.c'],['../stdin_8h.html#ad12775a14e44f855be4118a08321fe5f',1,'stdin_peek(t_stdin *in):&#160;stdin_peek.c']]],
+  ['step_5fonce_550',['step_once',['../main_8c.html#a7175d62a5c6bd53fbd1305da52e9c5e9',1,'main.c']]]
 ];

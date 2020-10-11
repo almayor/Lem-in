@@ -1,4 +1,5 @@
 <map id="terminate" name="terminate">
-<area shape="rect" id="node1" title="Prints a message to STDERR end exits." alt="" coords="5,5,81,32"/>
-<area shape="rect" id="node2" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="129,5,227,32"/>
+<area shape="rect" id="node1" title="Prints a message to STDERR end exits." alt="" coords="5,31,81,57"/>
+<area shape="rect" id="node2" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="138,5,218,32"/>
+<area shape="rect" id="node3" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="129,56,227,83"/>
 </map>

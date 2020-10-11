@@ -6,11 +6,15 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 20:53:26 by user              #+#    #+#             */
-/*   Updated: 2020/10/10 23:42:32 by user             ###   ########.fr       */
+/*   Updated: 2020/10/11 12:45:28 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "graph.h"
+
+/*
+** Updates the price function values at each node in the graph
+*/
 
 static void	set_prices(t_graph *graph)
 {
@@ -24,6 +28,10 @@ static void	set_prices(t_graph *graph)
 		i++;
 	}
 }
+
+/*
+** Relaxes edges between the IN and OUT halves of split nodes
+*/
 
 static void	relax_hidden_edge(t_graph *graph, int w)
 {

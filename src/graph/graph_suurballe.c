@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 17:30:42 by user              #+#    #+#             */
-/*   Updated: 2020/10/10 23:50:12 by user             ###   ########.fr       */
+/*   Updated: 2020/10/11 12:46:07 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ static void	simult_assign(int *a, int *b, int c, int d)
 	*a = c;
 	*b = d;
 }
+
+/*
+** Caches the most recently found path in the graph, i.e. split / unsplit nodes
+** and records the child-parent relationship of nodes in the graph
+*/
 
 static void	cache_path(t_graph *graph)
 {

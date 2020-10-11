@@ -1,8 +1,0 @@
-<map id="queue_new" name="queue_new">
-<area shape="rect" id="node1" title="Creates a new empty queue." alt="" coords="5,31,93,57"/>
-<area shape="rect" id="node2" href="$list__new_8c.html#a5ed6c55f949d2bf6949bdaf117e2e7c7" title="Creates a new empty list." alt="" coords="141,31,212,57"/>
-<area shape="rect" id="node3" href="$ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="260,31,339,57"/>
-<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="389,5,460,32"/>
-<area shape="rect" id="node5" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="387,56,463,83"/>
-<area shape="rect" id="node6" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="511,56,608,83"/>
-</map>

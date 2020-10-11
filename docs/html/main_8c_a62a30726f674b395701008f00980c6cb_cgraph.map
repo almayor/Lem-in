@@ -1,8 +1,0 @@
-<map id="step_once" name="step_once">
-<area shape="rect" id="node1" title="Moves all ants that are currently en&#45;route by one link forward." alt="" coords="5,81,88,108"/>
-<area shape="rect" id="node2" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/ft_printf/docs/.doxygen/ft_printf.tag$group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title=" " alt="" coords="164,5,231,32"/>
-<area shape="rect" id="node3" href="$graph__id2name_8c.html#a350297e2f8d0d09cf18aa3b16e9e6f73" title="Convertex a numeric id to the corresponding vertex name." alt="" coords="142,56,253,83"/>
-<area shape="rect" id="node5" href="$iterator__has__next_8c.html#a46c57c3c86aff5f9ae46fa019dad6728" title="Checks if an iterator has any values left." alt="" coords="136,107,259,133"/>
-<area shape="rect" id="node6" href="$iterator__next_8c.html#aefa7db19dcbb448ea7c7edd43c26fab7" title="Returns the next value in the iterator and advances its pointer." alt="" coords="150,157,245,184"/>
-<area shape="rect" id="node4" href="$array__get_8c.html#a1eb71c28fd8048d3bd3ab59dc2e55896" title="Returns the value at the specified position in this list." alt="" coords="307,56,383,83"/>
-</map>

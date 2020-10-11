@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: src/utils/is_comment.c Source File</title>
+<title>lem-in: src/utils/is_comment.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -74,10 +74,10 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   is_comment.c                                       :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: user &lt;user@student.42.fr&gt;                  +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/09/07 00:17:02 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/09/10 12:46:38 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/10/10 23:14:44 by user             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
@@ -85,10 +85,12 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="utils_8h.html#acd6f5c21e24ac959fb123ec4df931e03">   16</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="is__comment_8c.html#acd6f5c21e24ac959fb123ec4df931e03">is_comment</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *s)</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> (s &amp;&amp; s[0] == <span class="charliteral">&#39;#&#39;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> (s &amp;&amp; s[0] == <span class="charliteral">&#39;#&#39;</span> &amp;&amp; !<a class="code" href="is__start_8c.html#a0dad7aa8e80d01d6e9636d34759ccae4">is_start</a>(s) &amp;&amp; !<a class="code" href="is__end_8c.html#a76879869cfd0fdc53f2cad88d13696c8">is_end</a>(s));</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="ais__end_8c_html_a76879869cfd0fdc53f2cad88d13696c8"><div class="ttname"><a href="is__end_8c.html#a76879869cfd0fdc53f2cad88d13696c8">is_end</a></div><div class="ttdeci">int is_end(const char *s)</div><div class="ttdoc">Checks if the given string is the ##end command.</div><div class="ttdef"><b>Definition:</b> <a href="is__end_8c_source.html#l00016">is_end.c:16</a></div></div>
+<div class="ttc" id="ais__start_8c_html_a0dad7aa8e80d01d6e9636d34759ccae4"><div class="ttname"><a href="is__start_8c.html#a0dad7aa8e80d01d6e9636d34759ccae4">is_start</a></div><div class="ttdeci">int is_start(const char *s)</div><div class="ttdoc">Checks if the given string is the ##start command.</div><div class="ttdef"><b>Definition:</b> <a href="is__start_8c_source.html#l00016">is_start.c:16</a></div></div>
 <div class="ttc" id="ais__comment_8c_html_acd6f5c21e24ac959fb123ec4df931e03"><div class="ttname"><a href="is__comment_8c.html#acd6f5c21e24ac959fb123ec4df931e03">is_comment</a></div><div class="ttdeci">int is_comment(const char *s)</div><div class="ttdoc">Checks if the given string is a comment.</div><div class="ttdef"><b>Definition:</b> <a href="is__comment_8c_source.html#l00016">is_comment.c:16</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

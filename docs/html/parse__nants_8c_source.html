@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: src/parse/parse_nants.c Source File</title>
+<title>lem-in: src/parse/parse_nants.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -74,10 +74,10 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   parse_nants.c                                      :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: user &lt;user@student.42.fr&gt;                  +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/09/07 00:02:05 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/09/10 12:52:25 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/10/10 21:12:03 by user             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
@@ -87,13 +87,19 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="parse_8h.html#a3929f47eb3e0d0939c1fd1ec73974bd0">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="parse__nants_8c.html#a3929f47eb3e0d0939c1fd1ec73974bd0">parse_nants</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="is__nants_8c.html#ad32b9600f884e10c0fe436546b62be82">is_nants</a>(<a class="code" href="stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b">stdin_next</a>(in)))</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f">terminate</a>(ERR_INVALID_INPUT);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> (<a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#afad2ec371b4188602da9a94db687cb16">ft_atoi</a>(<a class="code" href="stdin__peek_8c.html#a4a4ff6200cee3f9de039ee60a2aa1179">stdin_peek</a>(in)));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> nants;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="is__nants_8c.html#ad32b9600f884e10c0fe436546b62be82">is_nants</a>(<a class="code" href="stdin__next_8c.html#af393b6e672c321fce0340fd69613b508">stdin_next</a>(in)))</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f">terminate</a>(ERR_INVALID_INPUT);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    nants = <a class="codeRef" href="https://almayor.github.io/libft/html/libft_8h.html#afad2ec371b4188602da9a94db687cb16">ft_atoi</a>(<a class="code" href="stdin__peek_8c.html#ad12775a14e44f855be4118a08321fe5f">stdin_peek</a>(in));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (nants &lt; 0)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f">terminate</a>(ERR_INVALID_INPUT);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> (nants);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astdin__peek_8c_html_a4a4ff6200cee3f9de039ee60a2aa1179"><div class="ttname"><a href="stdin__peek_8c.html#a4a4ff6200cee3f9de039ee60a2aa1179">stdin_peek</a></div><div class="ttdeci">char * stdin_peek(t_stdin *in)</div><div class="ttdoc">Returns the line that was most recently read from the STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin__peek_8c_source.html#l00016">stdin_peek.c:16</a></div></div>
-<div class="ttc" id="astructs__stdin_html"><div class="ttname"><a href="structs__stdin.html">s_stdin</a></div><div class="ttdoc">A convenience data type for reading from STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin_8h_source.html#l00027">stdin.h:27</a></div></div>
+<div class="ttc" id="astdin__peek_8c_html_ad12775a14e44f855be4118a08321fe5f"><div class="ttname"><a href="stdin__peek_8c.html#ad12775a14e44f855be4118a08321fe5f">stdin_peek</a></div><div class="ttdeci">const char * stdin_peek(t_stdin *in)</div><div class="ttdoc">Returns the line that was most recently read from the STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin__peek_8c_source.html#l00016">stdin_peek.c:16</a></div></div>
+<div class="ttc" id="astdin__next_8c_html_af393b6e672c321fce0340fd69613b508"><div class="ttname"><a href="stdin__next_8c.html#af393b6e672c321fce0340fd69613b508">stdin_next</a></div><div class="ttdeci">const char * stdin_next(t_stdin *in)</div><div class="ttdoc">Reads the next line STDIN and returns it.</div><div class="ttdef"><b>Definition:</b> <a href="stdin__next_8c_source.html#l00024">stdin_next.c:24</a></div></div>
+<div class="ttc" id="astructs__stdin_html"><div class="ttname"><a href="structs__stdin.html">s_stdin</a></div><div class="ttdoc">A data type for efficient reading from STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin_8h_source.html#l00030">stdin.h:30</a></div></div>
 <div class="ttc" id="aparse__nants_8c_html_a3929f47eb3e0d0939c1fd1ec73974bd0"><div class="ttname"><a href="parse__nants_8c.html#a3929f47eb3e0d0939c1fd1ec73974bd0">parse_nants</a></div><div class="ttdeci">int parse_nants(t_stdin *in)</div><div class="ttdoc">Exctacts the number of ants from the STDIN</div><div class="ttdef"><b>Definition:</b> <a href="parse__nants_8c_source.html#l00018">parse_nants.c:18</a></div></div>
 <div class="ttc" id="ais__nants_8c_html_ad32b9600f884e10c0fe436546b62be82"><div class="ttname"><a href="is__nants_8c.html#ad32b9600f884e10c0fe436546b62be82">is_nants</a></div><div class="ttdeci">int is_nants(const char *s)</div><div class="ttdoc">Checks if the given string specifies the number of ants.</div><div class="ttdef"><b>Definition:</b> <a href="is__nants_8c_source.html#l00016">is_nants.c:16</a></div></div>
 <div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
@@ -101,7 +107,6 @@ $(function() {
 <div class="ttc" id="astdin_8h_html"><div class="ttname"><a href="stdin_8h.html">stdin.h</a></div></div>
 <div class="ttc" id="alibft_8h_html_afad2ec371b4188602da9a94db687cb16"><div class="ttname"><a href="https://almayor.github.io/libft/html/libft_8h.html#afad2ec371b4188602da9a94db687cb16">ft_atoi</a></div><div class="ttdeci">int ft_atoi(const char *str)</div></div>
 <div class="ttc" id="alibftprintfgnl_8h_html"><div class="ttname"><a href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a></div></div>
-<div class="ttc" id="astdin__next_8c_html_a207e0d3a40c27fb62da8ec08f28dbc6b"><div class="ttname"><a href="stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b">stdin_next</a></div><div class="ttdeci">char * stdin_next(t_stdin *in)</div><div class="ttdoc">Reads the next line STDIN and returns it.</div><div class="ttdef"><b>Definition:</b> <a href="stdin__next_8c_source.html#l00016">stdin_next.c:16</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

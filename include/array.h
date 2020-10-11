@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 00:28:04 by unite             #+#    #+#             */
-/*   Updated: 2020/10/08 11:41:53 by user             ###   ########.fr       */
+/*   Updated: 2020/10/11 11:11:15 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ char			*array_get(const t_array *array, size_t index);
 
 /*
 ** Doubles the capacity of the array by reallocating and copying its contents
+** @note Accessory function
 */
 
 void			array_grow(t_array *array);
@@ -107,6 +108,7 @@ void			array_quick_sort(t_array *array);
 
 /*
 ** Halves the capacity of the array by reallocating and copying its contents
+** @note Accessory function
 */
 
 void			array_shrink(t_array *array);
@@ -125,6 +127,12 @@ size_t			array_size(const t_array *array);
 */
 
 void			array_swap(t_array *array, size_t ind1, size_t ind2);
+
+/*
+** Prints strings in the array
+** @note Function used for debugging
+*/
+
 void			array_print(const t_array *array);
 
 #endif

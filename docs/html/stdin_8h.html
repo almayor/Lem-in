@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: include/stdin.h File Reference</title>
+<title>lem-in: include/stdin.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -74,6 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &quot;<a class="elRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -83,10 +85,12 @@ $(function() {
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="stdin_8h__incl.png" border="0" usemap="#include_2stdin_8h" alt=""/></div>
 <map name="include_2stdin_8h" id="include_2stdin_8h">
-<area shape="rect" title=" " alt="" coords="37,5,144,32"/>
+<area shape="rect" title=" " alt="" coords="83,5,189,32"/>
 <area shape="rect" title=" " alt="" coords="5,155,69,181"/>
-<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="101,155,201,181"/>
-<area shape="rect" href="utils_8h.html" title=" " alt="" coords="62,80,119,107"/>
+<area shape="rect" title=" " alt="" coords="59,80,127,107"/>
+<area shape="rect" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html" title=" " alt="" coords="197,155,297,181"/>
+<area shape="rect" href="utils_8h.html" title=" " alt="" coords="151,80,209,107"/>
+<area shape="rect" title=" " alt="" coords="108,155,172,181"/>
 </map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -114,14 +118,20 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__stdin.html">s_stdin</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience data type for reading from <code>STDIN</code>  <a href="structs__stdin.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A data type for efficient reading from <code>STDIN</code>  <a href="structs__stdin.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top"><a id="a6b20d41d6252e9871430c242cb1a56e7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BUFFER_SIZE</b>&#160;&#160;&#160;2048</td></tr>
+<tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a5d8925bdd991730dc16d92b4187ece4e"><td class="memItemLeft" align="right" valign="top"><a id="a5d8925bdd991730dc16d92b4187ece4e"></a>
+<tr class="memitem:ad9e867f8bfbb318a017c5b4f8c1305d7"><td class="memItemLeft" align="right" valign="top"><a id="ad9e867f8bfbb318a017c5b4f8c1305d7"></a>
 typedef struct <a class="el" href="structs__stdin.html">s_stdin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>t_stdin</b></td></tr>
-<tr class="separator:a5d8925bdd991730dc16d92b4187ece4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ad9e867f8bfbb318a017c5b4f8c1305d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -131,12 +141,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a6de66b061301f781eca61f3b471f6041"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__stdin.html">t_stdin</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdin_8h.html#a6de66b061301f781eca61f3b471f6041">stdin_new</a> (void)</td></tr>
 <tr class="memdesc:a6de66b061301f781eca61f3b471f6041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a new <code>t_stdin</code>  <a href="stdin_8h.html#a6de66b061301f781eca61f3b471f6041">More...</a><br /></td></tr>
 <tr class="separator:a6de66b061301f781eca61f3b471f6041"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207e0d3a40c27fb62da8ec08f28dbc6b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdin_8h.html#a207e0d3a40c27fb62da8ec08f28dbc6b">stdin_next</a> (<a class="el" href="structs__stdin.html">t_stdin</a> *in)</td></tr>
-<tr class="memdesc:a207e0d3a40c27fb62da8ec08f28dbc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the next line <code>STDIN</code> and returns it.  <a href="stdin_8h.html#a207e0d3a40c27fb62da8ec08f28dbc6b">More...</a><br /></td></tr>
-<tr class="separator:a207e0d3a40c27fb62da8ec08f28dbc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a4ff6200cee3f9de039ee60a2aa1179"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdin_8h.html#a4a4ff6200cee3f9de039ee60a2aa1179">stdin_peek</a> (<a class="el" href="structs__stdin.html">t_stdin</a> *in)</td></tr>
-<tr class="memdesc:a4a4ff6200cee3f9de039ee60a2aa1179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the line that was most recently read from the <code>STDIN</code>  <a href="stdin_8h.html#a4a4ff6200cee3f9de039ee60a2aa1179">More...</a><br /></td></tr>
-<tr class="separator:a4a4ff6200cee3f9de039ee60a2aa1179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af393b6e672c321fce0340fd69613b508"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdin_8h.html#af393b6e672c321fce0340fd69613b508">stdin_next</a> (<a class="el" href="structs__stdin.html">t_stdin</a> *in)</td></tr>
+<tr class="memdesc:af393b6e672c321fce0340fd69613b508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the next line <code>STDIN</code> and returns it.  <a href="stdin_8h.html#af393b6e672c321fce0340fd69613b508">More...</a><br /></td></tr>
+<tr class="separator:af393b6e672c321fce0340fd69613b508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12775a14e44f855be4118a08321fe5f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdin_8h.html#ad12775a14e44f855be4118a08321fe5f">stdin_peek</a> (<a class="el" href="structs__stdin.html">t_stdin</a> *in)</td></tr>
+<tr class="memdesc:ad12775a14e44f855be4118a08321fe5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the line that was most recently read from the <code>STDIN</code>  <a href="stdin_8h.html#ad12775a14e44f855be4118a08321fe5f">More...</a><br /></td></tr>
+<tr class="separator:ad12775a14e44f855be4118a08321fe5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="abf58512ebefa5754d12a2e0527dfbcf3"></a>
@@ -192,20 +202,21 @@ Functions</h2></td></tr>
 <area shape="rect" href="ft__xcalloc_8c.html#a3d47ea4b67f7d0587d823442cc86134c" title="Replicates behaviour of calloc from libc, but fails on memory allocation errors." alt="" coords="135,31,213,57"/>
 <area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a6747f1fa402c0eb1dde5b99d3cdc900f" title=" " alt="" coords="264,5,335,32"/>
 <area shape="rect" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="261,56,337,83"/>
-<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="385,56,483,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="394,31,474,57"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="385,81,483,108"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a207e0d3a40c27fb62da8ec08f28dbc6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a207e0d3a40c27fb62da8ec08f28dbc6b">&#9670;&nbsp;</a></span>stdin_next()</h2>
+<a id="af393b6e672c321fce0340fd69613b508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af393b6e672c321fce0340fd69613b508">&#9670;&nbsp;</a></span>stdin_next()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* stdin_next </td>
+          <td class="memname">const char* stdin_next </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structs__stdin.html">t_stdin</a> *&#160;</td>
           <td class="paramname"><em>in</em></td><td>)</td>
@@ -218,31 +229,31 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The next line in the <code>STDIN</code> </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>As per the assignment, this function re-prints everything that it reads to <code>STDOUT</code> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="stdin__next_8c_source.html#l00016">16</a> of file <a class="el" href="stdin__next_8c_source.html">stdin_next.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stdin__next_8c_source.html#l00024">24</a> of file <a class="el" href="stdin__next_8c_source.html">stdin_next.c</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="stdin_8h_a207e0d3a40c27fb62da8ec08f28dbc6b_cgraph.png" border="0" usemap="#stdin_8h_a207e0d3a40c27fb62da8ec08f28dbc6b_cgraph" alt=""/></div>
-<map name="stdin_8h_a207e0d3a40c27fb62da8ec08f28dbc6b_cgraph" id="stdin_8h_a207e0d3a40c27fb62da8ec08f28dbc6b_cgraph">
-<area shape="rect" title="Reads the next line STDIN and returns it." alt="" coords="5,31,88,57"/>
-<area shape="rect" href="https://almayor.github.io/get_next_line/html/get__next__line_8c.html#ab20831df58070fa98472f95285c72311" title=" " alt="" coords="136,5,235,32"/>
-<area shape="rect" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="147,56,223,83"/>
-<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="283,56,380,83"/>
+<div class="center"><img src="stdin_8h_af393b6e672c321fce0340fd69613b508_cgraph.png" border="0" usemap="#stdin_8h_af393b6e672c321fce0340fd69613b508_cgraph" alt=""/></div>
+<map name="stdin_8h_af393b6e672c321fce0340fd69613b508_cgraph" id="stdin_8h_af393b6e672c321fce0340fd69613b508_cgraph">
+<area shape="rect" title="Reads the next line STDIN and returns it." alt="" coords="5,56,88,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a56ed5b430b1a92a8b208ff39d7f18a53" title=" " alt="" coords="136,5,235,32"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a8d986b0243eb93d15d9361e341877688" title=" " alt="" coords="150,56,221,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#abbb8c6c4ed85d892e7f1509f65f5768a" title=" " alt="" coords="151,107,220,133"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4a4ff6200cee3f9de039ee60a2aa1179"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a4ff6200cee3f9de039ee60a2aa1179">&#9670;&nbsp;</a></span>stdin_peek()</h2>
+<a id="ad12775a14e44f855be4118a08321fe5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12775a14e44f855be4118a08321fe5f">&#9670;&nbsp;</a></span>stdin_peek()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* stdin_peek </td>
+          <td class="memname">const char* stdin_peek </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structs__stdin.html">t_stdin</a> *&#160;</td>
           <td class="paramname"><em>in</em></td><td>)</td>
@@ -260,13 +271,13 @@ Functions</h2></td></tr>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="stdin_8h_a4a4ff6200cee3f9de039ee60a2aa1179_cgraph.png" border="0" usemap="#stdin_8h_a4a4ff6200cee3f9de039ee60a2aa1179_cgraph" alt=""/></div>
-<map name="stdin_8h_a4a4ff6200cee3f9de039ee60a2aa1179_cgraph" id="stdin_8h_a4a4ff6200cee3f9de039ee60a2aa1179_cgraph">
-<area shape="rect" title="Returns the line that was most recently read from the STDIN" alt="" coords="5,31,91,57"/>
-<area shape="rect" href="stdin__next_8c.html#a207e0d3a40c27fb62da8ec08f28dbc6b" title="Reads the next line STDIN and returns it." alt="" coords="139,31,221,57"/>
-<area shape="rect" href="https://almayor.github.io/get_next_line/html/get__next__line_8c.html#ab20831df58070fa98472f95285c72311" title=" " alt="" coords="269,5,368,32"/>
-<area shape="rect" href="terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="281,56,357,83"/>
-<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="416,56,513,83"/>
+<div class="center"><img src="stdin_8h_ad12775a14e44f855be4118a08321fe5f_cgraph.png" border="0" usemap="#stdin_8h_ad12775a14e44f855be4118a08321fe5f_cgraph" alt=""/></div>
+<map name="stdin_8h_ad12775a14e44f855be4118a08321fe5f_cgraph" id="stdin_8h_ad12775a14e44f855be4118a08321fe5f_cgraph">
+<area shape="rect" title="Returns the line that was most recently read from the STDIN" alt="" coords="5,56,91,83"/>
+<area shape="rect" href="stdin__next_8c.html#af393b6e672c321fce0340fd69613b508" title="Reads the next line STDIN and returns it." alt="" coords="139,56,221,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a56ed5b430b1a92a8b208ff39d7f18a53" title=" " alt="" coords="269,5,368,32"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#a8d986b0243eb93d15d9361e341877688" title=" " alt="" coords="283,56,354,83"/>
+<area shape="rect" href="https://almayor.github.io/libft/html/libft_8h.html#abbb8c6c4ed85d892e7f1509f65f5768a" title=" " alt="" coords="284,107,353,133"/>
 </map>
 </div>
 

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lem_in: include/stdin.h Source File</title>
+<title>lem-in: include/stdin.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Lem_in
+   <div id="projectname">lem-in
    </div>
   </td>
  </tr>
@@ -74,10 +74,10 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*                                                        :::      ::::::::   */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*   stdin.h                                            :+:      :+:    :+:   */</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*                                                    +:+ +:+         +:+     */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: unite &lt;marvin@42.fr&gt;                       +#+  +:+       +#+        */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*   By: user &lt;user@student.42.fr&gt;                  +#+  +:+       +#+        */</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*                                                +#+#+#+#+#+   +#+           */</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*   Created: 2020/09/09 19:32:01 by unite             #+#    #+#             */</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/09/11 01:19:05 by unite            ###   ########.fr       */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*   Updated: 2020/10/11 11:15:44 by user             ###   ########.fr       */</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*                                                                            */</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* ************************************************************************** */</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
@@ -86,27 +86,33 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"># define STDIN_H</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"># include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &quot;<a class="codeRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structs__stdin.html">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct      </span><a class="code" href="structs__stdin.html">s_stdin</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">char</span>    *line;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}                   <a class="code" href="structs__stdin.html">t_stdin</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="stdin_8h.html#abf58512ebefa5754d12a2e0527dfbcf3">stdin_delete</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"># include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"># include &quot;<a class="codeRef" href="https://almayor.github.io/libftprintfgnl/html/libftprintfgnl_8h.html">libftprintfgnl.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"># include &quot;<a class="code" href="utils_8h.html">utils.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor"># define BUFFER_SIZE    2048</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structs__stdin.html">   30</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct  </span><a class="code" href="structs__stdin.html">s_stdin</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">char</span>    buffer[BUFFER_SIZE + 1];</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">char</span>    *ptr;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">char</span>    *line;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">char</span>    end;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}               <a class="code" href="structs__stdin.html">t_stdin</a>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="structs__stdin.html">t_stdin</a>         *<a class="code" href="stdin_8h.html#a6de66b061301f781eca61f3b471f6041">stdin_new</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">char</span>            *<a class="code" href="stdin_8h.html#a207e0d3a40c27fb62da8ec08f28dbc6b">stdin_next</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">char</span>            *<a class="code" href="stdin_8h.html#a4a4ff6200cee3f9de039ee60a2aa1179">stdin_peek</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="stdin_8h.html#abf58512ebefa5754d12a2e0527dfbcf3">stdin_delete</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="structs__stdin.html">t_stdin</a>         *<a class="code" href="stdin_8h.html#a6de66b061301f781eca61f3b471f6041">stdin_new</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>      *<a class="code" href="stdin_8h.html#af393b6e672c321fce0340fd69613b508">stdin_next</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>      *<a class="code" href="stdin_8h.html#ad12775a14e44f855be4118a08321fe5f">stdin_peek</a>(<a class="code" href="structs__stdin.html">t_stdin</a> *in);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astdin_8h_html_a4a4ff6200cee3f9de039ee60a2aa1179"><div class="ttname"><a href="stdin_8h.html#a4a4ff6200cee3f9de039ee60a2aa1179">stdin_peek</a></div><div class="ttdeci">char * stdin_peek(t_stdin *in)</div><div class="ttdoc">Returns the line that was most recently read from the STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin__peek_8c_source.html#l00016">stdin_peek.c:16</a></div></div>
-<div class="ttc" id="astdin_8h_html_a207e0d3a40c27fb62da8ec08f28dbc6b"><div class="ttname"><a href="stdin_8h.html#a207e0d3a40c27fb62da8ec08f28dbc6b">stdin_next</a></div><div class="ttdeci">char * stdin_next(t_stdin *in)</div><div class="ttdoc">Reads the next line STDIN and returns it.</div><div class="ttdef"><b>Definition:</b> <a href="stdin__next_8c_source.html#l00016">stdin_next.c:16</a></div></div>
-<div class="ttc" id="astructs__stdin_html"><div class="ttname"><a href="structs__stdin.html">s_stdin</a></div><div class="ttdoc">A convenience data type for reading from STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin_8h_source.html#l00027">stdin.h:27</a></div></div>
+<div class="ttc" id="astdin_8h_html_ad12775a14e44f855be4118a08321fe5f"><div class="ttname"><a href="stdin_8h.html#ad12775a14e44f855be4118a08321fe5f">stdin_peek</a></div><div class="ttdeci">const char * stdin_peek(t_stdin *in)</div><div class="ttdoc">Returns the line that was most recently read from the STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin__peek_8c_source.html#l00016">stdin_peek.c:16</a></div></div>
+<div class="ttc" id="astructs__stdin_html"><div class="ttname"><a href="structs__stdin.html">s_stdin</a></div><div class="ttdoc">A data type for efficient reading from STDIN</div><div class="ttdef"><b>Definition:</b> <a href="stdin_8h_source.html#l00030">stdin.h:30</a></div></div>
+<div class="ttc" id="astdin_8h_html_af393b6e672c321fce0340fd69613b508"><div class="ttname"><a href="stdin_8h.html#af393b6e672c321fce0340fd69613b508">stdin_next</a></div><div class="ttdeci">const char * stdin_next(t_stdin *in)</div><div class="ttdoc">Reads the next line STDIN and returns it.</div><div class="ttdef"><b>Definition:</b> <a href="stdin__next_8c_source.html#l00024">stdin_next.c:24</a></div></div>
 <div class="ttc" id="astdin_8h_html_abf58512ebefa5754d12a2e0527dfbcf3"><div class="ttname"><a href="stdin_8h.html#abf58512ebefa5754d12a2e0527dfbcf3">stdin_delete</a></div><div class="ttdeci">void stdin_delete(t_stdin *in)</div><div class="ttdoc">Frees all memory taken up by t_stdin</div><div class="ttdef"><b>Definition:</b> <a href="stdin__delete_8c_source.html#l00016">stdin_delete.c:16</a></div></div>
 <div class="ttc" id="autils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
 <div class="ttc" id="astdin_8h_html_a6de66b061301f781eca61f3b471f6041"><div class="ttname"><a href="stdin_8h.html#a6de66b061301f781eca61f3b471f6041">stdin_new</a></div><div class="ttdeci">t_stdin * stdin_new(void)</div><div class="ttdoc">Initializes a new t_stdin</div><div class="ttdef"><b>Definition:</b> <a href="stdin__new_8c_source.html#l00016">stdin_new.c:16</a></div></div>

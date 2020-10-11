@@ -1,6 +1,7 @@
 <map id="array_grow" name="array_grow">
-<area shape="rect" id="node1" title="Doubles the capacity of the array by reallocating and copying its contents." alt="" coords="5,5,92,32"/>
-<area shape="rect" id="node2" href="$ft__xmalloc_8c.html#a668e8ce8ac8b47388c8f3bb135e25f4e" title="Replicates behaviour of malloc from libc, but fails on memory allocation errors." alt="" coords="140,5,223,32"/>
-<area shape="rect" id="node3" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="271,5,347,32"/>
-<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/Lem_in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="395,5,492,32"/>
+<area shape="rect" id="node1" title="Doubles the capacity of the array by reallocating and copying its contents." alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="$ft__xmalloc_8c.html#a668e8ce8ac8b47388c8f3bb135e25f4e" title="Replicates behaviour of malloc from libc, but fails on memory allocation errors." alt="" coords="140,31,223,57"/>
+<area shape="rect" id="node3" href="$terminate_8c.html#af5447adc2e4c3ae45c65d2d1ce1c759f" title="Prints a message to STDERR end exits." alt="" coords="271,31,347,57"/>
+<area shape="rect" id="node4" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#ad5be1665b379489304b89bdc6381d1eb" title=" " alt="" coords="403,5,483,32"/>
+<area shape="rect" id="node5" href="/Users/almayor/Documents/programming/42/lem-in/libftprintfgnl/libft/docs/.doxygen/libft.tag$libft_8h.html#a1c8aac84262f05aa9d1afbd2d29982a8" title=" " alt="" coords="395,56,492,83"/>
 </map>
