@@ -57,6 +57,13 @@ make test
 
 I have written a detailed [PDF](docs/algorithm-explanation.pdf) to outline my thought process when designing the algorithm. Please have a look if you're interested.
 
+## Useful links
+
+1.  <https://courses.csail.mit.edu/6.854/06/scribe/s12-minCostFlowAlg. pdf>
+2. <http://www.macfreek.nl/memory/Disjoint_Path_Finding>
+3. <https://en.wikipedia.org/wiki/Suurballe%27s_algorithm>
+
+
 ## Acknowledgements
 
 We are grateful to the entire team behind School 42 and its [Moscow branch](https://21-school.ru
