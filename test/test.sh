@@ -9,33 +9,6 @@ else
 	exit 1
 fi
 
-echo "\n################# EXAMPLE MAPS ##################\n"
-
-for i in {1..20}; do
-	printf "flow-one-$i:\n > " i
-	$generator --flow-one | ./lem-in | ./check-solution
-done
-
-for i in {1..20}; do
-	printf "flow-ten-$i:\n > " i
-	$generator --flow-ten | ./lem-in | ./check-solution
-done
-
-for i in {1..20}; do
-	printf "flow-thousand-$i:\n > " i
-	$generator --flow-thousand | ./lem-in | ./check-solution
-done
-
-for i in {1..20}; do
-	printf "big-$i:\n > " i
-	$generator --big | ./lem-in | ./check-solution
-done
-
-for i in {1..20}; do
-	printf "big-superposition-$i:\n > " i
-	$generator --big-superposition | ./lem-in | ./check-solution
-done
-
 echo "\n############### ERROR MANAGEMENT ################\n"
 
 maps=$(find example-maps -type f -path "*error-management*" -name "err*\.txt")
@@ -60,34 +33,29 @@ for map in $maps; do
 	fi
 done
 
-echo "\n#################### TIMING #####################\n"
+echo "\n################# EXAMPLE MAPS ##################\n"
 
 for i in {1..20}; do
-	printf "flow-one-$i:\n > " i
-	$generator --flow-one | time ./lem-in > /dev/null
-	echo
+	printf "flow-one-$i:"
+	$generator --flow-one | time ./lem-in | ./check-solution
 done
 
 for i in {1..20}; do
-	printf "flow-ten-$i:\n > " i
-	$generator --flow-ten | time ./lem-in > /dev/null
-	echo
+	printf "flow-ten-$i:"
+	$generator --flow-ten | time ./lem-in | ./check-solution
 done
 
 for i in {1..20}; do
-	printf "flow-thousand-$i:\n > " i
-	$generator --flow-thousand | time ./lem-in > /dev/null
-	echo
+	printf "flow-thousand-$i:"
+	$generator --flow-thousand | time ./lem-in | ./check-solution
 done
 
 for i in {1..20}; do
-	printf "big-$i:\n > " i
-	$generator --big | time ./lem-in > /dev/null
-	echo
+	printf "big-$i:"
+	$generator --big | time ./lem-in | ./check-solution
 done
 
 for i in {1..20}; do
-	printf "big-superposition-$i:\n > " i
-	$generator --big-superposition | time ./lem-in > /dev/null
-	echo
+	printf "big-superposition-$i:"
+	$generator --big-superposition | time ./lem-in | ./check-solution
 done

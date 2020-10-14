@@ -207,21 +207,21 @@ if __name__ == "__main__":
 
 		if parser.required and count > parser.required:
 			print(
-				f"{ansi_yellow}Too many lines{ansi_reset}"
+				f" > {ansi_yellow}Too many lines{ansi_reset}"
 				f" ({count} lines, {parser.required} expected)"
 			)
 		elif parser.required:
 			print(
-				f"{ansi_green}Correct{ansi_reset}"
+				f" > {ansi_green}Correct{ansi_reset}"
 				f" ({count} lines, {parser.required} expected)"
 			)
 		else:
 			print(
-				f"{ansi_green}Correct{ansi_reset}"
+				f" > {ansi_green}Correct{ansi_reset}"
 				f" ({count} lines)"
 			)
 
 	except ValueError:
-		print(f"{ansi_red}Error{ansi_reset}")
+		print(f" > {ansi_red}Error{ansi_reset}")
 		print("Last line read: " + parser.line)
 		raise
