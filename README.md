@@ -35,10 +35,10 @@ Then try some example maps
 or generate your own
 
 ```sh
-./generator --flow-thousand | ./lem-in
+./generator-osx --flow-thousand | ./lem-in
 ```
 
-(_NOTE_ that the `generator` has only been made available to us in a Linux compilation.)
+(_NOTE_ you could use `generator-linux` to run the generator on Linux.)
 
 ## Test
 
