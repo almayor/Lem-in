@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 15:36:39 by unite             #+#    #+#             */
-/*   Updated: 2020/10/14 15:16:07 by user             ###   ########.fr       */
+/*   Updated: 2020/10/14 23:47:59 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@ t_paths			*paths_compute(t_graph *graph, size_t nants)
 {
 	t_paths	*paths_old;
 	t_paths	*paths_new;
+	int		npaths;
 
 	if (!(paths_old = paths_get_next(graph, nants)))
 		terminate("ERROR");
-	while ((paths_new = paths_get_next(graph, nants)))
+	paths_new = NULL;
+	npaths = 1;
+	while (npaths++ < nants && (paths_new = paths_get_next(graph, nants)))
 	{
 		if (paths_new->nsteps < paths_old->nsteps)
 		{

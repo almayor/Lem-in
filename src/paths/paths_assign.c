@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/06 19:15:58 by user              #+#    #+#             */
-/*   Updated: 2020/10/11 19:35:56 by user             ###   ########.fr       */
+/*   Updated: 2020/10/14 23:42:23 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,6 @@ static void		paths_reassign(t_paths *paths, size_t *assigments_new)
 		i++;
 	}
 }
-
 
 void			paths_assign(t_paths *paths, size_t nants)
 {
