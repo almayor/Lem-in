@@ -22,6 +22,8 @@ for map in $maps; do
 	fi
 done
 
+echo
+
 maps=$(find example-maps -type f -path "*error-management*" -name "noerr*\.txt")
 for map in $maps; do
 	printf "%s:\n > " $map
@@ -36,26 +38,69 @@ done
 echo "\n################# EXAMPLE MAPS ##################\n"
 
 for i in {1..20}; do
-	printf "flow-one-$i:"
-	$generator --flow-one | time ./lem-in | ./check-solution
+	echo "flow-one-$i:"
+	$generator --flow-one | ./lem-in | ./check-solution
 done
 
-for i in {1..20}; do
-	printf "flow-ten-$i:"
-	$generator --flow-ten | time ./lem-in | ./check-solution
-done
+echo
 
 for i in {1..20}; do
-	printf "flow-thousand-$i:"
-	$generator --flow-thousand | time ./lem-in | ./check-solution
+	echo "flow-ten-$i:"
+	$generator --flow-ten | ./lem-in | ./check-solution
 done
 
-for i in {1..20}; do
-	printf "big-$i:"
-	$generator --big | time ./lem-in | ./check-solution
-done
+echo
 
 for i in {1..20}; do
-	printf "big-superposition-$i:"
-	$generator --big-superposition | time ./lem-in | ./check-solution
+	echo "flow-thousand-$i:"
+	$generator --flow-thousand | ./lem-in | ./check-solution
+done
+
+echo
+
+for i in {1..20}; do
+	echo "big-$i:"
+	$generator --big | ./lem-in | ./check-solution
+done
+
+echo
+
+for i in {1..20}; do
+	echo "big-superposition-$i:"
+	$generator --big-superposition | ./lem-in | ./check-solution
+done
+
+echo "\n################### TIMING #####################\n"
+
+for i in {1..20}; do
+	printf "flow-one-$i:\n > "
+	echo $($generator --flow-one | time ./lem-in 2>&1 >/dev/null)
+done
+
+echo
+
+for i in {1..20}; do
+	printf "flow-ten-$i:\n > "
+	echo $($generator --flow-ten | time ./lem-in 2>&1 >/dev/null)
+done
+
+echo
+
+for i in {1..20}; do
+	printf "flow-thousand-$i:\n > "
+	echo $($generator --flow-thousand | time ./lem-in 2>&1 >/dev/null)
+done
+
+echo	
+
+for i in {1..20}; do
+	printf "big-$i:\n > "
+	echo $($generator --big | time ./lem-in 2>&1 >/dev/null)
+done
+
+echo
+
+for i in {1..20}; do
+	printf "big-superposition-$i:\n > "
+	echo $($generator --big-superposition | time ./lem-in 2>&1 >/dev/null)
 done
