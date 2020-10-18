@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	generator="./generator-linux"
@@ -9,16 +9,16 @@ else
 	exit 1
 fi
 
-echo "\n############### ERROR MANAGEMENT ################\n"
+printf "\n############### ERROR MANAGEMENT ################\n\n"
 
 maps=$(find example-maps -type f -path "*error-management*" -name "err*\.txt")
 for map in $maps; do
 	printf "%s:\n > " $map
 	./lem-in < $map 2>&1 1>/dev/null | grep -i 'error' &> /dev/null
 	if [ $? == 0 ]; then
-		echo "\033[92mCorrect\033[0m"
+		printf "\033[92mCorrect\033[0m\n"
 	else
-		echo "\033[91mIgnored error\033[0m"
+		printf "\033[91mIgnored error\033[0m\n"
 	fi
 done
 
@@ -29,13 +29,13 @@ for map in $maps; do
 	printf "%s:\n > " $map
 	./lem-in < $map 2>&1 1>/dev/null | grep -i 'error' &> /dev/null
 	if [ $? == 0 ]; then
-		echo "\033[91mShoudn't return error\033[0m"
+		printf "\033[91mShoudn't return error\033[0m\n"
 	else
-		echo "\033[92mCorrect\033[0m"
+		printf "\033[92mCorrect\033[0m\n"
 	fi
 done
 
-echo "\n################# EXAMPLE MAPS ##################\n"
+printf "\n################# EXAMPLE MAPS ##################\n\n"
 
 for i in {1..20}; do
 	echo "flow-one-$i:"
@@ -70,7 +70,7 @@ for i in {1..20}; do
 	$generator --big-superposition | ./lem-in | ./check-solution
 done
 
-echo "\n################### TIMING #####################\n"
+printf "\n################### TIMING #####################\n\n"
 
 for i in {1..20}; do
 	printf "flow-one-$i:\n > "
