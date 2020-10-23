@@ -2,7 +2,11 @@
 
 # redirecting generator output to a temporary file because pipes in
 # Docker containers don't work with large input that gets printed too fast
+<<<<<<< HEAD
+TMPFILE=$(mktemp /tmp/lem-in.tests.XXXXXX)
+=======
 TMPFILE=$(mktemp /tmp/abc-script.XXXXXX)
+>>>>>>> aed70d304ac4b2fbfefd9942509e8686799326ad
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	generator="./generator-linux"
