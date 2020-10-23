@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# redirecting generator output to a temporary file because pipes in
+# Docker containers don't work with large input that gets printed too fast
+TMPFILE=$(mktemp /tmp/abc-script.XXXXXX)
+
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	generator="./generator-linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
@@ -39,68 +43,78 @@ printf "\n################# EXAMPLE MAPS ##################\n\n"
 
 for i in {1..20}; do
 	echo "flow-one-$i:"
-	$generator --flow-one | ./lem-in | ./check-solution
+	$generator --flow-one > $TMPFILE
+	./lem-in < $TMPFILE | ./check-solution
 done
 
 echo
 
 for i in {1..20}; do
 	echo "flow-ten-$i:"
-	$generator --flow-ten | ./lem-in | ./check-solution
+	$generator --flow-ten > $TMPFILE
+	./lem-in < $TMPFILE | ./check-solution
 done
 
 echo
 
 for i in {1..20}; do
 	echo "flow-thousand-$i:"
-	$generator --flow-thousand | ./lem-in | ./check-solution
+	$generator --flow-thousand > $TMPFILE
+	./lem-in < $TMPFILE | ./check-solution
 done
 
 echo
 
 for i in {1..20}; do
 	echo "big-$i:"
-	$generator --big | ./lem-in | ./check-solution
+	$generator --big > $TMPFILE
+	./lem-in < $TMPFILE | ./check-solution
 done
 
 echo
 
 for i in {1..20}; do
 	echo "big-superposition-$i:"
-	$generator --big-superposition | ./lem-in | ./check-solution
+	$generator --big-superposition > $TMPFILE
+	./lem-in < $TMPFILE | ./check-solution
 done
 
 printf "\n################### TIMING #####################\n\n"
 
 for i in {1..20}; do
 	printf "flow-one-$i:\n > "
-	echo $($generator --flow-one | time ./lem-in 2>&1 >/dev/null)
+	$generator --flow-one > $TMPFILE
+	echo $(time ./lem-in < $TMPFILE 2>&1 >/dev/null) # echo to get nice output from time
 done
 
 echo
 
 for i in {1..20}; do
 	printf "flow-ten-$i:\n > "
-	echo $($generator --flow-ten | time ./lem-in 2>&1 >/dev/null)
+	$generator --flow-ten > $TMPFILE
+	echo $(time ./lem-in < $TMPFILE 2>&1 >/dev/null) # echo to get nice output from time
 done
 
 echo
 
 for i in {1..20}; do
 	printf "flow-thousand-$i:\n > "
-	echo $($generator --flow-thousand | time ./lem-in 2>&1 >/dev/null)
+	$generator --flow-thousand > $TMPFILE
+	echo $(time ./lem-in < $TMPFILE 2>&1 >/dev/null) # echo to get nice output from time
 done
 
 echo	
 
 for i in {1..20}; do
 	printf "big-$i:\n > "
-	echo $($generator --big | time ./lem-in 2>&1 >/dev/null)
+	$generator --big > $TMPFILE
+	echo $(time ./lem-in < $TMPFILE 2>&1 >/dev/null) # echo to get nice output from time
 done
 
 echo
 
 for i in {1..20}; do
 	printf "big-superposition-$i:\n > "
-	echo $($generator --big-superposition | time ./lem-in 2>&1 >/dev/null)
+	$generator --big-superposition > $TMPFILE
+	echo $(time ./lem-in < $TMPFILE 2>&1 >/dev/null) # echo to get nice output from time
 done
