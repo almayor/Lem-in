@@ -6,7 +6,7 @@
 #    By: user <user@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/05 18:17:42 by unite             #+#    #+#              #
-#    Updated: 2020/10/15 01:36:03 by user             ###   ########.fr        #
+#    Updated: 2020/10/23 19:57:41 by user             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -101,7 +101,7 @@ MKDIR = /bin/mkdir
 ################################################################################
 
 COMPILE = $(CC) -c
-CFLAGS += -Werror
+CFLAGS += -Werror -Wno-unused-result
 CFLAGS += -O3 -std=gnu11 -ffast-math -march=native
 CFLAGS += -MMD
 CFLAGS += $(foreach path, $(PATHI), -I$(path))
